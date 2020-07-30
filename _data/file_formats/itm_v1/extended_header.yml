@@ -6,11 +6,13 @@
     - 3 = Magic
     - 4 = Launcher
   type: char
+  id: attack_type
 - desc: |
     ID Req.
     - bit 0: ID Required
     - bit 1: Non-ID Required
   type: char
+  id: id_required
 - desc: |
     Location
     - 0 = None
@@ -19,6 +21,7 @@
     - 3 = Equipment
     - 4 = Innate
   type: char
+  id: location
 - desc: Alternative dice sides
   type: char
 - desc: Use icon
@@ -34,6 +37,7 @@
     - 6 = Crash
     - 7 = None (Self, ignores game pause)
   type: char
+  id: target
 - desc: Target count
   type: char
 - desc: Range
@@ -47,6 +51,7 @@
     - 40 = Spear
     - 100 = Throwing Axe
   type: byte
+  id: projectile_type
 - desc: Alternative dice thrown
   type: byte
 - desc: Speed
@@ -61,6 +66,7 @@
     - The target creature(s) is STATE_HELPLESS
     - The target is affected by time stop
   type: word
+  id: thac0_bonus
 - desc: Dice sides
   type: byte
 - desc: Primary type
@@ -83,10 +89,13 @@
     - 7 = Piercing/Slashing (more) (BG2)
     - 8 = Blunt/Slashing (less) (BG2)
   type: word
+  id: damage_type
 - desc: Count of feature blocks
   type: word
+  id: feature_block_count
 - desc: Index into feature blocks
   type: word
+  id: feature_block_index
 - desc: Charges
   type: word
 - desc: |
@@ -96,17 +105,24 @@
     - 2 = Expended (w/o sound)
     - 3 = Recharge each day
   type: word
+  id: depletion
 - desc: '[Flags](#ExtHeader_Flags)'
   type: dword
+  id: header_flags
 - desc: Projectile animation (projectl.ids/missile.ids)
   type: word
+  id: projectile_animation
 - desc: '[Melee animation](#ExtendedHeader_MeleeAnimation)'
   type: word
   mult: 3
+  id: melee_animation
 - desc: Bow/Arrow qualifier (0=No, 1=Yes)
   type: word
+  id: is_arrow
 - desc: Crossbow/Bolt qualifier (0=No, 1=Yes)
   type: word
+  id: is_bolt
 - desc: Misc. Projectile qualifier (0=No, 1=Yes)
   type: word
+  id: is_bullet
   offset: 0x36

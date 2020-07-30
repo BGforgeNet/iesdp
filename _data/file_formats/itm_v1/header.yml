@@ -1,13 +1,17 @@
 - desc: Signature ('ITM ')
   type: char array
   length: 4
+  id: signature
 - desc: Version ('V1  ')
   type: char array
   length: 4
+  id: version
 - desc: Unidentified Name (strref)
   type: strref
+  id: unidentified_name
 - desc: Identified Name (strref)
   type: strref
+  id: identified_name
 - desc: |
     BG1, BG2, BGEE:  
     Replacement item (ITM)
@@ -15,40 +19,49 @@
     PSTEE:  
     Drop sound - played when the item is dropped in the inventory (WAV)
   type: resref
+  id: replacement
 - desc: '[Flags](#Header_Flags)'
   type: dword
 - desc: '[Item type](#Header_ItemType)'
   type: word
+  id: type
 - desc: '[Usability bitmask](#Header_Usability)'
   type: byte
   mult: 4
 - desc: '[Item animation](#Header_Animation)'
   type: char array
   length: 2
+  id: animation
 - desc: Min Level
   type: word
 - desc: Min Strength (unused in BG1)
   type: word
+  id: min_strength
 - desc: |
     Min Strength Bonus (unused in BG1)  
     Note: A strength of 19 or above is considered to have a Strength Bonus of 0, and would therefore not be able to equip any weapon with a Strength Bonus restriction.
   type: byte
+  id: min_strength_bonus
 - desc: '[Kit Usability 1](#Header_KitUsability)'
   type: byte
 - desc: Min Intelligence (unused in BG1)
   type: byte
+  id: min_intelligence
 - desc: '[Kit Usability 2](#Header_KitUsability)'
   type: byte
 - desc: Min Dexterity (unused in BG1)
   type: byte
+  id: min_dexterity
 - desc: '[Kit Usability 3](#Header_KitUsability)'
   type: byte
 - desc: Min Wisdom (unused in BG1)
   type: byte
+  id: min_wisdom
 - desc: '[Kit Usability 4](#Header_KitUsability)'
   type: byte
 - desc: Min Constitution (unused in BG1)
   type: byte
+  id: min_constitution
 - desc: '[Weapon Proficiency](#Header_Proficiency)'
   type: byte
 - desc: Min Charisma
@@ -59,28 +72,38 @@
   type: word
 - desc: Inventory icon (BAM)
   type: resref
+  id: inventory_icon
 - desc: Lore to ID
   type: word
 - desc: Ground icon (BAM)
   type: resref
+  id: ground_icon
 - desc: Weight
   type: dword
 - desc: Unidentified Description (strref)
   type: strref
+  id: unidentified_desc
 - desc: Identified Description (strref)
   type: strref
+  id: identified_desc
 - desc: Description icon (BAM)
   type: resref
+  id: description_icon
 - desc: Enchantment
   type: dword
 - desc: Offset to extended headers
   type: dword
+  id: extended_headers_offset
 - desc: Count of extended headers
   type: word
+  id: extended_headers_count
 - desc: Offset to feature blocks
   type: dword
+  id: feature_blocks_offset
 - desc: Index into equipping feature blocks
   type: word
+  id: feature_blocks_index
 - desc: Count of equipping feature blocks
   type: word
   offset: 0x70
+  id: feature_blocks_count

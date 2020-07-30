@@ -13,6 +13,7 @@
     - 8 = Everyone (excl. caster)
     - 9 = Self (post-projectile)
   type: char
+  id: target
 - desc: Power
   type: char
 - desc: Parameter 1
@@ -37,6 +38,7 @@
 
     NB. all effects except those with Timing mode '9' are removed by death.
   type: char
+  id: timing
 - desc: |
     Resistance
 
@@ -55,6 +57,7 @@
     - 2 = Cannot be dispelled/Ignores resistance
     - 3 = Can be dispelled/Ignores resistance
   type: char
+  id: resistance
 - desc: Duration
   type: dword
 - desc: Probability 1
@@ -66,6 +69,7 @@
     Note: Other engines treat probability as two values, effects are applied in the range probability <= x <= probability.  
     Probability range is 0-99
   type: char
+  id: probability2
 - desc: Resource
   type: resref
 - desc: Dice Thrown
@@ -87,8 +91,10 @@
 
     NB. If more than 1 saving throw type is specified, the target rolls against their best save.
   type: dword
+  id: save_type
 - desc: Saving Throw Bonus
   type: dword
+  id: save_bonus
 - desc: |
     TobEx: Stacking ID. Checked when bit 25 of the Saving Throw Type is set.
 
@@ -97,3 +103,4 @@
     Stacking IDs are unique to the opcode being applied. To maintain uniqueness of stacking IDs between different mods, one recommendation is to use the higher word of Special as the modder's Infinity Engine Community Prefix, then use the lower word as an identifying ID. For example, 0x41360001 ('A6' 0x0001).
   type: dword
   offset: 0x2c
+  id: stacking_id_tobex

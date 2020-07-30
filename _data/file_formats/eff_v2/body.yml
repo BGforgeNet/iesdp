@@ -2,6 +2,7 @@
     External EFFs - the field is the same as the signature field from the header  
     Embedded EFFs - this field is zeroed out
   offset: 0x8
+  id: signature2
   type: char array
   length: 4
 - desc: |
@@ -9,8 +10,10 @@
     Embedded EFFs - this field is zeroed out
   type: char array
   length: 4
+  id: version2
 - desc: Opcode number
   type: dword
+  id: opcode
 - desc: |
     Target type
     - 0=None
@@ -24,6 +27,7 @@
     - 8=Everyone (excl. caster)
     - 9=Self (post-projectile)
   type: dword
+  id: target
 - desc: Power
   type: dword
 - desc: Parameter 1
@@ -47,6 +51,7 @@
 
     NB. all effects except those with Timing mode '9' are removed by death.
   type: word
+  id: timing
 - desc: Timing ?
   type: word
   unknown: 1
@@ -61,6 +66,7 @@
     Note: Other engines treat probability as two values, effects are applied in the range probability <= x <= probability.  
     Probability range is 0-99
   type: word
+  id: probability2
 - desc: Resource
   type: resref
 - desc: Dice Thrown
@@ -82,6 +88,7 @@
 
     NB. If more than 1 saving throw type is specified, the target rolls against their best save
   type: dword
+  id: save_type
 - desc: Save bonus
   type: dword
 - desc: |
@@ -91,8 +98,10 @@
 
     Stacking IDs are unique to the opcode being applied. To maintain uniqueness of stacking IDs between different mods, one recommendation is to use the higher word of Special as the modder's Infinity Engine Community Prefix, then use the lower word as an identifying ID. For example, 0x41360001 ('A6' 0x0001).
   type: dword
+  id: stacking_id_tobex
 - desc: Primary type (school)
   type: dword
+  id: school
 - desc: Unknown
   type: dword
   unknown: 1
@@ -115,6 +124,7 @@
     - 2=Cannot be dispelled/Ignores resistance
     - 3=Can be dispelled/Ignores resistance
   type: dword
+  id: resistance
 - desc: Parameter 3
   type: dword
 - desc: Parameter 4
@@ -125,16 +135,21 @@
   type: dword
 - desc: Resource 2 (VVC in many effects)
   type: resref
+  id: resource2
 - desc: Resource 3
   type: resref
 - desc: Caster X coordinate
   type: dword
+  id: caster_x_coord
 - desc: Caster Y coordinate
   type: dword
+  id: caster_y_coord
 - desc: Target X coordinate
   type: dword
+  id: target_x_coord
 - desc: Target Y coordinate
   type: dword
+  id: target_y_coord
 - desc: Parent resource type (0=None, 1=Spell, 2=Item)
   type: dword
   unknown: 1
@@ -160,6 +175,7 @@
   unknown: 1
 - desc: Secondary Type
   type: dword
+  id: sectype
 - desc: Unknown
   type: dword
   mult: 15

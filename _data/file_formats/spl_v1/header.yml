@@ -1,13 +1,17 @@
 - desc: Signature ('SPL &nbsp;')
   type: char array
   length: 4
+  id: signature
 - desc: Version ('V1  ')
   type: char array
   length: 4
+  id: versions
 - desc: Spell Name - Unidentified (strref)
   type: dword
+  id: unidentified_name
 - desc: Spell Name - Identified (strref) (usually -1)
   type: dword
+  id: identified_name
 - desc: Completion Sound
   type: resref
 - desc: "[Flags](#Header_Flags)"
@@ -21,6 +25,7 @@
     - 4 = Innate
     - 5 = Bardsong
   type: word
+  id: type
 - desc: "[Exclusion Flags](#Exclusion_Flags)"
   type: dword
 - desc: "[Casting Graphics](#Header_Casting_Graphics)"
@@ -30,11 +35,13 @@
   unused: 1
 - desc: "Primary Type (Spell school) (IWD: school.2da, BG2:mschool.2da)"
   type: byte
+  id: school
 - desc: Min Strength
   type: byte
   unused: 1
 - desc: Secondary Type (BG2:msectype.2da)
   type: char
+  id: sectype
 - desc: Min Strength Bonus
   type: byte
   unused: 1
@@ -72,6 +79,7 @@
   unused: 1
 - desc: Spellbook icon (BAM). The engine replaces the last character of this filename with a C.
   type: resref
+  id: spellbook_icon
 - desc: Lore to ID
   type: word
   unused: 1
@@ -83,8 +91,10 @@
   unused: 1
 - desc: Spell Description - Unidentified (strref)
   type: dword
+  id: unidentified_description
 - desc: Spell Description - Identified (strref) (usually -1)
   type: dword
+  id: identified_desc
 - desc: Description icon
   type: resref
   unused: 1
@@ -93,12 +103,17 @@
   unused: 1
 - desc: Extended Header offset
   type: dword
+  id: extended_headers_offset
 - desc: Extended Header count
   type: word
+  id: extended_headers_count
 - desc: Feature Block Table offset
   type: dword
+  id: feature_blocks_offset
 - desc: Casting Feature Block offset (these feature blocks may not use target type 2)
   type: word
+  id: casting_feature_blocks_offset
 - desc: Casting Feature Block count
   offset: 0x70
   type: word
+  id: casting_feature_blocks_count

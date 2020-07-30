@@ -3,12 +3,15 @@
       - 1 - Standard
       - 2 - Projectile
   type: char
+  id: form
 - desc: "- bit 2: 'Friendly' ability"
   type: char
+  id: friendly
 - desc: Location
   type: word
 - desc: Memorised icon (BAM). The engine replaces the last character of this filename with a B.
   type: resref
+  id: memorised_icon
 - desc: |
     Target:
     - 0 = Invalid (target cannot be selected)
@@ -20,6 +23,7 @@
     - 6 = Crash
     - 7 = None (Self, ignores game pause)
   type: char
+  id: target
 - desc: Target Number
   type: char
 - desc: Range
@@ -44,8 +48,10 @@
   unused: 1
 - desc: Count of feature blocks
   type: word
+  id: feature_blocks_count
 - desc: Offset to feature blocks
   type: word
+  id: feature_blocks_offset
 - desc: Charges
   type: word
   unused: 1
@@ -55,3 +61,4 @@
 - desc: "Projectile (BG2: [projectl.ids](../../ids/bg2/projectl.htm). **Note:** in BG2, this value is off-by-one from projectl.ids value. I.e. binary value of 2 corresponds to 0x1 - ARROW)"
   type: word
   offset: 0x26
+  id: projectile
