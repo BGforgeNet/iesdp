@@ -74,6 +74,7 @@
   unused: 1
 - desc: Spell Level
   type: dword
+  id: level
 - desc: Stack amount
   type: word
   unused: 1
