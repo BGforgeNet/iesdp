@@ -104,4 +104,4 @@
     Stacking IDs are unique to the opcode being applied. To maintain uniqueness of stacking IDs between different mods, one recommendation is to use the higher word of Special as the modder's Infinity Engine Community Prefix, then use the lower word as an identifying ID. For example, 0x41360001 ('A6' 0x0001).
   type: dword
   offset: 0x2c
-  id: stacking_id_tobex
+  id: stacking_id_Ex

@@ -108,7 +108,7 @@
   id: depletion
 - desc: '[Flags](#ExtHeader_Flags)'
   type: dword
-  id: header_flags
+  id: flags
 - desc: Projectile animation (projectl.ids/missile.ids)
   type: word
   id: projectile_animation
