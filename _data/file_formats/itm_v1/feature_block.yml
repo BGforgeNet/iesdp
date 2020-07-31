@@ -1,5 +1,6 @@
 - desc: Opcode Number
   type: word
+  id: opcode
 - desc: |
     Target type
     - 0 = None
