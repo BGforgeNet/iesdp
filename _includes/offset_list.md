@@ -5,16 +5,18 @@
 {% endif %}
 
 {% for o in offsets %}
-<tr>
 
 {% if o.offset and o.offset != current_offset %}
   {{ "Offset mismatch. Expected " | append: o.offset | append: ", got " | append: current_offset | append: ". Desc: " | append: o.desc | raise_error }}
 {% endif %}
 
+{% assign skip_row = 0 %}
 {% if o.unused %}
   {% assign odesc = '<span class="unknown">' | append: o.desc | append: ' (unused)</span>' %}
+  {% assign skip_row = 1 %}
 {% elsif o.unknown %}
   {% assign odesc = '<span class="unknown">' | append: o.desc | append: '</span>' %}
+  {% assign skip_row = 1 %}
 {% else %}
   {% assign odesc = o.desc %}
 {% endif %}
@@ -38,10 +40,13 @@
   {% assign olength = olength | times: o.mult %}
 {% endif %}
 
+{% if skip_row == 0 %}
+<tr>
   <td>{{ current_offset | offset_to_hex }}</td>
   <td>{{ display_length }} ({{ o.type }})</td>
   <td>{{ odesc | liquify |  markdownify }}</td>
 </tr>
+{% endif %}
 
 {% assign current_offset = current_offset | plus: olength %}
 {% endfor %}
