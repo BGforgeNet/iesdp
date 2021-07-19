@@ -37,6 +37,7 @@ jobs:
         with:
           ref: bgforge
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Pull (Fast-Forward) upstream changes (bgforge)
         id: sync-bgforge
