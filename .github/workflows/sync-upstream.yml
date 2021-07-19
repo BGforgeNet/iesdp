@@ -9,7 +9,7 @@ on:
   push:
 
 jobs:
-  sync_upstream:
+  sync_master: # master follows upstream strictly
     runs-on: ubuntu-latest
     name: Sync master with upstream
     steps:
@@ -28,15 +28,15 @@ jobs:
           target_branch: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-  # sync_bgforge: # bgforge is a branch with 
-  #   runs-on: ubuntu-latest
-  #   name: Sync bgforge with upstream master
-  #   steps:
-  #     - name: Checkout bgforge
-  #       uses: actions/checkout@v2
-  #       with:
-  #         ref: bgforge
-  #         token: ${{ secrets.GITHUB_TOKEN }}
+  sync_bgforge: # bgforge is a branch with cosmetic changes
+    runs-on: ubuntu-latest
+    name: Sync bgforge with upstream master
+    steps:
+      - name: Checkout bgforge
+        uses: actions/checkout@v2
+        with:
+          ref: bgforge
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull (Fast-Forward) upstream changes (bgforge)
         id: sync-bgforge
