@@ -2,9 +2,7 @@ name: Sync with upstream
 
 on:
   schedule:
-    # - cron: '0 7 * * 1,4'
-    - cron: "*/5 * * * *"
-    # scheduled at 07:00 every Monday and Thursday
+    - cron: '33 7 * * *'
   workflow_dispatch:  # click the button on Github repo!
   push:
 
@@ -46,4 +44,24 @@ jobs:
           upstream_repository: Gibberlings3/iesdp
           upstream_branch: master
           target_branch: bgforge
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  sync_ielib: # ielib is a branch with data changes, necessary for import into BGforge MLS and IElib
+    runs-on: ubuntu-latest
+    name: Sync ielib with upstream master
+    steps:
+      - name: Checkout ielib
+        uses: actions/checkout@v2
+        with:
+          ref: ielib
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Pull (Fast-Forward) upstream changes (ielib)
+        id: sync-ielib
+        uses: aormsby/Fork-Sync-With-Upstream-action@v2.3
+        with:
+          upstream_repository: Gibberlings3/iesdp
+          upstream_branch: master
+          target_branch: ielib
           github_token: ${{ secrets.GITHUB_TOKEN }}
