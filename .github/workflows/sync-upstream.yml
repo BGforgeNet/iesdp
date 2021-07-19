@@ -24,3 +24,4 @@ jobs:
           upstream_repository: Gibberlings3/iesdp
           upstream_branch: master
           target_branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
