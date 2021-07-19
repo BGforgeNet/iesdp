@@ -125,16 +125,11 @@
   unused: 1
 - desc: Spell Description - Unidentified (strref)
   type: dword
-<<<<<<< HEAD
   id: unidentified_description
-- desc: Spell Description - Identified (strref) (usually -1)
-  type: dword
-  id: identified_desc
-=======
 - desc: Spell Description - Identified (strref) (usually `-1`)
   type: dword
+  id: identified_desc
   unused: 1
->>>>>>> master
 - desc: Description icon
   type: resref
   unused: 1
