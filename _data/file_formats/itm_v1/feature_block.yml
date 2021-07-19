@@ -1,18 +1,23 @@
 - desc: Opcode Number
   type: word
   id: opcode
-- desc: |
-    Target type
-    - 0 = None
-    - 1 = Self (pre-projectile)
-    - 2 = Pre-target
-    - 3 = Party
-    - 4 = Everyone (inc. party)
-    - 5 = Everyone (excl. party)
-    - 6 = Everyone matching specific value of caster (or Party if cast by party member)
-    - 7 = Everyone matching specific value of target (In ITM: ranged ability type only, otherwise no target)
-    - 8 = Everyone (excl. caster)
-    - 9 = Self (post-projectile)
+- desc: |-
+    <b><a name="V1_Feature_Block_0x2">Target type</a></b>
+
+    - 0 ⟶ None
+    - 1 ⟶ <b><a name="V1_Feature_Block_0x2_1">Self</a></b>
+    - 2 ⟶ <b><a name="V1_Feature_Block_0x2_2">Projectile target</a></b>
+    - 3 ⟶ <b><a name="V1_Feature_Block_0x2_3">Party</a></b>
+    - 4 ⟶ <b><a name="V1_Feature_Block_0x2_4">Everyone</a></b>
+    - 5 ⟶ <b><a name="V1_Feature_Block_0x2_5">Everyone except party</a></b>
+    - 6 ⟶ <b><a name="V1_Feature_Block_0x2_6">Caster group</a></b>
+    - 7 ⟶ <b><a name="V1_Feature_Block_0x2_7">Target group</a></b>
+    - 8 ⟶ <b><a name="V1_Feature_Block_0x2_8">Everyone except self</a></b>
+    - 9 ⟶ <b><a name="V1_Feature_Block_0x2_9">Original caster</a></b>
+
+    {% capture note %}
+    See <a href="../ie_formats/eff_v1.htm#effv1_Header_0x2">here</a> for further details.
+    {% endcapture %} {% include info.html %}
   type: char
   id: target
 - desc: Power
@@ -21,76 +26,91 @@
   type: dword
 - desc: Parameter 2
   type: dword
-- desc: |
-    Timing Mode
+- desc: |-
+    <b><a name="V1_Feature_Block_0xC">Timing mode</a></b>
 
-    - 0 = Duration
-    - 1 = Permanent
-    - 2 = While equipped
-    - 3 = Delayed Duration
-    - 4 = Delayed
-    - 5 = Delayed (transforms to 8)
-    - 6 = Duration?
-    - 7 = Permanent?
-    - 8 = Permanent (unsaved)
-    - 9 = Permanent (after Death)
-    - 10 = Trigger
-    - 4096 = Absolute duration
+    - 0 ⟶ <b><a name="V1_Feature_Block_0xC_0">Instant/Limited</a></b>
+    - 1 ⟶ <b><a name="V1_Feature_Block_0xC_1">Instant/Permanent</a></b>
+    - 2 ⟶ <b><a name="V1_Feature_Block_0xC_2">Instant/While equipped</a></b>
+    - 3 ⟶ <b><a name="V1_Feature_Block_0xC_3">Delay/Limited</a></b>
+    - 4 ⟶ <b><a name="V1_Feature_Block_0xC_4">Delay/Permanent</a></b>
+    - 5 ⟶ <b><a name="V1_Feature_Block_0xC_5">Delay/While equipped</a></b>
+    - 6 ⟶ <b><a name="V1_Feature_Block_0xC_6">Limited after duration</a></b>
+    - 7 ⟶ <b><a name="V1_Feature_Block_0xC_7">Permanent after duration</a></b>
+    - 8 ⟶ <b><a name="V1_Feature_Block_0xC_8">Equipped after duration</a></b>
+    - 9 ⟶ <b><a name="V1_Feature_Block_0xC_9">Instant/Permanent</a></b> (after Death)
+    - 10 ⟶ <b><a name="V1_Feature_Block_0xC_10">Instant/Limited</a></b>
+    - 4096 ⟶ <b><a name="V1_Feature_Block_0xC_4096">Absolute duration</a></b>
 
-    NB. all effects except those with Timing mode '9' are removed by death.
+    {% capture note %}
+    See <a href="../ie_formats/eff_v1.htm#effv1_Header_0xC">here</a> for further details.
+    {% endcapture %} {% include info.html %}
   type: char
   id: timing
-- desc: |
-    Resistance
+- desc: |-
+    <b><a name="V1_Feature_Block_0xD">Dispel / Resistance</a></b>
 
     The default behaviour is that effects cannot be dispelled and ignore magic resistance.
 
-    - bit 0: Can be dispelled, affected by magic resistance
-    - bit 1: Ignores magic resistance (when used in combination with bit 0)
-    - bit 2: Bypasses deflection/reflection/trap opcodes (only in EE games patched to v2.0+ / external [EFF](../ie_formats/eff_v2.htm) files)
-    - bit 31: Effect was applied by an ITM (only present in EE games patched to v2.0+ / external [EFF](../ie_formats/eff_v2.htm) files). It is set by the engine if the effect's source ITM is identified. This bit is only used by [opcode #324](../../opcodes/bgee.htm#op324) which checks it to determine whether it should set STRREF_FEEDBACK_IMMUNE_RESOURCE (see [ENGINEST.2DA](../../files/2da/2da_bgee/enginest.htm)) to the ITM's general or identified name
-
-    The only difference between 0 and 2 is that 0 will automatically convert to 2 when targeting yourself.
+    - bit 0 ⟶ Can be dispelled, affected by magic resistance
+    - bit 1 ⟶ Ignores magic resistance (when used in combination with bit 0)
 
     This can also be presented in the more traditional way:
-    - 0 = Natural/Nonmagical
-    - 1 = Can be dispelled/Affected by resistance
-    - 2 = Cannot be dispelled/Ignores resistance
-    - 3 = Can be dispelled/Ignores resistance
+    - 0 ⟶ Natural/Nonmagical
+    - 1 ⟶ Can be dispelled/Affected by resistance
+    - 2 ⟶ Cannot be dispelled/Ignores resistance
+    - 3 ⟶ Can be dispelled/Ignores resistance
+
+    The only difference between `0` and `2` is that `0` will automatically convert to `2` when targeting yourself.
   type: char
   id: resistance
-- desc: Duration
+- desc: <b><a name="V1_Feature_Block_0xE">Duration</a></b>
   type: dword
-- desc: Probability 1
+- desc: <b><a name="V1_Feature_Block_0x12">Probability 1</a></b>
   type: char
-- desc: |
-    Probability 2
+- desc: |-
+    <b><a name="V1_Feature_Block_0x13">Probability 2</a></b>
 
-    Note: The BG1 engine treats probability as a single word, effects are applied in the range 0-probability.  
-    Note: Other engines treat probability as two values, effects are applied in the range probability <= x <= probability.  
-    Probability range is 0-99
+    {% capture note %}
+    See <a href="../ie_formats/eff_v1.htm#effv1_Header_0x13">here</a> for further details.
+    {% endcapture %} {% include info.html %}
   type: char
   id: probability2
 - desc: Resource
   type: resref
-- desc: Dice Thrown
-  type: dword
-- desc: Dice Sides
-  type: dword
-- desc: |
-    Saving Throw Type
-    - bit 0: Spells
-    - bit 1: Breathe
-    - bit 2: Death
-    - bit 3: Wands
-    - bit 4: Polymorph
-    - bit 10: Ignore primary target – Line AoE projectile doesn't affect end target (EE only)
-    - bit 11: Ignore secondary target – Line AoE projectile doesn't affect bystanders (EE only)
-    - bit 24: Bypass mirror image (EE/TobEx only)
-    - bit 25: EE - ignore difficulty; TobEx - limit effect stacking
-    - bit 26: TobEx internal (don't use) - suspend effect application
+- desc: |-
+    <b><a name="V1_Feature_Block_0x1C">Dice Thrown / Maximum Level</a></b>
 
-    NB. If more than 1 saving throw type is specified, the target rolls against their best save.
+    {% capture note %}
+    See <a href="../ie_formats/eff_v1.htm#effv1_Header_0x1C">here</a> for further details.
+    {% endcapture %} {% include info.html %}
+  type: dword
+- desc: |-
+    <b><a name="V1_Feature_Block_0x20">Dice Sides / Minimum Level</a></b>
+
+    {% capture note %}
+    See <a href="../ie_formats/eff_v1.htm#effv1_Header_0x20">here</a> for further details.
+    {% endcapture %} {% include info.html %}
+  type: dword
+- desc: |-
+    <b><a name="V1_Feature_Block_0x24">Saving throw type</a></b>
+
+    - bit 0 ⟶ <b><a name="V1_Feature_Block_0x24_BIT0">Spells</a></b>
+    - bit 1 ⟶ <b><a name="V1_Feature_Block_0x24_BIT1">Breath</a></b>
+    - bit 2 ⟶ <b><a name="V1_Feature_Block_0x24_BIT2">Paralyze / Poison / Death</a></b>
+    - bit 3 ⟶ <b><a name="V1_Feature_Block_0x24_BIT3">Wands</a></b>
+    - bit 4 ⟶ <b><a name="V1_Feature_Block_0x24_BIT4">Petrify / Polymorph</a></b>
+    - bit 10 ⟶ <b><a name="V1_Feature_Block_0x24_BIT10">Ignore primary target</a></b> (EE only)
+    - bit 11 ⟶ <b><a name="V1_Feature_Block_0x24_BIT11">Ignore secondary target</a></b> (EE only)
+    - bit 24 ⟶ <b><a name="V1_Feature_Block_0x24_BIT24">Bypass mirror image</a></b> (EE/TobEx only)
+    - bit 25 ⟶
+      - <b><a name="V1_Feature_Block_0x24_BIT25_EE">Ignore difficulty</a></b> (EE only)
+      - <b><a name="V1_Feature_Block_0x24_BIT25_ToBEx">Limit effect stacking</a></b> (ToBEx only)
+    - bit 26 ⟶ TobEx internal (don't use)
+
+    {% capture note %}
+    See <a href="../ie_formats/eff_v1.htm#effv1_Header_0x24">here</a> for further details.
+    {% endcapture %} {% include info.html %}
   type: dword
   id: save_type
 - desc: Saving Throw Bonus

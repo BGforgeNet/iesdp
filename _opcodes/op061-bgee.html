@@ -1,0 +1,33 @@
+---
+n: 61
+name: "Creature RGB color fade"
+param1: "RGB Colour"
+param2: "Location and Fade Speed"
+bg1: 0
+bg2: 0
+bgee: 1
+iwd1: 0
+iwd2: 0
+pst: 0
+---
+Works similar to <a href="#op8">opcode #8</a>/<a href="#op9">opcode #9</a>, except:
+<ul>
+	<li>It always affects the entire creature (not a specific location).</li>
+	<li>It is always "instantaneous". No effect is attached to the creature, it's all handled by internal mechanics, but it still uses the specified duration. Saving &AMP; Reloading will remove the effect.</li>
+	<li>The creature will instantly be covered by a color overlay which then fades out. The color overlay will not fade back in. It's otherwise similar to <a href="#op50">opcode #50</a>, where the color overlay fades onto the creature and then fades back out.</li>
+</ul>
+
+<br/>The <code>RGB Colour</code> field is handled as follows:
+<ul>
+	<li>Second byte = Red (<code>0–255</code>)</li>
+	<li>Third byte = Green (<code>0–255</code>)</li>
+	<li>Fourth byte = Blue (<code>0–255</code>)</li>
+</ul>
+
+<br/>The <code>Location and Fade Speed</code> field is handled as follows:
+<ul>
+	<li>First byte = Location (unused, it always affects everything. Leave it at <code>0</code>)</li>
+	<li>Third byte = Fade Speed (<code>0–255</code>)</li>
+</ul>
+
+<br/>A speed of <code>0</code> does not pulsate. A speed of <code>1</code> is fastest, and a speed of <code>255</code> is slowest.

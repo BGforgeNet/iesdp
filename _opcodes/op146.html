@@ -10,8 +10,44 @@ iwd1: 1
 iwd2: 0
 pst: 0
 ---
-Casts the spell specified by the resource key at the level specified by the 'Casting Level' field, in the style specified by the 'Type' field. A 'Casting Level' of 0 casts at the level of the casting creature.
-<br/>Known values for 'Type' are:
-<br/>0   Normal Casting
-<br/>1   Cast Instantly
-<br/>If the target is a container, the Type parameter is ignored and treated as 0
+Casts the spell specified by the <code>resource</code> key at the level specified by the <code>Casting Level</code> field, in the style specified by the <code>Type</code> field. A <code>Casting Level</code> of <code>0</code> casts at the level of the casting creature.
+<br/>Known values for <code>Type</code> are:
+<ul>
+	<li>0 &longrightarrow; Normal Casting at specified level (<code>0</code> for caster level), non-interruptible</li>
+	<li>1 &longrightarrow; Cast Instantly at caster level</li>
+	<li>2 &longrightarrow; Cast Instantly at specified level (EE-only)</li>
+</ul>
+
+{% capture note %}
+<ul>
+	<li>When this opcode gets reflected using <code>Type=1</code>, the spell specified by the <code>resource</code> key is cast at the target's Casting Level, not the caster's.</li>
+	<li>When this opcode gets reflected (<a href="#op197">opcode #197</a>, <a href="#op198">opcode #198</a>, <a href="#op199">opcode #199</a>, <a href="#op202">opcode #202</a>, <a href="#op203">opcode #203</a> and <a href="#op207">opcode #207</a>) using <code>Type=2</code>, the spell specified by the <code>resource</code> key is cast at the specified <code>Casting Level</code>, and it will also affect the original target (as if it wasn't reflected).</li>
+</ul>
+{% endcapture %}
+
+{% include important.html %}
+
+{% capture note %}
+<ul>
+  <li>
+    When <code>Type=2</code>, effects in the <code>resource</code> will also bypass Magic Resistance, of every target, as if the caster targeted themselves, regardless of who they target with the spell or this effect.
+    <ul>
+      <li>Setting the <code><a href="../file_formats/ie_formats/pro_v1.htm#Behavior_BIT4">Ignore Center</a></code> bit in the subspell's projectile will force its effects to check Magic Resistance on every target, even if the caster did target themselves. Though as its primary function is to cause the projectile to ignore the caster (not "center"), it still won't affect them if it's <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code>.</li>
+    </ul>
+  </li>
+</ul>
+{% endcapture %}
+
+{% include note.html %}
+
+{% capture note %}
+If the target is a container, the <code>Type</code> parameter is ignored and treated as <code>0</code>.
+{% endcapture %}
+
+{% include note.html %}
+
+{% capture note %}
+See <a href="#op326">opcode #326</a> for some peculiarities of projectile behaviour for <code>Type=2</code>.
+{% endcapture %}
+
+{% include info.html %}

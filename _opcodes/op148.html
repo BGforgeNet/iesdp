@@ -10,13 +10,27 @@ iwd1: 1
 iwd2: 1
 pst: 1
 ---
-Casts the spell specified by the resource key, at the level specified by the 'Casting Level' field, in the style specified by the 'Type' field. A 'Casting Level' of 0 casts at the level of the casting creature.
-<br/>Known values for 'Type' are:
-<br/>0   Normal Casting
-<br/>1   Cast Instantly
+Casts the spell specified by the <code>resource</code> key, at the level specified by the <code>Casting Level</code> field, in the style specified by the <code>Type</code> field. A <code>Casting Level</code> of <code>0</code> casts at the level of the casting creature.
+<br/>Known values for <code>Type</code> are:
+<ul>
+	<li>0 &LongRightArrow; Normal Casting</li>
+	<li>1 &longrightarrow; Cast Instantly (ignore <code>Casting Level</code>)</li>
+</ul>
 
 {% capture note %}
 This opcode does not work if the target is a container in non-ee versions.
 {% endcapture %}
 
 {% include note.html %}
+
+{% capture note %}
+This opcode should generally target <code>Self</code>. In particular:
+<ul>
+	<li>The projectile of the subspell will originate from the target(s) of <a href="#op148">opcode #148</a>.</li>
+	<li>If the SPL/ITM with <a href="#op148">opcode #148</a> targets a location, and doesn't have an <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code> projectile, there will be no target to cast on.</li>
+	<li>If the SPL/ITM with <a href="#op148">opcode #148</a> has an <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code> projectile, the spell in <a href="#op148">opcode #148</a> would be cast once for every valid target.</li>
+	<li>If this opcode uses the <code>Cast Instantly</code> option, then the target, not the caster, would cast the spell in <a href="#op148">opcode #148</a>.</li>
+</ul>
+{% endcapture %}
+
+{% include info.html %}

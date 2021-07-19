@@ -11,10 +11,10 @@ iwd2: 0
 pst: 0
 ---
 The targeted creature(s) will backstab with every hit.
-<br/><br/>The effect modifies <a href="../files/ids/bgee/stats.htm#192">STAT #192</a> to 'param2'.
+<br/><br/>The effect modifies <a href="../files/ids/bgee/stats.htm#192">ASSASSINATE</a> to <code>Stat Value</code>.
 
 {% capture note %}
-The 'Stat Value' parameter can take any value. If you set it to 0, you will disable the effect (for its duration).
+The <code>Stat Value</code> parameter can take any value. If you set it to <code>0</code>, you will disable the effect (for its duration).
 {% endcapture %}
 
 {% include note.html %}
@@ -26,8 +26,10 @@ Creature must still be using a weapon valid for backstabbing.
 {% include important.html %}
 
 {% capture note %}
-Backstabs no longer require the creature to be invisible.<br/>
-Sneak Attacks no longer require the creature to be flanking their target.
+<ul>
+	<li>Backstabs no longer require the creature to be invisible.</li>
+	<li>Sneak Attacks no longer require the creature to be flanking their target.</li>
+</ul>
 {% endcapture %}
 
 {% include info.html %}

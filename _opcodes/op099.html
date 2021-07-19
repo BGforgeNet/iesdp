@@ -10,14 +10,28 @@ iwd1: 1
 iwd2: 1
 pst: 1
 ---
-Alters spell durations of the targeted creature(s), to the percentage specified by the 'Duration Modifier' field, affecting the spell type specified by the 'Type' field. Timing mode 0 is the only timing mode reliably affected. Timings handled through PRO files are ignored.
-<br/>eg.
-<br/>'Duration Modifier' = 0   -> Spells have no duration
-<br/>'Duration Modifier' = 100 -> Spells have normal duration
-<br/>'Duration Modifier' = 200 -> Spells have double duration
-<br/>Known values for 'Type' are:
-<br/>0   Mage
-<br/>1   Priest
+Alters spell durations of the targeted creature(s), to the percentage specified by the <code>Duration Modifier</code> field, affecting the spell type specified by the <code>Type</code> field. <code>Timing mode 0</code> is the only timing mode reliably affected. Timings handled through <a href="../file_formats/ie_formats/pro_v1.htm">PRO</a> files are ignored.
+<br/>For instance:
+<ul>
+	<li><code>Duration Modifier = 0</code> &longrightarrow; Spells have no duration</li>
+	<li><code>Duration Modifier = 100</code> &longrightarrow; Spells have normal duration</li>
+	<li><code>Duration Modifier = 200</code> &longrightarrow; Spells have double duration</li>
+</ul>
+
+<br/>Known values for <code>Type</code> are:
+<ul>
+	<li>0 &longrightarrow; Mage</li>
+	<li>1 &longrightarrow; Priest</li>
+	<li>2 &longrightarrow; Bard Song (EE only)</li>
+</ul>
+
+<br/>The effect modifies <a href="../files/ids/bgee/stats.htm#53">SPELLDURATIONMODMAGE</a> and <a href="../files/ids/bgee/stats.htm#54">SPELLDURATIONMODPRIEST</a>.
+
+{% capture note %}
+Durations handled by <a href="#op333">Static Charge</a> are unaffected (EE only).
+{% endcapture %}
+
+{% include note.html %}
 
 {% capture note %}
 Not seen to work in BG1.

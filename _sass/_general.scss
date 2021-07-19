@@ -28,16 +28,20 @@ html {
 
 #content
 {
-  padding-bottom: 9em;
+  padding-bottom: 5em;
 }
 
 #footer
 {
-  /*display: none;*/
-  position: relative;
-  margin-top: -5.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+// slightly space the two "columns" out
+#footer > div:nth-child(1) {
+  margin-right: 5em;
+}
 
 #logo {
   position : absolute;
@@ -73,9 +77,11 @@ table.offset_table > tbody > tr > td > p:last-of-type {margin-bottom: 0;}
 table.offset_table > tbody > tr > td > p {margin-top: 5px; margin-bottom: 5px}
 
 .code         {background-color:#eee; font-family: Monospace;}
+code         {font-family: Monospace; color: grey}
 .highlighter-rouge div {background-color:#eee;}
 .highlight pre {padding-top: 0.5em; padding-bottom: 0;}
 .highlight pre code {color: black; display: inline-block; padding-left: 1em;}
+.triggerHeader {font-size: 14px; font-weight: bold;}
 .actions_title {padding-bottom: 0.6em;}
 .actionHeader {font-size: 14px; font-weight: bold;}
 .action_name {margin-right: 0.3em;}
@@ -196,5 +202,19 @@ th          {text-align:left; background-color:#cbcbcb; white-space:nowrap;}
 .descriptiondata {
   margin-left: 20px;
   margin-bottom: 1.5em;
-  font-family: Monospace;
+  line-height: 1.3em;
+}
+
+.icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.gh-icon-container {
+  min-width: 35px;
+}
+
+#footer > div:nth-child(1) {
+  display: flex;
+  align-items: center;
 }

@@ -10,22 +10,82 @@ iwd1: 1
 iwd2: 0
 pst: 1
 ---
-Applies the modifier value specified by the 'AC Modifier' field to the category specified
- by the 'Type' field.<br/><br/>
+Applies the modifier value specified by the <code>AC Modifier</code> field to the category specified
+ by the <code>Type</code> field.<br/><br/>
 
-Known values for 'Type' are:
-<br/>0   All<br/>1   Crushing<br/>2   Missile<br/>4   Piercing<br/>8   Slashing<br/>
-16  Base AC setting (sets the targets AC to the value specified by the 'AC Modifier' field.
- If the targets AC is already 'AC Modifier' or below, this effect will do nothing).
+Known values for <code>Type</code> are:
+<ul>
+	<li>0 &longrightarrow; All</li>
+	<li>1 &longrightarrow; Crushing</li>
+	<li>2 &longrightarrow; Missile</li>
+	<li>4 &longrightarrow; Piercing</li>
+	<li>8 &longrightarrow; Slashing</li>
+	<li>
+		16 &longrightarrow; Base AC setting
+		<ul>
+			<li>Sets the targets AC to the value specified by the <code>AC Modifier</code> field. If the targets AC is already <code>AC Modifier</code> or below, this effect will do nothing.</li>
+		</ul>
+	</li>
+</ul>
+<br/>
 
 <p>
-Each modifier type to AC from this opcode is capped to the range [-20, 20]. Each AC type total is capped to the range [-32768,32767].
+Each modifier type to AC from this opcode is capped to the range <code>[-20,20]</code>. Each AC type total is capped to the range <code>[-32768,32767]</code>.
 </p>
 
 {% capture note %}
 IWD1 and PST use a slightly different version. The "Base AC" sets to <strong>field - 1</strong> 
 instead.<br>
 IWD2 uses different parameters altogether.
+{% endcapture %}
+
+{% include note.html %}
+
+{% capture note %}
+<ul>
+	<li>
+		<code>Type=0</code>:
+		<ul>
+			<li>Modifies <a href="../files/ids/bgee/stats.htm#2">ARMORCLASS</a>.</li>
+			<li>With <code>Timing Mode</code>s <code>1/4/7</code>, alters target's base <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x48">Armor Class</a></code>.</li>
+		</ul>
+	</li>
+	<li>
+		<code>Type=1</code>:
+		<ul>
+			<li>Modifies <a href="../files/ids/bgee/stats.htm#3">ACCRUSHINGMOD</a>.</li>
+			<li>With <code>Timing Mode</code>s <code>1/4/7</code>, alters target's base <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x4A">Crushing AC</a></code>.</li>
+		</ul>
+	</li>
+	<li>
+		<code>Type=2</code>:
+		<ul>
+			<li>Modifies <a href="../files/ids/bgee/stats.htm#4">ACMISSILEMOD</a>.</li>
+			<li>With <code>Timing Mode</code>s <code>1/4/7</code>, alters target's base <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x4C">Missile AC</a></code>.</li>
+		</ul>
+	</li>
+	<li>
+		<code>Type=4</code>:
+		<ul>
+			<li>Modifies <a href="../files/ids/bgee/stats.htm#5">ACPIERCINGMOD</a>.</li>
+			<li>With <code>Timing Mode</code>s <code>1/4/7</code>, alters target's base <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x4E">Piercing AC</a></code>.</li>
+		</ul>
+	</li>
+	<li>
+		<code>Type=8</code>:
+		<ul>
+			<li>Modifies <a href="../files/ids/bgee/stats.htm#6">ACSLASHINGMOD</a>.</li>
+			<li>With <code>Timing Mode</code>s <code>1/4/7</code>, alters target's base <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x50">Slashing AC</a></code>.</li>
+		</ul>
+	</li>
+	<li>
+		<code>Type=16</code>:
+		<ul>
+			<li>Modifies <a href="../files/ids/bgee/stats.htm#2">ARMORCLASS</a>.</li>
+			<li>With <code>Timing Mode</code>s <code>1/4/7</code>, alters target's base <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x48">Armor Class</a></code>, still subject to "only if better/lower", checked against base value, not current effective value.</li>
+		</ul>
+	</li>
+</ul>
 {% endcapture %}
 
 {% include note.html %}
