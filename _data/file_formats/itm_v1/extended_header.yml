@@ -98,8 +98,10 @@
     - This feature cannot be utilized by scripts.
       - Scripts will treat this field as if it's always `1`.
   type: char
+  id: target_count
 - desc: <b><a name="itmv1_Extended_Header_0xE">Range</a></b>
   type: word
+  id: range
 - desc: |-
     <b><a name="itmv1_Extended_Header_0x10">Launcher required</a></b>
 
@@ -145,6 +147,7 @@
 
     - See <code><a href="../../files/2da/2da_bgee/mschool.htm">MSCHOOL.2DA</a></code>.
   type: byte
+  id: primary_type
 - desc: <b><a name="itmv1_Extended_Header_0x18">Dice thrown</a></b>
   type: byte
 - desc: |-
@@ -152,6 +155,7 @@
 
     - See <code><a href="../../files/2da/2da_bgee/msectype.htm">MSECTYPE.2DA</a></code>.
   type: byte
+  id: secondary_type
 - desc: <b><a name="itmv1_Extended_Header_0x1A">Damage bonus</a></b>
   type: word
 - desc: |-

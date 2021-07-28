@@ -42,6 +42,7 @@
     - This field is basically the ITM counterpart of <code><a href="../ie_formats/spl_v1.htm#splv1_Extended_Header_0x10">Level Required</a></code>.
     - The only difference is that ITM <a href="#itmv1_Extended_Header">abilities</a> cannot have separate level requirements.
     {% endcapture %} {% include info.html %}
+  id: min_level
   type: word
 - desc: Min Strength (unused in BG1)
   type: word

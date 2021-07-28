@@ -30,6 +30,7 @@
     Subspells don't require an <code><a href="#splv1_Extended_Header_0x2">Ability Location</a></code>.
     {% endcapture %} {% include note.html %}
   type: word
+  id: location
 - desc: Memorised icon (BAM). The engine replaces the last character of this filename with a B.
   type: resref
   id: memorised_icon
@@ -71,6 +72,7 @@
     - This feature cannot be utilized by scripts.
       - Scripts will treat this field as if it's always `1`.
   type: char
+  id: target_count
 - desc: |-
     <b><a name="splv1_Extended_Header_0xE">Range</a></b>
 
@@ -78,6 +80,7 @@
     As far as subspells are concerned, their <code><a href="#splv1_Extended_Header_0xE">Range</a></code> is only checked if cast through <a href="../../opcodes/bgee.htm#op148">opcode #148</a>, <a href="../../opcodes/bgee.htm#op232">opcode #232</a>, <a href="../../opcodes/bgee.htm#op258">opcode #258</a>, or <a href="../../opcodes/bgee.htm#op260">opcode #260</a>.
     {% endcapture %} {% include info.html %}
   type: word
+  id: range
 - desc: |-
     <b><a name="splv1_Extended_Header_0x10">Level Required</a></b>
 
@@ -85,6 +88,7 @@
     Standard spellcasting only utilizes the first byte (`0 – 255`), but opcodes that specify Casting Level (<code><a href="../../opcodes/bgee.htm#op146">146</a><sup><small>*</small></sup>p2=2</code>/<code><a href="../../opcodes/bgee.htm#op326">326</a><sup><small>*</small></sup><a href="../ie_formats/eff_v2.htm#effv2_Body_0xC8">EFF</a></code>/<code><a href="../../opcodes/bgee.htm#op333">333</a></code>) have access to the entire range (`0 – 65535`).
     {% endcapture %} {% include info.html %}
   type: word
+  id: level_required
 - desc: |-
     <b><a name="splv1_Extended_Header_0x12">Casting Time</a></b>
 
@@ -95,6 +99,7 @@
     - As far as subspells are concerned, their speed is only used if cast through <a href="../../opcodes/bgee.htm#op146">opcode #146</a>/<a href="../../opcodes/bgee.htm#op148">opcode #148</a> with the `Cast normally` option.
     {% endcapture %} {% include info.html %}
   type: word
+  id: casting_time
 - desc: Times per day
   type: word
 - desc: Dice Sides

@@ -79,6 +79,7 @@
     If called via <a href="../../opcodes/bgee.htm#op177">opcode #177</a>/<a href="../../opcodes/bgee.htm#op183">opcode #183</a>/<a href="../../opcodes/bgee.htm#op283">opcode #283</a>, this field is ignored.
     {% endcapture %} {% include note.html %}
   type: dword
+  id: duration
 - desc: |-
     <b><a name="effv2_Body_0x2C">Probability 1</a></b>
 
@@ -86,6 +87,7 @@
     If called via <a href="../../opcodes/bgee.htm#op183">opcode #183</a>, this field is ignored.
     {% endcapture %} {% include note.html %}
   type: word
+  id: probability1
 - desc: |-
     <b><a name="effv2_Body_0x2E">Probability 2</a></b>
 
@@ -135,6 +137,7 @@
     {% capture note %}
     If called via <a href="../../opcodes/bgee.htm#op183">opcode #183</a>, this field is ignored.
     {% endcapture %} {% include note.html %}
+  id: save_bonus
   type: dword
 - desc: |
     TobEx: Stacking ID. Checked when bit 25 of the Saving Throw Type is set.
@@ -204,6 +207,7 @@
 
     - It stores the gametime (ticks) at which the effect was originally applied.
   type: dword
+  id: time_applied
 - desc: |-
     <b><a name="effv2_Body_0x70">Resource 2</a></b> (<a href="../ie_formats/vvc_v1.htm">VVC</a> in many effects)
   type: resref
@@ -229,6 +233,7 @@
     - 1 ⟶ <b><a name="effv2_Body_0x90_1">Spell</a></b>
     - 2 ⟶ <b><a name="effv2_Body_0x90_2">Item</a></b>
   type: dword
+  id: parent_resource_type
 - desc: |-
     <b><a name="effv2_Body_0x94">Parent resource</a></b>
 
@@ -238,6 +243,7 @@
     - So for instance, when applying +10％ <a href="../../opcodes/bgee.htm#op87">Crushing Resistance</a> to a CRE file whose <code><a href="../ie_formats/cre_v1.htm#CREV1_0_Header_0x244">Kit</a></code> is `BARBARIAN`, set this field to `"SPCL153"`.
     {% endcapture %} {% include info.html %}
   type: resref
+  id: parent_resource
 - desc: |-
     <b><a name="effv2_Body_0x9C">Parent resource flags</a></b>
 
@@ -249,6 +255,7 @@
     - bit 15 ⟶ Trigger/Contingency
     - bit 16 ⟶ Non-combat ability
   type: dword
+  id: parent_resource_flags
 - desc: |-
     <b><a name="effv2_Body_0xA0">Projectile</a></b>
   type: dword

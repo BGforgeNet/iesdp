@@ -109,6 +109,7 @@
         - One of such effects is <a href="../../opcodes/bgee.htm#op231">Time Stop</a> (this is in addition to lasting half its specified <code><a href="#effv1_Header_0xE">Duration</a></code>).
     {% endcapture %} {% include note.html %}
   type: char
+  id: timing_mode
 - desc: |-
     <b><a name="effv1_Header_0xD">Dispel / Resistance</a></b>
 
@@ -131,8 +132,10 @@
 
     - This field is measured in seconds or ticks (<small><sup>1</sup>⁄<sub>15</sub></small> second), depending on <code><a href="#effv1_Header_0xC">Timing mode</a></code>.
   type: dword
+  id: duration
 - desc: <b><a name="effv1_Header_0x12">Probability 1</a></b>
   type: byte
+  id: probability1
 - desc: |-
     <b><a name="effv1_Header_0x13">Probability 2</a></b>
 
@@ -160,6 +163,7 @@
       - A `1/30/1` single-class character qualifies as HD 1.
     {% endcapture %} {% include note.html %}
   type: dword
+  id: dice_thrown
 - desc: |-
     <b><a name="effv1_Header_0x20">Dice Sides / Minimum Level</a></b>
 
@@ -173,6 +177,7 @@
       - A `1/30/1` single-class qualifies as HD 1.
     {% endcapture %} {% include note.html %}
   type: dword
+  id: dice_sides
 - desc: |-
     <b><a name="effv1_Header_0x24">Saving throw type</a></b>
 

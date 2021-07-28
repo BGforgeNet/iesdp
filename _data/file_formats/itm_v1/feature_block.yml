@@ -84,6 +84,7 @@
     {% capture note %}
     See <a href="../ie_formats/eff_v1.htm#effv1_Header_0x1C">here</a> for further details.
     {% endcapture %} {% include info.html %}
+  id: max_level
   type: dword
 - desc: |-
     <b><a name="V1_Feature_Block_0x20">Dice Sides / Minimum Level</a></b>
@@ -91,6 +92,7 @@
     {% capture note %}
     See <a href="../ie_formats/eff_v1.htm#effv1_Header_0x20">here</a> for further details.
     {% endcapture %} {% include info.html %}
+  id: min_level
   type: dword
 - desc: |-
     <b><a name="V1_Feature_Block_0x24">Saving throw type</a></b>
