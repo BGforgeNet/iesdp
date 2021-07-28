@@ -211,10 +211,11 @@
 - desc: |-
     <b><a name="effv2_Body_0x70">Resource 2</a></b> (<a href="../ie_formats/vvc_v1.htm">VVC</a> in many effects)
   type: resref
-  id: resource3
+  id: resource2
 - desc: |-
     <b><a name="effv2_Body_0x78">Resource 3</a></b>
   type: resref
+  id: resource3
 - desc: Caster X coordinate
   type: dword
   id: caster_x_coord
