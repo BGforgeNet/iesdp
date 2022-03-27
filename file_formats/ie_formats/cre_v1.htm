@@ -80,8 +80,21 @@ regenerate: true
                 <li>bit 6: Original class was Thief</li>
                 <li>bit 7: Original class was Druid</li>
                 <li>bit 8: Original class was Ranger</li>
-                <li>bit 9: Fallen Paladin</li>
-                <li>bit 10: Fallen Ranger</li>
+
+                <li>
+                  bit 9 &longrightarrow; <b><a name="CREV1_0_Header_Flags_BIT9">Fallen Paladin</a></b>
+                  <ul>
+                    <li>See also <code><a href="../../files/2da/2da_bgee/fallen.htm">fallen.2da</a></code></li>
+                  </ul>
+                </li>
+
+                <li>
+                  bit 10 &longrightarrow; <b><a name="CREV1_0_Header_Flags_BIT10">Fallen Ranger</a></b>
+                  <ul>
+                    <li>See also <code><a href="../../files/2da/2da_bgee/fallen.htm">fallen.2da</a></code></li>
+                  </ul>
+                </li>
+
                 <li>bit 11: Exportable</li>
                 <li><span class="unknown">bit 12: Hide injury status in tooltip</span></li>
                 <li>bit 13: Quest critical / affected by alternative damage</li>
@@ -121,7 +134,7 @@ regenerate: true
           <tr>
             <td>0x0018</td>
             <td>4 (dword)</td>
-            <td><b><a name="CREV1_0_Header_0x18">Creature Power Level</a></b> (for summoning spells) / XP of the creature (for party members)</td>
+            <td><b><a name="CREV1_0_Header_0x18">Creature Power Level</a></b> (for summoning spells) / <b><a name="CREV1_0_Header_XP">XP</a></b> of the creature (for party members)</td>
           </tr>
           <tr>
             <td>0x001c</td>
@@ -188,7 +201,7 @@ regenerate: true
                 <li>
                   BGEE:
                   <ul>
-                    <li>Animation slots have been (for the most parts) externalised. Symbolic names are defined in <code><a href="../../files/ids/bgee/animate.htm">ANIMATE.IDS</a></code>. Animation definitions can be found in INI files where filenames are made up from the hexadecimal representation of the slot value and the <code>".INI"</code> extension. Example: Animation of <code>"0x6004 CLERIC_MALE_GNOME"</code> is defined in <code>6004.INI</code>.</li>
+                    <li>Animation slots have been (for the most parts) externalised. Symbolic names are defined in <code><a href="../../files/ids/bgee/animate.htm">ANIMATE.IDS</a></code>. Animation definitions can be found in <a href="ini_anim.htm">PST-style INI files</a> where filenames are made up from the hexadecimal representation of the slot value and the <code>".INI"</code> extension. Example: Animation of <code>"0x6004 CLERIC_MALE_GNOME"</code> is defined in <code>6004.INI</code>.</li>
                   </ul>
                 </li>
                 <li>
@@ -542,14 +555,14 @@ regenerate: true
             <td>0x007d</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
-                BGEE: Nightmare mode modifiers applied
+                BGEE: <b><a name="CREV1_0_Header_NightmareMode">Nightmare mode</a></b> modifiers applied
             </td>
           </tr>
           <tr>
             <td>0x007e</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
-                BGEE: Translucency (range: 0-255)
+                BGEE: <b><a name="CREV1_0_Header_translucency">Translucency</a></b> (range: 0-255)
             </td>
           </tr>
           <tr>
@@ -788,12 +801,28 @@ regenerate: true
           <tr>
             <td>0x023f</td>
             <td>1 (byte)</td>
-            <td>Morale</td>
+            <td>
+              <b><a name="CREV1_0_Header_Morale">Morale</a></b>
+              <ul>
+                <li>Default value is <code>10</code> (capped <code>0 &mdash; 20</code>)</li>
+                <li>
+                  It is unclear what increases/decreases <code><a href="#CREV1_0_Header_Morale">Morale</a></code> or by how much.
+                  <ul>
+                    <li>A party member dying, and taking damage while already low on health are the obvious ways to lose <code><a href="#CREV1_0_Header_Morale">Morale</a></code>.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <td>0x0240</td>
             <td>1 (byte)</td>
-            <td>Morale break</td>
+            <td>
+              <b><a name="CREV1_0_Header_MoraleBreak">Morale break</a></b>
+              <ul>
+                <li>See <a href="../../files/ids/bgee/stats.htm#MORALEBREAK">here</a> for further details.</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <td>0x0241</td>
@@ -803,7 +832,12 @@ regenerate: true
           <tr>
             <td>0x0242</td>
             <td>2 (word)</td>
-            <td>Morale Recovery Time</td>
+            <td>
+              <b><a name="CREV1_0_Header_MoraleRecovery">Morale Recovery Time</a></b>
+              <ul>
+                <li>See <a href="../../files/ids/bgee/stats.htm#MORALERECOVERYTIME">here</a> for further details.</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <td>0x0244</td>
@@ -875,7 +909,7 @@ TRANSMUTER          0x20000000</pre>
           <tr>
             <td>0x0270</td>
             <td>1 (byte)</td>
-            <td>Enemy-Ally (<a href="../../files/ids/bg2/ea.htm">EA.IDS</a>)</td>
+            <td><b><a name="CREV1_0_Header_EA">Enemy-Ally</a></b> (<a href="../../files/ids/bg2/ea.htm">EA.IDS</a>)</td>
           </tr>
           <tr>
             <td>0x0271</td>
@@ -890,7 +924,7 @@ TRANSMUTER          0x20000000</pre>
           <tr>
             <td>0x0273</td>
             <td>1 (byte)</td>
-            <td>Class (<a href="../../files/ids/bg2/class.htm">CLASS.IDS</a>)</td>
+            <td><b><a name="CREV1_0_Header_0x273">Class</a></b> (<a href="../../files/ids/bg2/class.htm">CLASS.IDS</a>)</td>
           </tr>
           <tr>
             <td>0x0274</td>

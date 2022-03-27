@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.8.6"
+gem "jekyll", group: :jekyll_plugins
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
@@ -8,4 +8,8 @@ group :jekyll_plugins do
   gem 'jekyll-include-cache'
 
   gem 'jekyll-liquify'
+
+  gem 'kramdown-parser-gfm'
 end
+
+gem "webrick", "~> 1.7"
