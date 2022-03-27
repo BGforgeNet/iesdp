@@ -1,16 +1,21 @@
 #!/bin/bash
 
 set -o errexit -o nounset
+set -x
 
 rev=$(git rev-parse --short HEAD)
 
-cd _site
+cp -r _site grrrrr
+cd grrrrr
+ls -ld . ..
+whoami
+ls
 
 git init
 git config user.name "Travis the automation"
 git config user.email "travis@travi.s"
 
-git remote add upstream "https://${{ secrets.GITHUB_TOKEN }}@github.com/Gibberlings3/iesdp.git"
+git remote add upstream "https://x-access-token:$GITHUB_TOKEN@github.com/Gibberlings3/iesdp.git"
 git fetch upstream
 git reset upstream/gh-pages
 
