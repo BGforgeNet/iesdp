@@ -154,8 +154,10 @@
     {% endcapture %} {% include info.html %}
   type: byte
   id: probability2
-- desc: Resref key
+- desc: |-
+    <b><a name="effv1_Header_Resource">Resref key</a></b>
   type: resref
+  id: resref_key
 - desc: |-
     <b><a name="effv1_Header_0x1C">Dice Thrown / Maximum Level</a></b>
 
