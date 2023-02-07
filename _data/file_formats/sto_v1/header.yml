@@ -1,13 +1,16 @@
 - desc: Signature ('STOR')
   type: char array
   length: 4
+  id: signature
 
 - desc: Version ('V1.0')
   type: char array
   length: 4
+  id: version
 
 - desc: Type (0=Store, 1=Tavern, 2=Inn, 3=Temple, 5=Container)
   type: dword
+  id: type
 
 - desc: name
   type: strref
@@ -31,21 +34,27 @@
     - bit 14: Toggle item recharge (TobEx)
     - bit 15: **User allowed to sell [critical]({{ "/file_formats/ie_formats/itm_v1.htm#Header_Flags_BIT0" | prepend: relurl }}) items** (BGEE)
   type: dword
+  id: flags
 
 - desc: Store "sell price markup" (percentage of base price store charges for items)
   type: dword
+  id: sell_markup
 
 - desc: Store "buy price markup" (percentage of base price store is willing to pay)
   type: dword
+  id: buy_markup
 
 - desc: Depreciation rate
   type: dword
+  id: depreciation
 
 - desc: "% chance of steal failure"
   type: word
+  id: chance_of_steal_failure
 
 - desc: Capacity (0=unlimited)
   type: word
+  id: capacity
 
 - desc: Unknown
   type: byte array
@@ -53,30 +62,39 @@
 
 - desc: Offset to [items purchased](#storv1_0_Buy) section
   type: dword
+  id: buy_offset
 - desc: Count of items in [items purchased](#storv1_0_Buy) section
   type: dword
+  id: buy_count
 
 - desc: Offset to [items for sale](#storv1_0_Sale) section
   type: dword
+  id: items_offset
 - desc: Count of [items for sale](#storv1_0_Sale)
   type: dword
+  id: items_count
 
 - desc: Lore
   type: dword
 
 - desc: ID Price
   type: dword
+  id: identification_price
 
 - desc: Rumours (Tavern)
   type: resref
+  id: rumors_tavern
 
 - desc: Offset to [drinks](#storv1_0_Drink) section
   type: dword
+  id: drinks_offset
 - desc: Count of [drinks](#storv1_0_Drink)
   type: dword
+  id: drinks_counts
 
 - desc: Rumours (Temple)
   type: resref
+  id: rumors_temple
 
 - desc: |
     Room flags
@@ -85,20 +103,26 @@
     - bit 2: Noble
     - bit 3: Royal
   type: dword
-
+  id: room_flags
 - desc: Price of a peasant room
   type: dword
+  id: room_price_peasant
 - desc: Price of a merchant room
   type: dword
+  id: room_price_merchant
 - desc: Price of a noble room
   type: dword
+  id: room_price_noble
 - desc: Price of a royal room
   type: dword
+  id: room_price_royal
 
 - desc: Offset to [cures](#storv1_0_Cure) section
   type: dword
+  id: cures_offset
 - desc: Count of [cures](#storv1_0_Cure)
   type: dword
+  id: cures_count
 
 - desc: Unknown
   type: byte array

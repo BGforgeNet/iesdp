@@ -1,9 +1,13 @@
 - desc: Rumour resource
   type: resref
+  id: rumor
 - desc: Drink name strref
   type: strref
+  id: name
 - desc: Drink price
   type: dword
+  id: price
 - desc: Alcoholic strength
   type: dword
+  id: strength
   offset: 0x10

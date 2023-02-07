@@ -1,5 +1,7 @@
 - desc: Filename of SPL
   type: resref
+  id: spellname
 - desc: Spell price
   type: dword
+  id: price
   offset: 0x8
