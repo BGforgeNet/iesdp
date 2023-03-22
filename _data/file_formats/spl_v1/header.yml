@@ -123,9 +123,9 @@
 - desc: Weight
   type: dword
   unused: 1
-- desc: Spell Description - Unidentified (strref)
+- desc: Spell Description
   type: dword
-  id: unidentified_description
+  id: description
 - desc: Spell Description - Identified (strref) (usually `-1`)
   type: dword
   id: identified_desc
