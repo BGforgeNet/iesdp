@@ -2,8 +2,8 @@ name: Sync with upstream
 
 on:
   schedule:
-    - cron: '33 7 * * *'
-  workflow_dispatch:  # click the button on Github repo!
+    - cron: "33 7 * * *"
+  workflow_dispatch: # click the button on Github repo!
   push:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
         with:
           upstream_sync_repo: Gibberlings3/iesdp
           upstream_sync_branch: master
-          upstream_pull_args: "--all"
+          upstream_pull_args: "--ff-only --tags"
           target_sync_branch: master
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -44,7 +44,7 @@ jobs:
         with:
           upstream_sync_repo: Gibberlings3/iesdp
           upstream_sync_branch: master
-          upstream_pull_args: "--all"
+          upstream_pull_args: "--ff-only --tags"
           target_sync_branch: bgforge
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -65,6 +65,6 @@ jobs:
         with:
           upstream_sync_repo: Gibberlings3/iesdp
           upstream_sync_branch: master
-          upstream_pull_args: "--all"
+          upstream_pull_args: "--ff-only --tags"
           target_sync_branch: ielib
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
