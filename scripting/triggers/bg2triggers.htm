@@ -35,7 +35,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x400A Alignment(O:Object*,I:Alignment*Align)</strong><br />
     Returns true only if the alignment of the specified object matches that in the second parameter.<br />
     <br />
-    <strong>0x400B Allegiance(O:Object*,I:Allegience*EA)</strong><br />
+    <strong>0x400B Allegiance(O:Object*,I:Allegiance*EA)</strong><br />
     Returns true only if the Enemy/Ally status of the specified object matches that in the second parameter.<br />
     <br />
     <strong>0x400C Class(O:Object*,I:Class*Class)</strong><br />
@@ -146,7 +146,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x402E HPPercentGT(O:Object*,I:Hit Points*)</strong><br />
     See HPGT(O:Object*,I:Hit Points*) except this is for a percentage.<br />
     <br />
-    <strong>0x002F Heard(O:Object*,I:ID*SHOUTIDS)</strong><br />
+    <strong>0x002F Heard(O:Object*,I:ID*ShoutIDS)</strong><br />
     Returns true only if the active CRE was within 30 feet of the specified object and the specified object shouted the specified number (which does not have to be in SHOUTIDS.ids) in the last script round.<br />
     NB. If the object is specified as a death variable, the trigger will only return true if the corresponding object shouting also has an Enemy-Ally flag of NEUTRAL.<br />
     <br />
@@ -209,7 +209,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x4041 GlobalTimerNotExpired(S:Name*,S:Area*)</strong><br />
     Returns true only if the timer with the name specified and of the type in the 2nd parameter is still running. Note that if we use !GlobalTimerNotExpired(S:Name*,S:Area*) this will return true if the timer has never been set OR if it has already expired- very useful...most useful of all the GlobalTimer triggers :) .<br />
     <br />
-    <strong>0x4042 PartyHasItem(S:Item*)</strong><br />
+    <strong>0x4042 PartyHasItem(ItmRef:Item*)</strong><br />
     Returns true if any of the party members have the specified item in their inventory. This trigger also checks with container items (e.g. Bags of Holding).<br />
     <br />
     <strong>0x4043 InParty(O:Object*)</strong><br />
@@ -303,7 +303,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x0060 PickLockFailed(O:Object*)</strong><br />
     NT Not used in any existing scripts.<br />
     <br />
-    <strong>0x4061 HasItem(S:ResRef*,O:Object*)</strong><br />
+    <strong>0x4061 HasItem(ItmRef:Item*,O:Object*)</strong><br />
     Returns true only if the specified object has the specified item in its inventory. This trigger also checks with container items (e.g. Bags of Holding).<br />
     <br />
     <strong>0x4062 InteractingWith(O:Object*)</strong><br />
@@ -369,7 +369,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x4075 Contains(S:ResRef*,O:Object*)</strong><br />
     Returns true only if the item specified in parameter 1 is in the container specified in parameter 2.<br />
     <br />
-    <strong>0x4076 OpenState(O:Object*,I:Open*BOOLEAN)</strong><br />
+    <strong>0x4076 OpenState(O:Object*,I:Open*Boolean)</strong><br />
     NT Returns true only if the open state of the specified door matches the state specified in the 2nd parameter.<br />
     <br />
     <strong>0x4077 NumItems(S:ResRef*,O:Object*,I:Num*)</strong><br />
@@ -396,7 +396,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x407E AreaCheck(S:ResRef*)</strong><br />
     Returns true only if the active CRE is in the area specified.<br />
     <br />
-    <strong>0x407F HasItemEquiped(S:ResRef*,O:Object*)</strong><br />
+    <strong>0x407F HasItemEquiped(ItmRef:Item*,O:Object*)</strong><br />
     Returns true if the specified object has the specified item outside the general inventory slots (does not check for equipped status). This trigger does not work for Melf's Minute Meteors or other magically created weapons.<br />
     <br />
     <strong>0x4080 NumCreatureVsParty(O:Object*,I:Number*)</strong><br />
@@ -419,7 +419,7 @@ title: "BG2: ToB Script Triggers"
     This trigger does not work as expected.<br />
     <div class="unknown">Returns true only if the combat counter (counts down from 150 after each attack) is greater than the value specified. CombatCounterGT(0) returns true if there is any combat going on in the active area.</div>
     <br />
-    <strong>0x4086 AreaType(I:Number*AREATYPE)</strong><br />
+    <strong>0x4086 AreaType(I:Number*AreaType)</strong><br />
     Returns true only if the area in which the active CRE is, has the specified type flag set. Note that the value is OR'd. This trigger can cause a crash if it evaluates to true and is used as the first trigger in a dead NPCs dream script.<br />
     <br />
     <strong>0x0087 TrapTriggered(O:Triggerer*)</strong><br />
@@ -512,7 +512,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x40A8 IfValidForPartyDialogue(O:Object*)</strong><br />
     Returns true only if that specifed party member can take part in party dialogue.<br />
     <br />
-    <strong>0x40A9 PartyHasItemIdentified(S:ResRef*)</strong><br />
+    <strong>0x40A9 PartyHasItemIdentified(ItmRef:Item*)</strong><br />
     Returns true only if the party has the item specified and it is identified.<br />
     <br />
     <strong>0x40B0 HasBounceEffects(O:Object*)</strong><br />
@@ -545,7 +545,7 @@ title: "BG2: ToB Script Triggers"
 <li>0xe2 Decrementing immunity to secondary type</li>
 </ul>
     <br />
-    <strong>0x40B2 HasItemSlot(O:Object*,I:Slot*SLOTS)</strong><br />
+    <strong>0x40B2 HasItemSlot(O:Object*,I:Slot*Slots)</strong><br />
     Returns true only if the specified object has an item in the specified slot. This trigger does not work for Melf's Minute Meteors.<br />
     <br />
     <strong>0x40B3 PersonalSpaceDistance(O:Object*,I:Range*)</strong><br />
@@ -572,7 +572,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x40BA NumInPartyAliveLT(I:Num*)</strong><br />
     Returns true only if the number of party members alive is less than the number specified.<br />
     <br />
-    <strong>0x40BB Kit(O:Object*,I:Kit*KIT)</strong><br />
+    <strong>0x40BB Kit(O:Object*,I:Kit*Kit)</strong><br />
     NT Returns true only if the specified object is of the kit specified.<br />
     NB. A creature's assigned kit is stored as a dword, however the Kit() trigger only checks the upper word. This, in conjunction with various incorrect values in the game cre files, and an incorrect kits.ids file, means the Kit() trigger can often fail. For optimal usage, the default kit.ids file should be replaced with the updated one listed in the BG2: ToB ids page.<br />
     <br />
@@ -595,7 +595,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x40C1 InventoryFull(O:Object*)</strong><br />
     Returns true only if the specified object can carry no more items.<br />
     <br />
-    <strong>0x40C2 HasItemEquipedReal(S:ResRef*,O:Object*)</strong><br />
+    <strong>0x40C2 HasItemEquipedReal(ItmRef:Item*,O:Object*)</strong><br />
     Returns true if the specified object has the specified item outside the general inventory slots. Unlike HasItemEquiped it only checks the equipped weapon slot, not all of them. This trigger does not work for Melf's Minute Meteors or other magically created weapons.<br />
     <br />
     <strong>0x40C3 XP(O:Object*,I:XP)</strong><br />
@@ -616,7 +616,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x40C8 GLT(S:ResRef*,I:Num*)</strong><br />
     This trigger acts as a shortcut for GlobalLT(). The trigger can only check global variables.<br />
     <br />
-    <strong>0x40C9 ModalState(I:State*MODAL)</strong><br />
+    <strong>0x40C9 ModalState(I:State*Modal)</strong><br />
     Returns true only if the active CRE is in the state/mode specified. e.g. detecting traps.<br />
     <br />
     <strong>0x40CB InMyArea(O:Object*)</strong><br />
@@ -635,13 +635,13 @@ title: "BG2: ToB Script Triggers"
     <strong>0x40CF DamageTakenLT(I:Amount*)</strong><br />
     See above and HPLT.<br />
     <br />
-    <strong>0x40D0 Difficulty(I:Amount*DIFFLEV)</strong><br />
+    <strong>0x40D0 Difficulty(I:Amount*DiffLev)</strong><br />
     NT Returns true only if the game difficulty setting is of the level specified.<br />
     <br />
-    <strong>0x40D1 DifficultyGT(I:Amount*DIFFLEV)</strong><br />
+    <strong>0x40D1 DifficultyGT(I:Amount*DiffLev)</strong><br />
     NT Returns true only if the game difficulty setting is greater than the level specified.<br />
     <br />
-    <strong>0x40D2 DifficultyLT(I:Amount*DIFFLEV)</strong><br />
+    <strong>0x40D2 DifficultyLT(I:Amount*DiffLev)</strong><br />
     NT Returns true only if the game difficulty setting is less than the level specified.<br />
     <br />
     <strong>0x40D3 InPartyAllowDead(O:Object*)</strong><br />
