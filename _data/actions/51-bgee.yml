@@ -7,6 +7,6 @@ params:
     type: p
   - name: ScrollSpeed
     type: i
-    ids: scroll
+    ids: Scroll
 desc: |-
   This action causes the active creature to simulate a left mouse click on the specified point.

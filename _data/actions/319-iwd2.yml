@@ -4,4 +4,4 @@ name: ForceMarkedSpell
 params:
   - name: Spell
     type: i
-    ids: spell
+    ids: Spell

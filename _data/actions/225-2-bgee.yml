@@ -11,6 +11,6 @@ params:
     type: p
   - name: Face
     type: i
-    ids: dir
+    ids: Dir
 desc: |-
   This action will move the active creature to the specified point in the indicated area, facing the appropriate direction, and plays the specified graphics when the creature disappears.

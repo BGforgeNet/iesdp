@@ -7,7 +7,7 @@ params:
     type: p
   - name: Slot
     type: i
-    ids: slots
+    ids: Slots
   - name: Ability
     type: i
 alias: true

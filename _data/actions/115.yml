@@ -14,7 +14,7 @@ params:
     type: s
   - name: Time
     type: i
-    ids: gtimes
+    ids: GTimes
 desc: |-
   This action sets a global timer. The timer is checked by the GlobalTimerExpired trigger or GlobalTimerNotExpired trigger.
 

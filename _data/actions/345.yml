@@ -6,6 +6,6 @@ name: SetSequence
 params:
   - name: Sequence
     type: i
-    ids: seq
+    ids: Seq
 desc: |-
   This action instructs the active creature to perform the specified animation sequence. Values are from [seq.ids]({{ ids }}/seq.htm).

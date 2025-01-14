@@ -8,7 +8,7 @@ params:
     type: o
   - name: Slot
     type: i
-    ids: slots
+    ids: Slots
   - name: EquipUnEquip
     type: i
     ids: xequip

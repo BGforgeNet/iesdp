@@ -6,6 +6,6 @@ params:
     type: o
   - name: Anim
     type: i
-    ids: seq
+    ids: Seq
 desc: |-
   This action instructs the target creature to perform the specified animation sequence. Values are from [seq.ids]({{ ids }}/seq.htm).

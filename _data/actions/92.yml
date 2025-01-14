@@ -10,7 +10,7 @@ name: SelectWeaponAbility
 params:
   - name: WeaponNum
     type: i
-    ids: slots
+    ids: Slots
   - name: AbilityNum
     type: i
 desc: |-

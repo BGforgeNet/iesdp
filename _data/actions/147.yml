@@ -10,7 +10,7 @@ name: RemoveSpell
 params:
   - name: Spell
     type: i
-    ids: spell
+    ids: Spell
 desc: |-
   This action removes one memorised indtance of the specified spell from the spellbook of the active creature. The spell can be an innate ability, a priest spell or a wizard spell, but must be listed in [spell.ids]({{ ids }}/spell.htm).
 

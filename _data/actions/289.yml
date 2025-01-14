@@ -6,6 +6,6 @@ name: AddSuperKit
 params:
   - name: Kit
     type: i
-    ids: kit
+    ids: Kit
 desc: |-
   This action sets the active creatures kit to the specified kit . Abilities from any previous kits are kept. Class restrictions apply for kits. When attempting adding an invalid kit, the existing kit (if any) will be replied.

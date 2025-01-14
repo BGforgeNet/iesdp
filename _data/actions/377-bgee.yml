@@ -9,9 +9,9 @@ params:
     type: s
   - name: Min
     type: i
-    ids: gtimes
+    ids: GTimes
   - name: Max
     type: i
-    ids: gtimes
+    ids: GTimes
 desc: |-
   This action sets a global timer to a random value within the range of Min and Max specified by the 3rd and 4th parameter. Both parameters accept symbolic values from [gtimes.ids]({{ ids }}/gtimes.htm). The timer is checked by the GlobalTimerExpired() and GlobalTimerNotExpired() triggers.

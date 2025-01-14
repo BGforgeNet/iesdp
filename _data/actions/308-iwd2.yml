@@ -8,4 +8,4 @@ params:
     type: s
   - name: Time
     type: i
-    ids: gtimes
+    ids: GTimes

@@ -8,7 +8,7 @@ params:
     type: o
   - name: Spell
     type: i
-    ids: spell
+    ids: Spell
 not_tested: true
 desc: |-
   It is likely that it will force the specified spell if the target is within range of the spell.

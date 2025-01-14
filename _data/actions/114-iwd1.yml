@@ -7,7 +7,7 @@ params:
     type: p
   - name: Spell
     type: i
-    ids: spell
+    ids: Spell
 desc: |-
   This action causes the active creature to cast the specified spell at the specified point ([x.y]). The spell need not currently be memorised by the caster, and will not be interrupted while being cast. The caster must meet the level requirements of the spell.
 

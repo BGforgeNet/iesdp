@@ -12,7 +12,7 @@ params:
     type: o
   - name: Value
     type: i
-    ids: class
+    ids: Class
 desc: |-
   This action changes the class of the target creature to the specified value. Values are from [class.ids]({{ ids }}/class.htm).
 

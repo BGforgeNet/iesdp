@@ -10,5 +10,5 @@ params:
     type: p
   - name: ScrollSpeed
     type: i
-    ids: scroll
+    ids: Scroll
 no_result: true

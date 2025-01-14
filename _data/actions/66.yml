@@ -10,7 +10,7 @@ name: DayNight
 params:
   - name: TimeOfDay
     type: i
-    ids: time
+    ids: Time
 desc: |-
   This action changes the time of day. The time parameter is taken from [time.ids]({{ ids }}/time.htm), though a direct number can be specified. The example script is from when Irenicus leaves his dungeon.
 

@@ -6,6 +6,6 @@ name: RemoveAreaType
 params:
   - name: Type
     type: i
-    ids: areatype
+    ids: AreaType
 desc: |-
   This action will remove area type flags (e.g. outdoor, dungeon) to the current area. Values are from [areatype.ids]({{ ids }}/areatype.htm)

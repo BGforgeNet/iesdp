@@ -10,7 +10,7 @@ name: Polymorph
 params:
   - name: AnimationType
     type: i
-    ids: animate
+    ids: Animate
 desc: |-
   This action causes the active creature to change animation to the specified animation (values from [animate.ids]({{ ids }}/animate.htm))
 

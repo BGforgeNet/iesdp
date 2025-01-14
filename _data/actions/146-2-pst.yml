@@ -4,7 +4,7 @@ name: PolymorphEx
 params:
   - name: AnimationType
     type: i
-    ids: animate
+    ids: Animate
   - name: RangeModes
     type: i
 alias: true

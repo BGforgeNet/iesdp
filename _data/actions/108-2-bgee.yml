@@ -11,5 +11,5 @@ params:
     type: i
   - name: Face
     type: i
-    ids: dir
+    ids: Dir
 alias: true

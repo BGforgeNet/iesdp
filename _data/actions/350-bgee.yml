@@ -11,6 +11,6 @@ params:
     type: p
   - name: Face
     type: i
-    ids: dir
+    ids: Dir
 desc: |-
   This action changes the current area. The active creature will move to the specified entry point (from [ENTRIES.2DA]({{ 2da }}/entries.htm)) before travelling. The action appears to only work from a creature script.

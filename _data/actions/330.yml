@@ -6,6 +6,6 @@ name: AddAreaType
 params:
   - name: Type
     type: i
-    ids: areatype
+    ids: AreaType
 desc: |-
   This action will add area type flags (e.g. outdoor, dungeon) to the current area. The areatype value is OR'd, so multiple values can be set. Values are from [areatype.ids]({{ ids }}/areatype.htm)

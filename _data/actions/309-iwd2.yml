@@ -4,4 +4,4 @@ name: SetMarkedSpell
 params:
   - name: Spell
     type: i
-    ids: spell
+    ids: Spell

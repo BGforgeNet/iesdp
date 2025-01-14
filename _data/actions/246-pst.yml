@@ -8,5 +8,5 @@ params:
     type: o
   - name: Level
     type: i
-    ids: scrlev
+    ids: ScrLev
 unknown: true

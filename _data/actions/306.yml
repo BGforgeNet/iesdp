@@ -10,6 +10,6 @@ params:
     type: i
   - name: Type
     type: i
-    ids: dmgtype
+    ids: DMGtype
 desc: |-
   This action applies a percentage damage (of the specified damage type) to the target object.

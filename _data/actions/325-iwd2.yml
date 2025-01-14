@@ -4,7 +4,7 @@ name: SetAreaFlags
 params:
   - name: Flags
     type: i
-    ids: areaflag
+    ids: AreaFlag
   - name: BitMode
     type: i
     ids: bitmode

@@ -12,7 +12,7 @@ params:
     type: o
   - name: Value
     type: i
-    ids: ea
+    ids: EA
 desc: |-
   This action changes the EA status of the target creature to the specified value. Values are from [ea.ids]({{ ids }}/ea.htm).
 

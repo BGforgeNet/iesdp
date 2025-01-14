@@ -6,6 +6,6 @@ name: AddKit
 params:
   - name: Kit
     type: i
-    ids: kit
+    ids: Kit
 desc: |-
   This action removes the active creature's current kit and adds the specified kit. Abilities from any previous kit are removed. AddKit(0) can be used to remove a creatures current kit without adding a new one. Class restrictions apply for kits. When attempting adding an invalid kit, the existing kit (if any) will be replied.

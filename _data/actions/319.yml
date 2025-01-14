@@ -8,7 +8,7 @@ params:
     type: p
   - name: Spell
     type: i
-    ids: spell
+    ids: Spell
 not_tested: true
 desc: |-
   It is likely that it will force the specified spell if the point is within range of the spell.

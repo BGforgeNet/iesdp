@@ -4,6 +4,6 @@ name: GlobalShout
 params:
   - name: ID
     type: i
-    ids: shoutids
+    ids: ShoutIDS
 desc: |-
   This action acts like Shout() without the range limit.

@@ -7,6 +7,6 @@ params:
     type: p
   - name: ScrollSpeed
     type: i
-    ids: scroll
+    ids: Scroll
 desc: |-
   This action appears to move the view point so that the specified point is located at the top left corner of the screen when using INSTANT scroll speed. Using any other scroll speed produces unreliable results. It must be executed from an active creature.

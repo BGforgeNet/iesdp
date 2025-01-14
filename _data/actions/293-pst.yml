@@ -4,5 +4,5 @@ name: SetNamelessClass
 params:
   - name: Value
     type: i
-    ids: class
+    ids: Class
 unknown: true

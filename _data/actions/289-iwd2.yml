@@ -17,4 +17,4 @@ params:
     type: i
   - name: Sequence
     type: i
-    ids: sequence
+    ids: Sequence

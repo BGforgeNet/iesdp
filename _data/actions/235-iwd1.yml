@@ -7,4 +7,4 @@ params:
     type: o
   - name: Sequence
     type: i
-    ids: sequence
+    ids: Sequence

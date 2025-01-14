@@ -12,7 +12,7 @@ params:
     type: o
   - name: ScrollSpeed
     type: i
-    ids: scroll
+    ids: Scroll
 desc: |-
   This action scrolls the view point (i.e. the area of the current map being displayed onscreen) to the target object ([x.y] at the specified speed. Speeds are taken from [scroll.ids]({{ ids }}/scroll.htm) (VERY\_FAST is equivalent to normal walking speed). The example script is from a cutscene; CUT03C.bcs.
 

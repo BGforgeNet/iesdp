@@ -10,6 +10,6 @@ params:
     type: i
   - name: SlotNum
     type: i
-    ids: sndslot
+    ids: SndSlot
 desc: |-
   This action changes the specified sound reference (SndSlot) on the specified creature to the specified value. It should be noted that the biography can be changed by this action, as it is listed as a SoundSlot (EXISTANCE5).

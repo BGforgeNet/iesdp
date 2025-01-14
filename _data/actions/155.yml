@@ -12,7 +12,7 @@ params:
     type: o
   - name: Value
     type: i
-    ids: race
+    ids: Race
 desc: |-
   This action changes the race of the target creature to the specified value. Values are from [race.ids]({{ ids }}/race.htm).
 

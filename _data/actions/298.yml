@@ -10,6 +10,6 @@ params:
     type: i
   - name: Type
     type: i
-    ids: dmgtype
+    ids: DMGtype
 desc: |-
   This action inflicts the specified amount of damage (of the specified type) on the target creature.

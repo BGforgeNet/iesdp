@@ -7,6 +7,6 @@ params:
     type: s
   - name: Face
     type: i
-    ids: dir
+    ids: Dir
 desc: |-
   This action creates the specified creature just offscreen from the active creature.

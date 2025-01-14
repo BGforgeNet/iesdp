@@ -7,8 +7,8 @@ pstee: 1
 n: 181
 name: ReallyForceSpellRES
 params:
-  - name: RES
-    type: s
+  - name: spell
+    type: splref
   - name: Target
     type: o
 alias: true

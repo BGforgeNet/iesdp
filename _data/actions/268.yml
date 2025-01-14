@@ -10,6 +10,6 @@ params:
     type: s
   - name: Time
     type: i
-    ids: gtimes
+    ids: GTimes
 desc: |-
   This action sets a global timer measured in seconds (of real time).

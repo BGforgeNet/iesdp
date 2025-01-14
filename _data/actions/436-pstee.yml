@@ -4,7 +4,7 @@ name: PlaySequenceTimed
 params:
   - name: Anim
     type: i
-    ids: seq
+    ids: Seq
   - name: Seconds
     type: i
 desc: |-

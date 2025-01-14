@@ -7,5 +7,5 @@ params:
     type: o
   - name: Slot
     type: i
-    ids: slots
+    ids: Slots
 alias: true

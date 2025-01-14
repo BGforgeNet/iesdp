@@ -12,7 +12,7 @@ params:
     type: o
   - name: Constant
     type: i
-    ids: soundoff
+    ids: SoundOff
 desc: |-
   This action plays a sound linked to the object.
 

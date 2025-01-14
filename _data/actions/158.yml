@@ -12,7 +12,7 @@ params:
     type: o
   - name: Value
     type: i
-    ids: gender
+    ids: Gender
 desc: |-
   This action changes the gender of the target creature to the specified value. Values are from [gender.ids]({{ ids }}/gender.htm). The example script changes the gender of summoned creatures to neither, to bypass the 5 concurrent summoned creatures limit.
 

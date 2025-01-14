@@ -6,7 +6,7 @@ params:
     type: o
   - name: Spell
     type: i
-    ids: spell
+    ids: Spell
   - name: CastLevel
     type: i
 desc: |-
