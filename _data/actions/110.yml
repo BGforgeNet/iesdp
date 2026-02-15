@@ -8,7 +8,7 @@ n: 110
 name: LeaveAreaLUA
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Parchment
     type: s
   - name: Point

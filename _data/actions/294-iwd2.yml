@@ -3,7 +3,7 @@ n: 294
 name: XEquipItem
 params:
   - name: Item
-    type: s
+    type: itmref
   - name: Object
     type: o
   - name: Slot

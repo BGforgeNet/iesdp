@@ -5,7 +5,7 @@ params:
   - name: Object
     type: o
   - name: StrRef
-    type: i
+    type: strref
 desc: |-
   This action displays the specified string over the head on the specified object (on the game-screen). The string may also be shown in the message log, depending on options specified in baldur.ini.
 

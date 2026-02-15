@@ -6,5 +6,6 @@ name: GlobalShout
 params:
   - name: ID
     type: i
+    ids: ShoutIDS
 desc: |-
   This action acts like <a href="#106"><code>Shout()</code></a> without the range limit.

@@ -7,7 +7,7 @@ n: 97
 name: UseItemPoint
 params:
   - name: Item
-    type: s
+    type: itmref
   - name: Target
     type: p
   - name: Ability

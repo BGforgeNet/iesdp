@@ -3,7 +3,7 @@ n: 116
 name: TakePartyItem
 params:
   - name: Item
-    type: s
+    type: itmref
 desc: |-
   This action takes a single instance of the specified item from the party (unless the item exists in a stack, in which case the entire stack is taken). The item is transferred to the inventory of the active creature. The example is from AR0516.bcs.
 

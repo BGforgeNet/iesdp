@@ -4,8 +4,8 @@ pstee: 1
 n: 233
 name: CreateCreatureObjectOffScreen
 params:
-  - name: ResRef
-    type: s
+  - name: Creature
+    type: creref
   - name: Object
     type: o
   - name: Usage1

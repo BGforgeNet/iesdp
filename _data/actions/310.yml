@@ -5,9 +5,9 @@ n: 310
 name: MoveGlobalsTo
 params:
   - name: FromArea
-    type: s
+    type: areref
   - name: ToArea
-    type: s
+    type: areref
   - name: Location
     type: p
 not_tested: true

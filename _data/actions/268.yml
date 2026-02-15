@@ -6,7 +6,7 @@ name: RealSetGlobalTimer
 params:
   - name: Name
     type: s
-  - name: Area
+  - name: Scope
     type: s
   - name: Time
     type: i

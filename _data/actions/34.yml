@@ -4,8 +4,8 @@ pstee: 1
 n: 34
 name: UseItem
 params:
-  - name: Object
-    type: s
+  - name: Item
+    type: itmref
   - name: Target
     type: o
 desc: |-

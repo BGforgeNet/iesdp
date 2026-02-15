@@ -3,7 +3,7 @@ n: 225
 name: MoveBetweenAreas
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Location
     type: p
   - name: Face

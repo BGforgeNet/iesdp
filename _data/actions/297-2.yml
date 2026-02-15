@@ -6,6 +6,6 @@ name: MoveToSavedLocationn
 params:
   - name: GLOBAL
     type: s
-  - name: Area
+  - name: Scope
     type: s
 alias: true

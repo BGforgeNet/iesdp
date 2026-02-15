@@ -7,8 +7,8 @@ params:
     type: s
   - name: Area
     type: s
-  - name: ResRef
-    type: s
+  - name: Item
+    type: itmref
 desc: |-
   This action creates a quantity of items equal to a global variable on the active creature. The example script will create 50 arrows.
 

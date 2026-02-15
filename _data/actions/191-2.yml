@@ -6,8 +6,8 @@ pstee: 1
 n: 191
 name: SpellNoDecRES
 params:
-  - name: RES
-    type: s
+  - name: Spell
+    type: splref
   - name: Target
     type: o
 alias: true

@@ -3,8 +3,8 @@ pstee: 1
 n: 227
 name: CreateCreatureObject
 params:
-  - name: ResRef
-    type: s
+  - name: Creature
+    type: creref
   - name: Object
     type: o
   - name: Usage1

@@ -2,8 +2,8 @@ pstee: 1
 n: 455
 name: DestroyItemObject
 params:
-  - name: Object
-    type: s
+  - name: Item
+    type: itmref
   - name: Target
     type: o
   - name: All

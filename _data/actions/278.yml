@@ -5,9 +5,9 @@ n: 278
 name: TakeItemReplace
 params:
   - name: Give
-    type: s
+    type: itmref
   - name: Take
-    type: s
+    type: itmref
   - name: Object
     type: o
 desc: |-

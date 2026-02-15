@@ -6,8 +6,8 @@ pstee: 1
 n: 114
 name: ForceSpellPointRES
 params:
-  - name: RES
-    type: s
+  - name: Spell
+    type: splref
   - name: Target
     type: p
 alias: true

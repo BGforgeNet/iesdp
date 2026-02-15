@@ -6,8 +6,8 @@ iwd2: 1
 n: 113
 name: ForceSpellRES
 params:
-  - name: RES
-    type: s
+  - name: Spell
+    type: splref
   - name: Target
     type: o
 alias: true

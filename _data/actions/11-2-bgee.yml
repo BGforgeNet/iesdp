@@ -3,8 +3,8 @@ pstee: 1
 n: 11
 name: EquipItemEx
 params:
-  - name: Object
-    type: s
+  - name: Item
+    type: itmref
   - name: EquipUnEquip
     type: i
 desc: |-

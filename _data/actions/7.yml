@@ -6,8 +6,8 @@ iwd1: 1
 n: 7
 name: CreateCreature
 params:
-  - name: NewObject
-    type: s
+  - name: Creature
+    type: creref
   - name: Location
     type: p
   - name: Face

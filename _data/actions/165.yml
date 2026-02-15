@@ -10,7 +10,7 @@ name: AddExperiencePartyGlobal
 params:
   - name: Name
     type: s
-  - name: Area
+  - name: Scope
     type: s
 desc: |-
   This action adds experience to the party, with the amount corresponding to a global variable.

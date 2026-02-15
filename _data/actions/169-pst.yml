@@ -2,8 +2,8 @@ pst: 1
 n: 169
 name: DestroyItem
 params:
-  - name: Object
-    type: s
+  - name: Item
+    type: itmref
   - name: Target
     type: o
   - name: All

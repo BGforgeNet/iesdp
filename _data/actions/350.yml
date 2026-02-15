@@ -3,7 +3,7 @@ n: 350
 name: LeaveAreaLUAEntry
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Entry
     type: s
   - name: Point

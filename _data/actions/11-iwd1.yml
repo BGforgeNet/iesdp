@@ -4,8 +4,8 @@ pst: 1
 n: 11
 name: EquipItem
 params:
-  - name: Object
-    type: s
+  - name: Item
+    type: itmref
 desc: |-
   This action instructs the active creature to equip the specified item. The item needs to be in one of the creatures quickslots.
 

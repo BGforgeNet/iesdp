@@ -8,7 +8,7 @@ n: 189
 name: LeaveAreaLUAPanic
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Parchment
     type: s
   - name: Point

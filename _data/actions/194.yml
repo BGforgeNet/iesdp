@@ -4,7 +4,7 @@ pstee: 1
 n: 194
 name: ChangeAnimation
 params:
-  - name: ResRef
-    type: s
+  - name: Creature
+    type: creref
 desc: |-
   This action will change the animation of the active creature to match that of the specified CRE file. If the active creature is in the party, the action will create the specified creature.

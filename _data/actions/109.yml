@@ -8,7 +8,7 @@ name: IncrementGlobal
 params:
   - name: Name
     type: s
-  - name: Area
+  - name: Scope
     type: s
   - name: Value
     type: i

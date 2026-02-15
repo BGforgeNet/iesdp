@@ -2,8 +2,8 @@ bg2: 1
 n: 238
 name: CreateCreatureOffScreen
 params:
-  - name: ResRef
-    type: s
+  - name: Creature
+    type: creref
   - name: Face
     type: i
 desc: |-

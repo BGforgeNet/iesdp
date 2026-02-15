@@ -4,8 +4,8 @@ name: CreateItemGlobal
 params:
   - name: Global
     type: s
-  - name: Area
+  - name: Scope
     type: s
-  - name: ResRef
-    type: s
+  - name: Item
+    type: itmref
 alias: true

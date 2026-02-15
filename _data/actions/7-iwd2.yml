@@ -3,8 +3,8 @@ iwd2: 1
 
 name: CreateCreature
 params:
-  - name: NewObject
-    type: s
+  - name: Creature
+    type: creref
   - name: Location
     type: p
 desc: |

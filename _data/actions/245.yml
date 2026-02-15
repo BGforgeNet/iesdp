@@ -4,7 +4,7 @@ pstee: 1
 n: 245
 name: SaveObjectLocation
 params:
-  - name: Area
+  - name: Scope
     type: s
   - name: Global
     type: s

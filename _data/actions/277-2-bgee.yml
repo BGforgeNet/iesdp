@@ -3,8 +3,8 @@ pstee: 1
 n: 277
 name: EscapeAreaObjectMove
 params:
-  - name: ResRef
-    type: s
+  - name: Area
+    type: areref
   - name: Object
     type: o
   - name: X

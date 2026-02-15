@@ -6,7 +6,7 @@ name: SetTokenGlobal
 params:
   - name: GLOBAL
     type: s
-  - name: Area
+  - name: Scope
     type: s
   - name: Token
     type: s

@@ -4,7 +4,7 @@ iwd2: 1
 n: 194
 name: ChangeAnimation
 params:
-  - name: ResRef
-    type: s
+  - name: Creature
+    type: creref
 desc: |-
   This action will change the animation of the active creature to match that of the specified CRE file.

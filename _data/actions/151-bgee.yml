@@ -6,7 +6,7 @@ params:
   - name: Object
     type: o
   - name: StrRef
-    type: i
+    type: strref
 desc: |-
   This action displays the strref specified by the StrRef parameter in the message window, attributing the text to the specified object.
 

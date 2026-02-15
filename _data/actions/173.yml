@@ -7,7 +7,7 @@ n: 173
 name: AddJournalEntry
 params:
   - name: Entry
-    type: i
+    type: strref
   - name: Type
     type: i
     ids: JourType

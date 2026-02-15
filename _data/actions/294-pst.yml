@@ -3,7 +3,7 @@ n: 294
 name: ForceLeaveAreaLUA
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Object
     type: o
   - name: Xpos

@@ -4,6 +4,6 @@ pstee: 1
 n: 147
 name: RemoveSpellRES
 params:
-  - name: RES
-    type: s
+  - name: Spell
+    type: splref
 alias: true

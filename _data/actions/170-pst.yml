@@ -2,8 +2,8 @@ pst: 1
 n: 170
 name: RevealAreaOnMap
 params:
-  - name: ResRef
-    type: s
+  - name: Area
+    type: areref
 desc: |-
   This action reveals an area on the worldmap. The action must be added to action.ids before it can be used.
 

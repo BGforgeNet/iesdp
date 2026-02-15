@@ -6,7 +6,7 @@ n: 108
 name: EscapeAreaMove
 params:
   - name: Area
-    type: s
+    type: areref
   - name: X
     type: i
   - name: Y

@@ -5,9 +5,9 @@ n: 347
 name: SetEncounterProbability
 params:
   - name: FromArea
-    type: s
+    type: areref
   - name: ToArea
-    type: s
+    type: areref
   - name: Probability
     type: i
 desc: |-

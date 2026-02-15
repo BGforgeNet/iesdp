@@ -5,7 +5,7 @@ n: 351
 name: LeaveAreaLUAPanicEntry
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Entry
     type: s
   - name: Point

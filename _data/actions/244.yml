@@ -4,7 +4,7 @@ pstee: 1
 n: 244
 name: SaveLocation
 params:
-  - name: Area
+  - name: Scope
     type: s
   - name: Global
     type: s

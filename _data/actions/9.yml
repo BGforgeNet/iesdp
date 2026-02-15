@@ -8,8 +8,8 @@ pstee: 1
 n: 9
 name: DropItem
 params:
-  - name: Object
-    type: s
+  - name: Item
+    type: itmref
   - name: Location
     type: p
 desc: |-

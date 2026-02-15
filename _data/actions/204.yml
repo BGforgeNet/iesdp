@@ -6,8 +6,8 @@ pstee: 1
 n: 204
 name: TakePartyItemNum
 params:
-  - name: ResRef
-    type: s
+  - name: Item
+    type: itmref
   - name: Num
     type: i
 desc: |-

@@ -4,7 +4,7 @@ title: "BG2: ToB Script Triggers"
     {% include relurl.html %}
     <div class="title_main"> BG2: ToB Script Triggers </div>
     <br />
-    <strong>0x0001 Acquired(S:ResRef*)</strong><br />
+    <strong>0x0001 Acquired(ItmRef:Item*)</strong><br />
     NT Returns true only if the current CRE obtained the specified item in the last script round.<br />
     Trigger appears to be broken?<br />
     <br />
@@ -30,7 +30,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x0008 TurnedBy(O:Object*)</strong><br />
     NT Returns true only if the active CRE was turned by the specified priest or paladin.<br />
     <br />
-    <strong>0x0009 Unusable(S:ResRef*)</strong><br />
+    <strong>0x0009 Unusable(ItmRef:Item*)</strong><br />
     NT Returns true only if the specified item is unusable by the active CRE.<br />
     <br />
     <strong>0x400A Alignment(O:Object*,I:Alignment*Align)</strong><br />
@@ -48,7 +48,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x400E General(O:Object*,I:General*General)</strong><br />
     Returns true only if the General category of the specified object matches that in the second parameter.<br />
     <br />
-    <strong>0x400F Global(S:Name*,S:Area*,I:Value*)</strong><br />
+    <strong>0x400F Global(S:Name*,S:Scope*,I:Value*)</strong><br />
     Returns true only if the variable with name 1st parameter of type 2nd parameter has value 3rd parameter.<br />
     <br />
     <strong>0x4010 HP(O:Object*,I:Hit Points*)</strong><br />
@@ -169,10 +169,10 @@ title: "BG2: ToB Script Triggers"
     <strong>0x0033 BecameVisible()</strong><br />
     NT Returns true only if the active CRE turned visible in the last script round.<br />
     <br />
-    <strong>0x4034 GlobalGT(S:Name*,S:Area*,I:Value*)</strong><br />
-    See Global(S:Name*,S:Area*,I:Value*) except the variable must be greater than the value specified to be true.<br />
+    <strong>0x4034 GlobalGT(S:Name*,S:Scope*,I:Value*)</strong><br />
+    See Global(S:Name*,S:Scope*,I:Value*) except the variable must be greater than the value specified to be true.<br />
     <br />
-    <strong>0x4035 GlobalLT(S:Name*,S:Area*,I:Value*)</strong><br />
+    <strong>0x4035 GlobalLT(S:Name*,S:Scope*,I:Value*)</strong><br />
     As above except for less than.<br />
     <br />
     <strong>0x0036 OnCreation()</strong><br />
@@ -206,14 +206,14 @@ title: "BG2: ToB Script Triggers"
     Returns true if the reaction of the object specified (on the friendly-hostile scale) to the player was lower than specified.<br />
     NB. Reaction = 10 + rmodchr + rmodrep (see rmodchr.2da and rmodrep.2da).<br />
     <br />
-    <strong>0x403F GlobalTimerExact(S:Name*,S:Area*)</strong><br />
+    <strong>0x403F GlobalTimerExact(S:Name*,S:Scope*)</strong><br />
     NT<br />
     <br />
-    <strong>0x4040 GlobalTimerExpired(S:Name*,S:Area*)</strong><br />
+    <strong>0x4040 GlobalTimerExpired(S:Name*,S:Scope*)</strong><br />
     Returns true only if the timer with the name specified and of the type in the 2nd parameter has run and expired.<br />
     <br />
-    <strong>0x4041 GlobalTimerNotExpired(S:Name*,S:Area*)</strong><br />
-    Returns true only if the timer with the name specified and of the type in the 2nd parameter is still running. Note that if we use !GlobalTimerNotExpired(S:Name*,S:Area*) this will return true if the timer has never been set OR if it has already expired- very useful...most useful of all the GlobalTimer triggers :) .<br />
+    <strong>0x4041 GlobalTimerNotExpired(S:Name*,S:Scope*)</strong><br />
+    Returns true only if the timer with the name specified and of the type in the 2nd parameter is still running. Note that if we use !GlobalTimerNotExpired(S:Name*,S:Scope*) this will return true if the timer has never been set OR if it has already expired- very useful...most useful of all the GlobalTimer triggers :) .<br />
     <br />
     <strong>0x4042 PartyHasItem(ItmRef:Item*)</strong><br />
     Returns true if any of the party members have the specified item in their inventory. This trigger also checks with container items (e.g. Bags of Holding).<br />
@@ -372,34 +372,34 @@ title: "BG2: ToB Script Triggers"
     <strong>0x4074 Detect(O:Object*)</strong><br />
     Returns true if the the specified object is detected by the active CRE in any way (hearing or sight). Neither Move Silently and Hide in Shadows prevent creatures being detected via Detect(). Detect ignores Protection from Creature type effects for static objects.<br />
     <br />
-    <strong>0x4075 Contains(S:ResRef*,O:Object*)</strong><br />
+    <strong>0x4075 Contains(ItmRef:Item*,O:Object*)</strong><br />
     Returns true only if the item specified in parameter 1 is in the container specified in parameter 2.<br />
     <br />
-    <strong>0x4076 OpenState(O:Object*,I:Open*Boolean)</strong><br />
+    <strong>0x4076 OpenState(O:Object*,I:Open*boolean)</strong><br />
     NT Returns true only if the open state of the specified door matches the state specified in the 2nd parameter.<br />
     <br />
-    <strong>0x4077 NumItems(S:ResRef*,O:Object*,I:Num*)</strong><br />
+    <strong>0x4077 NumItems(ItmRef:Item*,O:Object*,I:Num*)</strong><br />
     Returns true only if the specified object has the number of items in the 3rd parameter of the type specified in the 1st parameter in its inventory.<br />
     <br />
-    <strong>0x4078 NumItemsGT(S:ResRef*,O:Object*,I:Num*)</strong><br />
+    <strong>0x4078 NumItemsGT(ItmRef:Item*,O:Object*,I:Num*)</strong><br />
     Returns true only if the specified object has more than the number of items in the 3rd parameter of the type specified in the 1st parameter in its inventory.<br />
     <br />
-    <strong>0x4079 NumItemsLT(S:ResRef*,O:Object*,I:Num*)</strong><br />
+    <strong>0x4079 NumItemsLT(ItmRef:Item*,O:Object*,I:Num*)</strong><br />
     Returns true only if the specified object has fewer than the number of items in the 3rd parameter of the type specified in the 1st parameter in its inventory.<br />
     <br />
-    <strong>0x407A NumItemsParty(S:ResRef*,I:Num*)</strong><br />
+    <strong>0x407A NumItemsParty(ItmRef:Item*,I:Num*)</strong><br />
     Returns true only if the party has a total number of items of the type specified equal to the 2nd parameter.<br />
     <br />
-    <strong>0x407B NumItemsPartyGT(S:ResRef*,I:Num*)</strong><br />
+    <strong>0x407B NumItemsPartyGT(ItmRef:Item*,I:Num*)</strong><br />
     Returns true only if the party has a total number of items of the type specified greater than the 2nd parameter.<br />
     <br />
-    <strong>0x407C NumItemsPartyLT(S:ResRef*,I:Num*)</strong><br />
+    <strong>0x407C NumItemsPartyLT(ItmRef:Item*,I:Num*)</strong><br />
     Returns true only if the party has a total number of items of the type specified less than the 2nd parameter.<br />
     <br />
     <strong>0x407D IsOverMe(O:Object*)</strong><br />
     Only for trigger regions. Returns true only if the specified object is over the trigger running the script.<br />
     <br />
-    <strong>0x407E AreaCheck(S:ResRef*)</strong><br />
+    <strong>0x407E AreaCheck(AreRef:Area*)</strong><br />
     Returns true only if the active CRE is in the area specified.<br />
     <br />
     <strong>0x407F HasItemEquiped(ItmRef:Item*,O:Object*)</strong><br />
@@ -560,13 +560,13 @@ title: "BG2: ToB Script Triggers"
     <strong>0x40B4 InMyGroup(O:Object*)</strong><br />
     Returns true only if the specifics value of the specified object is the same as that of the active CRE.<br />
     <br />
-    <strong>0x40B5 RealGlobalTimerExact(S:Name*,S:Area*)</strong><br />
+    <strong>0x40B5 RealGlobalTimerExact(S:Name*,S:Scope*)</strong><br />
     NT<br />
     <br />
-    <strong>0x40B6 RealGlobalTimerExpired(S:Name*,S:Area*)</strong><br />
+    <strong>0x40B6 RealGlobalTimerExpired(S:Name*,S:Scope*)</strong><br />
     NT Returns true only if the timer with the specified name of the specified area has been set at least once and has now expired.<br />
     <br />
-    <strong>0x40B7 RealGlobalTimerNotExpired(S:Name*,S:Area*)</strong><br />
+    <strong>0x40B7 RealGlobalTimerNotExpired(S:Name*,S:Scope*)</strong><br />
     NT Returns true only if the timer with the specified name of the specified area has been set and has not yet expired.<br />
     <br />
     <strong>0x40B8 NumInPartyAlive(I:Num*)</strong><br />
@@ -653,7 +653,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x40D3 InPartyAllowDead(O:Object*)</strong><br />
     NT Returns true if the specified object which can be dead or alive is in the party.<br />
     <br />
-    <strong>0x40D4 AreaCheckObject(S:ResRef*,O:Object*)</strong><br />
+    <strong>0x40D4 AreaCheckObject(AreRef:Area*,O:Object*)</strong><br />
     Returns true if the specified object is in the area specified. This trigger can cause a crash if the specified area is not loaded.<br />
     <br />
     <strong>0x40D5 ActuallyInCombat()</strong><br />
@@ -676,7 +676,7 @@ title: "BG2: ToB Script Triggers"
     <strong>0x40DA HaveSpellParty(I:Spell*Spell)</strong><br />
     Returns true if any of the party members have the specified spell memorised.<br />
     <br />
-    <strong>0x4031 HaveSpellRES(S:Spell*)</strong><br />
+    <strong>0x4031 HaveSpellRES(SplRef:Spell*)</strong><br />
     ToB only. Returns true if the active CRE has the specified (by the string parameter) spell memorised.<br />
     <br />
     <strong>0x40DB AmIInWatchersKeepPleaseIgnoreTheLackOfApostophe()</strong><br />

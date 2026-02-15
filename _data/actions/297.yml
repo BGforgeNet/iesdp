@@ -6,7 +6,7 @@ name: MoveToSavedLocation
 params:
   - name: GLOBAL
     type: s
-  - name: Area
+  - name: Scope
     type: s
 desc: |-
   This action instructs the active creature to move to the previously saved specified location.

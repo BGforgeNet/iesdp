@@ -6,7 +6,7 @@ n: 116
 name: TakePartyItem
 params:
   - name: Item
-    type: s
+    type: itmref
 desc: |-
   This action takes a single instance of the specified item from the party (unless the item exists in a stack, in which case the entire stack is taken). Characters are checked in current party order. The item is transferred to the inventory of the active creature. If there are multiple calls to TakePartyItem() in the same block, each with the same item specified, only one call will actually remove an item (on each execution of the block). All slots are checked; inventory slots are checked in the following order
 

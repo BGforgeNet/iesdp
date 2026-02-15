@@ -6,9 +6,9 @@ name: CreateCreatureAtLocation
 params:
   - name: GLOBAL
     type: s
-  - name: Area
+  - name: Scope
     type: s
-  - name: ResRef
-    type: s
+  - name: Creature
+    type: creref
 desc: |-
   This action creates the specified creature at the specified saved location.

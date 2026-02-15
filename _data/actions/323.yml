@@ -2,8 +2,8 @@ bg2: 1
 n: 323
 name: CreateCreatureImpassableAllowOverlap
 params:
-  - name: NewObject
-    type: s
+  - name: Creature
+    type: creref
   - name: Location
     type: p
   - name: Face

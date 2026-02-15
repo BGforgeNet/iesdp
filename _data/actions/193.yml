@@ -8,6 +8,6 @@ n: 193
 name: TakePartyItemRange
 params:
   - name: Item
-    type: s
+    type: itmref
 desc: |-
   This action instructs the active creature to take the specified item from the party, if they are nearby. A range for the action cannot be specified.

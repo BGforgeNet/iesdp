@@ -3,8 +3,8 @@ pstee: 1
 n: 323
 name: CreateCreatureImpassableAllowOverlapEffect
 params:
-  - name: NewObject
-    type: s
+  - name: Creature
+    type: creref
   - name: Effect
     type: s
   - name: Location

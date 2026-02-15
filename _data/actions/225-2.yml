@@ -3,7 +3,7 @@ n: 225
 name: MoveBetweenAreasEffect
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Graphic
     type: s
   - name: Location

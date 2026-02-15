@@ -7,7 +7,7 @@ n: 91
 name: LeaveArea
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Point
     type: p
   - name: Face

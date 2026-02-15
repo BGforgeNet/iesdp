@@ -4,7 +4,7 @@ pstee: 1
 n: 279
 name: AddSpecialAbility
 params:
-  - name: ResRef
-    type: s
+  - name: Spell
+    type: splref
 desc: |-
   This action adds the specified spell to the active creature. The message <creature\_name> has gained a special ability: "Ability" is displayed in the message log.

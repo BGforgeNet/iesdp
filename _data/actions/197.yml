@@ -5,7 +5,7 @@ n: 197
 name: MoveGlobal
 params:
   - name: Area
-    type: s
+    type: areref
   - name: Object
     type: o
   - name: Point

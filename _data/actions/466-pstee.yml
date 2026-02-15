@@ -2,8 +2,8 @@ pstee: 1
 n: 466
 name: ForceSpellRESNoFeedback
 params:
-  - name: RES
-    type: s
+  - name: Spell
+    type: splref
   - name: Target
     type: o
 desc: |-
