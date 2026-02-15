@@ -2,7 +2,7 @@ pstee: 1
 n: 361
 name: DisplayStringPoint
 params:
-  - name: StrRef
+  - name: String
     type: strref
   - name: Location
     type: p

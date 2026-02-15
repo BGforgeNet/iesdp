@@ -4,7 +4,7 @@ name: DisplayStringPointLog
 params:
   - name: Location
     type: p
-  - name: StrRef
+  - name: String
     type: strref
 desc: |-
   Same as [DisplayStringPoint(P:Location\*,I:Strref\*)](#361) this action displays a floating message over a point in the script runner's current area, but also displays it in the message log.

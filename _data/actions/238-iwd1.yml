@@ -5,5 +5,5 @@ name: AddXPVar
 params:
   - name: VarTableEntry
     type: s
-  - name: Strref
+  - name: String
     type: i

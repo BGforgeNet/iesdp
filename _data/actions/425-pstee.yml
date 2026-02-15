@@ -4,7 +4,7 @@ name: FloatMessage
 params:
   - name: Object
     type: o
-  - name: StrRef
+  - name: String
     type: i
 desc: |-
   This action displays the string specified by StrRef over the head of the given object (on the game-screen).

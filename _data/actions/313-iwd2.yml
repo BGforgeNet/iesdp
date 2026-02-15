@@ -4,5 +4,5 @@ name: SetRegularNameSTRREF
 params:
   - name: Object
     type: o
-  - name: StrRef
+  - name: String
     type: i

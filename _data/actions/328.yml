@@ -6,7 +6,7 @@ name: RemoveMapNote
 params:
   - name: Position
     type: p
-  - name: STRREF
-    type: i
+  - name: String
+    type: strref
 desc: |-
   This will remove a map note from the current area's mini-map at the specified position. The position is a location on the actual area map (not the minimap).

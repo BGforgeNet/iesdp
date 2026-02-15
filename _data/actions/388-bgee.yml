@@ -5,7 +5,7 @@ name: DisplayStringHeadNoLog
 params:
   - name: Object
     type: o
-  - name: StrRef
+  - name: String
     type: strref
 desc: |-
   This action displays the string specified by the StrRef parameter over the head of the given object on the game-screen, but not in the message log.

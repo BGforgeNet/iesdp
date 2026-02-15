@@ -4,6 +4,6 @@ name: FloatMessageFixed
 params:
   - name: Location
     type: p
-  - name: StrRef
+  - name: String
     type: i
 unknown: true

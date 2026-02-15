@@ -2,5 +2,5 @@ iwd2: 1
 n: 314
 name: EndGame
 params:
-  - name: StrRef
+  - name: String
     type: i

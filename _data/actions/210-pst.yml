@@ -4,6 +4,6 @@ name: FloatMessage
 params:
   - name: Object
     type: o
-  - name: StrRef
+  - name: String
     type: i
 unknown: true

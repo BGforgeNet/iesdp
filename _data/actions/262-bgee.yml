@@ -5,7 +5,7 @@ name: DisplayStringNoName
 params:
   - name: Object
     type: o
-  - name: StrRef
+  - name: String
     type: strref
 desc: |-
   This action displays the strref specified by the StrRef parameter in the message window, without attributing the text to an object.

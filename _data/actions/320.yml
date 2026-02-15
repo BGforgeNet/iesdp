@@ -6,8 +6,8 @@ name: SetPlayerSound
 params:
   - name: Object
     type: o
-  - name: STRREF
-    type: i
+  - name: String
+    type: strref
   - name: SlotNum
     type: i
     ids: SndSlot

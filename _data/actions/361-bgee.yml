@@ -4,7 +4,7 @@ name: DisplayStringPoint
 params:
   - name: Location
     type: p
-  - name: StrRef
+  - name: String
     type: strref
 desc: |-
   Displays a floating message over a point in the script runner's current area.

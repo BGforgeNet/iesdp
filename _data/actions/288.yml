@@ -4,7 +4,7 @@ pstee: 1
 n: 288
 name: SetName
 params:
-  - name: STRREF
-    type: i
+  - name: String
+    type: strref
 desc: |-
   This action changes the name of the active creature to the specified strref.

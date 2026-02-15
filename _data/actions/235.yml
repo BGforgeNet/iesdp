@@ -4,7 +4,7 @@ pstee: 1
 n: 235
 name: SetQuestDone
 params:
-  - name: STRREF
-    type: i
+  - name: String
+    type: strref
 desc: |-
   This action removes the specified strref from the quest section of the journal.

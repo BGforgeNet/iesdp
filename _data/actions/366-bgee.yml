@@ -3,7 +3,7 @@ pstee: 1
 n: 366
 name: GameOver
 params:
-  - name: StrRef
+  - name: String
     type: i
 desc: |-
   Custom game over event, with the specific string displayed.
