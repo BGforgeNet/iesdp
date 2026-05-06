@@ -7,10 +7,10 @@
   length: 4
   id: version
 - desc: <b><a name="splv1_Header_0x8">Spell Name</a></b> - Unidentified (strref)
-  type: dword
+  type: strref
   id: unidentified_name
 - desc: Spell Name - Identified (strref) (usually `-1`)
-  type: dword
+  type: strref
   unused: 1
   id: identified_name
 - desc: Completion Sound
@@ -124,10 +124,10 @@
   type: dword
   unused: 1
 - desc: Spell Description
-  type: dword
+  type: strref
   id: description
 - desc: Spell Description - Identified (strref) (usually `-1`)
-  type: dword
+  type: strref
   id: identified_desc
   unused: 1
 - desc: Description icon
@@ -145,9 +145,9 @@
 - desc: Feature Block Table offset
   type: dword
   id: feature_blocks_offset
-- desc: Casting Feature Block offset (these feature blocks may not use target type 2)
+- desc: Casting Feature Block index (these feature blocks may not use target type 2)
   type: word
-  id: casting_feature_blocks_offset
+  id: casting_feature_blocks_index
 - desc: Casting Feature Block count
   offset: 0x70
   type: word
