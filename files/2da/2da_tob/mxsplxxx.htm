@@ -11,7 +11,7 @@ In case of bard, ranger and paladin there is a possibility to add more levels of
 Note that the BG2 manual is incorrect in regards to the casting level for rangers and paladins. Rangers cast at a spell level 7 levels below their current level, while paladins cast at a spell level 8 below their current level. This casting level is not capped at 9.<br />
 In BG2 ToB we have (mxsplbrd.2da):<br />
 
-<pre>
+{% highlight 2da %}
 2DA V1.0
 0
            1          2          3          4          5          6          
@@ -54,13 +54,13 @@ In BG2 ToB we have (mxsplbrd.2da):<br />
 38         5          5          5          5          5          5          
 39         5          5          5          5          5          5          
 40         5          5          5          5          5          5          
-</pre>
+{% endhighlight %}
 <br />
 <div class="title_main">mxsplwis.2da</div>
 <br />
 This file is responsible for bonus priests (clerics and druids) spells because of their wisdom:<br />
 In BG2 ToB we have:<br />
-<pre>
+{% highlight 2da %}
 2DA V1.0
 0
         1   2   3   4   5   6   7
@@ -76,7 +76,8 @@ In BG2 ToB we have:<br />
 22      3   3   2   4   2   0   0
 23      3   3   2   4   4   0   0
 24      3   3   2   4   4   2   0
-25      3   3   2   4   4   3   1</pre>
+25      3   3   2   4   4   3   1
+{% endhighlight %}
 Columns numerated from 1 to 7 indicates the priest spell book level<br />
 First column is the CRE's wisdom.<br />
 The crossing of them indicate how many bonus spells have priest creature with specified wisdom.<br />

@@ -9,7 +9,7 @@ All the SEQ.IDS-related rows are always played unless the creature is STATE_SILE
 <br />
 For example, the file AIRELE1.CRE animation type is CGAMEANIMATIONTYPE_ELEMENTAL_AIR, coded as MAIR. It therefore uses MAIR.2DA for its animation soundset. The ATTACK row pair has three sounds: airel01, nosound, and nosound, played at frames 2, 0, and 0 respectively. When this creature attacks, one sound from this list is chosen from random and played. Note "nosound" is an invalid sound, so no sound plays at all. AIRELE1.CRE will use the Battle_Cry and Selection sounds in MAIR.2DA, because it has no valid battle cry and selection sounds present in the CRE file.<br />
 <br />
-<pre>
+{% highlight 2da %}
 Mair/air elemental
 ***
 SOUND
@@ -51,17 +51,17 @@ Battle_Cry airel01 airel02
 Battle_Cry 0 0
 Selection airel01
 Selection 0
-</pre>
+{% endhighlight %}
 <br />
 Note. BG2: Throne of Bhaal has a bug where only the first and last sounds will play if there are more than 2 sounds listed under a row. The middle sounds will not play correctly. For example, MSOL.2DA has the following ATTACK row pair, and solarg02 will never play when a creature of animation CGAMEANIMATIONTYPE_SOLAR (MSOL) attacks.<br />
 <br />
-<pre>
+{% highlight 2da %}
 Msol/Solar
 ***
 SOUND
 ATTACK solarg01 solarg02 nosound
 ATTACK 0        0        0
-</pre>
+{% endhighlight %}
 
     <div class="indent1">
     a*.2da - Animals<br />

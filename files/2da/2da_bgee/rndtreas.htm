@@ -10,7 +10,7 @@ The first column of <code>RNDTREAS.2DA</code> specifies the name of the row, cur
 The BG2EE version of <code>RNDTREAS.2DA</code> is shown below.  In essence, <code>RNDTREAS.2DA</code> works exactly the same as <code><a href="../2da_bgee/rndequip.htm">RNDEQUIP.2DA</a></code>, so see <code><a href="../2da_bgee/rndequip.htm">RNDEQUIP.2DA</a></code> for an example of how <code>RNDTREAS.2DA</code> works.  However, <code>RNDTREAS.2DA</code> can be directly referenced by <code><a href="../2da_bgee/rndequip.htm">RNDEQUIP.2DA</a></code> without actually having <code>RNDTRE0#.ITM</code> as a resource.  For example, an entry in <code><a href="../2da_bgee/rndequip.htm">RNDEQUIP.2DA</a></code> that reads <code>RNDTRE05</code>, and a D20 roll of 6 will replace <code>RNDTRE0#.ITM</code> with <code>AMUL12</code>.<br />
 <br />
 In BG2EE we have:<br />
-<pre>
+{% highlight 2da %}
 2DA V1.0
 *
            2        3        4        5        6        7      8        9       10       11       12       13       14       15       16       17       18       19       20
@@ -19,7 +19,7 @@ AVERAGE    RNDMAG01 MISC23   AMUL05   MISC17   015      012    SCRL75   008     
 WELL_OFF   RNDMAG01 RNDMAG01 AMUL08   MISC20   034      AMUL09 RNDSCR01 008     009      RING11   023      RNDSCR01 RING14   MISC26   MISC25   057      MISC27   MISC28   RNDMAG01
 WEALTHY    RNDMAG02 RNDMAG01 MISC37   MISC35   RING16   AMUL07 RNDSCR02 047     038      029      AMUL09   RING10   RING15   RNDSCR02 RING13   RING17   MISC34   RNDMAG01 RNDMAG02
 RICH       RNDMAG02 RNDMAG02 RNDMAG01 RNDMAG01 AMUL12   AMUL13 AMUL10   MISC29  MISC21   073      MISC24   RNDSCR03 MISC34   MISC38   RNDSCR03 RNDMAG01 RNDMAG01 RNDMAG02 RNDMAG02
-</pre>
+{% endhighlight %}
 <br />
 <code>RNDTREAS.2DA</code> is supposed to support 9 functional rows of random treasure (from <code>rndtre01.itm</code> up to <code>rndtre09.itm</code>).<br />
 However, because of lax or missing range checks it is possible to extend the list quite a bit beyond the nine entries. The engine seems to use the ASCII code of the last filename character. After <code>9</code> there would be <code>:</code>, <code>;</code>, <code><</code>, <code>=</code>, <code>></code>, <code>?</code>, <code>@</code>, followed by <code>A</code> to <code>Z</code>. While characters like <code>:</code> or <code>?</code> are difficult to use because of their special meaning on filesystems, you can still use <code>A</code> to <code>Z</code>, which results in additional 26 random treasures (from <code>rndtre0a.itm</code> up to <code>rndtre0z.itm</code>). The entries between <code>9</code> and <code>A</code> can simply be filled with empty dummy entries.

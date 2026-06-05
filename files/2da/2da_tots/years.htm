@@ -5,7 +5,7 @@ title: "years.2da"
 <br />
 This file defines starting year and day in game time and format of date.<br />
 In BG1 TotS we have:<br />
-<pre>
+{% highlight 2da %}
 2DA V1.0
 0
            VALUE
@@ -13,7 +13,7 @@ STARTTIME  878400
 STARTYEAR  1368
 NORMALDAYMONTHFORMAT 15981
 SPECIALDAYMONTHFORMAT 16001
-</pre>
+{% endhighlight %}
 where:<br />
 first number determines day in given year when game is started (as defined in GTIMES.IDS ). In our case it is 122 day of this year ( 878400/7200 = 122 ) <br />
 second number is just the starting year and next two numbers are strrefs to dialog.tlk filled by tokens that show date (15981 is for example &quot;&lt;DAY&gt; &lt;MONTHNAME&gt;&quot; )<br />

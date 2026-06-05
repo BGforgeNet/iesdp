@@ -10,7 +10,7 @@ The first column of <code>RNDTREAS.2DA</code> specifies the name of the row, cur
 The PSTEE version of <code>RNDTREAS.2DA</code> is shown below.  In essence, <code>RNDTREAS.2DA</code> works exactly the same as <code><a href="../2da_pstee/rndscrol.htm">RNDSCROL.2DA</a></code>, so see <code><a href="../2da_pstee/rndscrol.htm">RNDSCROL.2DA</a></code> for an example of how <code>RNDTREAS.2DA</code> works.  However, <code>RNDTREAS.2DA</code> can be directly referenced by <code><a href="../2da_pstee/rndscrol.htm">RNDSCROL.2DA</a></code> without actually having <code>RNDTRE0#.ITM</code> as a resource.  For example, an entry in <code><a href="../2da_pstee/rndscrol.htm">RNDSCROL.2DA</a></code> that reads <code>RNDTRE05</code>, and a D20 roll of 6 will replace <code>RNDTRE0#.ITM</code> with <code>AEGIS</code>.<br />
 <br />
 In PSTEE we have:<br />
-<pre>
+{% highlight 2da %}
 2DA V1.0
 *
     1   2           3       4           5       6           7           8           9           10          11          12          13          14          15          16          17          18          19          20
@@ -19,7 +19,7 @@ In PSTEE we have:<br />
 3   *   50*100      golear  golring     golbra  axqual      qstlo       gsknife     gsdagger    RNDSCR02    hearchrm    knotchrm    bonechrm    50*100      golring     RNDSCR02    gsknife     50*100      bonechrm    RNDSCR02
 4   *   hearchrm    20*500  20*500      20*500  hearchrm    20*500      20*500      20*500      20*500      20*500      hearchrm    20*500      20*500      20*500      hearchrm    20*500      20*500      20*500      20*500
 5   *   heaven      umei    zero        bell    aegis       50*1000     50*1000     50*1000     50*1000     50*1000     50*1000     50*1000     50*1000     50*1000     50*1000     50*1000     50*1000     50*1000     50*1000
-</pre>
+{% endhighlight %}
 
 <br />
 <code>RNDTREAS.2DA</code> is supposed to support 9 functional rows of random treasure (from <code>rndtre01.itm</code> up to <code>rndtre09.itm</code>).<br />

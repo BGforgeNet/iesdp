@@ -10,11 +10,11 @@ The first column of RNDMAGIC.2DA specifies the name of the row, currently a simp
 The PSTEE version of RNDMAGIC.2DA is shown below.  In essence, RNDMAGIC.2DA works exactly the same as RNDEQUIP.2DA, so see RNDEQUIP.2DA for an example of how RNDMAGIC.2DA works.  However, RNDMAGIC.2DA can be directly referenced by RNDTREAS.2DA or RNDEQUIP.2DA without actually having RNDMAGx#.ITM as a resource.  For example, an entry in RNDTREAS.2DA that reads RNDMAG03, and a D20 roll of 3 will replace RNDTREx#.ITM with BOLT05.<br />
 <br />
 In PSTEE we have:<br />
-<pre>
+{% highlight 2da %}
 2DA
 234
     1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19  20
-</pre>
+{% endhighlight %}
 <br />
 RNDMAGIC.2DA supports 9 functional rows of random treasure.  Rows 10 and above are completely ignored.  If RNDMAGx#.ITM references a non-existant or an ignored row number (or if #=0 under any circumstances), then RNDMAGx#.ITM is replaced by an erroneous invisible item that cannot be removed.  Note that the replacing item is NOT RNDMAGx#.ITM itself, in this case. This blank item can likely be altered by setting the default 2da entry to a valid item.<br />
 <br />

@@ -8,7 +8,7 @@ This file defines what items are generated when a creature uses an item of filen
 The first column of <code>RNDTRES.2DA</code> specifies the name of the row, which is also used as the placeholder item name which is replaced by the actual item.  The rest of the columns have headers 1, 2, 3, 4, 5, ...  They can be used to add the item resource which is replaced by the placeholder item defined in the first column. The chance to get an item is calculated by dividing it by the number of defined columns, up to the first column consisting of '*', or the end of the row. The number of supported columns is open ended, but never exceeds the number of defined header columns. You can add more columns if you need finer control over the percentages for each item.<br />
 <br />
 In BG2EE we have:<br />
-<pre>
+{% highlight 2da %}
 2DA      V1.0
 *
          1        2        3        4        5        6        7        8        9        10       11       12       13       14       15       16       17       18       19       20       21       22       23       24       25       26       27       28       29       30       31       32       33       34       35       36       37       38       39       40
@@ -32,7 +32,7 @@ RNDPTN01 POTN02   POTN08   POTN19   POTN20   POTN28   *        *        *       
 RNDPTN02 POTN52   POTN17   POTN42   POTN24   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
 RNDPTN03 POTN14   POTN11   POTN12   POTN21   POTN45   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
 RNDOMAGE SW1H20   SW1H43   SW1H46   SW1H48   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
-</pre>
+{% endhighlight %}
 <br />
 Items that can be referenced:
 <ul>

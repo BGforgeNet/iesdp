@@ -10,14 +10,14 @@ The first column of RNDSCROL.2DA specifies the name of the row, currently a simp
 The BG2EE version of RNDSCROL.2DA is shown below.  In essence, RNDSCROL.2DA works exactly the same as RNDEQUIP.2DA, so see RNDEQUIP.2DA for an example of how RNDSCROL.2DA works.  However, RNDSCROL.2DA can be directly referenced by RNDEQUIP.2DA, RNDTREAS.2DA, RNDMAGIC.2DA, or RNDWEP.2DA without actually having RNDSCRx#.ITM as a resource.  For example, an entry in RNDWEP.2DA that reads RNDSCRL03, 2D10 dice are rolled producing a roll of 3 will replace RNDSCRx#.ITM with SCRL9F.<br />
 <br />
 In BG2EE we have:<br />
-<pre>
+{% highlight 2da %}
 2DA V1.0
 *
       1      2      3      4      5      6      7      8      9      10     11     12     13     14     15     16     17     18     19     20
 1st   SCRL6N SCRL6T SCRL70 SCRL66 SCRL66 SCRL67 SCRL68 SCRL69 SCRL71 SCRL72 SCRL73 SCRL75 SCRL76 SCRL77 SCRL78 SCRL79 SCRL80 SCRL7M SCRL7L SCRL7K
 2nd   SCRL8M SCRL8Q SCRL8R SCRL8S SCRL8T SCRL8U SCRL8V SCRL8W SCRL8X SCRL8Y SCRL8Z SCRL7B SCRL7C SCRL7D SCRL7E SCRL7F SCRL7G SCRL7H SCRL7I SCRL7J
 3rd   SCRL9L SCRL9G SCRL9F SCRL9E SCRL9D SCRL9C SCRL9B SCRL9A SCRL8A SCRL8B SCRL8C SCRL8D SCRL8E SCRL8F SCRL8G SCRL8H SCRL8I SCRL8J SCRL8L SCRL8M
-</pre>
+{% endhighlight %}
 <br />
 RNDSCROL.2DA supports 9 functional rows of random treasure.  Rows 10 and above are completely ignored.  If RNDSCRx#.ITM references a non-existant or an ignored row number (or if #=0 under any circumstances), then RNDSCRx#.ITM is replaced by an erroneous invisible item that cannot be removed.  Note that the replacing item is NOT RNDSCRx#.ITM itself, in this case. This blank item can likely be altered by setting the default 2da entry to a valid item.<br />
 <br />
