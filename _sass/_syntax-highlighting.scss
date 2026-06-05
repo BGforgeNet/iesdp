@@ -41,6 +41,16 @@
     .twoda-c3 { color: #8250df } // purple
     .twoda-c4 { color: #cf222e } // red
     .twoda-c5 { color: #bf3989 } // pink
+    // Column-header row: same per-column hue as .twoda-c0..c5 but bold, so each header reads with its
+    // column. Keep these hues in sync with the row above.
+    .twoda-h0 { color: #0969da; font-weight: 600 }
+    .twoda-h1 { color: #bc4c00; font-weight: 600 }
+    .twoda-h2 { color: #1a7f37; font-weight: 600 }
+    .twoda-h3 { color: #8250df; font-weight: 600 }
+    .twoda-h4 { color: #cf222e; font-weight: 600 }
+    .twoda-h5 { color: #bf3989; font-weight: 600 }
+    // First column (row labels): plain black, not bold - set apart from the coloured data cells.
+    .twoda-l { color: #1f2328 }
 }
 
 // Code-block background. Deliberately not bare `.highlight`, so it cannot add a box to the inline CLUA
