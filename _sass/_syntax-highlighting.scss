@@ -31,6 +31,16 @@
     // constants
     .no { color: #0550ae }
     .err { color: #cf222e } // invalid
+
+    // 2DA rainbow columns, cycled mod 6 by the 2da lexer. Six distinct hues from GitHub's Primer *light*
+    // palette (functional foreground colours), chosen for contrast on the light code background - the
+    // BGforge Monokai column colours are tuned for a dark editor and wash out here.
+    .twoda-c0 { color: #0969da } // blue
+    .twoda-c1 { color: #bc4c00 } // orange
+    .twoda-c2 { color: #1a7f37 } // green
+    .twoda-c3 { color: #8250df } // purple
+    .twoda-c4 { color: #cf222e } // red
+    .twoda-c5 { color: #bf3989 } // pink
 }
 
 // Code-block background. Deliberately not bare `.highlight`, so it cannot add a box to the inline CLUA
