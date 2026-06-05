@@ -10,7 +10,7 @@ name: Recoil
 desc: |-
   This action instructs the active creature to play the recoil animation. Note that some objects do not have this animation.
 
-  ```
+  ```baf
   IF
     TookDamage()
   THEN

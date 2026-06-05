@@ -12,7 +12,7 @@ desc: |-
 
   Example from Siege of Dragonspear (BD0103.BCS):
 
-  ```
+  ```baf
   IF
     Global("BD_Imoen_Items","GLOBAL",1)
     GlobalLT("BD_PLOT","GLOBAL",51)

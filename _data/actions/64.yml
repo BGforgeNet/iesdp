@@ -10,7 +10,7 @@ name: UndoExplore
 desc: |-
   This action resets the fog of war for the area the active creature is in.
 
-  ```
+  ```baf
   IF
     True()
   THEN

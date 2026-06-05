@@ -10,7 +10,7 @@ name: LockScroll
 desc: |-
   This action locks the screen on the active creature, preventing the screen from being scrolled away. The action only works when executed by a creature (its own script or via `ActionOverride`).
 
-  ```
+  ```baf
   IF
     CombatCounter(0)
   THEN

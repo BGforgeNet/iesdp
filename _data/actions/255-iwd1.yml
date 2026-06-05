@@ -10,7 +10,7 @@ params:
 desc: |-
   This action instructs the active creature to equip the best weapon (from those available in the quickslots) for attacking the target object. If the target creature is within the specified range the most damaging melee weapon is equipped, whereas if the creature is beyond the specified range the most damaging ranged weapon is equipped.
 
-  ```
+  ```baf
   IF
     See(NearestEnemyOf(Myself))
     !Allegiance(NearestEnemyOf(Myself),PC)

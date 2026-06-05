@@ -12,7 +12,7 @@ params:
 desc: |-
   This action instructs the active creature to attack the target for the specified time (ReevaluationPeriod) which is measured in AI updates (which default to 15 per second).The script will then run again, checking for other true conditions.
 
-  ```
+  ```baf
   IF
     See([EVILCUTOFF])
     Range(LastSeenBy(),4)

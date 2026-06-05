@@ -4,7 +4,7 @@ name: Rest
 desc: |-
   This action applies some of the benefits of resting (i.e. restoring spells and restoring abilities) to the active creature. The action does not play the rest movie or advance game time. The example script is from cut28a.bcs.
 
-  ```
+  ```baf
   IF
     True()
   THEN

@@ -16,7 +16,7 @@ params:
 desc: |-
   This action changes the general status of the target creature to the specified value. Values are from [general.ids]({{ ids }}/general.htm).
 
-  ```
+  ```baf
   IF
     Global"KR_GENERAL_CHANGE","LOCALS" ,0)
   THEN

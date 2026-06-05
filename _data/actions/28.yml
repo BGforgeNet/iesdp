@@ -13,7 +13,7 @@ params:
 desc: |-
   This action causes the active creature to attempt to disarm the specified trap. This action can be used for any creature (not just thieves) though success in disarming is dependent on points in the Disarm Trap skill.
 
-  ```
+  ```baf
   IF
     See("Trap01")
     Class(Myself,THIEF_ALL)

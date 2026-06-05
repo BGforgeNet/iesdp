@@ -9,7 +9,7 @@ name: FindTraps
 desc: |-
   This action instructs the active creature to enter Detect Traps modal state. This action can be used for any creature (not just thieves) though success in detecting traps is dependent on points in the Find Traps skill.
 
-  ```
+  ```baf
   IF
     ActionListEmpty()
     !Exists([EVILCUTOFF])

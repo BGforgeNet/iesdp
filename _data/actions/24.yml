@@ -10,7 +10,7 @@ name: Panic
 desc: |-
   This action causes the active creature to move randomly around the screen.
 
-  ```
+  ```baf
   IF
     HPPercentLT(Myself,15)
   THEN

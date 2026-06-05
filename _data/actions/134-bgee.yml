@@ -11,7 +11,7 @@ desc: |-
   This action instructs the active creature to attack the target for the specified time (ReevaluationPeriod) which is measured in AI updates (which default to 15 per second).The script will then run again, checking for other true conditions.
   Just to give an idea, [AttackOneRound()](#105) would be equivalent to AttackReevaluate() with a 100 tick reevaluation period.
 
-  ```
+  ```baf
   IF
     See([EVILCUTOFF])
     Range(LastSeenBy(),4)

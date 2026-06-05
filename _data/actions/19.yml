@@ -10,7 +10,7 @@ name: JoinParty
 desc: |-
   This action adds the active creature to the party. If the party is currently full the 'select party members' dialog is shown. JoinParty clears the ActionQueue of the active creature.
 
-  ```
+  ```baf
   IF
     See([PC])
     Global("KRJOINPARTY","GLOBAL",0)

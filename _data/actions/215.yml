@@ -14,7 +14,7 @@ params:
 desc: |-
   This action instructs the active creature to follow the target object, in the specified formation, taking up the specified position. The Formation parameter represents the formation type (e.g. two lines, arrowhead, single line). The position should be in the range [0,5]. The example script is from dlsctc02.bcs.
 
-  ```
+  ```baf
   IF
     !Range("DLSCTC02",12)
     Global("DontFollow","DL0302",0)

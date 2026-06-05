@@ -13,7 +13,7 @@ params:
 desc: |-
   This action instructs the active creature to move to the specified object. The action does not update the current position of the actor, saved in ARE files. The example script shows the creature moving towards the nearest enemy.
 
-  ```
+  ```baf
   IF
     See(NearestEnemyOf())
     !Range(NearestEnemyOf(),4)

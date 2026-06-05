@@ -12,7 +12,7 @@ params:
 desc: |-
   This action reveals an area on the worldmap, enabling travelling to it.
 
-  ```
+  ```baf
   IF
     Dead("Davaeorn")
     Global("Chapter","GLOBAL",4)

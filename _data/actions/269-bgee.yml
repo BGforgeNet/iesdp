@@ -10,7 +10,7 @@ params:
 desc: |-
   This action displays the specified string over the head on the specified object (on the game-screen). The string may also be shown in the message log, depending on options specified in baldur.ini.
 
-  ```
+  ```baf
   IF
     HPPercentLT(Myself,50)
     HasItem("Potn52",Myself)

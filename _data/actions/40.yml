@@ -13,7 +13,7 @@ params:
 desc: |-
   This action instructs the active creature to "play dead", i.e. to lay on the ground, for the specified interval (measured in AI updates per second (AI updates default to 15 per second). If used on a PC, the player can override the action by issuing a standard move command.
 
-  ```
+  ```baf
   IF
     HPPercentLT(Myself,30)
   THEN

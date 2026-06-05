@@ -13,7 +13,7 @@ params:
 desc: |-
   This action instructs the active creature to continually attack the target, i.e. the active creature will not switch targets until its target is dead.
 
-  ```
+  ```baf
   IF
     See([EVILCUTOFF])
     Class(LastSeenBy(),MAGE_ALL)

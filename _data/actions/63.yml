@@ -13,7 +13,7 @@ params:
 desc: |-
   This action causes a delay in script processing. The time is measured in seconds.
 
-  ```
+  ```baf
   IF
     See(Player1)
     See(Player6)

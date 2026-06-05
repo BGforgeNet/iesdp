@@ -19,7 +19,7 @@ params:
 desc: |-
   This action changes the current area. Parchment is the MOS image to use in the area transition loading screen. Only EE games support IDS symbols for `Face`.
 
-  ```
+  ```baf
   IF
     Global("MissionPackSave","GLOBAL",0)
   THEN

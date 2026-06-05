@@ -15,7 +15,7 @@ params:
 desc: |-
   This action starts the specified store with the specified object.
 
-  ```
+  ```baf
   IF
     Global("KRSTART_STORE","LOCALS",1)
   THEN

@@ -10,7 +10,7 @@ params:
 desc: |-
   This action calls lightning from the sky against the specified target.
 
-  ```
+  ```baf
   IF
     True()
   THEN

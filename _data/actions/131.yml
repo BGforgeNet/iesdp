@@ -13,7 +13,7 @@ params:
 desc: |-
   This action causes the target creature to die, dropping any droppable items they are carrying.
 
-  ```
+  ```baf
   IF
     Global("KillArntra04","AR0307",1)
   THEN

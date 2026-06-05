@@ -10,7 +10,7 @@ name: UnlockScroll
 desc: |-
   This action unlocks the screen if it has been locked.
 
-  ```
+  ```baf
   IF
     OR(2)
     HotKey(H)

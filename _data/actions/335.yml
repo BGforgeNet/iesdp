@@ -13,7 +13,7 @@ params:
 desc: |-
   This action sets the specified token to the given variable (in the specified scope). The example script will display 100 over the head of the active creature.
 
-  ```
+  ```baf
   IF
     Global("Value","GLOBAL",0)
   THEN

@@ -16,7 +16,7 @@ params:
 desc: |-
   This action changes the class of the target creature to the specified value. Values are from [class.ids]({{ ids }}/class.htm).
 
-  ```
+  ```baf
   IF
     Global"KR_CLASS_CHANGE","LOCALS",0)
   THEN

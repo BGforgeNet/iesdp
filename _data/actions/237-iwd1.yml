@@ -5,7 +5,7 @@ name: ReturnToSavedLocation
 desc: |-
   This action instructs the active creature to jump to its saved location (as set by SetSavedLocation()).
 
-  ```
+  ```baf
   IF
     !NearSavedLocation(7)
   THEN

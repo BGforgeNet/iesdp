@@ -15,7 +15,7 @@ params:
 desc: |-
   This action alters the morale of the target by the specified amount. The change amount can be positive or negative. The example script is from bardsh.bcs.
 
-  ```
+  ```baf
   IF
     AttackedBy([GOODCUTOFF],DEFAULT)
     Allegiance(Myself,NEUTRAL)

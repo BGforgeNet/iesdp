@@ -11,7 +11,7 @@ params:
 desc: |-
   This action instructs the active creature to use the specified item (object) on the specified target (target). This action is most often used to allow use of potions and wands. The item to be used must exist in the active creature's inventory (though it need not be equipped).
 
-  ```
+  ```baf
   IF
     HPPercentLT(Myself,50)
     HasItem("potn52",Myself)

@@ -10,7 +10,7 @@ name: Explore
 desc: |-
   This action removes the fog of war for the area the active creature is in.
 
-  ```
+  ```baf
   IF
     True()
   THEN

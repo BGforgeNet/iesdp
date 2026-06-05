@@ -9,7 +9,7 @@ params:
 desc: |-
   This action instructs the active creature to play the specified bard song. Values are from [bardsong.ids]({{ ids }}/bardsong.htm).
 
-  ```
+  ```baf
   IF
     ActionListEmpty()
     CheckStatGT(Myself,2,LEVEL)

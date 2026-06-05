@@ -15,7 +15,7 @@ desc: |-
 
   This script is from the area script for the Copper Coronet (AR0406) and creates extra guards when the Player is discovered in the off limits area.
 
-  ```
+  ```baf
   IF
     Global("CopperGuards","GLOBAL",1)
   THEN

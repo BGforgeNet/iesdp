@@ -8,7 +8,7 @@ params:
 desc: |-
   This action instructs the active creature to attack the specified target for one round.
 
-  ```
+  ```baf
   IF
     See(NearestEnemyOf())
   THEN

@@ -10,7 +10,7 @@ name: ClearAllActions
 desc: |-
   This action clears any queued actions for all creatures in the area. The example script is from ar0507.bcs.
 
-  ```
+  ```baf
   IF
     Global("AmsiHouse","GLOBAL",3)
     !Dead("amsi")

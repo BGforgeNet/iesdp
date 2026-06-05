@@ -13,7 +13,7 @@ params:
 desc: |-
   This action will open the specified door. If the door is locked the creature must possess the correct key. Some doors central to the plot doors cannot be opened. The active creature can stick on this action if it fails.
 
-  ```
+  ```baf
   IF
     See("Door01"
     OpenState("Door01",FALSE)

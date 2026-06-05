@@ -12,7 +12,7 @@ params:
     type: i
 desc: |-
   This action gives (or takes if negative) the specified amount of experience to the party. The XP amount is distributed among all current living party members. The example script is from ar1300.bcs.
-  ```
+  ```baf
   IF
     OpenState("Bridge01",TRUE)
     Global("BridgeOpen","GLOBAL",0)

@@ -15,7 +15,7 @@ params:
 desc: |-
   This action instructs the active creature to start the specified dialog with the specified target. The dialog can be initiated from a distance and must have at least one state with all its top level conditions true else it will not initiate. The active creature has its dialog file permanently set to the file specified by the DialogFile parameter.
 
-  ```
+  ```baf
   IF
     See([PC])
     NumTimesTalkedTo(0)

@@ -10,7 +10,7 @@ desc: |-
   {% assign text = "<code>Heard()</code>" -%} {%- assign anchor = "0x002F" -%} {%- include trigger_link.html %}
   trigger. Shouts can be heard within a 28-foot radius (448 pixels).
 
-  ```
+  ```baf
   IF
     StateCheck(Myself,STATE_POISONED)
   THEN
@@ -19,7 +19,7 @@ desc: |-
   END
   ```
 
-  ```
+  ```baf
   IF
     Heard([GOODCUTOFF],4010)
     HaveSpell(CLERIC_SLOW_POISON)

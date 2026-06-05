@@ -9,7 +9,7 @@ name: SetLeavePartyDialogFile
 desc: |-
   This action sets the dialog for the active creature to their leave dialog.
 
-  ```
+  ```baf
   IF
     !InParty(Myself)
     HPGT(Myself,0)

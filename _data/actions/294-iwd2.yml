@@ -15,7 +15,7 @@ params:
 desc: |-
   This action instructs the target object to (un)equip the specified item in the indicated slot. The example script instructs the active creature to equip "theItem" in the fist weapon slot.
 
-  ```
+  ```baf
   IF
     Global("iiEquipped","GLOBAL",0)
   THEN

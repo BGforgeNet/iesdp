@@ -13,7 +13,7 @@ params:
 desc: |-
   This action instantly moves the active creature to the specified point.
 
-  ```
+  ```baf
   IF
     True()
   THEN

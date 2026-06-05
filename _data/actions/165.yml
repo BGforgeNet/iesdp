@@ -15,7 +15,7 @@ params:
 desc: |-
   This action adds experience to the party, with the amount corresponding to a global variable.
 
-  ```
+  ```baf
   IF
     Global("MyXP","GLOBAL",0)
   THEN

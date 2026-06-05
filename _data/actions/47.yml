@@ -15,7 +15,7 @@ params:
 desc: |-
   This action can used to make the active creature follow the creature specified by the leader parameter, maintain a relative position determined by the offset parameter.
 
-  ```
+  ```baf
   IF
     CombatCounter(0)
     Allegiance(Myself,NEUTRAL)

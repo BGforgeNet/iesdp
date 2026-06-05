@@ -8,7 +8,7 @@ desc: |-
 
   The action is uninterruptable; actions listed this one in a script may not execute as intended.
 
-  ```
+  ```baf
   IF
     HPPercentLT(Myself,35)
   THEN

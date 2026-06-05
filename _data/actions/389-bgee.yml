@@ -16,7 +16,7 @@ desc: |-
 
   Example from Siege of Dragonspear (BDINTRO.BCS):
 
-  ```
+  ```baf
   IF
     Global("SOD_fromimport","GLOBAL",0)
     !HasItemEquiped("ring05",Player1)  // Sandthief's Ring

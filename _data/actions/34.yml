@@ -11,7 +11,7 @@ params:
 desc: |-
   This action instructs the active creature to use the specified item (object) on the specified target (target). The ability number (i.e. extended header index) to use may be specified. This action is most often used to allow use of potions and wands. The item to be used must exist in the active creature's inventory (not in a container within the inventory) - though it need not be equipped.
 
-  ```
+  ```baf
   IF
     HPPercentLT(Myself,50)
     HasItem("potn52",Myself)
@@ -24,7 +24,7 @@ desc: |-
   ```
 
   IWDEE supports also the `UseItemAbility` signature:
-  ```
+  ```baf
   IF
     !StateCheck(Myself,STATE_MIRRORIMAGE)
     GlobalLT("MO_UsedIlbratha","GLOBAL",1)

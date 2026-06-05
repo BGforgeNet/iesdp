@@ -12,7 +12,7 @@ params:
 desc: |-
   This action creates a quantity of items equal to a global variable on the active creature. The example script will create 50 arrows.
 
-  ```
+  ```baf
   IF
     Global("Arrows","LOCALS",0)
   THEN

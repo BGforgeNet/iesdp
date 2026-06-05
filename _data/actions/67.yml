@@ -14,7 +14,7 @@ params:
 desc: |-
   This action changes the weather. The action only works in outdoors areas that have weather enabled in the ARE file. Values for the weather parameter are from [weather.ids]({{ ids }}/weather.htm). Note that the fog weather type does not work.
 
-  ```
+  ```baf
   IF
     Global("KRSTORM","GLOBAL",0)
   THEN

@@ -17,7 +17,7 @@ desc: |-
 
   The example is from AR0516.bcs.
 
-  ```
+  ```baf
   IF
     Global("ThrallOrb","GLOBAL",2)
     PartyHasItem("MISC7Y")

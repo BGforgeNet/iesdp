@@ -12,7 +12,7 @@ params:
 desc: |-
   This action is used to initiate banter between NPCs. The example script is from edwin.bcs.
 
-  ```
+  ```baf
   IF
     InParty(Myself)
     Gender(Myself,FEMALE)

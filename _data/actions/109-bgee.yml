@@ -12,7 +12,7 @@ params:
 desc: |-
   This action alters the specified variable, in the specified scope, by the amount indicated. The amount can be positive or negative.
 
-  ```
+  ```baf
   IF
     See([EVILCUTOFF]
     !Specifics(LastSeenBy(),160)

@@ -4,7 +4,7 @@ name: EscapeArea
 desc: |-
   This action instructs the active creature to leave the current area, either by walking, or, if the path is blocked, by simply disappearing. The action is uninterruptable; actions listed this one in a script may not execute as intended.
 
-  ```
+  ```baf
   IF
     HPPercentLT(Myself,35)
   THEN

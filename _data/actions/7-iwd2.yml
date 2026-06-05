@@ -9,7 +9,7 @@ params:
     type: p
 desc: |
   Here we have a different description, because we can.
-  ```
+  ```baf
   IF
     Global("CopperGuards","GLOBAL",1)
   THEN

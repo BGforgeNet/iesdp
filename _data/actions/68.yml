@@ -9,7 +9,7 @@ params:
 desc: |-
   This action calls lightning from the sky against the specified target, causing immediate death (unless the target has the MinHP effect applied). The lightning does not always show, and if it does, it is not always in the expected location.
 
-  ```
+  ```baf
   IF
     True()
   THEN

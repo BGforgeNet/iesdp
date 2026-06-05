@@ -10,7 +10,7 @@ name: EquipMostDamagingMelee
 desc: |-
   This action instructs the active creature to equip the most damaging melee weapon from those available in the quickslots. Damage is calculated on the THAC0 bonus and damage - special bonuses versus creature types and elemental damages are not checked.
 
-  ```
+  ```baf
   IF
     See([EVILCUTOFF])
   THEN

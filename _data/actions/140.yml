@@ -21,7 +21,7 @@ params:
 desc: |-
   This action creates the item specified by the resref parameter on the creature specified by the object parameter, with quantity/charges controlled by the usage parameters.
 
-  ```
+  ```baf
   IF
     GlobalTimerExpired("dwVith","GLOBAL")
     Global("dwVithal","GLOBAL",3)

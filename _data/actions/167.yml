@@ -13,7 +13,7 @@ params:
 desc: |-
   This action is used to a play a movie (MVE file). The example script is from ar108.bcs.
 
-  ```
+  ```baf
   IF
     Global("EnteredPalace","GLOBAL",0)
   THEN

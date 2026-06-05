@@ -17,7 +17,7 @@ desc: |-
   
   The example script is from ar1803.bcs.
 
-  ```
+  ```baf
   IF
     Dead("Davaeorn")
     Global("Chapter","GLOBAL",4)

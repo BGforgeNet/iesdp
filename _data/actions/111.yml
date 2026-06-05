@@ -12,7 +12,7 @@ desc: |-
   joinable NPCs, familiars and recipients of `MakeGlobal` are still accessible by script name and are not
   fully removed. The example script is from the Irenicus cutscene at the beginning of the game.
 
-  ```
+  ```baf
   IF
     True()
   THEN

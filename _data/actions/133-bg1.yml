@@ -10,7 +10,7 @@ params:
 desc: |-
   This action clears the action list of the specified object. The example script is from ar2400.bcs.
 
-  ```
+  ```baf
   IF
     GlobalTimerExpired("udWaitOgreDoor","GLOBAL")
     Global("HaveOgreOpenDoor","AR2400",0)

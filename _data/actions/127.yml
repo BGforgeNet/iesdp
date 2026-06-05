@@ -13,7 +13,7 @@ params:
 desc: |-
   This action is used internally in a cutscene to make the object with the specified death variable perform actions. The action appears to only work from a creature script. The example script is from cut01.bcs.
 
-  ```
+  ```baf
   IF
     True()
   THEN

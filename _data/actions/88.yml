@@ -9,7 +9,7 @@ params:
 desc: |-
   This action instructs the active creature to move to the specified point and marks the creature as a leader. The following example script sets Player1 walking to [3363.2954] and sets Player2 and Player3 to "follow" to [3363.2954] in a line and with minimal walking into each other. This action is not fully understood, and is not particularly reliable.
 
-  ```
+  ```baf
   IF
     HotKey(E)
   THEN

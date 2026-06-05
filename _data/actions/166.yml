@@ -13,7 +13,7 @@ params:
 desc: |-
   This action sets the number of times the active creature has been talked to (by player characters). The example script is from ar0103.bcs.
 
-  ```
+  ```baf
   IF
     Global("BrielbaraMove","GLOBAL",1)
     !Exists("Brielbara")

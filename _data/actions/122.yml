@@ -10,7 +10,7 @@ name: EndCutSceneMode
 desc: |-
   This action ends a cutscene, and restores the GUI and player control. The example script is from ar0800.bcs.
 
-  ```
+  ```baf
   IF
     GlobalGT("BodhiJob","GLOBAL",0)
     Global("Movie02","GLOBAL",0)

@@ -11,7 +11,7 @@ params:
 desc: |-
   This action changes the current area. NOTE: Unlike other games, PST does not take a second string argument!
 
-  ```
+  ```baf
   IF
     Global("MissionPackSave","GLOBAL",0)
   THEN

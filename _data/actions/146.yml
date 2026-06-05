@@ -14,7 +14,7 @@ params:
 desc: |-
   This action causes the active creature to change animation to the specified animation (values from [animate.ids]({{ ids }}/animate.htm))
 
-  ```
+  ```baf
   IF
     !InPartyAllowDead("Aerie")
     !Dead("Aerie")

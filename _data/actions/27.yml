@@ -15,7 +15,7 @@ params:
 desc: |-
   This action causes the active creature to guard the specified point, staying within the specified range.
 
-  ```
+  ```baf
   IF
     True()
   THEN

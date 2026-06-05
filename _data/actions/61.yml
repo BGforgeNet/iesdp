@@ -15,7 +15,7 @@ params:
 desc: |-
   This action starts a timer local to the active creature. The timer is measured in seconds, and the timer value is not saved in save games. The timer is checked with the TimerExpired trigger.
 
-  ```
+  ```baf
   IF
     Global("KRDEAD","LOCALS",0 )
     Dead("Shadra01")

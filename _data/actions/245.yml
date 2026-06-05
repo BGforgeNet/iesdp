@@ -13,7 +13,7 @@ params:
 desc: |-
   This action stores the location of the specified object in the named variable.
 
-  ```
+  ```baf
   IF
     Global("SavedMyPos","LOCALS",0)
   THEN

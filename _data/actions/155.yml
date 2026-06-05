@@ -16,7 +16,7 @@ params:
 desc: |-
   This action changes the race of the target creature to the specified value. Values are from [race.ids]({{ ids }}/race.htm).
 
-  ```
+  ```baf
   IF
     Global"KR_RACE_CHANGE","LOCALS",0)
   THEN

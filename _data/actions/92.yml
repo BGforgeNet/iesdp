@@ -16,7 +16,7 @@ params:
 desc: |-
   This action instructs the active creature to select the specified slot, and use the ability in the extended header specified by the ability parameter. The example script is from ankheg.bcs.
 
-  ```
+  ```baf
   IF
     See(NearestEnemyOf(Myself))
     Range(NearestEnemyOf(Myself),5)

@@ -16,7 +16,7 @@ params:
 desc: |-
   This action plays a sound linked to the object.
 
-  ```
+  ```baf
   IF
     Delay(2)
     HPPercentLT(Myself,35)

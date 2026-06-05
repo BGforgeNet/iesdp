@@ -17,7 +17,7 @@ params:
 desc: |-
   This action sets a variable (specified by name) in the scope (specified by area) to the value (specified by value). See the [variable type](../../appendices/variables.htm) appendix for details on variables.
 
-  ```
+  ```baf
   IF
     Global("KRINAREA","AR0400",0)
   THEN

@@ -10,7 +10,7 @@ name: LeaveParty
 desc: |-
   This action causes the active creature to leave the party. This action calls DropInventory() as part of its execution.
 
-  ```
+  ```baf
   IF
     HappinessLT(Myself,-299)
   THEN

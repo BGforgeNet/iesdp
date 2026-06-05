@@ -12,7 +12,7 @@ params:
 desc: |-
   This action gives the specified amount of gold to the party. The active creature need not have the gold in its "money variable". A negative amount will remove gold from the active creature.
 
-  ```
+  ```baf
   IF
     NumTimesTalkedTo(30)
   THEN

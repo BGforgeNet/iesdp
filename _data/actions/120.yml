@@ -18,7 +18,7 @@ desc: |-
   only one script block depending on the specified conditions. With `StartCutSceneEx("BDCUT17B",FALSE)` it will execute both blocks
   regardless of condition.
 
-  ```
+  ```baf
   IF
     GlobalLT("bd_cut17b_cycle","bd1000",10)
     !NearLocation(Player1,4535,550,30)

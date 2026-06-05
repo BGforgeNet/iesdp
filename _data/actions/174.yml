@@ -9,7 +9,7 @@ name: EquipRanged
 desc: |-
   This action instructs the active creature to a ranged weapon from the weapons available in the quickslots.
 
-  ```
+  ```baf
   IF
     See([EVILCUTOFF])
     !Range([EVILCUTOFF],4)

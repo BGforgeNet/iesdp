@@ -11,7 +11,7 @@ params:
 desc: |-
   This action instructs the active creature to move to the previously saved specified location.
 
-  ```
+  ```baf
   IF
     Global("MoveToLocation","LOCALS",0)
   THEN

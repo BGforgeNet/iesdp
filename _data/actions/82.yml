@@ -18,7 +18,7 @@ params:
 desc: |-
   This action creates the specified item (resref) on the active creature. The usage parameters determine the number of items created or the number of charges on the item, depending on the item type being created. The example script is from AR0602.
 
-  ```
+  ```baf
   IF
     Global("BG1Pantaloons","GLOBAL",0)
     PartyHasItem("MISC47")

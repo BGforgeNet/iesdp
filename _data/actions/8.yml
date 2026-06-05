@@ -13,7 +13,7 @@ params:
 desc: |-
   This action instructs the active creature to initiate dialog with the target creature. Dialog will not be initiated if the creature using this action has been assigned a dialog that has all top level conditions returning false.
 
-  ```
+  ```baf
   IF
     GlobalTimerExpired("Yeslick","GLOBAL")
     Global("FLOODED","GLOBAL",0)

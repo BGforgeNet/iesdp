@@ -10,7 +10,7 @@ name: Help
 desc: |-
   This action acts similar to shout, but does not accept values. The range of the Help action is larger than the default visual radius of NPCs (see description of `Shout`).
 
-  ```
+  ```baf
   IF
     HitBy([ANYONE],CRUSHING)
   THEN

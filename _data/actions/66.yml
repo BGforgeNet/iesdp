@@ -14,7 +14,7 @@ params:
 desc: |-
   This action changes the time of day. The time parameter is taken from [time.ids]({{ ids }}/time.htm), though a direct number can be specified. The example script is from when Irenicus leaves his dungeon.
 
-  ```
+  ```baf
   IF
     Global("AmaWaukeen","GLOBAL",1)
   THEN

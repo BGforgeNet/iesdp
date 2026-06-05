@@ -14,7 +14,7 @@ params:
     type: o
 no_result: true
 desc: |-
-  ```
+  ```baf
   IF
     See([ANYONE])
     !HasItem("Sw1h01",Myself)

@@ -9,7 +9,7 @@ params:
 desc: |-
   This action instructs the active creature to equip the specified item. The item needs to be in one of the creatures quickslots.
 
-  ```
+  ```baf
   IF
     HasItem("Sw1h01",Myself)
     !HasItemEquipedReal("Sw1h01",Myself)

@@ -13,7 +13,7 @@ params:
 desc: |-
   This action closes the specified door. The example script is from ar0300.bcs.
 
-  ```
+  ```baf
   IF
     OR(2)
     Global("LyrosJob","GLOBAL",3)

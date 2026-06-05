@@ -8,7 +8,7 @@ params:
 desc: |-
   This action sets the maximum dialog range (used by Dialogue() and DialogueNoSet()), i.e. the actions will work if the creature targetted by those actions is within this distance.
 
-  ```
+  ```baf
   IF
     NumTimesTalkedTo(0)
     See([PC])

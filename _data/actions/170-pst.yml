@@ -7,7 +7,7 @@ params:
 desc: |-
   This action reveals an area on the worldmap. The action must be added to action.ids before it can be used.
 
-  ```
+  ```baf
   IF
     Dead("Davaeorn")
   THEN

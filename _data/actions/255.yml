@@ -11,7 +11,7 @@ params:
 desc: |-
   This action will add the variable specified by parameter 2 onto the variable specified by parameter 1. It only works for variables in the "GLOBAL" scope. An example script is below.
 
-  ```
+  ```baf
   IF
     Global("Var1","GLOBAL",0)
   THEN

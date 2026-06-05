@@ -15,7 +15,7 @@ params:
 desc: |-
   This action can be used to control another creature. A creature referenced as the result of [SetTokenObject()](../actions/bgeeactions.htm#248) is not a valid target for the ActionOverride() action. The following is from the Irenicus cutscene after leaving his abode in chapter 1.
 
-  ```
+  ```baf
   IF
     True()
   THEN

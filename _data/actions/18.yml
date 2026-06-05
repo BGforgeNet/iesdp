@@ -10,7 +10,7 @@ name: Hide
 desc: |-
   This action instructs the active creature to attempt to Hide in Shadows. This action can be used for any creature (not just thieves) though success in hiding is dependent on points in the Stealth skill. A hidden creature is treated as STATE\_INVISIBLE.
 
-  ```
+  ```baf
   IF
     !See([EVILCUTOFF])
     OR(2)

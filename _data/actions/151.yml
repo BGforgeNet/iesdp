@@ -13,7 +13,7 @@ params:
 desc: |-
   This action displays the strref specified by the StrRef parameter in the message window, attributing the text to the specified object.
 
-  ```
+  ```baf
   IF
     HasItem("potn52",Myself)
     HPPercentLT((),50)
