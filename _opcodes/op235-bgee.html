@@ -59,14 +59,14 @@ The following animations are hardcoded to be immune to this effect:
 {% capture note %}
 The opcode also has this weird block:
 <details>
-	<pre>
-	if (this->m_sourceRes.startsWith("SP")) {
-		this->m_effectAmount = (100 - pSprite->m_derivedStats.m_nResistMagic) / 100 * (float)this->m_effectAmount;
-		if (this->m_effectAmount == 0) {
-			return 0; // Terminate
-		}
+{% highlight cpp %}
+if (this->m_sourceRes.startsWith("SP")) {
+	this->m_effectAmount = (100 - pSprite->m_derivedStats.m_nResistMagic) / 100 * (float)this->m_effectAmount;
+	if (this->m_effectAmount == 0) {
+		return 0; // Terminate
 	}
-	</pre>
+}
+{% endhighlight %}
 </details>
 <p>
 	It's attempting to dampen the knockback speed with the target's <a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MagicResistance' | prepend: relurl }}"><code>magic resistance</code></a>, but it fails at casting the first division to a float.<br />

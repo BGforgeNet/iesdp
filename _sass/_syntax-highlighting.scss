@@ -2,17 +2,18 @@
  * Syntax highlighting - VS Code "Light 2026" palette (GitHub-light style).
  *
  * A general, language-agnostic theme: colours are mapped by Rouge token family so any highlighted
- * language (BAF now; D, 2DA, etc. later) inherits them. Values mirror VS Code's Light 2026 default theme -
+ * language (BAF, D, cpp, ... ) inherits them. Values mirror VS Code's Light 2026 default theme -
  * keywords #cf222e, strings #0a3069, numbers/constants #0550ae, comments #6e7781, function calls #8250df,
  * variables #953800 - with one departure: function-definition/trigger scopes take the theme's tag green
  * (#116329) so they stay distinct from builtin/support calls (#8250df).
  */
-// Scoped to .highlighter-rouge so the rules only touch real Rouge code blocks: the `.highlight` class is
-// also reused elsewhere (inline red-text spans on the CLUA pages, hand-built boxes in ini_anim/ini_spawn),
-// which must not pick up code-block styling.
-.highlighter-rouge .highlight {
-    background: #eef;
 
+// Token colours. Scoped by `.highlight` alone so they apply to both code-block mechanisms - kramdown fenced
+// blocks (div.highlighter-rouge > div.highlight) and the {% highlight %} Liquid tag (figure.highlight). The
+// token classes (.k, .s, ...) only ever exist inside real highlighted code, so this cannot bleed onto the
+// other reuses of `.highlight` (inline red-text spans on the CLUA pages, hand-built boxes in ini_anim/
+// ini_spawn): those contain no token spans.
+.highlight {
     // comments
     .c, .c1, .cm, .cs, .cp { color: #6e7781 }
     // keywords and word/symbol operators
@@ -30,4 +31,11 @@
     // constants
     .no { color: #0550ae }
     .err { color: #cf222e } // invalid
+}
+
+// Code-block background. Deliberately not bare `.highlight`, so it cannot add a box to the inline CLUA
+// spans; it covers both kramdown blocks and {% highlight %} tag output.
+.highlighter-rouge .highlight,
+figure.highlight {
+    background: #eef;
 }
