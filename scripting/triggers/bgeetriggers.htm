@@ -335,7 +335,7 @@ title: "BGEE Script Triggers"
 <br />
 
 <div class="triggerHeader"><a name="0x4031">0x4031 HaveSpell(I:Spell*Spell)</a></div>
-<div class="triggerHeader"><a name="0x4031">0x4031 HaveSpellRES(S:Spell*)</a></div>
+<div class="triggerHeader">0x4031 HaveSpellRES(S:Spell*)</div>
 <div class="indent1">
   Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">CRE</a> has the specified spell (either as <a href="../../files/ids/bgee/spell.htm">symbolic</a> value or resource string) memorised.
 </div>
@@ -384,7 +384,7 @@ title: "BGEE Script Triggers"
 <br />
 
 <div class="triggerHeader"><a name="0x4039">0x4039 NumTimesTalkedTo(I:Num*)</a></div>
-<div class="triggerHeader"><a name="0x4039">0x4039 NumberOfTimesTalkedTo(I:Num*)</a></div>
+<div class="triggerHeader">0x4039 NumberOfTimesTalkedTo(I:Num*)</div>
 <div class="indent1">
   Returns true only if the player's party has spoken to the active <a href="../../file_formats/ie_formats/cre_v1.htm">CRE</a> the exact number of times specified.<br />
 
@@ -627,7 +627,7 @@ title: "BGEE Script Triggers"
 <br />
 
 <div class="triggerHeader"><a name="0x4058">0x4058 OutOfAmmo()</a></div>
-<div class="triggerHeader"><a name="0x4058">0x4058 HaveUsableWeapon()</a></div>
+<div class="triggerHeader">0x4058 HaveUsableWeapon()</div>
 <div class="indent1">
   Seems to be broken. Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">CRE</a> has no ammunition for the current ranged weapon.
 </div>
@@ -682,7 +682,7 @@ title: "BGEE Script Triggers"
 <br />
 
 <div class="triggerHeader"><a name="0x4061">0x4061 HasItem(S:ResRef*,O:Object*)</a></div>
-<div class="triggerHeader"><a name="0x4061">0x4061 HasItemType(O:Object*,I:Type*ITEMFLAG,I:IgnoreDestructible*BOOLEAN)</a></div>
+<div class="triggerHeader">0x4061 HasItemType(O:Object*,I:Type*ITEMFLAG,I:IgnoreDestructible*BOOLEAN)</div>
 <div class="indent1">
   Returns true only if the specified object has the specified <a href="../../file_formats/ie_formats/itm_v1.htm">item</a> in its inventory. The first form of this trigger also checks within container items (e.g. Bags of Holding).
 </div>
@@ -964,7 +964,7 @@ weapons.
 <br />
 
 <div class="triggerHeader"><a name="0x0091">0x0091 SpellCast(O:Object*,I:Spell*Spell)</a></div>
-<div class="triggerHeader"><a name="0x0091">0x0091 SpellCastRES(S:Spell*,O:Object*)</a></div>
+<div class="triggerHeader">0x0091 SpellCastRES(S:Spell*,O:Object*)</div>
 <div class="indent1">
   Returns true only if the specified object cast the spell in the 2<small><sup>nd</sup></small> paramater in the last script round. If the <code>Spell</code> parameter is <code>0</code>, then this will return true for ANY spell cast.
 </div>
@@ -1062,7 +1062,7 @@ weapons.
 <br />
 
 <div class="triggerHeader"><a name="0x00A1">0x00A1 SpellCastOnMe(O:Caster*,I:Spell*Spell)</a></div>
-<div class="triggerHeader"><a name="0x00A1">0x00A1 SpellCastOnMeRES(S:Spell*,O:Caster*)</a></div>
+<div class="triggerHeader">0x00A1 SpellCastOnMeRES(S:Spell*,O:Caster*)</div>
 <div class="indent1">
   Returns true only if the specified object cast the specified spell on the active <a href="../../file_formats/ie_formats/cre_v1.htm">CRE</a> in the last script round. If the <code>Spell</code> parameter is <code>0</code> (or <code>""</code> for the RES version), then this will return true for ANY spell cast.
   Returns false for spells whose <a href="../../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0xC">Ability target</a> is <a href="../../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0xC_4">4</a> (Any point within range).
@@ -1094,14 +1094,14 @@ weapons.
 <br />
 
 <div class="triggerHeader"><a name="0x00A6">0x00A6 SpellCastPriest(O:Object*,I:Spell*Spell)</a></div>
-<div class="triggerHeader"><a name="0x00A6">0x00A6 SpellCastPriestRES(S:Spell*,O:Object*)</a></div>
+<div class="triggerHeader">0x00A6 SpellCastPriestRES(S:Spell*,O:Object*)</div>
 <div class="indent1">
   Returns true only if the specified object cast the specified priest spell in the last script round.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x00A7">0x00A7 SpellCastInnate(O:Object*,I:Spell*Spell)</a></div>
-<div class="triggerHeader"><a name="0x00A7">0x00A7 SpellCastInnateRES(S:Spell*,O:Object*)</a></div>
+<div class="triggerHeader">0x00A7 SpellCastInnateRES(S:Spell*,O:Object*)</div>
 <div class="indent1">
   Returns true only if the specified object cast the specified innate spell in the last script round.<br />
 
@@ -1113,9 +1113,9 @@ weapons.
 <br />
 
 <div class="triggerHeader"><a name="0x40A8">0x40A8 IsValidForPartyDialog(O:Object*)</a></div>
-<div class="triggerHeader"><a name="0x40A8">0x40A8 IfValidForPartyDialog(O:Object*)</a></div>
-<div class="triggerHeader"><a name="0x40A8">0x40A8 IsValidForPartyDialogue(O:Object*)</a></div>
-<div class="triggerHeader"><a name="0x40A8">0x40A8 IfValidForPartyDialogue(O:Object*)</a></div>
+<div class="triggerHeader">0x40A8 IfValidForPartyDialog(O:Object*)</div>
+<div class="triggerHeader">0x40A8 IsValidForPartyDialogue(O:Object*)</div>
+<div class="triggerHeader">0x40A8 IfValidForPartyDialogue(O:Object*)</div>
 <div class="indent1">
   Returns true only if that specified party member can take part in party dialogue.
 </div>
@@ -1426,7 +1426,7 @@ asItemEquiped it only checks the equipped weapon slot, not all of them. This tri
 </div>
 <br />
 
-<div class="triggerHeader"><a name="0x40DB">0x40DB InWatchersKeep()</a></div>
+<div class="triggerHeader">0x40DB InWatchersKeep()</div>
 <div class="indent1">
   Returns true only if the active CRE is in a Watcher's Keep (i.e. the current area begins with <code>AR30</code>).
 </div>
@@ -1679,7 +1679,7 @@ It causes the first RESPONSE with the given weight (pulled from the GLOBAL) to b
 <br />
 
 <div class="triggerHeader"><a name="0x4102">0x4102 HaveKnownSpell(I:Spell*Spell)</a></div>
-<div class="triggerHeader"><a name="0x4102">0x4102 HaveKnownSpellRES(S:Spell*)</a></div>
+<div class="triggerHeader">0x4102 HaveKnownSpellRES(S:Spell*)</div>
 <div class="indent1">
   Returns true if the active CRE has the specified spell scribed in their <a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_KnownSpell">spellbook</a>. It does not have to be memorised.
 </div>
