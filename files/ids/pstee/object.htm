@@ -4,12 +4,12 @@ title: "PSTEE Identifiers : object.ids"
     <div class="title_main"> object.ids </div>
 <br />
 
-Objects can be split broadly into three categories; static objects, marked objects and object specifiers. Static objects (e.g. <code><a href="#Player1">Player1</a></code>, <code><a href="#1">Myself</a></code>) are always bound (and in fact, they always return the same creature). Marked objects (e.g. <code><a href="#18">LastSeenBy</a></code>, <code><a href="#10">LastAttackerOf</a></code>) are almost always bound. Object specifiers (e.g. <code>[<a href="../pstee/ea.htm#255">ENEMY</a>.0.0.<a href="../pstee/class.htm#1">MAGE</a>]</code> are not bound &mdash; they are checked every time they are referenced. Objects listed in <code><a href="../pstee/object.htm">object.ids</a></code> are marked objects and are not saved over game sessions.
+Objects can be split broadly into three categories; static objects, marked objects and object specifiers. Static objects (e.g. <a href="#Player1"><code>Player1</code></a>, <a href="#1"><code>Myself</code></a>) are always bound (and in fact, they always return the same creature). Marked objects (e.g. <a href="#18"><code>LastSeenBy</code></a>, <a href="#10"><code>LastAttackerOf</code></a>) are almost always bound. Object specifiers (e.g. <code>[<a href="../pstee/ea.htm#255">ENEMY</a>.0.0.<a href="../pstee/class.htm#1">MAGE</a>]</code> are not bound &mdash; they are checked every time they are referenced. Objects listed in <a href="../pstee/object.htm"><code>object.ids</code></a> are marked objects and are not saved over game sessions.
 
 {% capture note %}
 <ul>
-  <li><code><a href="#60">Group</a></code> objects are determined by the <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x274">specifics</a></code> value set in the creature file.</li>
-  <li><code><a href="#14">Nearest()</a></code> identifiers cascade outwards, i.e. if there are only three valid creatures, <code><a href="#FourthNearest">FourthNearest()</a></code> and above will return the third nearest creature (rather than false).</li>
+  <li><a href="#60"><code>Group</code></a> objects are determined by the <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x274">specifics</a> value set in the creature file.</li>
+  <li><a href="#14"><code>Nearest()</code></a> identifiers cascade outwards, i.e. if there are only three valid creatures, <a href="#FourthNearest"><code>FourthNearest()</code></a> and above will return the third nearest creature (rather than false).</li>
 </ul>
 {% endcapture %}
 {% include note.html %}
@@ -103,19 +103,19 @@ IDS V1.0<br />
 
 <div class="idsHeader"><a name="18">18 LastSeenBy</a></div>
 <div class="indent1">
-  Set by <code><a href="../../../scripting/triggers/psteetriggers.htm#0x401C">See()</a></code> and <code><a href="../../../scripting/triggers/psteetriggers.htm#0x4074">Detect()</a></code>, not by <code><a href="../../../scripting/triggers/psteetriggers.htm#0x400D">Exists()</a></code> or <code><a href="../../../scripting/triggers/psteetriggers.htm#0x4018">Range()</a></code>.
+  Set by <a href="../../../scripting/triggers/psteetriggers.htm#0x401C"><code>See()</code></a> and <a href="../../../scripting/triggers/psteetriggers.htm#0x4074"><code>Detect()</code></a>, not by <a href="../../../scripting/triggers/psteetriggers.htm#0x400D"><code>Exists()</code></a> or <a href="../../../scripting/triggers/psteetriggers.htm#0x4018"><code>Range()</code></a>.
 </div>
 <br />
 
 <div class="idsHeader"><a name="19">19 LastTalkedToBy</a></div>
 <div class="indent1">
-  Returns the last creature that has been targeted by <code><a href="../../../scripting/actions/psteeactions.htm#137">StartDialogue()</a></code> or similar actions.
+  Returns the last creature that has been targeted by <a href="../../../scripting/actions/psteeactions.htm#137"><code>StartDialogue()</code></a> or similar actions.
 </div>
 <br />
 
 <div class="idsHeader"><a name="20">20 LastHeardBy</a></div>
 <div class="indent1">
-  Returns the last creature that triggered a <code><a href="../../../scripting/actions/psteeactions.htm#17">Help()</a></code> or <code><a href="../../../scripting/actions/psteeactions.htm#106">Shout()</a></code> action.
+  Returns the last creature that triggered a <a href="../../../scripting/actions/psteeactions.htm#17"><code>Help()</code></a> or <a href="../../../scripting/actions/psteeactions.htm#106"><code>Shout()</code></a> action.
 </div>
 <br />
 
@@ -139,7 +139,7 @@ IDS V1.0<br />
 
 <div class="idsHeader"><a name="27">27 Protagonist</a></div>
 <div class="indent1">
-  Synonymous with <code><a href="#Player1">Player1</a></code>.
+  Synonymous with <a href="#Player1"><code>Player1</code></a>.
 </div>
 <br />
 
@@ -223,7 +223,7 @@ IDS V1.0<br />
 
 <div class="idsHeader"><a name="50">50 NearestEnemyOfType</a></div>
 <div class="indent1">
-  It auto-populates the <code><a href="../pstee/ea.htm">EA</a></code> field of the object selector and immediately evaluates it, so it's useless to define the <code><a href="../pstee/ea.htm">EA</a></code> manually.
+  It auto-populates the <a href="../pstee/ea.htm"><code>EA</code></a> field of the object selector and immediately evaluates it, so it's useless to define the <a href="../pstee/ea.htm"><code>EA</code></a> manually.
 </div>
 <br />
 
@@ -259,7 +259,7 @@ IDS V1.0<br />
 
 <div class="idsHeader"><a name="60">60 NearestMyGroupOfType</a></div>
 <div class="indent1">
-  It auto-populates the <code><a href="../pstee/specific.htm">SPECIFIC</a></code> field of the object selector and immediately evaluates it, so it's useless to define the <code><a href="../pstee/specific.htm">SPECIFIC</a></code> manually.
+  It auto-populates the <a href="../pstee/specific.htm"><code>SPECIFIC</code></a> field of the object selector and immediately evaluates it, so it's useless to define the <a href="../pstee/specific.htm"><code>SPECIFIC</code></a> manually.
 </div>
 <br />
 

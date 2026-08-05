@@ -1,0 +1,162 @@
+# Verdicts for link texts that unwrap-code-links.py cannot classify from their shape alone.
+# Format: code|prose <TAB> text <TAB> optional # comment.  This file overrides the script's
+# heuristics, so it is also the place to correct one of them.
+#
+# The rule of thumb these follow: a text that names something the engine itself reads - an
+# object.ids or 2da symbol, a script action, a literal field value - stays code.  A text that
+# names a struct field, an enum value, or a flag in a file format is a human-readable label
+# and is not code; the link's target anchor is what distinguishes the two.
+
+code	0	# literal field value
+code	1	# literal field value
+code	2	# literal field value
+code	3	# literal field value
+code	333	# literal field value
+code	4	# literal field value
+code	9	# literal field value
+code	[ANYONE]	# ea.ids symbol
+code	GlobalShout	# script action
+code	Group	# object.ids symbol
+code	LastAttackerOf	# object.ids symbol
+code	LastHitter	# object.ids symbol
+code	LastSeenBy	# object.ids symbol
+code	MagicAttack	# msectype.2da symbol
+code	Myself	# object.ids symbol
+code	Nearest	# object.ids symbol
+code	Player1	# object.ids symbol
+code	Player1Fill	# object.ids symbol
+code	Shout	# script action
+code	SPL/ITM	# resource types
+
+prose	Acid	# field label
+prose	Actor	# enum value
+prose	Ammo	# field label
+prose	ammo	# field label
+prose	animation	# field label
+prose	Area-Effect	# field label
+prose	Area-effect	# field label
+prose	area-effect	# field label
+prose	area-of-effect	# field label
+prose	Arrow	# field label
+prose	Arrows	# field label
+prose	Berserk	# field label
+prose	bits	# field label
+prose	Blind	# field label
+prose	Bolt	# field label
+prose	Bolts	# field label
+prose	Bullet	# field label
+prose	Bullets	# field label
+prose	Caster	# enum value
+prose	Charisma	# field label
+prose	Charm	# field label
+prose	Class	# field label
+prose	class	# field label
+prose	Cold	# field label
+prose	Comet	# flag label
+prose	Cone-shaped	# flag label
+prose	Constitution	# field label
+prose	Contingency	# field label
+prose	Crushing	# enum value
+prose	CTRL+M	# keystroke
+prose	Cursed	# flag label
+prose	Deaf	# field label
+prose	Delay/Limited	# enum value
+prose	Delay/Permanent	# enum value
+prose	Dexterity	# field label
+prose	Dispel	# flag label
+prose	Dispel/Resistance	# field label
+prose	Displayable	# flag label
+prose	Domination	# field label
+prose	dropped	# flag label
+prose	Duration	# field label
+prose	duration	# field label
+prose	effects	# field label
+prose	Electricity	# field label
+prose	Enchantment	# field label
+prose	Fire	# field label
+prose	fist	# field label
+prose	Flags	# section heading
+prose	Fragments	# flag label
+prose	Gametime	# field label
+prose	Gender	# field label
+prose	Hand	# field label
+prose	hand	# field label
+prose	Haste	# field label
+prose	Headgear	# field label
+prose	Innate	# enum value
+prose	Instant/Permanent	# enum value
+prose	Intelligence	# field label
+prose	Item	# enum value
+prose	item	# enum value
+prose	itemtype	# field label
+prose	Kit	# field label
+prose	Launcher	# enum value
+prose	launcher	# field label
+prose	Level	# field label
+prose	level	# field label
+prose	Location	# enum value
+prose	location	# field label
+prose	mage	# enum value
+prose	Magic	# field label
+prose	Magical	# flag label
+prose	Mainhand	# field label
+prose	mainhand	# field label
+prose	Maze	# field label
+prose	Melee	# enum value
+prose	Missile	# enum value
+prose	Morale	# field label
+prose	Non-combat	# flag label
+prose	None	# enum value
+prose	Off-hand	# field label
+prose	off-hand	# field label
+prose	Palette	# field label
+prose	Parameter3	# field label
+prose	Parameter4	# field label
+prose	Party	# enum value
+prose	Piercing	# enum value
+prose	Pillar	# flag label
+prose	Poisoned	# field label
+prose	Priest	# enum value
+prose	priest	# enum value
+prose	Probability1	# field label
+prose	Probability2	# field label
+prose	projectile	# field label
+prose	Psionic	# enum value
+prose	Range	# field label
+prose	range	# field label
+prose	Ranged	# enum value
+prose	Rays	# field label
+prose	resource	# field label
+prose	resource2	# field label
+prose	resource3	# field label
+prose	second	# field label
+prose	Self	# enum value
+prose	shield	# field label
+prose	Single-target	# field label
+prose	single-target	# field label
+prose	Slashing	# enum value
+prose	Sleep	# field label
+prose	Slow	# field label
+prose	Special	# enum value
+prose	specific	# field label
+prose	Specifics	# field label
+prose	specifics	# field label
+prose	Speed	# field label
+prose	Spell	# enum value
+prose	state/mode	# field label
+prose	Stoneskin	# field label
+prose	Strength	# field label
+prose	String	# field label
+prose	string	# field label
+prose	Stun	# field label
+prose	stunning	# field label
+prose	third	# field label
+prose	Type	# field label
+prose	type	# field label
+prose	undispellable	# flag label
+prose	vvc	# field label
+prose	Weapon	# enum value
+prose	weapon	# enum value
+prose	Wisdom	# field label
+prose	Wizard	# enum value
+prose	wizard	# enum value

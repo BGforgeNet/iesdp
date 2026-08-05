@@ -11,10 +11,10 @@ iwd2: 1
 pst: 0
 pstee: 1
 ---
-Creates the item specified by the <code>resource</code> key. The number of items created is controlled by the <code>Amount</code> field. The item is created in the <code><a href="../files/ids/bgee/slots.htm#34">Magical Weapon Slot</a></code>.
+Creates the item specified by the <code>resource</code> key. The number of items created is controlled by the <code>Amount</code> field. The item is created in the <a href="../files/ids/bgee/slots.htm#34">Magical Weapon Slot</a>.
 
 {% capture note %}
-The <code><a href="../files/ids/bgee/slots.htm#34">Magical Weapon Slot</a></code> does not allow <code><a href="../file_formats/ie_formats/itm_v1.htm#itmv1_Extended_Header_0x2_3">Item</a></code> Abilities.
+The <a href="../files/ids/bgee/slots.htm#34">Magical Weapon Slot</a> does not allow <a href="../file_formats/ie_formats/itm_v1.htm#itmv1_Extended_Header_0x2_3">Item</a> Abilities.
 {% endcapture %}
 
 {% include important.html %}
@@ -26,7 +26,7 @@ The <code>resource</code> field should not be empty, or the game will crash (not
 {% include warning.html %}
 
 {% capture note %}
-The dispel bit of <a href="#op111">opcode #111</a> has no bearing on the <a href="../file_formats/ie_formats/itm_v1.htm">item</a> it creates. Its only function comes up when the <a href="#op111">opcode #111</a> effect is delayed &mdash; the effect can be dispelled before it triggers (see also <code><a href="../file_formats/ie_formats/itm_v1.htm#Header_Flags_BIT24">undispellable</a></code> and <a href="#op58">opcode #58</a>).
+The dispel bit of <a href="#op111">opcode #111</a> has no bearing on the <a href="../file_formats/ie_formats/itm_v1.htm">item</a> it creates. Its only function comes up when the <a href="#op111">opcode #111</a> effect is delayed &mdash; the effect can be dispelled before it triggers (see also <a href="../file_formats/ie_formats/itm_v1.htm#Header_Flags_BIT24">undispellable</a> and <a href="#op58">opcode #58</a>).
 {% endcapture %}
 
 {% include info.html %}

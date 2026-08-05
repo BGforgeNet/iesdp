@@ -275,15 +275,15 @@ Set by <a href="../../../opcodes/pstee.htm#op105">opcode #105</a>
 <div class="indent1">
   <ul>
     <li>This stat is the lower bound for avoiding a morale failure.</li>
-    <li>If <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a></code> is lower than this value, morale failure occurs, if <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a></code> is higher, any morale failure is removed.</li>
+    <li>If <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a> is lower than this value, morale failure occurs, if <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a> is higher, any morale failure is removed.</li>
     <li>A value of <code>0</code> is effectively immune to morale failure though.</li>
-    <li>No creature has a <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleBreak">Morale break</a></code> value higher than <code>10</code> as they would always be in morale failure.</li>
+    <li>No creature has a <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleBreak">Morale break</a> value higher than <code>10</code> as they would always be in morale failure.</li>
   </ul>
   {% capture note %}
   <ul>
-    <li><code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a></code> also fails if <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleBreak">Morale break</a> = current <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a> value</code>, so <code>20 <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a></code> will fail if <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleBreak">Morale break</a></code> is also <code>20</code>.
+    <li><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a> also fails if <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleBreak">Morale break</a> = current <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a> value</code>, so <code>20 <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a></code> will fail if <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleBreak">Morale break</a> is also <code>20</code>.
       <ul>
-        <li>Except if <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleBreak">Morale break</a></code> is <code>0</code>, which cannot fail.</li>
+        <li>Except if <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleBreak">Morale break</a> is <code>0</code>, which cannot fail.</li>
       </ul>
     </li>
   </ul>
@@ -295,8 +295,8 @@ Set by <a href="../../../opcodes/pstee.htm#op105">opcode #105</a>
 <div class="idsHeader"><a name="MORALERECOVERYTIME">47 MORALERECOVERYTIME</a></div>
 <div class="indent1">
   <ul>
-    <li><code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleRecovery">Morale recovery</a></code> is the period of time (should be seconds) it takes to recover some amount of <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a></code> naturally (towards a value of <code>10</code>, from a higher or lower value).</li>
-    <li>It's unknown what's going on internally though, as it's not consistent, and even the details given by <code><a href="../../../appendices/clua/bgee.htm">CTRL+M</a></code> don't update <code><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a></code> in real-time.</li>
+    <li><a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_MoraleRecovery">Morale recovery</a> is the period of time (should be seconds) it takes to recover some amount of <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a> naturally (towards a value of <code>10</code>, from a higher or lower value).</li>
+    <li>It's unknown what's going on internally though, as it's not consistent, and even the details given by <a href="../../../appendices/clua/bgee.htm">CTRL+M</a> don't update <a href="../../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Morale">Morale</a> in real-time.</li>
   </ul>
 </div>
 <br />

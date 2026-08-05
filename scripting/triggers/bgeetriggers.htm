@@ -485,7 +485,7 @@ title: "BGEE Script Triggers"
   Returns true only if the specified object has the <a href="../../files/ids/bgee/stats.htm">statistic</a> in the 3<small><sup>rd</sup></small> parameter at the value of the 2<small><sup>nd</sup></small> parameter.
 
   {% capture note %}
-  This trigger looks at the entire value of any <code><a href="../../files/ids/bgee/stats.htm">STAT</a></code> (16 or 32 bits, depending on the <code><a href="../../files/ids/bgee/stats.htm">STAT</a></code>).
+  This trigger looks at the entire value of any <a href="../../files/ids/bgee/stats.htm"><code>STAT</code></a> (16 or 32 bits, depending on the <a href="../../files/ids/bgee/stats.htm"><code>STAT</code></a>).
   {% endcapture %}
   {% include info.html %}
 </div>
@@ -496,7 +496,7 @@ title: "BGEE Script Triggers"
   Returns true only if the specified object has the <a href="../../files/ids/bgee/stats.htm">statistic</a> in the 3<small><sup>rd</sup></small> parameter greater than the value of the 2<small><sup>nd</sup></small> parameter.
 
   {% capture note %}
-  This trigger looks at the entire value of any <code><a href="../../files/ids/bgee/stats.htm">STAT</a></code> (16 or 32 bits, depending on the <code><a href="../../files/ids/bgee/stats.htm">STAT</a></code>).
+  This trigger looks at the entire value of any <a href="../../files/ids/bgee/stats.htm"><code>STAT</code></a> (16 or 32 bits, depending on the <a href="../../files/ids/bgee/stats.htm"><code>STAT</code></a>).
   {% endcapture %}
   {% include info.html %}
 </div>
@@ -507,7 +507,7 @@ title: "BGEE Script Triggers"
   Returns true only if the specified object has the <a href="../../files/ids/bgee/stats.htm">statistic</a> in the 3<small><sup>rd</sup></small> parameter less than the value of the 2<small><sup>nd</sup></small> parameter.
 
   {% capture note %}
-  This trigger looks at the entire value of any <code><a href="../../files/ids/bgee/stats.htm">STAT</a></code> (16 or 32 bits, depending on the <code><a href="../../files/ids/bgee/stats.htm">STAT</a></code>).
+  This trigger looks at the entire value of any <a href="../../files/ids/bgee/stats.htm"><code>STAT</code></a> (16 or 32 bits, depending on the <a href="../../files/ids/bgee/stats.htm"><code>STAT</code></a>).
   {% endcapture %}
   {% include info.html %}
 </div>
@@ -518,7 +518,7 @@ title: "BGEE Script Triggers"
   Generates a random number between <code>1</code> and <code>Range</code>. Returns true only if the random number equals the 2<small><sup>nd</sup></small> parameter.
 
   {% capture note %}
-  Scripting uses the same random value to seed all <code><a href="#0x4047">RandomNum()</a></code> triggers across a single tick; if you have multiple <code><a href="#0x4047">RandomNum()</a></code> calls with the same parameters, they will all generate the same result.
+  Scripting uses the same random value to seed all <a href="#0x4047"><code>RandomNum()</code></a> triggers across a single tick; if you have multiple <a href="#0x4047"><code>RandomNum()</code></a> calls with the same parameters, they will all generate the same result.
   {% endcapture %}
   {% include note.html %}
 </div>
@@ -690,10 +690,10 @@ title: "BGEE Script Triggers"
 
 <div class="triggerHeader"><a name="0x4062">0x4062 InteractingWith(O:Object*)</a></div>
 <div class="indent1">
-  Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">CRE</a>'s latest target using the <code><a href="../actions/bgeeactions.htm#168">Interact()</a></code> action is the specified object.
+  Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">CRE</a>'s latest target using the <a href="../actions/bgeeactions.htm#168"><code>Interact()</code></a> action is the specified object.
 
   {% capture note %}
-  Alternate object selector (e.g. [PC]) behavior &mdash; returns true if the active <a href="../../file_formats/ie_formats/cre_v1.htm">CRE</a>'s latest target using the <code><a href="../actions/bgeeactions.htm#168">Interact()</a></code> action matches against the selector.
+  Alternate object selector (e.g. [PC]) behavior &mdash; returns true if the active <a href="../../file_formats/ie_formats/cre_v1.htm">CRE</a>'s latest target using the <a href="../actions/bgeeactions.htm#168"><code>Interact()</code></a> action matches against the selector.
   {% endcapture %}
   {% include info.html %}
 </div>
@@ -761,10 +761,10 @@ title: "BGEE Script Triggers"
 
 <div class="triggerHeader"><a name="0x406D">0x406D UnselectableVariable(I:Num*)</a></div>
 <div class="indent1">
-  Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">creature</a> is for exactly the specified number of ticks (<small><sup>1</sup>&frasl;<sub>15</sub></small>th seconds) left under the effect of the script action <code><a href="../actions/bgeeactions.htm#182">MakeUnselectable()</a></code> or <a href="../../opcodes/bgee.htm#op365">opcode #365</a>.
+  Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">creature</a> is for exactly the specified number of ticks (<small><sup>1</sup>&frasl;<sub>15</sub></small>th seconds) left under the effect of the script action <a href="../actions/bgeeactions.htm#182"><code>MakeUnselectable()</code></a> or <a href="../../opcodes/bgee.htm#op365">opcode #365</a>.
 
   {% capture note %}
-  By default in BG2EE creatures stop processing scripts while under effect of the script action <code><a href="../actions/bgeeactions.htm#182">MakeUnselectable()</a></code>.
+  By default in BG2EE creatures stop processing scripts while under effect of the script action <a href="../actions/bgeeactions.htm#182"><code>MakeUnselectable()</code></a>.
   {% endcapture %}
   {% include note.html %}
 </div>
@@ -772,10 +772,10 @@ title: "BGEE Script Triggers"
 
 <div class="triggerHeader"><a name="0x406E">0x406E UnselectableVariableGT(I:Num*)</a></div>
 <div class="indent1">
-  Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">creature</a> is for more than the specified number of ticks (<small><sup>1</sup>&frasl;<sub>15</sub></small>th seconds) left under the effect of the script action <code><a href="../actions/bgeeactions.htm#182">MakeUnselectable()</a></code> or <a href="../../opcodes/bgee.htm#op365">opcode #365</a>.
+  Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">creature</a> is for more than the specified number of ticks (<small><sup>1</sup>&frasl;<sub>15</sub></small>th seconds) left under the effect of the script action <a href="../actions/bgeeactions.htm#182"><code>MakeUnselectable()</code></a> or <a href="../../opcodes/bgee.htm#op365">opcode #365</a>.
 
   {% capture note %}
-  By default in BG2EE creatures stop processing scripts while under effect of the script action <code><a href="../actions/bgeeactions.htm#182">MakeUnselectable()</a></code>.
+  By default in BG2EE creatures stop processing scripts while under effect of the script action <a href="../actions/bgeeactions.htm#182"><code>MakeUnselectable()</code></a>.
   {% endcapture %}
   {% include note.html %}
 </div>
@@ -783,10 +783,10 @@ title: "BGEE Script Triggers"
 
 <div class="triggerHeader"><a name="0x406F">0x406F UnselectableVariableLT(I:Num*)</a></div>
 <div class="indent1">
-  Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">creature</a> is for less than the specified number of ticks (<small><sup>1</sup>&frasl;<sub>15</sub></small>th seconds) left under the effect of the script action <code><a href="../actions/bgeeactions.htm#182">MakeUnselectable()</a></code> or <a href="../../opcodes/bgee.htm#op365">opcode #365</a>.
+  Returns true only if the active <a href="../../file_formats/ie_formats/cre_v1.htm">creature</a> is for less than the specified number of ticks (<small><sup>1</sup>&frasl;<sub>15</sub></small>th seconds) left under the effect of the script action <a href="../actions/bgeeactions.htm#182"><code>MakeUnselectable()</code></a> or <a href="../../opcodes/bgee.htm#op365">opcode #365</a>.
 
   {% capture note %}
-  By default in BG2EE creatures stop processing scripts while under effect of the script action <code><a href="../actions/bgeeactions.htm#182">MakeUnselectable()</a></code>.
+  By default in BG2EE creatures stop processing scripts while under effect of the script action <a href="../actions/bgeeactions.htm#182"><code>MakeUnselectable()</code></a>.
   {% endcapture %}
   {% include note.html %}
 </div>
@@ -1174,7 +1174,7 @@ weapons.
   NT Returns true if the specified object is exactly as far away from the active CRE as the 2<small><sup>nd</sup></small> parameter specifies.
 
   {% capture note %}
-  This trigger is <code><a href="#0x4018">Range()</a></code> reduced by the creatures' circle sizes.
+  This trigger is <a href="#0x4018"><code>Range()</code></a> reduced by the creatures' circle sizes.
   {% endcapture %}
   {% include info.html %}
 </div>
@@ -1182,7 +1182,7 @@ weapons.
 
 <div class="triggerHeader"><a name="0x40B4">0x40B4 InMyGroup(O:Object*)</a></div>
 <div class="indent1">
-  Returns true only if the <code><a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x274">specifics</a></code> value of the specified object is the same as that of the active CRE.
+  Returns true only if the <a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x274">specifics</a> value of the specified object is the same as that of the active CRE.
 </div>
 <br />
 
@@ -1248,13 +1248,13 @@ weapons.
 
 <div class="triggerHeader"><a name="0x40BF">0x40BF FallenRanger(O:Object*)</a></div>
 <div class="indent1">
-  NT Returns true only if the specified object is a <code><a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Flags_BIT10">fallen ranger</a></code>.
+  NT Returns true only if the specified object is a <a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Flags_BIT10">fallen ranger</a>.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40C0">0x40C0 FallenPaladin(O:Object*)</a></div>
 <div class="indent1">
-  NT Returns true only if the specified object is a <code><a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Flags_BIT9">fallen paladin</a></code>.
+  NT Returns true only if the specified object is a <a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Flags_BIT9">fallen paladin</a>.
 </div>
 <br />
 
@@ -1273,43 +1273,43 @@ asItemEquiped it only checks the equipped weapon slot, not all of them. This tri
 
 <div class="triggerHeader"><a name="0x40C3">0x40C3 XP(O:Object*,I:XP)</a></div>
 <div class="indent1">
-  Returns true if the specified object has <code><a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_XP">experience points</a></code> equal to the number specified.
+  Returns true if the specified object has <a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_XP">experience points</a> equal to the number specified.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40C4">0x40C4 XPGT(O:Object*,I:XP)</a></div>
 <div class="indent1">
-  Returns true if the specified object has <code><a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_XP">experience points</a></code> greater than the number specified.
+  Returns true if the specified object has <a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_XP">experience points</a> greater than the number specified.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40C5">0x40C5 XPLT(O:Object*,I:XP)</a></div>
 <div class="indent1">
-  Returns true if the specified object has <code><a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_XP">experience points</a></code> less than the number specified.
+  Returns true if the specified object has <a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_XP">experience points</a> less than the number specified.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40C6">0x40C6 G(S:ResRef*,I:Num*)</a></div>
 <div class="indent1">
-  This trigger acts as a shortcut for <code><a href="#0x400F">Global()</a></code>. The trigger can only check global variables.
+  This trigger acts as a shortcut for <a href="#0x400F"><code>Global()</code></a>. The trigger can only check global variables.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40C7">0x40C7 GGT(S:ResRef*,I:Num*)</a></div>
 <div class="indent1">
-  This trigger acts as a shortcut for <code><a href="#0x4034">GlobalGT()</a></code>. The trigger can only check global variables.
+  This trigger acts as a shortcut for <a href="#0x4034"><code>GlobalGT()</code></a>. The trigger can only check global variables.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40C8">0x40C8 GLT(S:ResRef*,I:Num*)</a></div>
 <div class="indent1">
-  This trigger acts as a shortcut for <code><a href="#0x4035">GlobalLT()</a></code>. The trigger can only check global variables.
+  This trigger acts as a shortcut for <a href="#0x4035"><code>GlobalLT()</code></a>. The trigger can only check global variables.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40C9">0x40C9 ModalState(I:State*MODAL)</a></div>
 <div class="indent1">
-  Returns true only if the active CRE is in the <code><a href="../../files/ids/bgee/modal.htm">state/mode</a></code> specified. e.g. detecting traps.
+  Returns true only if the active CRE is in the <a href="../../files/ids/bgee/modal.htm">state/mode</a> specified. e.g. detecting traps.
 </div>
 <br />
 
@@ -1327,13 +1327,13 @@ asItemEquiped it only checks the equipped weapon slot, not all of them. This tri
 
 <div class="triggerHeader"><a name="0x40CD">0x40CD DamageTaken(I:Amount*)</a></div>
 <div class="indent1">
-  Returns true if the total damage taken by the active CRE is of the amount specified. Think of this as the reverse of testing for HP. See <code><a href="#0x4010">HP()</a></code>.
+  Returns true if the total damage taken by the active CRE is of the amount specified. Think of this as the reverse of testing for HP. See <a href="#0x4010"><code>HP()</code></a>.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40CE">0x40CE DamageTakenGT(I:Amount*)</a></div>
 <div class="indent1">
-  See above and <code><a href="#0x4011">HPGT()</a></code>.
+  See above and <a href="#0x4011"><code>HPGT()</code></a>.
 
   {% capture note %}
   This trigger may not act correctly until the active creature has dropped below their maximum base HP (i.e. without CON bonus taken into account).
@@ -1344,25 +1344,25 @@ asItemEquiped it only checks the equipped weapon slot, not all of them. This tri
 
 <div class="triggerHeader"><a name="0x40CF">0x40CF DamageTakenLT(I:Amount*)</a></div>
 <div class="indent1">
-  See above and <code><a href="#0x4012">HPLT()</a></code>.
+  See above and <a href="#0x4012"><code>HPLT()</code></a>.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40D0">0x40D0 Difficulty(I:Amount*DIFFLEV)</a></div>
 <div class="indent1">
-  NT Returns true only if the game difficulty setting is of the level specified. Values are taken from <code><a href="../../files/ids/bgee/difflev.htm">difflev.ids</a></code>.
+  NT Returns true only if the game difficulty setting is of the level specified. Values are taken from <a href="../../files/ids/bgee/difflev.htm"><code>difflev.ids</code></a>.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40D1">0x40D1 DifficultyGT(I:Amount*DIFFLEV)</a></div>
 <div class="indent1">
-  NT Returns true only if the game difficulty setting is greater than the level specified. Values are taken from <code><a href="../../files/ids/bgee/difflev.htm">difflev.ids</a></code>.
+  NT Returns true only if the game difficulty setting is greater than the level specified. Values are taken from <a href="../../files/ids/bgee/difflev.htm"><code>difflev.ids</code></a>.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40D2">0x40D2 DifficultyLT(I:Amount*DIFFLEV)</a></div>
 <div class="indent1">
-  NT Returns true only if the game difficulty setting is less than the level specified. Values are taken from <code><a href="../../files/ids/bgee/difflev.htm">difflev.ids</a></code>.
+  NT Returns true only if the game difficulty setting is less than the level specified. Values are taken from <a href="../../files/ids/bgee/difflev.htm"><code>difflev.ids</code></a>.
 </div>
 <br />
 
@@ -1416,7 +1416,7 @@ asItemEquiped it only checks the equipped weapon slot, not all of them. This tri
 
 <div class="triggerHeader"><a name="0x40DA">0x40DA HaveSpellParty(I:Spell*Spell)</a></div>
 <div class="indent1">
-  Returns true if any of the party members have the specified spell memorised. Values are taken from <code><a href="../../files/ids/bgee/spell.htm">spell.ids</a></code>.
+  Returns true if any of the party members have the specified spell memorised. Values are taken from <a href="../../files/ids/bgee/spell.htm"><code>spell.ids</code></a>.
 </div>
 <br />
 
@@ -1434,7 +1434,7 @@ asItemEquiped it only checks the equipped weapon slot, not all of them. This tri
 
 <div class="triggerHeader"><a name="0x40DC">0x40DC AreaCheckAllegiance(I:Allegience*EA)</a></div>
 <div class="indent1">
-  This trigger will check if any creatures of the specified allegiance are present in the current area. Values are taken from <code><a href="../../files/ids/bgee/ea.htm">ea.ids</a></code>.
+  This trigger will check if any creatures of the specified allegiance are present in the current area. Values are taken from <a href="../../files/ids/bgee/ea.htm"><code>ea.ids</code></a>.
 </div>
 <br />
 
@@ -1464,7 +1464,7 @@ asItemEquiped it only checks the equipped weapon slot, not all of them. This tri
 <div class="triggerHeader"><a name="0x40E0">0x40E0 NextTriggerObject(O:Object*)</a></div>
 <div class="indent1">
   Defines the object that the next trigger will be evaluated in reference to. This trigger does not evaluate
-  and does not count as a trigger in an <code><a href="#0x4089">OR()</a></code> block. If the object cannot be found, the next trigger will evaluate to
+  and does not count as a trigger in an <a href="#0x4089"><code>OR()</code></a> block. If the object cannot be found, the next trigger will evaluate to
   false. It will even
   <a href="https://www.gibberlings3.net/forums/topic/31891-nexttriggerobject-documentation-not-accurate/?do=findComment&comment=287192" rel="noopener">
   break the OR() trigger</a> if you don't put it in there last in the entire condition section. WeiDU adds a
@@ -1475,25 +1475,25 @@ asItemEquiped it only checks the equipped weapon slot, not all of them. This tri
 
 <div class="triggerHeader"><a name="0x40E1">0x40E1 ExtendedStateCheck(O:Object*,I:State*extstate)</a></div>
 <div class="indent1">
-  Returns true only if the specified object is in the state specified (uses <code><a href="../../files/ids/bgee/extstate.htm">extstate.ids</a></code>).
+  Returns true only if the specified object is in the state specified (uses <a href="../../files/ids/bgee/extstate.htm"><code>extstate.ids</code></a>).
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40E2">0x40E2 CheckSpellState(O:Object*,I:State*splstate)</a></div>
 <div class="indent1">
-  Returns true only if the specified object is in the state specified (uses <code><a href="../../files/ids/bgee/splstate.htm">splstate.ids</a></code>). Spell states can be set via <a href="../../opcodes/bgee.htm#op328">opcode 328</a>.
+  Returns true only if the specified object is in the state specified (uses <a href="../../files/ids/bgee/splstate.htm"><code>splstate.ids</code></a>). Spell states can be set via <a href="../../opcodes/bgee.htm#op328">opcode 328</a>.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40E3">0x40E3 NearLocation(O:Object*,I:PointX*,I:PointY*,I:Range*)</a></div>
 <div class="indent1">
-  Returns true if the specified object is within the range of the specified point. Works similar to <code><a href="#0x4018">Range()</a></code>, but with a point instead of an object.
+  Returns true if the specified object is within the range of the specified point. Works similar to <a href="#0x4018"><code>Range()</code></a>, but with a point instead of an object.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40E4">0x40E4 NearSavedLocation(O:Object*,S:Global*,I:Range*)</a></div>
 <div class="indent1">
-  Returns true if the object is near its home location (in case the specified variable doesn't exist) or near a point marked by a variable. The default home location for creatures is equal to their default position in the <code><a href="../../file_formats/ie_formats/are_v1.htm#formAREAV1_0_Actor">ARE</a></code> file.
+  Returns true if the object is near its home location (in case the specified variable doesn't exist) or near a point marked by a variable. The default home location for creatures is equal to their default position in the <a href="../../file_formats/ie_formats/are_v1.htm#formAREAV1_0_Actor"><code>ARE</code></a> file.
 </div>
 <br />
 
@@ -1515,19 +1515,19 @@ It causes the first RESPONSE with the given weight (pulled from the GLOBAL) to b
 
 <div class="triggerHeader"><a name="0x40E7">0x40E7 ButtonDisabled(I:Button*BUTTON)</a></div>
 <div class="indent1">
-  Returns true if the specified interface button is disabled. Values are taken from <code><a href="../../files/ids/bgee/button.htm">button.ids</a></code>.
+  Returns true if the specified interface button is disabled. Values are taken from <a href="../../files/ids/bgee/button.htm"><code>button.ids</code></a>.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40E8">0x40E8 HasItemCategory(O:Object*,I:Itemtype*ITEMCAT,I:Equipped*BOOLEAN)</a></div>
 <div class="indent1">
-  Returns true if the target object has one or more items of the specified <code><a href="../../files/ids/bgee/itemcat.htm">item category</a></code> in their inventory. The 3<small><sup>rd</sup></small> parameter defines whether the item has to be equipped as well (values are taken from <code><a href="../../files/ids/bgee/boolean.htm">boolean.ids</a></code>).
+  Returns true if the target object has one or more items of the specified <a href="../../files/ids/bgee/itemcat.htm">item category</a> in their inventory. The 3<small><sup>rd</sup></small> parameter defines whether the item has to be equipped as well (values are taken from <a href="../../files/ids/bgee/boolean.htm"><code>boolean.ids</code></a>).
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40E9">0x40E9 NightmareModeOn()</a></div>
 <div class="indent1">
-  Returns true if <code><a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_NightmareMode">Nightmare Mode</a></code> is active (aka &quot;Legacy of Bhaal&quot; mode in BGEE/BG2EE or &quot;Heart of Fury&quot; mode in IWDEE).
+  Returns true if <a href="../../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_NightmareMode">Nightmare Mode</a> is active (aka &quot;Legacy of Bhaal&quot; mode in BGEE/BG2EE or &quot;Heart of Fury&quot; mode in IWDEE).
 </div>
 <br />
 
@@ -1545,7 +1545,7 @@ It causes the first RESPONSE with the given weight (pulled from the GLOBAL) to b
 
 <div class="triggerHeader"><a name="0x40EC">0x40EC WeaponEffectiveVs(O:Object*,I:Hand*HAND)</a></div>
 <div class="indent1">
-  Returns true if the weapon equipped in the <code><a href="../../files/ids/bgee/hand.htm">hand</a></code> defined by the 2<small><sup>nd</sup></small> parameter of the active creature can hit the target object specified in the 1<small><sup>st</sup></small> parameter.
+  Returns true if the weapon equipped in the <a href="../../files/ids/bgee/hand.htm">hand</a> defined by the 2<small><sup>nd</sup></small> parameter of the active creature can hit the target object specified in the 1<small><sup>st</sup></small> parameter.
 </div>
 <br />
 
@@ -1575,13 +1575,13 @@ It causes the first RESPONSE with the given weight (pulled from the GLOBAL) to b
 
 <div class="triggerHeader"><a name="0x40F1">0x40F1 ModalStateObject(O:Object*,I:ModalState*Modal)</a></div>
 <div class="indent1">
-  Returns true only if the specified object is in the <code><a href="../../files/ids/bgee/modal.htm">state/mode</a></code>) specified. e.g. detecting traps.
+  Returns true only if the specified object is in the <a href="../../files/ids/bgee/modal.htm">state/mode</a>) specified. e.g. detecting traps.
 </div>
 <br />
 
 <div class="triggerHeader"><a name="0x40F2">0x40F2 WeaponCanDamage(O:Object*,I:Hand*HAND)</a></div>
 <div class="indent1">
-  Returns true if the weapon equipped in the <code><a href="../../files/ids/bgee/hand.htm">hand</a></code> defined by the 2<small><sup>nd</sup></small> parameter of the active creature can cause non-zero damage to the target object specified in the 1<small><sup>st</sup></small> parameter.
+  Returns true if the weapon equipped in the <a href="../../files/ids/bgee/hand.htm">hand</a> defined by the 2<small><sup>nd</sup></small> parameter of the active creature can cause non-zero damage to the target object specified in the 1<small><sup>st</sup></small> parameter.
 </div>
 <br />
 
@@ -1611,7 +1611,7 @@ It causes the first RESPONSE with the given weight (pulled from the GLOBAL) to b
 
 <div class="triggerHeader"><a name="0x40F7">0x40F7 BitCheck(S:Name*,S:Area*,I:Bit*Bits)</a></div>
 <div class="indent1">
-  Returns true if at least one bit from the given variable is in common with the <code><a href="../../files/ids/bgee/bits.htm">bits</a></code> defined in the third parameter.
+  Returns true if at least one bit from the given variable is in common with the <a href="../../files/ids/bgee/bits.htm">bits</a> defined in the third parameter.
 
   {% capture note %}
   String parameters are incorrectly matched by the engine which causes the trigger to always return false in dialog conditions.
@@ -1640,7 +1640,7 @@ It causes the first RESPONSE with the given weight (pulled from the GLOBAL) to b
 
 <div class="triggerHeader"><a name="0x40FB">0x40FB IsForcedRandomEncounterActive(S:Area*)</a></div>
 <div class="indent1">
-  Returns true only if a random encounter to the specified area has been initialized by a preceding call of <code><a href="../actions/bgeeactions.htm#357">ForceRandomEncounter()</a></code> or <code><a href="../actions/bgeeactions.htm#357">ForceRandomEncounterEntry()</a></code>. Specifying an empty area string returns true if a forced random encounter has been initialized with any areas.
+  Returns true only if a random encounter to the specified area has been initialized by a preceding call of <a href="../actions/bgeeactions.htm#357"><code>ForceRandomEncounter()</code></a> or <a href="../actions/bgeeactions.htm#357"><code>ForceRandomEncounterEntry()</code></a>. Specifying an empty area string returns true if a forced random encounter has been initialized with any areas.
 </div>
 <br />
 
@@ -1652,17 +1652,17 @@ It causes the first RESPONSE with the given weight (pulled from the GLOBAL) to b
 
 <div class="triggerHeader"><a name="0x40FD">0x40FD ClassLevel(O:Object*,I:Category*CLASSCAT,I:Value*)</a></div>
 <div class="indent1">
-  Returns true only if the experience level of the specified object in the <code><a href="../../files/ids/bgee/classcat.htm">class</a></code> denoted by the 2<small><sup>nd</sup></small> parameter equals the 3<small><sup>rd</sup></small> parameter.
+  Returns true only if the experience level of the specified object in the <a href="../../files/ids/bgee/classcat.htm">class</a> denoted by the 2<small><sup>nd</sup></small> parameter equals the 3<small><sup>rd</sup></small> parameter.
 </div>
 <br />
 <div class="triggerHeader"><a name="0x40FE">0x40FE ClassLevelGT(O:Object*,I:Category*CLASSCAT,I:Value*)</a></div>
 <div class="indent1">
-  Returns true only if the experience level of the specified object in the <code><a href="../../files/ids/bgee/classcat.htm">class</a></code> denoted by the 2<small><sup>nd</sup></small> parameter is greater than the 3<small><sup>rd</sup></small> parameter.
+  Returns true only if the experience level of the specified object in the <a href="../../files/ids/bgee/classcat.htm">class</a> denoted by the 2<small><sup>nd</sup></small> parameter is greater than the 3<small><sup>rd</sup></small> parameter.
 </div>
 <br />
 <div class="triggerHeader"><a name="0x40FF">0x40FF ClassLevelLT(O:Object*,I:Category*CLASSCAT,I:Value*)</a></div>
 <div class="indent1">
-  Returns true only if the experience level of the specified object in the <code><a href="../../files/ids/bgee/classcat.htm">class</a></code> denoted by the 2<small><sup>nd</sup></small> parameter is less than the 3<small><sup>rd</sup></small> parameter.
+  Returns true only if the experience level of the specified object in the <a href="../../files/ids/bgee/classcat.htm">class</a> denoted by the 2<small><sup>nd</sup></small> parameter is less than the 3<small><sup>rd</sup></small> parameter.
 </div>
 <br />
 
@@ -1687,7 +1687,7 @@ It causes the first RESPONSE with the given weight (pulled from the GLOBAL) to b
 
 <div class="triggerHeader"><a name="0x4103">0x4103 CheckItemSlot(O:Object*,S:Item*,I:Slot*SLOTS)</a></div>
 <div class="indent1">
-  Returns true only if the item specified in the 2<small><sup>nd</sup></small> parameter can be found in the inventory slot (taken from <code><a href="../../files/ids/bgee/slots.htm">slots.ids</a></code>) of the specified object.
+  Returns true only if the item specified in the 2<small><sup>nd</sup></small> parameter can be found in the inventory slot (taken from <a href="../../files/ids/bgee/slots.htm"><code>slots.ids</code></a>) of the specified object.
 </div>
 <br />
 

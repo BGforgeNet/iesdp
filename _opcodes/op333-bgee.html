@@ -36,7 +36,7 @@ When using this opcode, be aware of the following quirks:
 				Subspell is cast targeting the <code>Living Actor</code>
 				<ul>
 					<li>subspell: op#: <code>target:Self</code> &longrightarrow; affects targeted <code>Living Actor</code>.</li>
-					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects targeted <code>Living Actor</code> if subspell's projectile is <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a></code>, or subspell's projectile target(s) if it's <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code>.</li>
+					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects targeted <code>Living Actor</code> if subspell's projectile is <a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a>, or subspell's projectile target(s) if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
 				</ul>
 			</li>
 
@@ -45,7 +45,7 @@ When using this opcode, be aware of the following quirks:
 				Subspell is cast at each target of the projectile
 				<ul>
 					<li>subspell: op#: <code>target:Self</code> &longrightarrow; affects subspell's target.</li>
-					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects subspell's target if subspell's projectile is <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a></code>, or subspell's projectile target(s) if it's <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code>.</li>
+					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects subspell's target if subspell's projectile is <a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a>, or subspell's projectile target(s) if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
 				</ul>
 			</li>
 
@@ -54,7 +54,7 @@ When using this opcode, be aware of the following quirks:
 				Subspell is cast targeting yourself, not the target point
 				<ul>
 					<li>subspell: op#: <code>target:Self</code> &longrightarrow; affects <code>Self</code>.</li>
-					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects <code>Self</code> if subspell's projectile is <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a></code>, or subspell's projectile target(s) if it's <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code>.</li>
+					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects <code>Self</code> if subspell's projectile is <a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a>, or subspell's projectile target(s) if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
 				</ul>
 			</li>
 
@@ -63,7 +63,7 @@ When using this opcode, be aware of the following quirks:
 				Subspell is cast at each target of the projectile
 				<ul>
 					<li>subspell: op#: <code>target:Self</code> &longrightarrow; affects subspell's target.</li>
-					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects subspell's target if subspell's projectile is <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a></code>, or subspell's projectile target(s) if it's <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code>.</li>
+					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects subspell's target if subspell's projectile is <a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a>, or subspell's projectile target(s) if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
 				</ul>
 			</li>
 
@@ -91,7 +91,7 @@ When using this opcode, be aware of the following quirks:
 	<li>
 		Effects in the <code>resource</code> will also bypass Magic Resistance, of every target, as if the caster targeted themselves, regardless of who they target with the spell or this effect.
 		<ul>
-			<li>Setting the <code><a href="../file_formats/ie_formats/pro_v1.htm#Behavior_BIT4">Ignore Center</a></code> bit in the subspell's projectile will force its effects to check Magic Resistance on every target, even if the caster did target themselves. Though as its primary function is to cause the projectile to ignore the caster (not "center"), it still won't affect them if it's <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code>.</li>
+			<li>Setting the <a href="../file_formats/ie_formats/pro_v1.htm#Behavior_BIT4">Ignore Center</a> bit in the subspell's projectile will force its effects to check Magic Resistance on every target, even if the caster did target themselves. Though as its primary function is to cause the projectile to ignore the caster (not "center"), it still won't affect them if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
 		</ul>
 	</li>
 </ul>

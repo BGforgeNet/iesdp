@@ -45,17 +45,17 @@ Known values for <code>Secondary Type</code> are:
 
 {% capture note %}
 <ul>
-	<li>CAN block effects of Secondary Type <code><a href="../files/2da/2da_bgee/msectype.htm#4">MagicAttack</a></code>.</li>
+	<li>CAN block effects of Secondary Type <a href="../files/2da/2da_bgee/msectype.htm#4"><code>MagicAttack</code></a>.</li>
 
 	<li>
-		CAN block EFF files with <code><a href="../file_formats/ie_formats/eff_v2.htm#effv2_Body_0x5C_BIT2">resist_dispel = BIT2</a></code>.
+		CAN block EFF files with <a href="../file_formats/ie_formats/eff_v2.htm#effv2_Body_0x5C_BIT2"><code>resist_dispel = BIT2</code></a>.
 		<ul>
 			<li>Keep in mind that this BIT is automatically set on any effect delivered by an <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">Area-Effect</a> (Explosion) projectile, so this opcode can deflect effects through <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">AoE</a> projectiles.</li>
 		</ul>
 	</li>
 
 	<li>CANNOT block effects from self.</li>
-	<li>Maintains portrait icon <code><a href="../files/2da/2da_bgee/statdesc.htm#73">Spell Shield</a></code> on the target.</li>
+	<li>Maintains portrait icon <a href="../files/2da/2da_bgee/statdesc.htm#73">Spell Shield</a> on the target.</li>
 	<li>Maintains animation <code>SPMAGGLO</code> on the target, can be suppressed by <a href="#op291">opcode #291</a>.</li>
 </ul>
 {% endcapture %}

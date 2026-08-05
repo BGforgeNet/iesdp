@@ -62,6 +62,19 @@ One exception to this rule is linking anchors on the same page, they don't need 
     <a href="https://gibberlings3.github.io/iesdp/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x273">Class</a>
     ```
 
+### Code markup in links
+
+Style a link as code only when its text is something the engine reads - a script action, an IDS or 2DA symbol, a
+resource filename, a literal field value. Names of header fields, enum values and flags are prose, however
+technical they look, and get no `<code>`.
+
+- **Right**: `<a href="..."><code>MakeUnselectable()</code></a>`, `<a href="...">Explosion Frequency</a>`
+- **Wrong**: `<code><a href="...">Explosion Frequency</a></code>`, `<code><a href="...">MakeUnselectable()</a></code>`
+
+Note the nesting: the link goes outside, so that HTML matches what markdown's `` [`text`](url) `` produces.
+`_tools/unwrap-code-links.py` checks and fixes both, and `_tools/code-link-words.txt` records the verdict for
+texts whose shape alone doesn't settle it.
+
 ## Actions
 
 Example: `Polymorph(I:AnimationType*Animate)`

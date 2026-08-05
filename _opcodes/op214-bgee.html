@@ -15,8 +15,8 @@ Uses the 2da specified by the <code>resource</code> key to display multiple spel
 <br/>Known values for <code>Type</code> are:
 <ul>
 	<li>0 &longrightarrow; Use <code>resource</code> 2da list</li>
-	<li>1 &longrightarrow; Known <code><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Header_0x1C_1">mage</a></code> spells, except Identify (<code>"SPWI110"</code>), and Nahal's Reckless Dweomer (<code>"SPWI124"</code>)</li>
-	<li>2 &longrightarrow; Known <code><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Header_0x1C_1">mage</a></code> spells, except the above, and those with spell flag <code><a href="../file_formats/ie_formats/spl_v1.htm#Header_Flags_BIT15">Ignore Wild Surge</a></code></li>
+	<li>1 &longrightarrow; Known <a href="../file_formats/ie_formats/spl_v1.htm#splv1_Header_0x1C_1">mage</a> spells, except Identify (<code>"SPWI110"</code>), and Nahal's Reckless Dweomer (<code>"SPWI124"</code>)</li>
+	<li>2 &longrightarrow; Known <a href="../file_formats/ie_formats/spl_v1.htm#splv1_Header_0x1C_1">mage</a> spells, except the above, and those with spell flag <a href="../file_formats/ie_formats/spl_v1.htm#Header_Flags_BIT15">Ignore Wild Surge</a></li>
 </ul>
 
 When <code>Type</code> is <code>0</code>, the 2da file must follow the following format:<br/>
@@ -36,12 +36,12 @@ As far as <code>Casting Type</code> is concerned:
 	<li>
 		2 &longrightarrow; It either does nothing or crashes, depending on the spell.
 		<ul>
-			<li><code><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0xC_5">Caster</a></code> targeted spells just do nothing.</li>
-			<li><code><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0xC_1">Actor</a></code>/<code><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0xC_4">Location</a></code> targeted spells will crash the game.</li>
+			<li><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0xC_5">Caster</a> targeted spells just do nothing.</li>
+			<li><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0xC_1">Actor</a>/<a href="../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0xC_4">Location</a> targeted spells will crash the game.</li>
 		</ul>
 	</li>
 	<li>3 &longrightarrow; Ignores Spells/Round rule, ignores memorization.</li>
-	<li>4 &longrightarrow; Ignores Spells/Round rule, ignores memorization, spellcasting cannot be interrupted by damage, uses normal <code><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0x12">casting speed</a></code>.</li>
+	<li>4 &longrightarrow; Ignores Spells/Round rule, ignores memorization, spellcasting cannot be interrupted by damage, uses normal <a href="../file_formats/ie_formats/spl_v1.htm#splv1_Extended_Header_0x12">casting speed</a>.</li>
 	<li>5 &longrightarrow; Ignores Spells/Round rule, cast instantly, even if the game is paused, can be cast without memorization, but will decrement memorization if exists.</li>
 </ul>
 

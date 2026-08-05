@@ -21,7 +21,7 @@ Known values for <code>Type</code> are:
 		<ul>
 			<li>Grants a <code>+4</code> bonus to melee attacks only.</li>
 			<li>Applying <code>Normal</code> Invisibility with <code>Timing Mode</code>s other than <code>1/4/7</code> in an external <a href="../file_formats/ie_formats/eff_v2.htm">EFF</a> through <a href="#op183">opcode #183</a> will NOT terminate early due to hostile/aggressive action (similar to the constant invisibility provided by Mislead). Applying the same through <a href="#op177">opcode #177</a> or <a href="#op283">opcode #283</a> DOES terminate due to hostile/aggressive action as normal.</li>
-			<li>Applying <code>Normal</code> Invisibility with <code>Timing Mode</code>s <code>1/4/7</code> will set the creature's base state <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x20_BIT4">STATE_INVISIBLE</a></code>, while still leaving behind a removable (but irrelevant) effect. This state is not cleared on death, but it is still terminated by any hostile/aggressive action that would normally terminate invisibility.</li>
+			<li>Applying <code>Normal</code> Invisibility with <code>Timing Mode</code>s <code>1/4/7</code> will set the creature's base state <a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x20_BIT4"><code>STATE_INVISIBLE</code></a>, while still leaving behind a removable (but irrelevant) effect. This state is not cleared on death, but it is still terminated by any hostile/aggressive action that would normally terminate invisibility.</li>
 		</ul>
 	</li>
 	<li>
@@ -31,7 +31,7 @@ Known values for <code>Type</code> are:
 			<li>Does not provide saving throw bonuses outside EEs, where it provides a bonus of <code>4</code> to all.</li>
 			<li>Lingers after the duration is spent and act as permanent if used as a 'While Equipped' effect.</li>
 			<li>Applying <code>Improved</code> Invisibility will cause the effect to be duplicated, with the duplicate using <code>Normal</code> invisibility. There's no reason to apply both <code>Normal</code> and <code>Improved</code> invisibility in the same spell/item (unless you want them to have different probabilities/hd limits).</li>
-			<li>Applying <code>Improved</code> Invisibility with <code>Timing Mode</code>s <code>1/4/7</code> will set the creature's base state <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x20_BIT22">STATE_IMPROVEDINVISIBILITY</a></code>, and because it duplicates itself as <code>Normal</code> invisibility, <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x20_BIT4">STATE_INVISIBLE</a></code> as well, while still leaving behind a removable (but irrelevant) effect for each. These states are not cleared on death.</li>
+			<li>Applying <code>Improved</code> Invisibility with <code>Timing Mode</code>s <code>1/4/7</code> will set the creature's base state <a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x20_BIT22"><code>STATE_IMPROVEDINVISIBILITY</code></a>, and because it duplicates itself as <code>Normal</code> invisibility, <a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x20_BIT4"><code>STATE_INVISIBLE</code></a> as well, while still leaving behind a removable (but irrelevant) effect for each. These states are not cleared on death.</li>
 			<li>The effects that remain when setting the base <code>STATE</code>s are irrelevant, at least in-game, because everything that can remove the <code>STATE</code>s will also remove the effect. The <code>STATE</code>s can however be removed separately through NI or EEkeeper, at which point the effect will once again reapply its <code>STATE</code> immediately upon loading the game.</li>
 		</ul>
 	</li>
@@ -46,16 +46,16 @@ Known values for <code>Type</code> are:
 </ul>
 
 {% capture note %}
-Any attack a character makes while invisible will ignore the target's AC dexterity bonus (see <code><a href="../files/2da/2da_bgee/dexmod.htm">dexmod.2da</a></code>)
+Any attack a character makes while invisible will ignore the target's AC dexterity bonus (see <a href="../files/2da/2da_bgee/dexmod.htm"><code>dexmod.2da</code></a>)
 <br><br>
 
 To be exact, the attack must follow these rules:
 <ol>
-	<li>Attacker must have a backstab multiplier of <code>2</code> or higher (see <code><a href="../files/2da/2da_bgee/backstab.htm">backstab.2da</a></code>)</li>
-	<li>Attacker must be <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x20_BIT4">STATE_INVISIBLE</a></code></li>
-	<li>Attacker's weapon must <u>not</u> be <code><a href="../file_formats/ie_formats/itm_v1.htm#itmv1_Extended_Header_0x0_2">RANGED</a></code></li>
+	<li>Attacker must have a backstab multiplier of <code>2</code> or higher (see <a href="../files/2da/2da_bgee/backstab.htm"><code>backstab.2da</code></a>)</li>
+	<li>Attacker must be <a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x20_BIT4"><code>STATE_INVISIBLE</code></a></li>
+	<li>Attacker's weapon must <u>not</u> be <a href="../file_formats/ie_formats/itm_v1.htm#itmv1_Extended_Header_0x0_2"><code>RANGED</code></a></li>
 </ol>
-<code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x273">Class</a></code> / <code><a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x244">Kit</a></code> doesn't matter, <code><a href="../files/2da/2da_bgee/sneakatt.htm">sneakatt.2da</a></code> doesn't matter (even though the backstab multiplier isn't used to calculate damage under "Game Option: 3E Sneak Attack", the creature still has its multiplier calculated / assigned), weapon backstab suitability doesn't matter.
+<a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x273">Class</a> / <a href="../file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x244">Kit</a> doesn't matter, <a href="../files/2da/2da_bgee/sneakatt.htm"><code>sneakatt.2da</code></a> doesn't matter (even though the backstab multiplier isn't used to calculate damage under "Game Option: 3E Sneak Attack", the creature still has its multiplier calculated / assigned), weapon backstab suitability doesn't matter.
 <br><br>
 
 <details>

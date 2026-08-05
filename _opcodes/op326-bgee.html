@@ -14,7 +14,7 @@ pstee: 1
 The creature type specified by the <code>Stat Type</code> field will be affected by the spell in the <code>Resource</code> field. See <a href="#op324">opcode #324</a> for more information.
 
 <p>
-  The spell specified by the <code>resource</code> field is cast at the same level as the current effect, regardless of <code><a href="../file_formats/ie_formats/spl_v1.htm#splv1_Header_0x1C">Spell type</a></code>.
+  The spell specified by the <code>resource</code> field is cast at the same level as the current effect, regardless of <a href="../file_formats/ie_formats/spl_v1.htm#splv1_Header_0x1C">Spell type</a>.
 </p>
 
 <p>
@@ -40,7 +40,7 @@ The creature type specified by the <code>Stat Type</code> field will be affected
 </p>
 
 {% capture note %}
-If this effect is applied through <a href="#op177">opcode #177</a>, the spell specified by the <code>resource</code> key is cast at the level specified at offset <code><a href="../file_formats/ie_formats/eff_v2.htm#effv2_Body_0xC8">0xc8</a></code> of the <a href="../file_formats/ie_formats/eff_v2.htm">EFF</a>.
+If this effect is applied through <a href="#op177">opcode #177</a>, the spell specified by the <code>resource</code> key is cast at the level specified at offset <a href="../file_formats/ie_formats/eff_v2.htm#effv2_Body_0xC8"><code>0xc8</code></a> of the <a href="../file_formats/ie_formats/eff_v2.htm">EFF</a>.
 {% endcapture %}
 
 {% include note.html %}
@@ -48,7 +48,7 @@ If this effect is applied through <a href="#op177">opcode #177</a>, the spell sp
 {% capture note %}
 <ul>
   <li>Unlike <a href="#op146">opcode #146</a><code><small><sup>*</sup></small>p2=1</code>, when this opcode gets reflected (<a href="#op197">opcode #197</a>, <a href="#op198">opcode #198</a>, <a href="#op199">opcode #199</a>, <a href="#op202">opcode #202</a>, <a href="#op203">opcode #203</a> and <a href="#op207">opcode #207</a>), the spell specified by the <code>resource</code> key is cast at the caster's Casting Level, and it will also affect the original target (as if it wasn't reflected).</li>
-  <li>When this opcode is applied through <a href="#op177">opcode #177</a> and gets reflected (<a href="#op197">opcode #197</a>, <a href="#op198">opcode #198</a>, <a href="#op199">opcode #199</a>, <a href="#op202">opcode #202</a>, <a href="#op203">opcode #203</a> and <a href="#op207">opcode #207</a>), the spell specified by the <code>resource</code> key is cast at the level specified at offset <code><a href="../file_formats/ie_formats/eff_v2.htm#effv2_Body_0xC8">0xc8</a></code> of the <a href="../file_formats/ie_formats/eff_v2.htm">EFF</a>, and it will also affect the original target (as if it wasn't reflected).</li>
+  <li>When this opcode is applied through <a href="#op177">opcode #177</a> and gets reflected (<a href="#op197">opcode #197</a>, <a href="#op198">opcode #198</a>, <a href="#op199">opcode #199</a>, <a href="#op202">opcode #202</a>, <a href="#op203">opcode #203</a> and <a href="#op207">opcode #207</a>), the spell specified by the <code>resource</code> key is cast at the level specified at offset <a href="../file_formats/ie_formats/eff_v2.htm#effv2_Body_0xC8"><code>0xc8</code></a> of the <a href="../file_formats/ie_formats/eff_v2.htm">EFF</a>, and it will also affect the original target (as if it wasn't reflected).</li>
 </ul>
 {% endcapture %}
 
@@ -59,7 +59,7 @@ If this effect is applied through <a href="#op177">opcode #177</a>, the spell sp
   <li>
     Effects in the <code>resource</code> will also bypass Magic Resistance, of every target, as if the caster targeted themselves, regardless of who they target with the spell or this effect.
     <ul>
-      <li>Setting the <code><a href="../file_formats/ie_formats/pro_v1.htm#Behavior_BIT4">Ignore Center</a></code> bit in the subspell's projectile will force its effects to check Magic Resistance on every target, even if the caster did target themselves. Though as its primary function is to cause the projectile to ignore the caster (not "center"), it still won't affect them if it's <code><a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a></code>.</li>
+      <li>Setting the <a href="../file_formats/ie_formats/pro_v1.htm#Behavior_BIT4">Ignore Center</a> bit in the subspell's projectile will force its effects to check Magic Resistance on every target, even if the caster did target themselves. Though as its primary function is to cause the projectile to ignore the caster (not "center"), it still won't affect them if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
     </ul>
   </li>
 </ul>

@@ -6,26 +6,26 @@
     - 3 ⟶ <b><a name="itmv1_Extended_Header_0x0_3">Magical</a></b>
     - 4 ⟶ <b><a name="itmv1_Extended_Header_0x0_4">Launcher</a></b>
 
-    For <code><a href="#itmv1_Extended_Header_0x2_3">Item</a></code> abilities:
+    For <a href="#itmv1_Extended_Header_0x2_3">Item</a> abilities:
     - Do NOT use `0|None`, will crash the game.
-    - Only <code><a href="#itmv1_Extended_Header_0x0_3">Magical</a></code> abilities can be drained (along with <a href="../../opcodes/bgee.htm#op243">opcode #243</a>'s other restrictions).
-    - Type <code><a href="#itmv1_Extended_Header_0x0_4">4</a></code> cannot be used except from scripts (icon won't show up in actionbar).
+    - Only <a href="#itmv1_Extended_Header_0x0_3">Magical</a> abilities can be drained (along with <a href="../../opcodes/bgee.htm#op243">opcode #243</a>'s other restrictions).
+    - Type <a href="#itmv1_Extended_Header_0x0_4"><code>4</code></a> cannot be used except from scripts (icon won't show up in actionbar).
 
-    For <code><a href="#itmv1_Extended_Header_0x2_1">Weapon</a></code> abilities:
+    For <a href="#itmv1_Extended_Header_0x2_1">Weapon</a> abilities:
     - Do NOT use `0|None`, will crash the game.
-    - <code><a href="#itmv1_Extended_Header_0x0_1">Melee</a></code>: Ignores the <code><a href="#itmv1_Extended_Header_0x2A">projectile</a></code> field (always uses `#1|None`). Valid for <a href="../../files/2da/2da_bgee/stylbonu.htm">Weapon Styles</a>.
-    - <code><a href="#itmv1_Extended_Header_0x0_2">Ranged</a></code>:
-      - Utilizes <code><a href="#itmv1_Extended_Header_0x2A">projectile</a></code> field.
-      - Item cannot be equipped in <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code>, unless its <code><a href="#Header_ItemType">itemtype</a></code> can only be equipped in the <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code> slot, from <code><a href="../../files/2da/2da_bgee/itemtype.htm">ITEMTYPE.2DA</a></code>.
-      - If equipped in <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code>, it will attack as normal (at least for the offhand).
-      - <code><a href="../../files/ids/bgee/slots.htm#9">Off-hand</a></code> weapon will be suppressed while this item ability is selected in <code><a href="../../files/ids/bgee/slots.htm#35">mainhand</a></code> (EE only).
-    - <code><a href="#itmv1_Extended_Header_0x0_3">Magical</a></code>: Identical to <code><a href="#itmv1_Extended_Header_0x0_1">Melee</a></code>, except that it can be <a href="../../opcodes/bgee.htm#op243">drained</a>.
-    - <code><a href="#itmv1_Extended_Header_0x0_4">Launcher</a></code>:
-      - In the <code><a href="../../files/ids/bgee/slots.htm#35">mainhand</a></code> slots:
+    - <a href="#itmv1_Extended_Header_0x0_1">Melee</a>: Ignores the <a href="#itmv1_Extended_Header_0x2A">projectile</a> field (always uses `#1|None`). Valid for <a href="../../files/2da/2da_bgee/stylbonu.htm">Weapon Styles</a>.
+    - <a href="#itmv1_Extended_Header_0x0_2">Ranged</a>:
+      - Utilizes <a href="#itmv1_Extended_Header_0x2A">projectile</a> field.
+      - Item cannot be equipped in <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, unless its <a href="#Header_ItemType">itemtype</a> can only be equipped in the <a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot, from <a href="../../files/2da/2da_bgee/itemtype.htm"><code>ITEMTYPE.2DA</code></a>.
+      - If equipped in <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, it will attack as normal (at least for the offhand).
+      - <a href="../../files/ids/bgee/slots.htm#9">Off-hand</a> weapon will be suppressed while this item ability is selected in <a href="../../files/ids/bgee/slots.htm#35">mainhand</a> (EE only).
+    - <a href="#itmv1_Extended_Header_0x0_3">Magical</a>: Identical to <a href="#itmv1_Extended_Header_0x0_1">Melee</a>, except that it can be <a href="../../opcodes/bgee.htm#op243">drained</a>.
+    - <a href="#itmv1_Extended_Header_0x0_4">Launcher</a>:
+      - In the <a href="../../files/ids/bgee/slots.htm#35">mainhand</a> slots:
         - Ability cannot actually be selected, nor is the item considered "equipped" by script triggers or <a href="../../opcodes/bgee.htm#op183">opcode #183</a>.
-        - Equipped effects, stats and on-hit effects are added to the currently selected weapon ability IF that ability requires a <code><a href="#itmv1_Extended_Header_0x10">launcher</a></code> of this type.
-      - In the <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code> slot:
-        - Item cannot be equipped in <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code>, unless its <code><a href="#Header_ItemType">itemtype</a></code> can only be equipped in the <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code> slot, from <code><a href="../../files/2da/2da_bgee/itemtype.htm">ITEMTYPE.2DA</a></code>.
+        - Equipped effects, stats and on-hit effects are added to the currently selected weapon ability IF that ability requires a <a href="#itmv1_Extended_Header_0x10">launcher</a> of this type.
+      - In the <a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot:
+        - Item cannot be equipped in <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, unless its <a href="#Header_ItemType">itemtype</a> can only be equipped in the <a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot, from <a href="../../files/2da/2da_bgee/itemtype.htm"><code>ITEMTYPE.2DA</code></a>.
         - Attack cycle will stop when this weapon would have attacked (must be re-initiated manually or by script).
           - The creature will stop attacking when the off-hand attack would have occurred. Similar to pressing the group "Stop" button (F3).
   type: char
@@ -40,17 +40,17 @@
     - 0 ⟶ None
       - Ability will not be selectable through the UI (but still available to scripts and spell-casting opcodes).
     - 1 ⟶ <b><a name="itmv1_Extended_Header_0x2_1">Weapon</a></b>
-      - Ability can be used/selected in Quick-weapon slots (when equipped in one of the <code><a href="../../files/ids/bgee/slots.htm#35">mainhand</a></code>/<code><a href="../../files/ids/bgee/slots.htm#11">ammo</a></code>/<code><a href="../../files/ids/bgee/slots.htm#10">fist</a></code>/<code><a href="../../files/ids/bgee/slots.htm#34">magical weapon</a></code> slots).
+      - Ability can be used/selected in Quick-weapon slots (when equipped in one of the <a href="../../files/ids/bgee/slots.htm#35">mainhand</a>/<a href="../../files/ids/bgee/slots.htm#11">ammo</a>/<a href="../../files/ids/bgee/slots.htm#10">fist</a>/<a href="../../files/ids/bgee/slots.htm#34">magical weapon</a> slots).
     - 2 ⟶ Spell
-      - <code><a href="../ie_formats/spl_v1.htm#splv1_Extended_Header_0x2_2">SPL</a></code> only.
+      - <a href="../ie_formats/spl_v1.htm#splv1_Extended_Header_0x2_2"><code>SPL</code></a> only.
     - 3 ⟶ <b><a name="itmv1_Extended_Header_0x2_3">Equipment / Item</a></b>
-      - Ability can be selected from Quick-item slots, when equipped in one of those slots, or from the "Use Item (F8)" button if equipped elsewhere (except the <code><a href="../../files/ids/bgee/slots.htm#34">Magical Weapon Slot</a></code>).
+      - Ability can be selected from Quick-item slots, when equipped in one of those slots, or from the "Use Item (F8)" button if equipped elsewhere (except the <a href="../../files/ids/bgee/slots.htm#34">Magical Weapon Slot</a>).
     - 4 ⟶ Innate
-      - <code><a href="../ie_formats/spl_v1.htm#splv1_Extended_Header_0x2_4">SPL</a></code> only.
+      - <a href="../ie_formats/spl_v1.htm#splv1_Extended_Header_0x2_4"><code>SPL</code></a> only.
     - 5+ ⟶ As `0`.
 
     {% capture note %}
-    The first ability header of an item equipped in a <code><a href="../../files/ids/bgee/slots.htm#35">weapon</a></code>/<code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code> slot will always be treated as a <code><a href="#itmv1_Extended_Header_0x2_1">weapon</a></code> abillty, even if it lacks the correct <code><a href="#itmv1_Extended_Header_0x2">location</a></code> to be selected as such, unless that item is a <code><a href="../../files/ids/bgee/itemcat.htm#12">shield</a></code> in the <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code>.
+    The first ability header of an item equipped in a <a href="../../files/ids/bgee/slots.htm#35">weapon</a>/<a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot will always be treated as a <a href="#itmv1_Extended_Header_0x2_1">weapon</a> abillty, even if it lacks the correct <a href="#itmv1_Extended_Header_0x2">location</a> to be selected as such, unless that item is a <a href="../../files/ids/bgee/itemcat.htm#12">shield</a> in the <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>.
     {% endcapture %} {% include note.html %}
   type: char
 - desc: Alternative dice sides
@@ -62,13 +62,13 @@
 
     - 0 ⟶ Invalid (cannot be selected)
     - 1 ⟶ <b><a name="itmv1_Extended_Header_0xC_1">Living actor</a></b>
-      - Targets Portrait, <a href="../ie_formats/are_v1.htm#formAREAV1_0_Actor">Creature/Actor</a>, <a href="../ie_formats/are_v1.htm#formAREAV1_0_Container">Container</a>, or <a href="../ie_formats/are_v1.htm#formAREAV1_0_Door">Door</a>. Checks <code><a href="#itmv1_Extended_Header_0xE">Range</a></code>.
+      - Targets Portrait, <a href="../ie_formats/are_v1.htm#formAREAV1_0_Actor">Creature/Actor</a>, <a href="../ie_formats/are_v1.htm#formAREAV1_0_Container">Container</a>, or <a href="../ie_formats/are_v1.htm#formAREAV1_0_Door">Door</a>. Checks <a href="#itmv1_Extended_Header_0xE">Range</a>.
     - 2 ⟶ <b><a name="itmv1_Extended_Header_0xC_2">Inventory</a></b>
       - Can't be activated manually.
     - 3 ⟶ <b><a name="itmv1_Extended_Header_0xC_3">Dead actor</a></b>
-      - As <code><a href="#itmv1_Extended_Header_0xC_1">Living Actor</a></code>. It really just ignores any <code><a href="#itmv1_Extended_Header_0xE">Range</a></code> requirement, including being in the same area.
+      - As <a href="#itmv1_Extended_Header_0xC_1">Living Actor</a>. It really just ignores any <a href="#itmv1_Extended_Header_0xE">Range</a> requirement, including being in the same area.
     - 4 ⟶ <b><a name="itmv1_Extended_Header_0xC_4">Any point within range</a></b>
-      - Targets location. Checks <code><a href="#itmv1_Extended_Header_0xE">Range</a></code>.
+      - Targets location. Checks <a href="#itmv1_Extended_Header_0xE">Range</a>.
     - 5 ⟶ <b><a name="itmv1_Extended_Header_0xC_5">Caster</a></b>
       - Targets Self.
     - 6 ⟶ Crash
@@ -77,17 +77,17 @@
       - Targets Self. In particular:
         - Used instantly (even while the game is paused).
         - Ignores one item per round rule.
-        - Ignores <code><a href="#itmv1_Extended_Header_0x2A">projectile</a></code> (uses `#1|None`).
+        - Ignores <a href="#itmv1_Extended_Header_0x2A">projectile</a> (uses `#1|None`).
 
     {% capture note %}
     - This field doesn't matter when the ability is activated/cast by script, when cast by another opcode, or for weapon attacks.
-    - <code><a href="#itmv1_Extended_Header_0x2_1">Weapon</a></code> attacks always use a more restricted form of <code><a href="#itmv1_Extended_Header_0xC_1">Living actor</a></code>, as they cannot target <a href="../ie_formats/are_v1.htm#formAREAV1_0_Container">containers</a> or <a href="../ie_formats/are_v1.htm#formAREAV1_0_Door">doors</a> unless they are locked.
+    - <a href="#itmv1_Extended_Header_0x2_1">Weapon</a> attacks always use a more restricted form of <a href="#itmv1_Extended_Header_0xC_1">Living actor</a>, as they cannot target <a href="../ie_formats/are_v1.htm#formAREAV1_0_Container">containers</a> or <a href="../ie_formats/are_v1.htm#formAREAV1_0_Door">doors</a> unless they are locked.
     {% endcapture %} {% include note.html %}
   type: char
 - desc: |-
     <b><a name="itmv1_Extended_Header_0xD">Target count</a></b>
 
-    - Only usable by <code><a href="#itmv1_Extended_Header_0x2_3">Item</a></code> abilities, and only with Ability Targets <code><a href="#itmv1_Extended_Header_0xC_1">1</a></code>, <code><a href="#itmv1_Extended_Header_0xC_3">3</a></code>, or <code><a href="#itmv1_Extended_Header_0xC_4">4</a></code>.
+    - Only usable by <a href="#itmv1_Extended_Header_0x2_3">Item</a> abilities, and only with Ability Targets <a href="#itmv1_Extended_Header_0xC_1"><code>1</code></a>, <a href="#itmv1_Extended_Header_0xC_3"><code>3</code></a>, or <a href="#itmv1_Extended_Header_0xC_4"><code>4</code></a>.
     - Targeting reticle will display amount remaining while selecting targets.
     - Double-clicking a target/location will target it for the remaining amount.
     - Regardless of the number of targets, only a single "Charge" will be expended.
@@ -101,20 +101,20 @@
 
     - 0 ⟶ None
     - 1 ⟶ <b><a name="itmv1_Extended_Header_0x10_1">Bow</a></b>
-      - Any <code><a href="#itmv1_Extended_Header_0x0_2">Ranged</a></code> ability with this field set to this value will require a weapon with the corresponding <code><a href="../../files/ids/bgee/itemcat.htm#15">ITEMCAT.IDS</a></code> (Item category) in one of the <code><a href="../../files/ids/bgee/slots.htm#35">mainhand</a></code> weapon slots (not <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code>, <code><a href="../../files/ids/bgee/slots.htm#10">fist</a></code>, or <code><a href="../../files/ids/bgee/slots.htm#34">magical weapon</a></code> slot).
+      - Any <a href="#itmv1_Extended_Header_0x0_2">Ranged</a> ability with this field set to this value will require a weapon with the corresponding <a href="../../files/ids/bgee/itemcat.htm#15"><code>ITEMCAT.IDS</code></a> (Item category) in one of the <a href="../../files/ids/bgee/slots.htm#35">mainhand</a> weapon slots (not <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, <a href="../../files/ids/bgee/slots.htm#10">fist</a>, or <a href="../../files/ids/bgee/slots.htm#34">magical weapon</a> slot).
     - 2 ⟶ <b><a name="itmv1_Extended_Header_0x10_2">Crossbow</a></b>
-      - Any <code><a href="#itmv1_Extended_Header_0x0_2">Ranged</a></code> ability with this field set to this value will require a weapon with the corresponding <code><a href="../../files/ids/bgee/itemcat.htm#27">ITEMCAT.IDS</a></code> (Item category) in one of the <code><a href="../../files/ids/bgee/slots.htm#35">mainhand</a></code> weapon slots (not <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code>, <code><a href="../../files/ids/bgee/slots.htm#10">fist</a></code>, or <code><a href="../../files/ids/bgee/slots.htm#34">magical weapon</a></code> slot).
+      - Any <a href="#itmv1_Extended_Header_0x0_2">Ranged</a> ability with this field set to this value will require a weapon with the corresponding <a href="../../files/ids/bgee/itemcat.htm#27"><code>ITEMCAT.IDS</code></a> (Item category) in one of the <a href="../../files/ids/bgee/slots.htm#35">mainhand</a> weapon slots (not <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, <a href="../../files/ids/bgee/slots.htm#10">fist</a>, or <a href="../../files/ids/bgee/slots.htm#34">magical weapon</a> slot).
     - 3 ⟶ <b><a name="itmv1_Extended_Header_0x10_3">Sling</a></b>
-      - Any <code><a href="#itmv1_Extended_Header_0x0_2">Ranged</a></code> ability with this field set to this value will require a weapon with the corresponding <code><a href="../../files/ids/bgee/itemcat.htm#18">ITEMCAT.IDS</a></code> (Item category) in one of the <code><a href="../../files/ids/bgee/slots.htm#35">mainhand</a></code> weapon slots (not <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code>, <code><a href="../../files/ids/bgee/slots.htm#10">fist</a></code>, or <code><a href="../../files/ids/bgee/slots.htm#34">magical weapon</a></code> slot).
+      - Any <a href="#itmv1_Extended_Header_0x0_2">Ranged</a> ability with this field set to this value will require a weapon with the corresponding <a href="../../files/ids/bgee/itemcat.htm#18"><code>ITEMCAT.IDS</code></a> (Item category) in one of the <a href="../../files/ids/bgee/slots.htm#35">mainhand</a> weapon slots (not <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, <a href="../../files/ids/bgee/slots.htm#10">fist</a>, or <a href="../../files/ids/bgee/slots.htm#34">magical weapon</a> slot).
     - 40 ⟶ Spear
     - 100 ⟶ Throwing Axe
 
     In particular:
-    - It ONLY checks items for <code><a href="../../files/ids/bgee/itemcat.htm#15">BOW</a></code> / <code><a href="../../files/ids/bgee/itemcat.htm#27">XBOW</a></code> / <code><a href="../../files/ids/bgee/itemcat.htm#18">SLING</a></code> and will always use that item's first ability header – it doesn't matter what that ability's <code><a href="#itmv1_Extended_Header_0x0">Type</a></code> is (<code><a href="#itmv1_Extended_Header_0x0_1">Melee</a></code>/<code><a href="#itmv1_Extended_Header_0x0_2">Ranged</a></code>/<code><a href="#itmv1_Extended_Header_0x0_3">Magical</a></code>/<code><a href="#itmv1_Extended_Header_0x0_4">Launcher</a></code>).
+    - It ONLY checks items for <a href="../../files/ids/bgee/itemcat.htm#15"><code>BOW</code></a> / <a href="../../files/ids/bgee/itemcat.htm#27"><code>XBOW</code></a> / <a href="../../files/ids/bgee/itemcat.htm#18"><code>SLING</code></a> and will always use that item's first ability header – it doesn't matter what that ability's <a href="#itmv1_Extended_Header_0x0">Type</a> is (<a href="#itmv1_Extended_Header_0x0_1">Melee</a>/<a href="#itmv1_Extended_Header_0x0_2">Ranged</a>/<a href="#itmv1_Extended_Header_0x0_3">Magical</a>/<a href="#itmv1_Extended_Header_0x0_4">Launcher</a>).
       - This also means that you can't make an Arrow that requires being shot out of a Sword.
-    - <code><a href="../../files/ids/bgee/itemcat.htm">ITEMCAT</a></code> is offset <code><a href="#Header_ItemType">0x1C</a></code> of the ITM file (which is also linked to <code><a href="../../files/2da/2da_bgee/itemtype.htm">ITEMTYPE.2DA</a></code>).
-    - Only the <code><a href="../../files/ids/bgee/slots.htm#35">Mainhand</a></code>, <code><a href="../../files/ids/bgee/slots.htm#11">Ammo</a></code>, and <code><a href="../../files/ids/bgee/slots.htm#34">Magical Weapon</a></code> slots can utilize launchers. The <code><a href="../../files/ids/bgee/slots.htm#9">off-hand</a></code> ignores this field, while the <code><a href="../../files/ids/bgee/slots.htm#10">fist</a></code> slot uses it (only to crash).
-    - Weapons of any <code><a href="../../files/ids/bgee/itemcat.htm">ITEMCAT</a></code> can use this field, as long as it is equipped in one of the proper slots.
+    - <a href="../../files/ids/bgee/itemcat.htm"><code>ITEMCAT</code></a> is offset <a href="#Header_ItemType"><code>0x1C</code></a> of the ITM file (which is also linked to <a href="../../files/2da/2da_bgee/itemtype.htm"><code>ITEMTYPE.2DA</code></a>).
+    - Only the <a href="../../files/ids/bgee/slots.htm#35">Mainhand</a>, <a href="../../files/ids/bgee/slots.htm#11">Ammo</a>, and <a href="../../files/ids/bgee/slots.htm#34">Magical Weapon</a> slots can utilize launchers. The <a href="../../files/ids/bgee/slots.htm#9">off-hand</a> ignores this field, while the <a href="../../files/ids/bgee/slots.htm#10">fist</a> slot uses it (only to crash).
+    - Weapons of any <a href="../../files/ids/bgee/itemcat.htm"><code>ITEMCAT</code></a> can use this field, as long as it is equipped in one of the proper slots.
       - This also means that you can make a Sword that requires being shot out of a Bow.
     - Bows, Crossbows, and Slings with multiple abilities can even use themselves as their required launcher.
   type: byte
@@ -140,14 +140,14 @@
 - desc: |-
     <b><a name="itmv1_Extended_Header_0x17">Primary Type (School)</a></b>
 
-    - See <code><a href="../../files/2da/2da_bgee/mschool.htm">MSCHOOL.2DA</a></code>.
+    - See <a href="../../files/2da/2da_bgee/mschool.htm"><code>MSCHOOL.2DA</code></a>.
   type: byte
 - desc: <b><a name="itmv1_Extended_Header_0x18">Dice thrown</a></b>
   type: byte
 - desc: |-
     <b><a name="itmv1_Extended_Header_0x19">Secondary Type</a></b>
 
-    - See <code><a href="../../files/2da/2da_bgee/msectype.htm">MSECTYPE.2DA</a></code>.
+    - See <a href="../../files/2da/2da_bgee/msectype.htm"><code>MSECTYPE.2DA</code></a>.
   type: byte
 - desc: <b><a name="itmv1_Extended_Header_0x1A">Damage bonus</a></b>
   type: word
@@ -171,20 +171,20 @@
     - 8 ⟶ <b><a name="itmv1_Extended_Header_0x1C_8">Crushing/Slashing</a></b> (Worse)
       - Uses whichever damage type and AC the creature has the better damage resistance against (regardless if its AC is better or worse). Uses `Slashing` if equal resistance.
     - 9 ⟶ <b><a name="itmv1_Extended_Header_0x1C_9">Blunt Missile</a></b>
-      - Same as <code><a href="#itmv1_Extended_Header_0x1C_0">None</a></code>
-        - Either it's bugged or <code><a href="#itmv1_Extended_Header_0x1C_9">Blunt Missile</a></code> has always been an IWD2-only feature.
+      - Same as <a href="#itmv1_Extended_Header_0x1C_0">None</a>
+        - Either it's bugged or <a href="#itmv1_Extended_Header_0x1C_9">Blunt Missile</a> has always been an IWD2-only feature.
         - It's probably meant to deal crushing damage while using Missile AC.
-    - 10+ ⟶ Same as <code><a href="#itmv1_Extended_Header_0x1C_0">None</a></code>
+    - 10+ ⟶ Same as <a href="#itmv1_Extended_Header_0x1C_0">None</a>
 
     {% capture note %}
     - ALL values:
-      - If <code><a href="#itmv1_Extended_Header_0x18">Dice thrown</a></code>, <code><a href="#itmv1_Extended_Header_0x16">Dice size</a></code>, and <code><a href="#itmv1_Extended_Header_0x1A">Damage bonus</a></code> are all `0`: Always deals zero damage (ignores all modifiers, like Weapon Proficiency).
+      - If <a href="#itmv1_Extended_Header_0x18">Dice thrown</a>, <a href="#itmv1_Extended_Header_0x16">Dice size</a>, and <a href="#itmv1_Extended_Header_0x1A">Damage bonus</a> are all `0`: Always deals zero damage (ignores all modifiers, like Weapon Proficiency).
         - If you want zero base damage + modifiers, you can use `1d1 - 1`.
       - Some edge cases:
         - <code><a href="#itmv1_Extended_Header_0x18">Dice thrown</a>d<a href="#itmv1_Extended_Header_0x16">Dice size</a> + <a href="#itmv1_Extended_Header_0x1A">Damage bonus</a> = Xd0 + 0</code>: Deals `X` damage, regardless of other modifiers.
         - <code><a href="#itmv1_Extended_Header_0x18">Dice thrown</a>d<a href="#itmv1_Extended_Header_0x16">Dice size</a> + <a href="#itmv1_Extended_Header_0x1A">Damage bonus</a> = 0d0 + X</code>: Deals `X + modifiers` damage.
         - <code><a href="#itmv1_Extended_Header_0x18">Dice thrown</a>d<a href="#itmv1_Extended_Header_0x16">Dice size</a> + <a href="#itmv1_Extended_Header_0x1A">Damage bonus</a> = 0dX + 0</code>: Also deals `0` damage.
-    - Values `1–4` don't have any other quirks (<code><a href="#itmv1_Extended_Header_0x1C_1">Piercing</a></code>, <code><a href="#itmv1_Extended_Header_0x1C_2">Crushing</a></code>, <code><a href="#itmv1_Extended_Header_0x1C_3">Slashing</a></code>, <code><a href="#itmv1_Extended_Header_0x1C_4">Missile</a></code>), just each a different damage type.
+    - Values `1–4` don't have any other quirks (<a href="#itmv1_Extended_Header_0x1C_1">Piercing</a>, <a href="#itmv1_Extended_Header_0x1C_2">Crushing</a>, <a href="#itmv1_Extended_Header_0x1C_3">Slashing</a>, <a href="#itmv1_Extended_Header_0x1C_4">Missile</a>), just each a different damage type.
     {% endcapture %} {% include note.html %}
   type: word
 - desc: Count of feature blocks
@@ -197,17 +197,17 @@
     <b><a name="itmv1_Extended_Header_0x24">Charge depletion behaviour</a></b>
 
     - 0 ⟶ <b><a name="itmv1_Extended_Header_0x24_0">Item remains</a></b>
-      - Item becomes unusable (except as a weapon) when <code><a href="#itmv1_Extended_Header_0x22">Max Charges</a></code> reaches zero. Can be recharged by selling or by resting if it has the <code><a href="#ExtHeader_Flags_BIT11">Recharge after resting</a></code> flag.
+      - Item becomes unusable (except as a weapon) when <a href="#itmv1_Extended_Header_0x22">Max Charges</a> reaches zero. Can be recharged by selling or by resting if it has the <a href="#ExtHeader_Flags_BIT11">Recharge after resting</a> flag.
     - 1 ⟶ <b><a name="itmv1_Extended_Header_0x24_1">Item vanishes</a></b>
-      - Item disappears when <code><a href="#itmv1_Extended_Header_0x22">Max Charges</a></code> reaches zero. Can be recharged prior to reaching zero (through either method).
+      - Item disappears when <a href="#itmv1_Extended_Header_0x22">Max Charges</a> reaches zero. Can be recharged prior to reaching zero (through either method).
     - 2 ⟶ <b><a name="itmv1_Extended_Header_0x24_2">Replace with used up</a></b>
-      - When <code><a href="#itmv1_Extended_Header_0x22">Max Charges</a></code> reaches zero, item is replaced with the item specified at offset <code><a href="#itmv1_Header_0x10">0x10</a></code>. Can be recharged prior to reaching zero (through either method).
+      - When <a href="#itmv1_Extended_Header_0x22">Max Charges</a> reaches zero, item is replaced with the item specified at offset <a href="#itmv1_Header_0x10"><code>0x10</code></a>. Can be recharged prior to reaching zero (through either method).
     - 3 ⟶ <b><a name="itmv1_Extended_Header_0x24_3">Item recharges</a></b>
-      - This is very likely no different from <code><a href="#itmv1_Extended_Header_0x24_0">Item remains</a></code> or `4+`, i.e. defaults to <code><a href="#itmv1_Extended_Header_0x24_0">0</a></code>.
+      - This is very likely no different from <a href="#itmv1_Extended_Header_0x24_0">Item remains</a> or `4+`, i.e. defaults to <a href="#itmv1_Extended_Header_0x24_0"><code>0</code></a>.
 
     {% capture note %}
-    - This field is irrelevant when the <code><a href="#itmv1_Extended_Header_0x22">Max Charges</a></code> field is zero. Item can be used infinitely.
-    - If the item has a <code><a href="#itmv1_Header_0x38">Max Stack Size</a> > 1</code>, this behavior will instead occur when the stack is depleted, not the charges (but still requires a non-zero <code><a href="#itmv1_Extended_Header_0x22">Max Charges</a></code>).
+    - This field is irrelevant when the <a href="#itmv1_Extended_Header_0x22">Max Charges</a> field is zero. Item can be used infinitely.
+    - If the item has a <code><a href="#itmv1_Header_0x38">Max Stack Size</a> > 1</code>, this behavior will instead occur when the stack is depleted, not the charges (but still requires a non-zero <a href="#itmv1_Extended_Header_0x22">Max Charges</a>).
     {% endcapture %} {% include note.html %}
   type: word
 - desc: '[Flags](#ExtHeader_Flags)'
@@ -219,7 +219,7 @@
     <b>[Melee animation](#ExtendedHeader_MeleeAnimation)</b>
 
     - It should total 100, but not mandatory on EE games.
-    - Not needed if <code><a href="#itmv1_Extended_Header_0x32">Arrow</a></code>/<code><a href="#itmv1_Extended_Header_0x34">Bolt</a></code>/<code><a href="#itmv1_Extended_Header_0x36">Bullet</a></code> is used.
+    - Not needed if <a href="#itmv1_Extended_Header_0x32">Arrow</a>/<a href="#itmv1_Extended_Header_0x34">Bolt</a>/<a href="#itmv1_Extended_Header_0x36">Bullet</a> is used.
     - It should work as such:<br/>
       Engine rolls `0 – 99`.
       - `overhand range = 0 to (overhand - 1)`
@@ -235,7 +235,7 @@
         - `0 – 99`: Overhand
         - `100 – 199`: Backhand (never used)
         - `200 – 299`: Thrust (never used)
-    - Along with <code><a href="#itmv1_Extended_Header_0x32">Is arrow?</a></code>/<code><a href="#itmv1_Extended_Header_0x34">Is bolt?</a></code>/<code><a href="#itmv1_Extended_Header_0x36">Is bullet?</a></code>, it is only used for attack animations. If all are zero, no animation will be used for attacking. Activated <code><a href="#itmv1_Extended_Header_0x2_3">Item</a></code> abilities can leave them all `0`, as they are not used.
+    - Along with <a href="#itmv1_Extended_Header_0x32">Is arrow?</a>/<a href="#itmv1_Extended_Header_0x34">Is bolt?</a>/<a href="#itmv1_Extended_Header_0x36">Is bullet?</a>, it is only used for attack animations. If all are zero, no animation will be used for attacking. Activated <a href="#itmv1_Extended_Header_0x2_3">Item</a> abilities can leave them all `0`, as they are not used.
   type: word
   mult: 3
 - desc: |-

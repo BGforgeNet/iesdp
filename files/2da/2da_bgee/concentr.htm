@@ -20,10 +20,10 @@ Known values for <code>CHECK_MODE</code> are:
     0 &longrightarrow; Any damage a spellcaster takes will cause them to fail their spellcasting.
     <ul>
       <li>
-        To be precise, spellcasters can't be disrupted by damage if they are facing <code><a href="../../ids/bgee/dir.htm#SSW">SSW</a></code>, <code><a href="../../ids/bgee/dir.htm#SWW">SWW</a></code>, <code><a href="../../ids/bgee/dir.htm#NWW">NWW</a></code>, <code><a href="../../ids/bgee/dir.htm#NNW">NNW</a></code>, <code><a href="../../ids/bgee/dir.htm#NNE">NNE</a></code>, <code><a href="../../ids/bgee/dir.htm#NEE">NEE</a></code>, <code><a href="../../ids/bgee/dir.htm#SEE">SEE</a></code>, or <code><a href="../../ids/bgee/dir.htm#SSE">SSE</a></code>.
+        To be precise, spellcasters can't be disrupted by damage if they are facing <a href="../../ids/bgee/dir.htm#SSW"><code>SSW</code></a>, <a href="../../ids/bgee/dir.htm#SWW"><code>SWW</code></a>, <a href="../../ids/bgee/dir.htm#NWW"><code>NWW</code></a>, <a href="../../ids/bgee/dir.htm#NNW"><code>NNW</code></a>, <a href="../../ids/bgee/dir.htm#NNE"><code>NNE</code></a>, <a href="../../ids/bgee/dir.htm#NEE"><code>NEE</code></a>, <a href="../../ids/bgee/dir.htm#SEE"><code>SEE</code></a>, or <a href="../../ids/bgee/dir.htm#SSE"><code>SSE</code></a>.
         <ul>
           <li>
-            This happens because the disruption code is only checked if the caster is in the correct orientation to face the target. <code><a href="../../ids/bgee/seq.htm#SEQ_DAMAGE">SEQ_DAMAGE</a></code> rounds a creature's orientation down to the nearest <i>even</i> direction, causing the caster to momentarily <b><u>not</u></b> face the target, making the check fail. Here's an example:
+            This happens because the disruption code is only checked if the caster is in the correct orientation to face the target. <a href="../../ids/bgee/seq.htm#SEQ_DAMAGE"><code>SEQ_DAMAGE</code></a> rounds a creature's orientation down to the nearest <i>even</i> direction, causing the caster to momentarily <b><u>not</u></b> face the target, making the check fail. Here's an example:
 
             <details>
               <video width="960" height="600" controls autoplay loop> <!-- 16:10 aspect ratio -->

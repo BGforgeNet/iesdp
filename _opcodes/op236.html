@@ -16,7 +16,7 @@ pstee: 1
 Creates an image (duplicate) of the caster, in the style specified by the <code>Type</code> field.
 <br/>In particular:
 <ul>
-	<li>The Image inherits any/only effects attached to the creature using <a href="{{ '/file_formats/ie_formats/eff_v1.htm#effv1_Header_0xC_9' | prepend: relurl }}"><code>Timing Mode 9</code></a></li>
+	<li>The Image inherits any/only effects attached to the creature using <a href="{{ '/file_formats/ie_formats/eff_v1.htm#effv1_Header_0xC_9' | prepend: relurl }}">Timing Mode 9</a></li>
 	<li>The Image has duplicates of all of the targeted creature(s) items that are flagged with <a href="{{ '/files/ids/bgee/itemflag.htm#BIT2' | prepend:relurl }}"><code>DROPPABLE</code></a> and not flagged with <a href="{{ '/files/ids/bgee/invitem.htm#BIT3' | prepend:relurl }}"><code>NONDROPABLE</code></a></li>
 	<li>All items on the Image are flagged with <a href="{{ '/files/ids/bgee/invitem.htm#BIT3' | prepend:relurl }}"><code>NONDROPABLE</code></a>, so an image created by another image will have no items</li>
 	<li>If the targeted creature(s) is not a party memeber, saving is disabled so long as the image exists</li>
@@ -28,7 +28,7 @@ Creates an image (duplicate) of the caster, in the style specified by the <code>
 		0 &longrightarrow; Clone &mdash; Image created with the targeted creature(s) Current Hit Points and the following (in order)
 		<ul>
 			<li>All AI scripts and Dialogues are set to <code>""</code> (empty string, i.e. they will be cleared)</li>
-			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x280' | prepend:relurl }}"><code>Script Name</code></a> (Death Variable) set to <code>"COPY"</code></li>
+			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x280' | prepend:relurl }}">Script Name</a> (Death Variable) set to <code>"COPY"</code></li>
 			<li><a href="#op68">Opcode #68</a> based on effect <code>duration</code></li>
 			<li>The creature is not immediately controllable, but will become controllable (if allied) after saving &amp; reloading</li>
 		</ul>
@@ -38,13 +38,13 @@ Creates an image (duplicate) of the caster, in the style specified by the <code>
 		1 &longrightarrow; Mislead &mdash; Image created with the targeted creature(s) Maximum Hit Points and the following (in order)
 		<ul>
 			<li>Allegiance set to <a href="{{ '/files/ids/bgee/ea.htm#4' | prepend:relurl }}"><code>ALLY</code></a>, <a href="{{ '/files/ids/bgee/ea.htm#128' | prepend:relurl }}"><code>NEUTRAL</code></a>, or <a href="{{ '/files/ids/bgee/ea.htm#255' | prepend:relurl }}"><code>ENEMY</code></a>, depending on target allegiance</li>
-			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Gender' | prepend:relurl }}"><code>Gender</code></a> set to <a href="{{ '/files/ids/bgee/gender.htm#ILLUSIONARY' | prepend: relurl }}"><code>ILLUSIONARY</code></a></li>
+			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Gender' | prepend:relurl }}">Gender</a> set to <a href="{{ '/files/ids/bgee/gender.htm#ILLUSIONARY' | prepend: relurl }}"><code>ILLUSIONARY</code></a></li>
 			<li>All AI scripts and Dialogues are set to <code>""</code> (empty string, i.e. they will be cleared)</li>
 			<li>
-				If the clone's allegiance is not <a href="{{ '/files/ids/bgee/ea.htm#4' | prepend:relurl }}"><code>ALLY</code></a>, <a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_ClassScript' | prepend:relurl }}"><code>Class Script</code></a> is set to <code>'Original Class Script' + 'M'</code>. The script has to already exist (as a separate <a href="{{ '/file_formats/ie_formats/bcs.htm' | prepend:relurl }}"><code>BCS</code></a> file).
+				If the clone's allegiance is not <a href="{{ '/files/ids/bgee/ea.htm#4' | prepend:relurl }}"><code>ALLY</code></a>, <a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_ClassScript' | prepend:relurl }}">Class Script</a> is set to <code>'Original Class Script' + 'M'</code>. The script has to already exist (as a separate <a href="{{ '/file_formats/ie_formats/bcs.htm' | prepend:relurl }}"><code>BCS</code></a> file).
 				<ul>
-					<li>And the <a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_ClassScript' | prepend:relurl }}"><code>Class Script</code></a> is only set if it wasn't originally null/empty &mdash; it will never be just <code>"M"</code></li>
-					<li>If original <a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_ClassScript' | prepend:relurl }}"><code>Class Script</code></a> is 8 characters long, the last letter will be replaced with <code>"M"</code></li>
+					<li>And the <a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_ClassScript' | prepend:relurl }}">Class Script</a> is only set if it wasn't originally null/empty &mdash; it will never be just <code>"M"</code></li>
+					<li>If original <a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_ClassScript' | prepend:relurl }}">Class Script</a> is 8 characters long, the last letter will be replaced with <code>"M"</code></li>
 					<li>
 						If you look in BG2EE, you will see these files:
 						<ul>
@@ -57,7 +57,7 @@ Creates an image (duplicate) of the caster, in the style specified by the <code>
 					</li>
 				</ul>
 			</li>
-			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x280' | prepend:relurl }}"><code>Script Name</code></a> (Death Variable) set to <code>"COPY"</code></li>
+			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x280' | prepend:relurl }}">Script Name</a> (Death Variable) set to <code>"COPY"</code></li>
 			<li><a href="#op68">Opcode #68</a> based on effect <code>duration</code></li>
 			<li><a href="#op237">Opcode #237</a><code><small><sup>*</sup></small>p2=1</code>: Puppet Stats, Mislead</li>
 			<li><a href="#op145">Opcode #145</a><code><small><sup>*</sup></small>p2=0</code>: Disable Spell Casting, Wizard</li>
@@ -76,9 +76,9 @@ Creates an image (duplicate) of the caster, in the style specified by the <code>
 		2 &longrightarrow; Project Image &mdash; Image is created with the targeted creature(s) Current Hit Points and the following (in order)
 		<ul>
 			<li>Allegiance set to <a href="{{ '/files/ids/bgee/ea.htm#4' | prepend:relurl }}"><code>ALLY</code></a>, <a href="{{ '/files/ids/bgee/ea.htm#128' | prepend:relurl }}"><code>NEUTRAL</code></a>, or <a href="{{ '/files/ids/bgee/ea.htm#255' | prepend:relurl }}"><code>ENEMY</code></a>, depending on target allegiance</li>
-			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Gender' | prepend:relurl }}"><code>Gender</code></a> set to <a href="{{ '/files/ids/bgee/gender.htm#ILLUSIONARY' | prepend: relurl }}"><code>ILLUSIONARY</code></a></li>
+			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_Gender' | prepend:relurl }}">Gender</a> set to <a href="{{ '/files/ids/bgee/gender.htm#ILLUSIONARY' | prepend: relurl }}"><code>ILLUSIONARY</code></a></li>
 			<li>All AI scripts and Dialogues are set to <code>""</code> (empty string, i.e. they will be cleared)</li>
-			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x280' | prepend:relurl }}"><code>Script Name</code></a> (Death Variable) set to <code>"COPY"</code></li>
+			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x280' | prepend:relurl }}">Script Name</a> (Death Variable) set to <code>"COPY"</code></li>
 			<li><a href="#op68">Opcode #68</a> based on effect <code>duration</code></li>
 			<li><a href="#op237">Opcode #237</a><code><small><sup>*</sup></small>p2=2</code>: Puppet Stats, Project Image</li>
 			<li>Applies <code>"PROJIMAG.SPL"</code></li>
@@ -90,7 +90,7 @@ Creates an image (duplicate) of the caster, in the style specified by the <code>
 		<ul>
 			<li>Allegiance set to <a href="{{ '/files/ids/bgee/ea.htm#4' | prepend:relurl }}"><code>ALLY</code></a>, <a href="{{ '/files/ids/bgee/ea.htm#128' | prepend:relurl }}"><code>NEUTRAL</code></a>, or <a href="{{ '/files/ids/bgee/ea.htm#255' | prepend:relurl }}"><code>ENEMY</code></a>, depending on target allegiance</li>
 			<li>All AI scripts and Dialogues are set to <code>""</code> (empty string, i.e. they will be cleared)</li>
-			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x280' | prepend:relurl }}"><code>Script Name</code></a> (Death Variable) set to <code>"COPY"</code></li>
+			<li><a href="{{ '/file_formats/ie_formats/cre_v1.htm#CREV1_0_Header_0x280' | prepend:relurl }}">Script Name</a> (Death Variable) set to <code>"COPY"</code></li>
 			<li><a href="#op68">Opcode #68</a> based on effect <code>duration</code></li>
 			<li><a href="#op216">Opcode #216</a></li>
 			<li><a href="#op237">Opcode #237</a><code><small><sup>*</sup></small>p2=3</code>: Puppet Stats, Simulacrum</li>

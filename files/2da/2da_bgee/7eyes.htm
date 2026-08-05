@@ -48,7 +48,7 @@ The inability to block effects through op#177/#283 is a reported bug.
 When a row triggers to block an effect, it will also block all effects of that resource that follow after it, but not any effects that precede it. The feedback <code>STRREF</code> is however only displayed for each effect it is actually listed to block.<br/>
 For instance, suppose an active row were setup to block <a href="../../../opcodes/bgee.htm#op58">opcode #58</a> (Dispel effects), and Dispel Magic were cast on them:
 <ul>
-    <li>It would still remove portrait icon <code><a href="../2da_bgee/statdesc.htm#112">Deaf</a></code> and <a href="../../../opcodes/bgee.htm#op81">Cure Deafness</a>, as they precede <a href="../../../opcodes/bgee.htm#op58">opcode #58</a>.</li>
+    <li>It would still remove portrait icon <a href="../2da_bgee/statdesc.htm#112">Deaf</a> and <a href="../../../opcodes/bgee.htm#op81">Cure Deafness</a>, as they precede <a href="../../../opcodes/bgee.htm#op58">opcode #58</a>.</li>
     <li>It would display the feedback <code>STRREF</code> once, for the single <a href="../../../opcodes/bgee.htm#op58">opcode #58</a> effect, blocking the dispel effect.</li>
     <li>The remaining effects after <a href="../../../opcodes/bgee.htm#op58">opcode #58</a> would also be blocked, but would not cause more feedback messages for being blocked.</li>
 </ul>

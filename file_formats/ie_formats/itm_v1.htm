@@ -84,7 +84,7 @@ regenerate: true
             <b><a name="Header_Flags_BIT0">Unsellable (critical item)</a></b>
             <ul>
               <li>In BG1 and IWD, this flag does not affect whether the item can be sold or disintegrated. See BIT11 instead.</li>
-              <li>On EE games, <a href="../ie_formats/sto_v1.htm">Stores</a> can buy critical items if they are flagged as <code><a href="../ie_formats/sto_v1.htm#storv1_0_Header_0x10_BIT15">Can buy Critical</a></code>, provided they can buy its <code><a href="#Header_ItemType">itemtype</a></code>.</li>
+              <li>On EE games, <a href="../ie_formats/sto_v1.htm">Stores</a> can buy critical items if they are flagged as <a href="../ie_formats/sto_v1.htm#storv1_0_Header_0x10_BIT15">Can buy Critical</a>, provided they can buy its <a href="#Header_ItemType">itemtype</a>.</li>
               <li>Will also cause the item to be moved into Player1's Inventory if the character who has it leaves the party on their own.</li>
             </ul>
           </td>
@@ -122,7 +122,7 @@ regenerate: true
           <td>
             Toggle critical hit aversion (BGEE, TobEx)
             <ul>
-              <li>Keep in mind that if you set this bit to <code>1</code> for an ITM whose <a href="#Header_ItemType">Item type</a> is <code><a href="#Header_ItemType_7">Headgear</a></code>, then you'll toggle off the Critical hit aversion.</li>
+              <li>Keep in mind that if you set this bit to <code>1</code> for an ITM whose <a href="#Header_ItemType">Item type</a> is <a href="#Header_ItemType_7">Headgear</a>, then you'll toggle off the Critical hit aversion.</li>
             </ul>
           </td>
         </tr>
@@ -132,14 +132,14 @@ regenerate: true
           <td>
             <b><a name="Header_Flags_BIT2">Movable / Droppable</a></b>
             <ul>
-              <li>This flag is overridden by the <a href="../ie_formats/cre_v1.htm#CREV1_0_Item_0x10_BIT3">CRE</a>/<a href="../ie_formats/sto_v1.htm#storv1_0_Sale_0x10_BIT3">STO</a> item flag <code><a href="../../files/ids/bgee/invitem.htm#BIT3">NONDROPABLE</a></code>.</li>
+              <li>This flag is overridden by the <a href="../ie_formats/cre_v1.htm#CREV1_0_Item_0x10_BIT3">CRE</a>/<a href="../ie_formats/sto_v1.htm#storv1_0_Sale_0x10_BIT3">STO</a> item flag <a href="../../files/ids/bgee/invitem.htm#BIT3"><code>NONDROPABLE</code></a>.</li>
             </ul>
           </td>
           <td>
             Stolen (unsellable) / <b><a name="Header_Flags_BIT10">Off-handed</a></b>
             <ul>
               <li>Set offhand animations for 0x5###-0x6### animId series (excluding 0x64##) when weapon placed in offhand.</li>
-              <li>Forces Dual-Wield animation (overrides <code><a href="#Header_Flags_BIT1">BIT1</a></code>).</li>
+              <li>Forces Dual-Wield animation (overrides <a href="#Header_Flags_BIT1"><code>BIT1</code></a>).</li>
             </ul>
           </td>
           <td><span class="unknown">Unused</span></td>
@@ -151,8 +151,8 @@ regenerate: true
           <td>
             <b><a name="Header_Flags_BIT3">Displayable</a></b>
             <ul>
-              <li>Item will show up on the ground (when <code><a href="#Header_Flags_BIT2">dropped</a></code>). Setting the <code><a href="#itmv1_Header_0x44">Ground Icon</a></code> to <code>""</code> (empty) still uses a default icon, this gets around that. It can still be clicked on and picked up.</li>
-              <li>The default icon if the <code><a href="#itmv1_Header_0x44">Ground Icon</a></code> is <code>""</code> (empty) is a small bag <code>"GSACK01.BAM"</code>, the icon without the <code><a href="#Header_Flags_BIT3">Displayable</a></code> flag is a 1x1 invisible pixel.</li>
+              <li>Item will show up on the ground (when <a href="#Header_Flags_BIT2">dropped</a>). Setting the <a href="#itmv1_Header_0x44">Ground Icon</a> to <code>""</code> (empty) still uses a default icon, this gets around that. It can still be clicked on and picked up.</li>
+              <li>The default icon if the <a href="#itmv1_Header_0x44">Ground Icon</a> is <code>""</code> (empty) is a small bag <code>"GSACK01.BAM"</code>, the icon without the <a href="#Header_Flags_BIT3">Displayable</a> flag is a 1x1 invisible pixel.</li>
             </ul>
           </td>
           <td>
@@ -179,7 +179,7 @@ regenerate: true
             <ul>
               <li>Determines how the item interacts with <a href="../../opcodes/bgee.htm#op26">opcode #26</a>.</li>
               <li>The item cannot be unequipped.</li>
-              <li>Cursed weapons override the <code><a href="../../files/ids/bgee/slots.htm#34">Magical Weapon</a></code> slot.</li>
+              <li>Cursed weapons override the <a href="../../files/ids/bgee/slots.htm#34">Magical Weapon</a> slot.</li>
             </ul>
           </td>
           <td>
@@ -199,7 +199,7 @@ regenerate: true
             <ul>
               <li>Whether a scroll can be "Copy Note" to journal or "Write Magic" to spell book is determined by its <a href="#itmv1_Extended_Header">ability headers</a>. Setting this bit doesn't alter it either way.</li>
               <li>It doesn't prevent a "clone" from getting a duplicate (<a href="../../opcodes/bgee.htm#op236">opcode #236</a><code><small><sup>*</sup></small>p2=2</code>).</li>
-              <li>It doesn't prevent the <code><a href="../../scripting/actions/bgeeactions.htm#264">CopyGroundPilesTo()</a></code> action from moving them.</li>
+              <li>It doesn't prevent the <a href="../../scripting/actions/bgeeactions.htm#264"><code>CopyGroundPilesTo()</code></a> action from moving them.</li>
               <li>In original BG1, it was set on every item except for the Identify Scroll.</li>
               <li>In BGEE/SoD, only a few (16) random items added by Beamdog don't have it set, as well as the Identify and Chromatic Orb scrolls.</li>
             </ul>
@@ -222,7 +222,7 @@ regenerate: true
             <b><a name="Header_Flags_BIT6">Magical</a></b>
             <ul>
               <li>Determines how the weapon interacts with <a href="../../opcodes/bgee.htm#op120">opcode #120</a>.</li>
-              <li>Has no relation to the <code><a href="#itmv1_Header_0x60">Enchantment</a></code> field. Both function independently.</li>
+              <li>Has no relation to the <a href="#itmv1_Header_0x60">Enchantment</a> field. Both function independently.</li>
             </ul>
           </td>
           <td>Usable in inventory (PSTEE)</td>
@@ -242,7 +242,7 @@ regenerate: true
           <td>
             <b><a name="Header_Flags_BIT15">Adamantine</a></b> (BGEE)
             <ul>
-              <li>Used by Drow Equipment in SoD along with script action <code><a href="../../scripting/actions/bgeeactions.htm#280">DestroyAllFragileEquipment(ADAMANTINE)</a></code>.</li>
+              <li>Used by Drow Equipment in SoD along with script action <a href="../../scripting/actions/bgeeactions.htm#280"><code>DestroyAllFragileEquipment(ADAMANTINE)</code></a>.</li>
             </ul>
           </td>
           <td><span class="unknown">Unused</span></td>
@@ -1263,7 +1263,7 @@ regenerate: true
           <td>
             <b><a name="ExtHeader_Flags_BIT10">Hostile</a></b>
             <ul>
-              <li>Breaks both <a href="../../opcodes/bgee.htm#op153">Sanctuary</a> and <a href="../../opcodes/bgee.htm#op20">Invisibility</a>, triggers <code><a href="../../scripting/triggers/bgeetriggers.htm#0x0002">AttackedBy()</a></code>, and allows <a href="../../opcodes/bgee.htm#op102">opcode #102</a> to block effects from Self.</li>
+              <li>Breaks both <a href="../../opcodes/bgee.htm#op153">Sanctuary</a> and <a href="../../opcodes/bgee.htm#op20">Invisibility</a>, triggers <a href="../../scripting/triggers/bgeetriggers.htm#0x0002"><code>AttackedBy()</code></a>, and allows <a href="../../opcodes/bgee.htm#op102">opcode #102</a> to block effects from Self.</li>
             </ul>
           </td>
           <td><span class="unknown">Unknown</span></td>
