@@ -11,14 +11,14 @@ title: "D File Format"
     <br />
     NB. Description taken from Weidu readme, with permission. Check <a href="http://www.weidu.org" class="offsite"> weidu.org </a> for latest information, as this information is subject to rapid change.<br />
     <br />
-    The <TT><A HREF="#D">D</A></TT> file format is a way of describing Infinity Engine dialogues
+    The <TT><A HREF="#D File">D</A></TT> file format is a way of describing Infinity Engine dialogues
     and modifications to Infinity Engine Dialogues in a portable,
     easy-to-understand format. It supports foreign language translations and
     allows you to describe extensions to existing game dialogues without
     forcing you to describe their content. This allows you to write mods that
     work with mods written by others. <br />
     <br />
-    The <TT><A HREF="#D">D</A></TT> file format is presented here in an extended context-free
+    The <TT><A HREF="#D File">D</A></TT> file format is presented here in an extended context-free
     grammar notation. If you are unfamiliar with CFGs, take a look
     <TT><A HREF="http://www.wikipedia.com/wiki/Context-free_grammar" class="offsite">http://www.wikipedia.com/wiki/Context-free_grammar</A></TT>
     or 
@@ -39,10 +39,9 @@ title: "D File Format"
     <TABLE BORDER=1 CELLSPACING=0 CELLPADDING=1>
     <TR><TD VALIGN=top ALIGN=center NOWRAP><strong><TT>D File</TT></strong><A NAME="D File"></A><A NAME="@default1"></A></TD>
     <TD VALIGN=top ALIGN=left>&nbsp;</TD>
-    <TD VALIGN=top ALIGN=left>A <TT><A HREF="#D File">D file</A></TT> is a text file that contains a number of <TT><A HREF="#D
-     Actions">D
+    <TD VALIGN=top ALIGN=left>A <TT><A HREF="#D File">D file</A></TT> is a text file that contains a number of <TT><A HREF="#D Action">D
      Actions</A></TT>. <TT><A HREF="#D File">D File</A></TT>s tell WeiDU how to create and modify Infinity
-     Engine <TT><A HREF="#DLG">DLG</A></TT> files.</TD>
+     Engine <TT><A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> files.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> is</TD>
     <TD VALIGN=top ALIGN=left><TT><A HREF="#D Action">D Action</A></TT> <FONT COLOR="#ff0000"> list </FONT></TD>
@@ -55,7 +54,7 @@ title: "D File Format"
     <TR><TD VALIGN=top ALIGN=center NOWRAP><strong><TT>D Action</TT></strong><A NAME="D Action"></A><A NAME="@default2"></A></TD>
     <TD VALIGN=top ALIGN=left>&nbsp;</TD>
     <TD VALIGN=top ALIGN=left>A <TT><A HREF="#D Action">D Action</A></TT> tells WeiDU how to create or modify Infinity Engine
-     <TT><A HREF="#DLG">DLG</A></TT> files.</TD>
+     <TT><A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> files.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> is</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>BEGIN</TT></strong><A NAME="BEGIN"></A><A NAME="@default3"></A> filename <FONT COLOR="#ff0000"> [ </FONT><strong><TT>nonPausing</TT></strong><A NAME="nonPausing"></A><A NAME="@default4"></A> <FONT COLOR="#ff0000"> ] </FONT><TT><A HREF="#state">state</A></TT> <FONT COLOR="#ff0000"> list </FONT></TD>
@@ -69,7 +68,7 @@ title: "D File Format"
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>APPEND</TT></strong><A NAME="APPEND"></A><A NAME="@default5"></A> filename <TT><A HREF="#state">state</A></TT> list <TT>END</TT></TD>
     <TD VALIGN=top ALIGN=left>This tells WeiDU to place the given <TT><A HREF="#state">state</A></TT>s at the end of the
-     already-existing dialogue <TT>filename.<A HREF="#DLG">DLG</A></TT>.</TD>
+     already-existing dialogue <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT>.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>CHAIN</TT></strong><A NAME="CHAIN"></A><A NAME="@default6"></A> 
@@ -102,7 +101,7 @@ title: "D File Format"
     <TD VALIGN=top ALIGN=left><strong><TT>EXTEND_TOP</TT></strong><A NAME="EXTEND_TOP"></A><A NAME="@default9"></A>
      filename <TT><A HREF="#stateLabel">stateLabel</A></TT> <FONT COLOR="#ff0000"> list  [ </FONT><TT>#positionNumber</TT> <FONT COLOR="#ff0000"> ] </FONT><TT><A HREF="#transition">transition</A></TT> <FONT COLOR="#ff0000"> list </FONT><TT>END</TT></TD>
     <TD VALIGN=top ALIGN=left>This instructs WeiDU to add the <TT><A HREF="#transition">transition</A></TT>s in list to the top of
-     the <TT><A HREF="#transition">transition</A></TT> list for the specified states in <TT>filename.<A HREF="#DLG">DLG</A></TT>
+     the <TT><A HREF="#transition">transition</A></TT> list for the specified states in <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT>
      (which must already exist). <br />
     If a <TT>positionNumber</TT> is given, WeiDU to insert the <TT><A HREF="#transition">transition</A></TT>s
      just between already-existing transitions <TT>#positionNumber</TT> and
@@ -119,7 +118,7 @@ title: "D File Format"
      <TT><A HREF="#stateTriggerString">stateTriggerString</A></TT> [ <TT><A HREF="#stateNumber">stateNumber</A></TT> <FONT COLOR="#ff0000"> list </FONT>]</TD>
     <TD VALIGN=top ALIGN=left>This instructs WeiDU to add the <TT><A HREF="#stateTriggerString">stateTriggerString</A></TT> to all
      of the <TT><A HREF="#state">state</A></TT>s with the given <TT><A HREF="#stateNumber">stateNumber</A></TT>s in 
-     the file <TT>filename.<A HREF="#DLG">DLG</A></TT> (which must already exist). This is handy for
+     the file <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> (which must already exist). This is handy for
      adding extra conditions to an existing dialogue <TT><A HREF="#state">state</A></TT>.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
@@ -127,7 +126,7 @@ title: "D File Format"
      <TT><A HREF="#transTriggerString">transTriggerString</A></TT> <FONT COLOR="#ff0000"> [ </FONT><TT><A HREF="#stateNumber">stateNumber</A></TT> <FONT COLOR="#ff0000"> list  ] </FONT></TD>
     <TD VALIGN=top ALIGN=left>This instructs WeiDU to add the <TT><A HREF="#transTriggerString">transTriggerString</A></TT> to all
      of the <TT><A HREF="#transition">transition</A></TT>s in all of the <TT><A HREF="#state">state</A></TT>s with the given
-     <TT><A HREF="#stateNumber">stateNumber</A></TT>s in the file <TT>filename.<A HREF="#DLG">DLG</A></TT> (which must already
+     <TT><A HREF="#stateNumber">stateNumber</A></TT>s in the file <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> (which must already
      exist). This is often used in conjunction with <TT><A HREF="#EXTEND_BOTTOM">EXTEND_BOTTOM</A></TT> to
      make a new branch in an existing <TT><A HREF="#state">state</A></TT>. Use
      <TT><A HREF="#ADD_TRANS_TRIGGER">ADD_TRANS_TRIGGER</A></TT> to add the negation of some predicate to all of
@@ -136,7 +135,7 @@ title: "D File Format"
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>REPLACE</TT></strong><A NAME="REPLACE"></A><A NAME="@default13"></A> filename <TT><A HREF="#state">state</A></TT> <FONT COLOR="#ff0000"> list </FONT><TT>END</TT></TD>
-    <TD VALIGN=top ALIGN=left>This instructs WeiDU to load <TT>filename.<A HREF="#DLG">DLG</A></TT> and replace some of its 
+    <TD VALIGN=top ALIGN=left>This instructs WeiDU to load <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> and replace some of its 
      <TT><A HREF="#state">state</A></TT>s with the new ones described in the <TT><A HREF="#state">state</A></TT> list.
      All of the <TT><A HREF="#state">state</A></TT>s should have numeric stateLabels (e.g., "5" or
      "67"). A new <TT><A HREF="#state">state</A></TT> with label <TT>X</TT> will replace the old 
@@ -145,14 +144,14 @@ title: "D File Format"
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>SET_WEIGHT</TT></strong><A NAME="SET_WEIGHT"></A><A NAME="@default14"></A> filename <TT><A HREF="#stateLabel">stateLabel</A></TT> <TT>#stateWeight</TT></TD>
     <TD VALIGN=top ALIGN=left>This instructcs WeiDU to destructively change the <TT><A HREF="#WEIGHT">WEIGHT</A></TT> of the
-     given <TT><A HREF="#state">state</A></TT> in <TT>filename.<A HREF="#DLG">DLG</A></TT> (which must exist). This should only
+     given <TT><A HREF="#state">state</A></TT> in <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> (which must exist). This should only
      be used to patch or workaround existing dialogues. Never use
      <TT><A HREF="#SET_WEIGHT">SET_WEIGHT</A></TT> if you can help it.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
-    <TD VALIGN=top ALIGN=left><strong><TT>REPLACE_SAY</TT></strong><A NAME="REPLACE_SAY"></A><A NAME="@default15"></A> filename <TT><A HREF="#stateLabel">stateLabel</A></TT> <TT><A HREF="#sayString">sayString</A></TT></TD>
-    <TD VALIGN=top ALIGN=left>This instructs WeiDU to destructively change the <TT><A HREF="#sayString">sayString</A></TT> of the
-     given <TT><A HREF="#state">state</A></TT> in <TT>filename.<A HREF="#DLG">DLG</A></TT> (which must exist). This should only
+    <TD VALIGN=top ALIGN=left><strong><TT>REPLACE_SAY</TT></strong><A NAME="REPLACE_SAY"></A><A NAME="@default15"></A> filename <TT><A HREF="#stateLabel">stateLabel</A></TT> <TT><A HREF="#sayText">sayString</A></TT></TD>
+    <TD VALIGN=top ALIGN=left>This instructs WeiDU to destructively change the <TT><A HREF="#sayText">sayString</A></TT> of the
+     given <TT><A HREF="#state">state</A></TT> in <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> (which must exist). This should only
      be used to patch or workaround existing dialogues. Never use
      <TT><A HREF="#REPLACE_SAY">REPLACE_SAY</A></TT> if you can help it.</TD>
     </TR>
@@ -161,31 +160,31 @@ title: "D File Format"
      <TT><A HREF="#stateTriggerString">stateTriggerString</A></TT> <FONT COLOR="#ff0000"> [ </FONT><TT><A HREF="#stateNumber">stateNumber</A></TT> <FONT COLOR="#ff0000"> list  ] </FONT></TD>
     <TD VALIGN=top ALIGN=left>This instructs WeiDU to destructively set the
      <TT><A HREF="#stateTriggerString">stateTriggerString</A></TT> of all of the <TT><A HREF="#state">state</A></TT>s with the given
-     <TT><A HREF="#stateNumber">stateNumber</A></TT>s in the file <TT>filename.<A HREF="#DLG">DLG</A></TT> (which must already
+     <TT><A HREF="#stateNumber">stateNumber</A></TT>s in the file <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> (which must already
      exist). It should be used with caution.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>REPLACE_TRIGGER_TEXT</TT></strong><A NAME="REPLACE_TRIGGER_TEXT"></A><A NAME="@default17"></A> filename oldText newText</TD>
     <TD VALIGN=top ALIGN=left>This instructs WeiDU to destructively replace every occurrence of oldText
-     (which may be a <TT><A HREF="#regexp">regexp</A></TT>) in the <TT><A HREF="#stateTriggerString">stateTriggerString</A></TT>s and
-     <TT><A HREF="#transTriggerString">transTriggerString</A></TT>s of <TT>filename.<A HREF="#DLG">DLG</A></TT> (which must exist). 
+     (which may be a <TT><A HREF="https://weidu.org/~thebigg/README-WeiDU.html#sec58" class="offsite">regexp</A></TT>) in the <TT><A HREF="#stateTriggerString">stateTriggerString</A></TT>s and
+     <TT><A HREF="#transTriggerString">transTriggerString</A></TT>s of <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> (which must exist). 
      This should only be used to patch or workaround existing dialogues. Never
      use this if you can help it.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>REPLACE_ACTION_TEXT</TT></strong><A NAME="REPLACE_ACTION_TEXT"></A><A NAME="@default18"></A> filename oldText newText</TD>
     <TD VALIGN=top ALIGN=left>This instructs WeiDU to destruveily replace every occurrence of oldText
-     (which may be a <TT><A HREF="#regexp">regexp</A></TT>) in the <TT><A HREF="#stateActionString">stateActionString</A></TT>s 
-     of <TT>filename.<A HREF="#DLG">DLG</A></TT> (which must exist). This should only be used
+     (which may be a <TT><A HREF="https://weidu.org/~thebigg/README-WeiDU.html#sec58" class="offsite">regexp</A></TT>) in the <TT><A HREF="#stateActionString">stateActionString</A></TT>s 
+     of <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> (which must exist). This should only be used
      to patch or workaround existing dialogues. Never use this if you can help
      it.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP> or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>REPLACE_ACTION_TEXT_PROCESS</TT></strong><A NAME="REPLACE_ACTION_TEXT_PROCESS"></A><A NAME="@default19"></A> filename oldText newText</TD>
     <TD VALIGN=top ALIGN=left>This instructs WeiDU to destruveily replace every occurrence of oldText
-     (which may be a <TT><A HREF="#regexp">regexp</A></TT>) in the <TT><A HREF="#stateActionString">stateActionString</A></TT>s 
-     of <TT>filename.<A HREF="#DLG">DLG</A></TT> (which must exist) with newText. However,
-     newText is first compiled as a <TT><A HREF="#BAF">BAF</A></TT> action list. In particular,
+     (which may be a <TT><A HREF="https://weidu.org/~thebigg/README-WeiDU.html#sec58" class="offsite">regexp</A></TT>) in the <TT><A HREF="#stateActionString">stateActionString</A></TT>s 
+     of <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> (which must exist) with newText. However,
+     newText is first compiled as a <TT><A HREF="https://weidu.org/~thebigg/README-WeiDU.html#BAF" class="offsite">BAF</A></TT> action list. In particular,
      this means that replacing with commands like:
      <PRE>
       ~DisplayString(Myself,@123)~
@@ -232,24 +231,24 @@ title: "D File Format"
     <TR><TD VALIGN=top ALIGN=center NOWRAP>is</TD>
     <TD VALIGN=top ALIGN=left><TT>IF</TT> <FONT COLOR="#ff0000"> [ </FONT><strong><TT>WEIGHT</TT></strong><A NAME="WEIGHT"></A><A NAME="@default22"></A> <TT>#weightNumber</TT> <FONT COLOR="#ff0000"> ] </FONT><strong><TT>stateTriggerString</TT></strong><A NAME="stateTriggerString"></A><A NAME="@default23"></A> <FONT COLOR="#ff0000"> [ </FONT><TT>THEN</TT> <FONT COLOR="#ff0000"> ]  [ </FONT><TT>BEGIN</TT> <FONT COLOR="#ff0000"> ] </FONT><strong><TT>stateLabel</TT></strong><A NAME="stateLabel"></A><A NAME="@default24"></A> <TT>SAY</TT> <strong><TT>sayText</TT></strong><A NAME="sayText"></A><A NAME="@default25"></A> <FONT COLOR="#ff0000"> [ </FONT>=
      <TT><A HREF="#sayText">SayText</A></TT> ... <FONT COLOR="#ff0000"> ] </FONT><TT><A HREF="#transition">transition</A></TT> list <TT>END</TT></TD>
-    <TD VALIGN=top ALIGN=left>When you start conversing with a creature that uses a <TT><A HREF="#DLG">DLG</A></TT> file, the
+    <TD VALIGN=top ALIGN=left>When you start conversing with a creature that uses a <TT><A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> file, the
      Infinity Engine searches through all of the <TT><A HREF="#state">state</A></TT>s in that file
      in order of increasing <TT><A HREF="#WEIGHT">WEIGHT</A></TT> and selects the first one it finds
      for which the <TT><A HREF="#stateTriggerString">stateTriggerString</A></TT> is both true and not empty. 
      The creature then says all of the associated <TT><A HREF="#sayText">sayText</A></TT>. Finally,
-     the <TT><A HREF="#transitions">transitions</A></TT> are evaluted in bottom-up (i.e., reverse) order.
+     the <TT><A HREF="#transition">transitions</A></TT> are evaluted in bottom-up (i.e., reverse) order.
      If a <TT><A HREF="#transition">transition</A></TT> is found with a <TT><A HREF="#transTriggerString">transTriggerString</A></TT> that
      evaluates to True and no <TT><A HREF="#replyText">replyText</A></TT>, that <TT><A HREF="#transition">transition</A></TT> is
      immediately executed. Otherwise, all of the <TT><A HREF="#transition">transition</A></TT>s are
      presented as options to the PC. <br />
      <br />
     If a <TT><A HREF="#stateLabel">stateLabel</A></TT> is an integer it is called a
-     <strong><TT>stateNumber</TT></strong><A NAME="stateNumber"></A><A NAME="@default26"></A>. All of the states in the <TT><A HREF="#DLG">DLG</A></TT> files that
-     come with the original game use <TT><A HREF="#stateNumber">stateNumber</A></TT>s. Only <TT><A HREF="#D">D</A></TT>
+     <strong><TT>stateNumber</TT></strong><A NAME="stateNumber"></A><A NAME="@default26"></A>. All of the states in the <TT><A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> files that
+     come with the original game use <TT><A HREF="#stateNumber">stateNumber</A></TT>s. Only <TT><A HREF="#D File">D</A></TT>
      files use symbolic strings for <TT><A HREF="#stateLabel">stateLabel</A></TT>s. <br />
      <br />
     Including more than one bit of <TT><A HREF="#sayText">sayText</A></TT> here is often called
-     <TT><A HREF="#Multisay">Multisay</A></TT>. <br />
+     <TT><A HREF="https://weidu.org/~thebigg/README-WeiDU.html#Multisay" class="offsite">Multisay</A></TT>. <br />
      <br />
     Finally, once you are familiar with the syntax you may omit the <TT>THEN</TT>
      and <TT>BEGIN</TT> keywords if you like.</TD>
@@ -300,7 +299,7 @@ title: "D File Format"
     <TR><TD VALIGN=top ALIGN=center NOWRAP>or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>COPY_TRANS</TT></strong><A NAME="COPY_TRANS"></A><A NAME="@default31"></A> filename <TT><A HREF="#stateLabel">stateLabel</A></TT></TD>
     <TD VALIGN=top ALIGN=left>This instructs WeiDU to copy all of the <TT><A HREF="#transition">transition</A></TT>s from the
-     <TT><A HREF="#state">state</A></TT> with the given <TT><A HREF="#stateLabel">stateLabel</A></TT> in <TT>filename.<A HREF="#DLG">DLG</A></TT>. This
+     <TT><A HREF="#state">state</A></TT> with the given <TT><A HREF="#stateLabel">stateLabel</A></TT> in <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT>. This
      copying takes place before all other <TT><A HREF="#D Action">D Action</A></TT>s. For example,
      this is a valid <TT><A HREF="#transition">transition</A></TT> list:
     
@@ -342,7 +341,7 @@ title: "D File Format"
     <TR><TD VALIGN=top ALIGN=center NOWRAP>or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>FLAGS</TT></strong><A NAME="FLAGS"></A><A NAME="@default40"></A> integer</TD>
     <TD VALIGN=top ALIGN=left>This allows you to set the features associated with a transition directly
-     using the binary format of <TT><A HREF="#DLG">DLG</A></TT> files. Do not use this!</TD>
+     using the binary format of <TT><A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> files. Do not use this!</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP>&nbsp;</TD>
     </TR>
@@ -354,12 +353,12 @@ title: "D File Format"
     <TR><TD VALIGN=top ALIGN=center NOWRAP>is</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>GOTO</TT></strong><A NAME="GOTO"></A><A NAME="@default42"></A> <TT><A HREF="#stateLabel">stateLabel</A></TT></TD>
     <TD VALIGN=top ALIGN=left>The dialogue continues at the state with label <TT><A HREF="#stateLabel">stateLabel</A></TT> in the
-     same <TT><A HREF="#DLG">DLG</A></TT> file as the current <TT><A HREF="#state">state</A></TT>.</TD>
+     same <TT><A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT> file as the current <TT><A HREF="#state">state</A></TT>.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP>or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>EXTERN</TT></strong><A NAME="EXTERN"></A><A NAME="@default43"></A> filename <TT><A HREF="#stateLabel">stateLabel</A></TT></TD>
     <TD VALIGN=top ALIGN=left>The dialogue continues at the state with label <TT><A HREF="#stateLabel">stateLabel</A></TT> in the
-     file <TT>filename.<A HREF="#DLG">DLG</A></TT>.</TD>
+     file <TT>filename.<A HREF="{{ '/file_formats/ie_formats/dlg_v1.htm' | prepend: relurl }}">DLG</A></TT>.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP>or</TD>
     <TD VALIGN=top ALIGN=left><strong><TT>EXIT</TT></strong><A NAME="EXIT"></A><A NAME="@default44"></A></TD>
@@ -412,12 +411,12 @@ title: "D File Format"
     <TR><TD VALIGN=top ALIGN=center NOWRAP>or</TD>
     <TD VALIGN=top ALIGN=left><TT>#integer</TT></TD>
     <TD VALIGN=top ALIGN=left>The string with reference number <TT>#integer</TT> from
-    <TT>DIALOG.<A HREF="#TLK">TLK</A></TT> should be used unchanged.</TD>
+    <TT>DIALOG.<A HREF="{{ '/file_formats/ie_formats/tlk_v1.htm' | prepend: relurl }}">TLK</A></TT> should be used unchanged.</TD>
     </TR>
     <TR><TD VALIGN=top ALIGN=center NOWRAP>or</TD>
     <TD VALIGN=top ALIGN=left><TT>@integer</TT></TD>
     <TD VALIGN=top ALIGN=left>The last definition of the translation string
-    <TT>@integer</TT> given in any <TT><A HREF="#TRA">TRA</A></TT> file should be used.</TD>
+    <TT>@integer</TT> given in any <TT><A HREF="https://weidu.org/~thebigg/README-WeiDU.html" class="offsite">TRA</A></TT> file should be used.</TD>
     </TR></TABLE><br />
     </div>
   </div>
