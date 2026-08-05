@@ -26,10 +26,10 @@
     - 9 ⟶ <b><a name="effv2_Body_0x14_9">Original caster</a></b>
 
     {% capture note %}
-    - If called via <a href="../../opcodes/bgee.htm#op177">opcode #177</a>/<a href="../../opcodes/bgee.htm#op283">opcode #283</a>/<a href="../../opcodes/bgee.htm#op183">opcode #183</a>/<a href="../../opcodes/bgee.htm#op272">opcode #272</a>, this field is irrelevant (it will affect whatever creature the <a href="../../opcodes/bgee.htm#op177">opcode #177</a>/<a href="../../opcodes/bgee.htm#op283">opcode #283</a>/<a href="../../opcodes/bgee.htm#op183">opcode #183</a>/<a href="../../opcodes/bgee.htm#op272">opcode #272</a> effect is attached to).
+    - If called via <a href="../../opcodes/bgee.htm#op177">opcode #177</a>/<a href="../../opcodes/bgee.htm#op283">opcode #283</a>/<a href="../../opcodes/bgee.htm#op183">opcode #183</a>/<a href="../../opcodes/bgee.htm#op272">opcode #272</a>, this field is irrelevant (it will affect whatever creature the opcode #177/opcode #283/opcode #183/opcode #272 effect is attached to).
     - If called via <a href="../../opcodes/bgee.htm#op248">opcode #248</a>, this field is irrelevant (it will affect whatever creature was attacked).
     - If called via <a href="../../opcodes/bgee.htm#op249">opcode #249</a>, this field will function same as in <a href="../ie_formats/eff_v1.htm#effv1_Header_0x2"><code>SPL/ITM</code></a> effects, except that <a href="#effv2_Body_0x14_0">None</a> will default to <a href="#effv2_Body_0x14_2">Projectile target</a>.
-    - If attached directly to a <a href="../ie_formats/cre_v1.htm">CRE</a> file, this field is irrelevant (it will affect whatever creature it's attached to). Also applies to <a href="../ie_formats/cre_v1.htm#CREV1_0_Header_0x33_0">V1 effects</a> attached directly to <a href="../ie_formats/cre_v1.htm">CRE</a> files.
+    - If attached directly to a <a href="../ie_formats/cre_v1.htm">CRE</a> file, this field is irrelevant (it will affect whatever creature it's attached to). Also applies to <a href="../ie_formats/cre_v1.htm#CREV1_0_Header_0x33_0">V1 effects</a> attached directly to CRE files.
     {% endcapture %} {% include note.html %}
   type: dword
 - desc: Power
@@ -203,7 +203,7 @@
             </li>
           </ul>
           <div style="margin-top: 0.5em">
-            <b>and</b> uses a non-<code>Original caster (9)</code> <a href="{{ '/file_formats/ie_formats/eff_v2.htm#effv2_Body_0x14' | prepend: relurl }}">Target type</a>.
+            <b>and</b> uses a non-<code>Original caster (9)</code> Target type.
           </div>
         </li>
       </ul>
@@ -211,7 +211,7 @@
       - Targeting yourself with an ability (Extended Header) will internally set this bit on all effects applied by that ability.
         - For the caster, it will allow a Magic Resistance check for any effect that has both <a href="#effv2_Body_0x5C_BIT0">Dispel</a> set and offers some saving throw.
           - The saving throw doesn't have to succeed, it just has to be offered.
-        - For anyone else hit by the ability, it will allow a Magic Resistance check for any effect that also has <a href="#effv2_Body_0x5C_BIT0">Dispel</a> set.
+        - For anyone else hit by the ability, it will allow a Magic Resistance check for any effect that also has Dispel set.
       - Either way, this bit is still overridden by <a href="#effv2_Body_0x5C_BIT1">Bypass Resistance</a>.
       - This feature should eliminate the bug/exploit of bypassing other's Magic Resistance by targeting yourself with an <a href="../ie_formats/pro_v1.htm#0x8_3">area-effect</a> ability.
     - bit 31 ⟶ <b><a name="effv2_Body_0x5C_BIT31">Effect applied by item</a></b>
@@ -275,7 +275,7 @@
     {% capture note %}
     - [Global/Casting effects](../ie_formats/spl_v1.htm#splv1_Feature_Block) on [`SPL`](../ie_formats/spl_v1.htm) files have an empty/blank [`Parent resource`](#effv2_Body_0x94) field, allowing them to safely ignore [opcode #206](../../opcodes/bgee.htm#op206)/[opcode #318](../../opcodes/bgee.htm#op318)/[opcode #324](../../opcodes/bgee.htm#op324), as such effects are designed to affect the caster (or the global environment) even when the [`SPL`](../ie_formats/spl_v1.htm) fails.
     - When attaching passive kit bonuses (labeled as `AP_XXXXXXXX` in <a href="../../files/2da/2da_bgee/clabxx00.htm"><code>CLAB</code></a> files) to joinable CRE files as <a href="../ie_formats/cre_v1.htm#CREV1_0_Header_0x33_1">V2 Effects</a>, this field should be set to the SPL applying such bonuses.
-      - In so doing, such bonuses will not be applied a second time (due to <a href="../../files/2da/2da_bgee/clabxx00.htm"><code>CLAB</code></a> processing) when those creatures join the Party.
+      - In so doing, such bonuses will not be applied a second time (due to <code>CLAB</code> processing) when those creatures join the Party.
       - So for instance, when applying +10％ <a href="../../opcodes/bgee.htm#op87">Crushing Resistance</a> to a CRE file whose <a href="../ie_formats/cre_v1.htm#CREV1_0_Header_0x244">Kit</a> is `BARBARIAN`, set this field to `"SPCL153"`.
     {% endcapture %} {% include info.html %}
   type: resref

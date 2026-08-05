@@ -25,9 +25,9 @@
     - `ITM` global (equipped) effects: Target is always the wearer, this field isn't relevant.
     - `SPL` global (casting) effects: Will not work with <a href="#effv1_Header_0x2_2">Projectile Target</a>.
     - `Everyone` stands for "in current area".
-    - Excluding <a href="#effv1_Header_0x2">Target type</a> <a href="#effv1_Header_0x2_2"><code>2</code></a>, all other <a href="#effv1_Header_0x2">Target type</a>s apply the effect using projectile `#1|None`.
+    - Excluding <a href="#effv1_Header_0x2">Target type</a> <a href="#effv1_Header_0x2_2"><code>2</code></a>, all other Target types apply the effect using projectile `#1|None`.
     - <a href="#effv1_Header_0x2">Target type</a>s <a href="#effv1_Header_0x2_2"><code>2</code></a> and <a href="#effv1_Header_0x2_9"><code>9</code></a> are applied in effect order, but always after the others, even when using projectile `#1|None`.
-      - <a href="#effv1_Header_0x2">Target type</a>s (`1`, `3–8`) are applied in effect order.
+      - Target types (`1`, `3–8`) are applied in effect order.
         - If a spell/item has effects listed in this order:
           - `op(1), target = 2`
           - `op(2), target = 3`
@@ -53,7 +53,7 @@
 
     - 0 ⟶ <b><a name="effv1_Header_0xC_0">Instant/Limited</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in seconds.
-      - Instantly converts to <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + 15 * <a href="#effv1_Header_0xE">Duration</a>(seconds)</code>.
+      - Instantly converts to <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + 15 * Duration(seconds)</code>.
 
     - 1 ⟶ <b><a name="effv1_Header_0xC_1">Instant/Permanent</a></b>
       - If the opcode doesn't directly modify a <code><a href="../../files/ids/bgee/stats.htm">STAT</a>/<a href="../../files/ids/bgee/state.htm">STATE</a></code> in the target's <a href="../ie_formats/cre_v1.htm">CRE</a> file, then it will last until removed (or it self-terminates). <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">New duration</a>(ticks) = <a href="#effv1_Header_0xE">Duration</a>(ticks)</code> (mostly unused).
@@ -66,37 +66,37 @@
 
     - 3 ⟶ <b><a name="effv1_Header_0xC_3">Delay/Limited</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in seconds.
-      - Instantly converts to <a href="#effv1_Header_0xC_6">Limited after duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + 15 * <a href="#effv1_Header_0xE">Duration</a>(seconds)</code>.
+      - Instantly converts to <a href="#effv1_Header_0xC_6">Limited after duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + 15 * Duration(seconds)</code>.
 
     - 4 ⟶ <b><a name="effv1_Header_0xC_4">Delay/Permanent</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in seconds.
-      - Instantly converts to <a href="#effv1_Header_0xC_7">Permanent after duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + 15 * <a href="#effv1_Header_0xE">Duration</a>(seconds)</code>.
+      - Instantly converts to <a href="#effv1_Header_0xC_7">Permanent after duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + 15 * Duration(seconds)</code>.
 
     - 5 ⟶ <b><a name="effv1_Header_0xC_5">Delay/While equipped</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in seconds.
-      - Instantly converts to <a href="#effv1_Header_0xC_8">Equipped after duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + 15 * <a href="#effv1_Header_0xE">Duration</a>(seconds)</code>.
+      - Instantly converts to <a href="#effv1_Header_0xC_8">Equipped after duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + 15 * Duration(seconds)</code>.
 
     - 6 ⟶ <b><a name="effv1_Header_0xC_6">Limited after duration</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in ticks (<small><sup>1</sup>⁄<sub>15</sub></small> second).
-      - At <code><a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) >= <a href="#effv1_Header_0xE">Duration</a>(ticks)</code> converts to <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = 2 * <a href="#effv1_Header_0xE">Duration</a>(ticks) - <a href="../ie_formats/eff_v2.htm#effv2_Body_0x6C">Time Applied</a>(ticks)</code>.
+      - At <code><a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) >= Duration(ticks)</code> converts to <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = 2 * Duration(ticks) - <a href="../ie_formats/eff_v2.htm#effv2_Body_0x6C">Time Applied</a>(ticks)</code>.
         - (If previously converted from <a href="#effv1_Header_0xC_3">Delay/Limited</a>)
-      - At <code><a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) >= <a href="#effv1_Header_0xE">Duration</a>(ticks)</code> converts to <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = 16 * <a href="#effv1_Header_0xE">Duration</a>(ticks)</code>.
+      - At <code>Gametime(ticks) >= Duration(ticks)</code> converts to Absolute duration, <code>new duration(ticks) = 16 * Duration(ticks)</code>.
         - (If effect applied directly with <a href="#effv1_Header_0xC_6">Limited after duration</a>)
-        - `16 x Duration(ticks) = Duration(ticks) + 15 * Duration(seconds)` (Yes, it calculates a new duration using its current <a href="#effv1_Header_0xE">Duration</a> field as both ticks and seconds).
-        - It will convert to <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a> at the same <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a> (ticks) no matter when the effect was applied.
-        - That <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a> will expire at the same <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a> (ticks) no matter when the effect was applied.
+        - `16 x Duration(ticks) = Duration(ticks) + 15 * Duration(seconds)` (Yes, it calculates a new duration using its current Duration field as both ticks and seconds).
+        - It will convert to Absolute duration at the same Gametime (ticks) no matter when the effect was applied.
+        - That Absolute duration will expire at the same Gametime (ticks) no matter when the effect was applied.
 
     - 7 ⟶ <b><a name="effv1_Header_0xC_7">Permanent after duration</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in ticks (<small><sup>1</sup>⁄<sub>15</sub></small> second).
-      - At <code><a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) >= <a href="#effv1_Header_0xE">Duration</a>(ticks)</code> converts to <a href="#effv1_Header_0xC_1">Instant/Permanent</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = 2 * <a href="#effv1_Header_0xE">Duration</a>(ticks) - <a href="../ie_formats/eff_v2.htm#effv2_Body_0x6C">Time Applied</a>(ticks)</code>.
+      - At <code><a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) >= Duration(ticks)</code> converts to <a href="#effv1_Header_0xC_1">Instant/Permanent</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = 2 * Duration(ticks) - <a href="../ie_formats/eff_v2.htm#effv2_Body_0x6C">Time Applied</a>(ticks)</code>.
         - (If previously converted from <a href="#effv1_Header_0xC_4">Delay/Permanent</a>)
-      - At <code><a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) >= <a href="#effv1_Header_0xE">Duration</a>(ticks)</code> converts to <a href="#effv1_Header_0xC_1">Instant/Permanent</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = 16 * <a href="#effv1_Header_0xE">Duration</a>(ticks)</code>.
+      - At <code>Gametime(ticks) >= Duration(ticks)</code> converts to Instant/Permanent, <code>new duration(ticks) = 16 * Duration(ticks)</code>.
         - (If effect applied directly with <a href="#effv1_Header_0xC_7">Permanent after duration</a>)
-        - It will convert to <a href="#effv1_Header_0xC_1">Instant/Permanent</a> at the same <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a> (ticks) no matter when the effect was applied.
+        - It will convert to Instant/Permanent at the same Gametime (ticks) no matter when the effect was applied.
 
     - 8 ⟶ <b><a name="effv1_Header_0xC_8">Equipped after duration</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in ticks (<small><sup>1</sup>⁄<sub>15</sub></small> second).
-      - At <code><a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) >= <a href="#effv1_Header_0xE">Duration</a>(ticks)</code> converts to <a href="#effv1_Header_0xC_2">Instant/While equipped</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = irrelevant</code>.
+      - At <code><a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) >= Duration(ticks)</code> converts to <a href="#effv1_Header_0xC_2">Instant/While equipped</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = irrelevant</code>.
 
     - 9 ⟶ <b><a name="effv1_Header_0xC_9">Instant/Permanent</a></b> (after Death)
       - Effect is applied instantly.
@@ -104,12 +104,12 @@
 
     - 10 ⟶ <b><a name="effv1_Header_0xC_10">Instant/Limited</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in ticks (<small><sup>1</sup>⁄<sub>15</sub></small> second).
-      - Instantly converts to <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + <a href="#effv1_Header_0xE">Duration</a>(ticks)</code>.
-      - If <code><a href="#effv1_Header_0xE">Duration</a> = 0</code>, it won't function any differently from timing mode <a href="#effv1_Header_0xC_0"><code>0</code></a>.
+      - Instantly converts to <a href="../ie_formats/eff_v2.htm#effv2_Body_0x24_4096">Absolute duration</a>, <code><a href="../ie_formats/eff_v2.htm#effv2_Body_0x28">new duration</a>(ticks) = <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a>(ticks) + Duration(ticks)</code>.
+      - If <code>Duration = 0</code>, it won't function any differently from timing mode <a href="#effv1_Header_0xC_0"><code>0</code></a>.
 
     {% capture note %}
     - All effects except those with Timing mode <a href="#effv1_Header_0xC_9"><code>9</code></a> are removed by death.
-    - Some effects use a measurement of <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a> in seconds, and multiply it by 15, rather than taking the exact <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a> in ticks.<br/>
+    - Some effects use a measurement of <a href="../ie_formats/gam_v2.0.htm#GAMEV2_0_Header_GameTime">Gametime</a> in seconds, and multiply it by 15, rather than taking the exact Gametime in ticks.<br/>
       - This results in them lasting longer/shorter than they should (by up to 14 ticks).
         - One of such effects is <a href="../../opcodes/bgee.htm#op231">Time Stop</a> (this is in addition to lasting half its specified <a href="#effv1_Header_0xE">Duration</a>).
     {% endcapture %} {% include note.html %}
@@ -144,9 +144,9 @@
     - The `BG1` engine treats probability as a single word, effects are applied in the range `0–probability`.
     - Other engines treat probability as two values. When an event fires, a random number (let us denote it by `x`) in the `0–99` range is generated. If <code>x <= <a href="#effv1_Header_0x12">Probability1</a> && >= <a href="#effv1_Header_0x13">Probability2</a></code>, the event fires.
       - Some counter-intuitive cases:
-        - if you set both <a href="#effv1_Header_0x12">Probability1</a> and <a href="#effv1_Header_0x13">Probability2</a> to `0`, you get an effect with a 1％ chance of firing (it fires whenever the random number generator spits out zero).
+        - if you set both Probability1 and Probability2 to `0`, you get an effect with a 1％ chance of firing (it fires whenever the random number generator spits out zero).
         - if you set <a href="#effv1_Header_0x12">Probability1</a> to `1` and <a href="#effv1_Header_0x13">Probability2</a> to `0` (as, e.g., happens in BGT/BGEE's implementation of the iron crisis), you don't get an effect with a 1％ chance of firing, but one with a 2％ chance of firing.
-    - An effect's probabilities are rolled on the sprite the effect is applied to. This means that an effect targeting <a href="#effv1_Header_0x2_2">Projectile Target</a> will have the target roll that effect's probabilities, not the attacker or caster. This decouples the split probability roll and allows both to occur at the same time, since each sprite rolls separately. As a consequence it is not directly possible to synchronize effects with partial probabilities that are applied to different targets (e.g. <a href="#effv1_Header_0x2_2">Projectile Target</a> and <a href="#effv1_Header_0x2_1">Self</a>).
+    - An effect's probabilities are rolled on the sprite the effect is applied to. This means that an effect targeting <a href="#effv1_Header_0x2_2">Projectile Target</a> will have the target roll that effect's probabilities, not the attacker or caster. This decouples the split probability roll and allows both to occur at the same time, since each sprite rolls separately. As a consequence it is not directly possible to synchronize effects with partial probabilities that are applied to different targets (e.g. Projectile Target and <a href="#effv1_Header_0x2_1">Self</a>).
     {% endcapture %} {% include info.html %}
   type: byte
 - desc: |-

@@ -24,7 +24,7 @@
     - 5 ⟶ <b><a name="splv1_Header_0x1C_5">Bard song</a></b>
 
     {% capture note %}
-    - <a href="#splv1_Header_0x1C_0">Special</a>, <a href="#splv1_Header_0x1C_3">Psionic</a>, <a href="#splv1_Header_0x1C_4">Innate</a>, and <a href="#splv1_Header_0x1C_5">Bard song</a> differ only by the string displayed when you cast them. They are all treated as <a href="#splv1_Header_0x1C_4">Innate</a> abilities, even by <a href="../../opcodes/bgee.htm#op145">opcode #145</a> and the <a href="../../scripting/triggers/bgeetriggers.htm#0x00A7"><code>SpellCastInnate()</code></a> trigger.
+    - <a href="#splv1_Header_0x1C_0">Special</a>, <a href="#splv1_Header_0x1C_3">Psionic</a>, <a href="#splv1_Header_0x1C_4">Innate</a>, and <a href="#splv1_Header_0x1C_5">Bard song</a> differ only by the string displayed when you cast them. They are all treated as Innate abilities, even by <a href="../../opcodes/bgee.htm#op145">opcode #145</a> and the <a href="../../scripting/triggers/bgeetriggers.htm#0x00A7"><code>SpellCastInnate()</code></a> trigger.
     - <a href="#splv1_Header_0x1C_0">Special</a> and <a href="#splv1_Header_0x1C_4">Innate</a> will display <code>"(Caster): (<a href="#splv1_Header_0x8">spell name</a>): (target)"</code>.
     - <a href="#splv1_Header_0x1C_3">Psionic</a> and <a href="#splv1_Header_0x1C_5">Bard song</a> will display <code>"(Caster): Casts (<a href="#splv1_Header_0x8">spell name</a>): (target)"</code> (which can be misleading).
     - <a href="#splv1_Header_0x1C_1">Wizard</a> and <a href="#splv1_Header_0x1C_2">Priest</a> will also display <code>"(Caster): Casts (<a href="#splv1_Header_0x8">spell name</a>): (target)"</code>.

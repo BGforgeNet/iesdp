@@ -32,7 +32,7 @@ When using this opcode, be aware of the following quirks:
 		If <code>subspell's projectile != 0</code>, subspell effects targeting <code>Self</code> and <code>Projectile Target</code> will affect the ability target of spell containing <a href="#op333">opcode #333</a>. In particular:
 		<ul>
 			<li>
-				SPL containing <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Living Actor</code>; <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Self</code><br/>
+				SPL containing opcode #333 &Rightarrow; <code>target:Living Actor</code>; opcode #333 &Rightarrow; <code>target:Self</code><br/>
 				Subspell is cast targeting the <code>Living Actor</code>
 				<ul>
 					<li>subspell: op#: <code>target:Self</code> &longrightarrow; affects targeted <code>Living Actor</code>.</li>
@@ -41,34 +41,34 @@ When using this opcode, be aware of the following quirks:
 			</li>
 
 			<li>
-				SPL containing <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Living Actor</code>; <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Projectile Target</code><br/>
+				SPL containing opcode #333 &Rightarrow; <code>target:Living Actor</code>; opcode #333 &Rightarrow; <code>target:Projectile Target</code><br/>
 				Subspell is cast at each target of the projectile
 				<ul>
 					<li>subspell: op#: <code>target:Self</code> &longrightarrow; affects subspell's target.</li>
-					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects subspell's target if subspell's projectile is <a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a>, or subspell's projectile target(s) if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
+					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects subspell's target if subspell's projectile is single-target, or subspell's projectile target(s) if it's area-effect.</li>
 				</ul>
 			</li>
 
 			<li>
-				SPL containing <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Target Point</code>; <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Self</code><br/>
+				SPL containing opcode #333 &Rightarrow; <code>target:Target Point</code>; opcode #333 &Rightarrow; <code>target:Self</code><br/>
 				Subspell is cast targeting yourself, not the target point
 				<ul>
 					<li>subspell: op#: <code>target:Self</code> &longrightarrow; affects <code>Self</code>.</li>
-					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects <code>Self</code> if subspell's projectile is <a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a>, or subspell's projectile target(s) if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
+					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects <code>Self</code> if subspell's projectile is single-target, or subspell's projectile target(s) if it's area-effect.</li>
 				</ul>
 			</li>
 
 			<li>
-				SPL containing <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Target Point</code>; <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Projectile Target</code><br/>
+				SPL containing opcode #333 &Rightarrow; <code>target:Target Point</code>; opcode #333 &Rightarrow; <code>target:Projectile Target</code><br/>
 				Subspell is cast at each target of the projectile
 				<ul>
 					<li>subspell: op#: <code>target:Self</code> &longrightarrow; affects subspell's target.</li>
-					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects subspell's target if subspell's projectile is <a href="../file_formats/ie_formats/pro_v1.htm#0x8_2">single-target</a>, or subspell's projectile target(s) if it's <a href="../file_formats/ie_formats/pro_v1.htm#0x8_3">area-effect</a>.</li>
+					<li>subspell: op#: <code>target:Projectile Target</code> &longrightarrow; affects subspell's target if subspell's projectile is single-target, or subspell's projectile target(s) if it's area-effect.</li>
 				</ul>
 			</li>
 
 			<li>
-				SPL containing <a href="#op333">opcode #333</a> &Rightarrow; <code>target:Caster</code> &longrightarrow; is the same as targeting yourself as the <code>Living Actor</code>.
+				SPL containing opcode #333 &Rightarrow; <code>target:Caster</code> &longrightarrow; is the same as targeting yourself as the <code>Living Actor</code>.
 			</li>
 		</ul>
 	</li>

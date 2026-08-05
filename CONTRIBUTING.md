@@ -75,6 +75,13 @@ Note the nesting: the link goes outside, so that HTML matches what markdown's ``
 `_tools/unwrap-code-links.py` checks and fixes both, and `_tools/code-link-words.txt` records the verdict for
 texts whose shape alone doesn't settle it.
 
+### Repeated links
+
+Link a target once per block - a list item with its nested sub-list, or a paragraph - and leave later mentions as
+plain text. Repeating a link in the next one-line bullet costs the reader attention without telling them anything
+new. A large paragraph keeps its own link, since a reader arriving there shouldn't have to scan back up the list.
+`_tools/dedupe-links.py` reports and fixes this.
+
 ## Actions
 
 Example: `Polymorph(I:AnimationType*Animate)`

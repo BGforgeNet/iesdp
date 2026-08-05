@@ -16,7 +16,7 @@ pstee: 1
 <p>
 	This opcode is supposed to apply the <a href="{{ '/file_formats/ie_formats/eff_v2.htm' | prepend: relurl }}"><code>EFF</code></a> file specified in <a href="{{ '/file_formats/ie_formats/eff_v2.htm#effv2_Body_0x70' | prepend: relurl }}">resource2</a> if the target has the <a href="{{ '/file_formats/ie_formats/itm_v1.htm' | prepend: relurl }}"><code>ITM</code></a> file specified in <a href="{{ '/file_formats/ie_formats/eff_v2.htm#effv2_Body_Resource' | prepend: relurl }}">resource</a> equipped.
 	<ul>
-		<li>Since the <a href="{{ '/file_formats/ie_formats/eff_v2.htm' | prepend: relurl }}"><code>EFF</code></a> resource is specified in <a href="{{ '/file_formats/ie_formats/eff_v2.htm#effv2_Body_0x70' | prepend: relurl }}">resource2</a>, this opcode must be used in <a href="{{ '/file_formats/ie_formats/eff_v2.htm' | prepend: relurl }}"><code>V2</code></a> (external) effects.</li>
+		<li>Since the <code>EFF</code> resource is specified in resource2, this opcode must be used in <a href="{{ '/file_formats/ie_formats/eff_v2.htm' | prepend: relurl }}"><code>V2</code></a> (external) effects.</li>
 	</ul>
 </p>
 
@@ -26,7 +26,7 @@ This opcode is bugged.
 	<li>
 		The internal function it uses to find the item, <code>CGameSprite::FindItemPersonal()</code>, treats the found slot&hyphen;index as a boolean, so it always applies the <a href="{{ '/file_formats/ie_formats/eff_v2.htm' | prepend: relurl }}"><code>EFF</code></a> unless the <a href="{{ '/file_formats/ie_formats/itm_v1.htm' | prepend: relurl }}"><code>ITM</code></a> is in <a href="{{ '/files/ids/bgee/slots.htm#0' | prepend: relurl }}"><code>SLOT_AMULET</code></a>.
 		<ul>
-			<li>Basically, since all slot indices but <a href="{{ '/files/ids/bgee/slots.htm#0' | prepend: relurl }}"><code>SLOT_AMULET</code></a> are strictly greater than <code>0</code>, the function will almost always return true, making the opcode useless.</li>
+			<li>Basically, since all slot indices but <code>SLOT_AMULET</code> are strictly greater than <code>0</code>, the function will almost always return true, making the opcode useless.</li>
 		</ul>
 	</li>
 	<li>Additionally, <code>CGameSprite::FindItemPersonal()</code> doesn't consider <a href="{{ '/files/ids/bgee/slots.htm#34' | prepend: relurl }}"><code>SLOT_MISC19</code></a> (the Magical Weapon slot, used by <a href="#op111">opcode #111</a>) as an "equipped" slot (this is probably intentional though...)</li>

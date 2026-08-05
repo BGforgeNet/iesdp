@@ -16,8 +16,8 @@
     - <a href="#itmv1_Extended_Header_0x0_1">Melee</a>: Ignores the <a href="#itmv1_Extended_Header_0x2A">projectile</a> field (always uses `#1|None`). Valid for <a href="../../files/2da/2da_bgee/stylbonu.htm">Weapon Styles</a>.
     - <a href="#itmv1_Extended_Header_0x0_2">Ranged</a>:
       - Utilizes <a href="#itmv1_Extended_Header_0x2A">projectile</a> field.
-      - Item cannot be equipped in <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, unless its <a href="#Header_ItemType">itemtype</a> can only be equipped in the <a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot, from <a href="../../files/2da/2da_bgee/itemtype.htm"><code>ITEMTYPE.2DA</code></a>.
-      - If equipped in <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, it will attack as normal (at least for the offhand).
+      - Item cannot be equipped in <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, unless its <a href="#Header_ItemType">itemtype</a> can only be equipped in the off-hand slot, from <a href="../../files/2da/2da_bgee/itemtype.htm"><code>ITEMTYPE.2DA</code></a>.
+      - If equipped in off-hand, it will attack as normal (at least for the offhand).
       - <a href="../../files/ids/bgee/slots.htm#9">Off-hand</a> weapon will be suppressed while this item ability is selected in <a href="../../files/ids/bgee/slots.htm#35">mainhand</a> (EE only).
     - <a href="#itmv1_Extended_Header_0x0_3">Magical</a>: Identical to <a href="#itmv1_Extended_Header_0x0_1">Melee</a>, except that it can be <a href="../../opcodes/bgee.htm#op243">drained</a>.
     - <a href="#itmv1_Extended_Header_0x0_4">Launcher</a>:
@@ -25,7 +25,7 @@
         - Ability cannot actually be selected, nor is the item considered "equipped" by script triggers or <a href="../../opcodes/bgee.htm#op183">opcode #183</a>.
         - Equipped effects, stats and on-hit effects are added to the currently selected weapon ability IF that ability requires a <a href="#itmv1_Extended_Header_0x10">launcher</a> of this type.
       - In the <a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot:
-        - Item cannot be equipped in <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>, unless its <a href="#Header_ItemType">itemtype</a> can only be equipped in the <a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot, from <a href="../../files/2da/2da_bgee/itemtype.htm"><code>ITEMTYPE.2DA</code></a>.
+        - Item cannot be equipped in off-hand, unless its <a href="#Header_ItemType">itemtype</a> can only be equipped in the off-hand slot, from <a href="../../files/2da/2da_bgee/itemtype.htm"><code>ITEMTYPE.2DA</code></a>.
         - Attack cycle will stop when this weapon would have attacked (must be re-initiated manually or by script).
           - The creature will stop attacking when the off-hand attack would have occurred. Similar to pressing the group "Stop" button (F3).
   type: char
@@ -50,7 +50,7 @@
     - 5+ ⟶ As `0`.
 
     {% capture note %}
-    The first ability header of an item equipped in a <a href="../../files/ids/bgee/slots.htm#35">weapon</a>/<a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot will always be treated as a <a href="#itmv1_Extended_Header_0x2_1">weapon</a> abillty, even if it lacks the correct <a href="#itmv1_Extended_Header_0x2">location</a> to be selected as such, unless that item is a <a href="../../files/ids/bgee/itemcat.htm#12">shield</a> in the <a href="../../files/ids/bgee/slots.htm#9">off-hand</a>.
+    The first ability header of an item equipped in a <a href="../../files/ids/bgee/slots.htm#35">weapon</a>/<a href="../../files/ids/bgee/slots.htm#9">off-hand</a> slot will always be treated as a <a href="#itmv1_Extended_Header_0x2_1">weapon</a> abillty, even if it lacks the correct <a href="#itmv1_Extended_Header_0x2">location</a> to be selected as such, unless that item is a <a href="../../files/ids/bgee/itemcat.htm#12">shield</a> in the off-hand.
     {% endcapture %} {% include note.html %}
   type: char
 - desc: Alternative dice sides
@@ -157,7 +157,7 @@
     - 0 ⟶ <b><a name="itmv1_Extended_Header_0x1C_0">None</a></b>
       - Deals Crushing damage, uses base AC (ignores all 4 specific AC).
         - If <code><a href="#itmv1_Extended_Header_0x18">#dice</a> = 0</code>: Deals damage as normal, just no dice amount.
-        - If <code><a href="#itmv1_Extended_Header_0x18">#dice</a> > 0</code>: Sets target's HP to `Damage Dealt`, ignores crushing resistance.
+        - If <code>#dice > 0</code>: Sets target's HP to `Damage Dealt`, ignores crushing resistance.
     - 1 ⟶ <b><a name="itmv1_Extended_Header_0x1C_1">Piercing</a></b>
     - 2 ⟶ <b><a name="itmv1_Extended_Header_0x1C_2">Crushing</a></b>
     - 3 ⟶ <b><a name="itmv1_Extended_Header_0x1C_3">Slashing</a></b>
@@ -181,9 +181,9 @@
       - If <a href="#itmv1_Extended_Header_0x18">Dice thrown</a>, <a href="#itmv1_Extended_Header_0x16">Dice size</a>, and <a href="#itmv1_Extended_Header_0x1A">Damage bonus</a> are all `0`: Always deals zero damage (ignores all modifiers, like Weapon Proficiency).
         - If you want zero base damage + modifiers, you can use `1d1 - 1`.
       - Some edge cases:
-        - <code><a href="#itmv1_Extended_Header_0x18">Dice thrown</a>d<a href="#itmv1_Extended_Header_0x16">Dice size</a> + <a href="#itmv1_Extended_Header_0x1A">Damage bonus</a> = Xd0 + 0</code>: Deals `X` damage, regardless of other modifiers.
-        - <code><a href="#itmv1_Extended_Header_0x18">Dice thrown</a>d<a href="#itmv1_Extended_Header_0x16">Dice size</a> + <a href="#itmv1_Extended_Header_0x1A">Damage bonus</a> = 0d0 + X</code>: Deals `X + modifiers` damage.
-        - <code><a href="#itmv1_Extended_Header_0x18">Dice thrown</a>d<a href="#itmv1_Extended_Header_0x16">Dice size</a> + <a href="#itmv1_Extended_Header_0x1A">Damage bonus</a> = 0dX + 0</code>: Also deals `0` damage.
+        - <code>Dice throwndDice size + Damage bonus = Xd0 + 0</code>: Deals `X` damage, regardless of other modifiers.
+        - <code>Dice throwndDice size + Damage bonus = 0d0 + X</code>: Deals `X + modifiers` damage.
+        - <code>Dice throwndDice size + Damage bonus = 0dX + 0</code>: Also deals `0` damage.
     - Values `1–4` don't have any other quirks (<a href="#itmv1_Extended_Header_0x1C_1">Piercing</a>, <a href="#itmv1_Extended_Header_0x1C_2">Crushing</a>, <a href="#itmv1_Extended_Header_0x1C_3">Slashing</a>, <a href="#itmv1_Extended_Header_0x1C_4">Missile</a>), just each a different damage type.
     {% endcapture %} {% include note.html %}
   type: word
