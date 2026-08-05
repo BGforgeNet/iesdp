@@ -171,7 +171,7 @@
     - bit 1 ⟶ <b><a name="effv2_Body_0x5C_BIT1">Bypass resistance</a></b>
       - Ignores Magic Resistance.
     - bit 2 ⟶
-      <b name="effv2_Body_0x5C_BIT2">Bypasses
+      <b><a name="effv2_Body_0x5C_BIT2"></a>Bypasses
         <a href="{{ '/opcodes/bgee.htm#op199' | prepend: relurl }}">opcode #199</a>,
         <a href="{{ '/opcodes/bgee.htm#op200' | prepend: relurl }}">opcode #200</a>,
         <a href="{{ '/opcodes/bgee.htm#op201' | prepend: relurl }}">opcode #201</a>,
