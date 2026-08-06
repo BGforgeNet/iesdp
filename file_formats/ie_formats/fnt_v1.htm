@@ -59,27 +59,27 @@ title: "FNT file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="fntv1_Header_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Glyph count (<code>G</code>) - the number of glyphs defined for each point size</td>
           </tr>
-          <tr>
+          <tr id="fntv1_Header_0x4">
             <td>0x0004</td>
             <td>2 (word)</td>
             <td>Size count (<code>S</code>) - the number of point sizes bundled in this font</td>
           </tr>
-          <tr>
+          <tr id="fntv1_Header_0x6">
             <td>0x0006</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown (usu. 1)</span></td>
           </tr>
-          <tr>
+          <tr id="fntv1_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td><span class="unknown">Unknown (usu. 1)</span></td>
           </tr>
-          <tr>
+          <tr id="fntv1_Header_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#fntv1_Kerning">kerning entries</a></td>
@@ -113,7 +113,7 @@ title: "FNT file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="fntv1_CharTable_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Unicode code point of this glyph</td>
@@ -145,22 +145,22 @@ title: "FNT file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="fntv1_SizeMetrics_0x0">
             <td>0x0000</td>
             <td>4 (float)</td>
             <td>Point size of this entry (em size)</td>
           </tr>
-          <tr>
+          <tr id="fntv1_SizeMetrics_0x4">
             <td>0x0004</td>
             <td>4 (float)</td>
             <td>Line height, in pixels</td>
           </tr>
-          <tr>
+          <tr id="fntv1_SizeMetrics_0x8">
             <td>0x0008</td>
             <td>4 (float)</td>
             <td><span class="unknown">Baseline / ascent, in pixels</span></td>
           </tr>
-          <tr>
+          <tr id="fntv1_SizeMetrics_0xC">
             <td>0x000c</td>
             <td>4 (float)</td>
             <td>Descent, in pixels (height below the baseline)</td>
@@ -194,22 +194,22 @@ title: "FNT file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="fntv1_GlyphMetrics_0x0">
             <td>0x0000</td>
             <td>4 (float)</td>
             <td><span class="unknown">Left side bearing</span></td>
           </tr>
-          <tr>
+          <tr id="fntv1_GlyphMetrics_0x4">
             <td>0x0004</td>
             <td>4 (float)</td>
             <td><span class="unknown">Advance width</span></td>
           </tr>
-          <tr>
+          <tr id="fntv1_GlyphMetrics_0x8">
             <td>0x0008</td>
             <td>4 (float)</td>
             <td><span class="unknown">Top side bearing / vertical offset</span></td>
           </tr>
-          <tr>
+          <tr id="fntv1_GlyphMetrics_0xC">
             <td>0x000c</td>
             <td>4 (float)</td>
             <td><span class="unknown">Unknown (usually 0)</span></td>
@@ -239,12 +239,12 @@ title: "FNT file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="fntv1_Kerning_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Code point of the neighbouring character in the pair</td>
           </tr>
-          <tr>
+          <tr id="fntv1_Kerning_0x4">
             <td>0x0004</td>
             <td>4 (float)</td>
             <td>Horizontal kerning adjustment, in pixels (commonly negative)</td>
@@ -281,37 +281,37 @@ title: "FNT file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="fntv1_Coords_0x0">
             <td>0x0000</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown (always observed as 0; possibly a bitmap page index)</span></td>
           </tr>
-          <tr>
+          <tr id="fntv1_Coords_0x2">
             <td>0x0002</td>
             <td>2 (signed word)</td>
             <td>Vertical placement offset of the glyph</td>
           </tr>
-          <tr>
+          <tr id="fntv1_Coords_0x4">
             <td>0x0004</td>
             <td>2 (word)</td>
             <td>Horizontal placement offset of the glyph</td>
           </tr>
-          <tr>
+          <tr id="fntv1_Coords_0x6">
             <td>0x0006</td>
             <td>2 (word)</td>
             <td>X position of the glyph rectangle in the bitmap, in pixels</td>
           </tr>
-          <tr>
+          <tr id="fntv1_Coords_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Y position of the glyph rectangle in the bitmap, in pixels (measured from the bottom)</td>
           </tr>
-          <tr>
+          <tr id="fntv1_Coords_0xA">
             <td>0x000a</td>
             <td>2 (word)</td>
             <td>Width of the glyph rectangle, in pixels</td>
           </tr>
-          <tr>
+          <tr id="fntv1_Coords_0xC">
             <td>0x000c</td>
             <td>2 (word)</td>
             <td>Height of the glyph rectangle, in pixels</td>

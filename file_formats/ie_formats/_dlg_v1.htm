@@ -89,67 +89,67 @@ title: "DLG file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="formDLGV1_Header_0x0">
           <td>0x0000</td>
           <td>4 (char array)</td>
           <td>Signature ('DLG ')</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x4">
           <td>0x0004</td>
           <td>4 (char array)</td>
           <td>Version ('V1.0')</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#formDLGV1_State">states</a></td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0xC">
           <td>0x000c</td>
           <td>4 (dword)</td>
           <td>Offset of <a href="#formDLGV1_State">state table</a> from start of
             file</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x10">
           <td>0x0010</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#formDLGV1_Transition">transitions</a></td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x14">
           <td>0x0014</td>
           <td>4 (dword)</td>
           <td>Offset of <a href="#formDLGV1_Transition">transition table</a> from
             start of file</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x18">
           <td>0x0018</td>
           <td>4 (dword)</td>
           <td>Offset of <a href="#formDLGV1_StateTrigger">state trigger table</a>
             from start of file</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x1C">
           <td>0x001c</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#formDLGV1_StateTrigger">state triggers</a></td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x20">
           <td>0x0020</td>
           <td>4 (dword)</td>
           <td>Offset of <a href="#formDLGV1_TransTrigger">transition trigger table</a>
             from start of file</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x24">
           <td>0x0024</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#formDLGV1_TransTrigger">transition triggers</a></td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x28">
           <td>0x0028</td>
           <td>4 (dword)</td>
           <td>Offset of <a href="#formDLGV1_Action">action table</a> from start of
             file</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Header_0x2C">
           <td>0x002c</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#formDLGV1_Action">actions</a></td>
@@ -176,20 +176,20 @@ title: "DLG file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="formDLGV1_State_0x0">
           <td>0x0000</td>
           <td>4 (strref)</td>
           <td>Actor response text (i.e. what the non-player character says to the
             party)</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_State_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>Index of the first transition corresponding to this state (i.e. the
             index in the <a href="#formDLGV1_Transition">transition table</a> of the
             first potential response the party can make in this state).</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_State_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#formDLGV1_Transition">transitions</a>
@@ -198,7 +198,7 @@ title: "DLG file format"
             table</a> are assigned to this state, starting from 'first', as given by
             the previous field, ranging up to (but not including) 'first'+'count'.</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_State_0xC">
           <td>0x000c</td>
           <td>4 (dword)</td>
           <td>Trigger for this state (as index into the <a href="#formDLGV1_StateTrigger">state
@@ -226,7 +226,7 @@ title: "DLG file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="formDLGV1_Transition_0x0">
           <td>0x0000</td>
           <td>4 (dword)</td>
           <td>Flags:
@@ -243,38 +243,38 @@ title: "DLG file format"
             </div>
           </td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Transition_0x4">
           <td>0x0004</td>
           <td>4 (strref)</td>
           <td>If flags bit 0 was set, this is the text associated with the
             transition (i.e. what the player character says)</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Transition_0x8">
           <td>0x0008</td>
           <td>4 (strref)</td>
           <td>If flags bit 4 was set, this is the text that goes into your journal
             after you have spoken.</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Transition_0xC">
           <td>0x000c</td>
           <td>4 (dword)</td>
           <td>If flags bit 1 was set, this is the index of this transition's trigger
             within the <a href="#formDLGV1_TransTrigger">transition trigger table</a>.</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Transition_0x10">
           <td>0x0010</td>
           <td>4 (dword)</td>
           <td>If flags bit 2 was set, this is the index of this transition's action
             within the <a href="#formDLGV1_Action">action table</a>.</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Transition_0x14">
           <td>0x0014</td>
           <td>8 (resref)</td>
           <td>If flags bit 3 was not set, this is the resource name of the DLG resource
             which contains the next <a href="#formDLGV1_State">state</a> in the
             conversation.</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Transition_0x1C">
           <td>0x001c</td>
           <td>4 (dword)</td>
           <td>If flags bit 3 was not set, this is the index of the next state within the
@@ -309,12 +309,12 @@ title: "DLG file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="formDLGV1_StateTrigger_0x0">
           <td>0x0000</td>
           <td>4 (dword)</td>
           <td>offset from start of file to state trigger string.</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_StateTrigger_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>length in bytes of the state trigger string.</td>
@@ -347,12 +347,12 @@ title: "DLG file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="formDLGV1_TransTrigger_0x0">
           <td>0x0000</td>
           <td>4 (dword)</td>
           <td>offset from start of file to transition trigger string.</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_TransTrigger_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>length in bytes of the transition trigger string.</td>
@@ -385,12 +385,12 @@ title: "DLG file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="formDLGV1_Action_0x0">
           <td>0x0000</td>
           <td>4 (dword)</td>
           <td>offset from start of file to the action string.</td>
         </tr>
-        <tr>
+        <tr id="formDLGV1_Action_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>length in bytes of the action string.</td>

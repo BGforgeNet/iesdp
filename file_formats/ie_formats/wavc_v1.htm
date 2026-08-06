@@ -12,7 +12,7 @@ title: "WAVC file format"
     </div>
     <br />
     
-    <div class="fileHeader">Detailed Description</div>
+    <div class="fileHeader"><a name="wavcv1_Header">Detailed Description</a></div>
     <div class="indent1">
       WAVC is the sound file format used in Infinity Engine. The file is simply an ACM file with the following additional header attached.<br />
       <br />
@@ -29,52 +29,52 @@ title: "WAVC file format"
             <th>Description</th>
           </tr>
         </thead>
-        <tr>
+        <tr id="wavcv1_Header_0x0">
           <td>0x0000</td>
           <td>4 (char array)</td>
           <td>Signature ('WAVC')</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0x4">
           <td>0x0004</td>
           <td>4 (char array)</td>
           <td>Version ('V1.0')</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Uncompressed size of file</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0xA">
           <td>0x000a</td>
           <td>4 (dword)</td>
           <td>Compressed size of file</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0x10">
           <td>0x0010</td>
           <td>4 (dword)</td>
           <td>Pointer to ACM data (usu. 0x1c)</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0x14">
           <td>0x0014</td>
           <td>2 (word)</td>
           <td>Number of sound channels (usu. 1)</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0x16">
           <td>0x0016</td>
           <td>2 (word)</td>
           <td>Number of bits per sample (usu. 16-bit)</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0x18">
           <td>0x0018</td>
           <td>2 (word)</td>
           <td>Sample rate (usu. 22050 Hz)</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0x1A">
           <td>0x001a</td>
           <td>2 (word)</td>
           <td>Unused (usu. 0x777e)</td>
         </tr>
-        <tr>
+        <tr id="wavcv1_Header_0x1C">
           <td>0x001c</td>
           <td>4 (bytes)</td>
           <td>Standard ACM header (0x97280301)</td>

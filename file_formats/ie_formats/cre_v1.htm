@@ -46,31 +46,31 @@ regenerate: true
           </tr>
         </thead>
         <tbody>
-        <tr>
+        <tr id="CREV1_0_Header_0x0">
           <td>0x00000</td>
           <td>4 (char array)</td>
           <td>Signature ('CRE ')</td>
         </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1.0')</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x8">
             <td>0x0008</td>
             <td>4 (strref)</td>
             <td>Long name</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0xC">
             <td>0x000c</td>
             <td>4 (strref)</td>
             <td>Short name (tooltip)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>
-              <b><a name="CREV1_0_Header_0x10">Creature flags</a></b>
+              <b>Creature flags</b>
               <ul>
                 <li><span class="unknown">bit 0 Show longname in tooltip</span></li>
                 <li>bit 1: No corpse</li>          
@@ -127,26 +127,26 @@ regenerate: true
               A multiclass char is indicated by the absence of any of the &quot;original class&quot; flags being set.<br />
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>XP (gained for killing this creature)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x18">
             <td>0x0018</td>
             <td>4 (dword)</td>
-            <td><b><a name="CREV1_0_Header_0x18">Creature Power Level</a></b> (for summoning spells) / <b><a name="CREV1_0_Header_XP">XP</a></b> of the creature (for party members)</td>
+            <td><b>Creature Power Level</b> (for summoning spells) / <b><a name="CREV1_0_Header_XP">XP</a></b> of the creature (for party members)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x1C">
             <td>0x001c</td>
             <td>4 (dword)</td>
             <td>Gold carried</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x20">
             <td>0x0020</td>
             <td>4 (dword)</td>
             <td>
-              <b><a name="CREV1_0_Header_0x20">Permanent status flags</a></b> (<a href="../../files/ids/bgee/state.htm">STATE.IDS</a>)
+              <b>Permanent status flags</b> (<a href="../../files/ids/bgee/state.htm">STATE.IDS</a>)
               <ul>
                 <li>bit 0 &longrightarrow; <b><a name="CREV1_0_Header_0x20_BIT0">SLEEPING</a></b></li>
                 <li>bit 1 &longrightarrow; <b><a name="CREV1_0_Header_0x20_BIT1">BERSERK</a></b></li>
@@ -183,21 +183,21 @@ regenerate: true
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x24">
             <td>0x0024</td>
             <td>2 (word)</td>
             <td>Current Hit Points</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x26">
             <td>0x0026</td>
             <td>2 (word)</td>
             <td>Maximum Hit Points</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x28">
             <td>0x0028</td>
             <td>4 (dword)</td>
             <td>
-              <b><a name="CREV1_0_Header_0x28">Animation ID</a></b>
+              <b>Animation ID</b>
               <ul>
                 <li>
                   BGEE:
@@ -214,242 +214,242 @@ regenerate: true
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2C">
             <td>0x002c</td>
             <td>1 (byte)</td>
             <td>Metal Colour Index</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2D">
             <td>0x002d</td>
             <td>1 (byte)</td>
             <td>Minor Colour Index</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2E">
             <td>0x002e</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x2E">Major Colour Index</a></b></td>
+            <td><b>Major Colour Index</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2F">
             <td>0x002f</td>
             <td>1 (byte)</td>
             <td>Skin Colour Index</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x30">
             <td>0x0030</td>
             <td>1 (byte)</td>
             <td>Leather Colour Index</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x31">
             <td>0x0031</td>
             <td>1 (byte)</td>
             <td>Armor Colour Index</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x32">
             <td>0x0032</td>
             <td>1 (byte)</td>
             <td>Hair Colour Index</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x33">
             <td>0x0033</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x33">Eff structure version</a></b>
+            <td><b>Eff structure version</b>
               <ul>
                 <li>0 &longrightarrow; <b><a name="CREV1_0_Header_0x33_0">Version 1 EFF</a></b></li>
                 <li>1 &longrightarrow; <b><a name="CREV1_0_Header_0x33_1">Version 2 EFF</a></b></li>
               </ul>
           </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x34">
             <td>0x0034</td>
             <td>8 (resref)</td>
             <td>Small Portrait (BMP)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x3C">
             <td>0x003c</td>
             <td>8 (resref)</td>
             <td>Large Portrait (PSTEE: BAM, Other games: BMP)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x44">
             <td>0x0044</td>
             <td>1 (signed byte)</td>
             <td>Reputation (minimum value: 0)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x45">
             <td>0x0045</td>
             <td>1 (byte)</td>
             <td>Hide In Shadows (base)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x46">
             <td>0x0046</td>
             <td>2 (signed word)</td>
-            <td><b><a name="CREV1_0_Header_0x46">Armor Class (Natural)</a></b></td>
+            <td><b>Armor Class (Natural)</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x48">
             <td>0x0048</td>
             <td>2 (signed word)</td>
-            <td><b><a name="CREV1_0_Header_0x48">Armor Class (Effective)</a></b></td>
+            <td><b>Armor Class (Effective)</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x4A">
             <td>0x004a</td>
             <td>2 (signed word)</td>
-            <td><b><a name="CREV1_0_Header_0x4A">Armor Class (Crushing Attacks Modifier)</a></b></td>
+            <td><b>Armor Class (Crushing Attacks Modifier)</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x4C">
             <td>0x004c</td>
             <td>2 (signed word)</td>
-            <td><b><a name="CREV1_0_Header_0x4C">Armor Class (Missile Attacks Modifier)</a></b></td>
+            <td><b>Armor Class (Missile Attacks Modifier)</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x4E">
             <td>0x004e</td>
             <td>2 (signed word)</td>
-            <td><b><a name="CREV1_0_Header_0x4E">Armor Class (Piercing Attacks Modifier)</a></b></td>
+            <td><b>Armor Class (Piercing Attacks Modifier)</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x50">
             <td>0x0050</td>
             <td>2 (signed word)</td>
-            <td><b><a name="CREV1_0_Header_0x50">Armor Class (Slashing Attacks Modifier)</a></b></td>
+            <td><b>Armor Class (Slashing Attacks Modifier)</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x52">
             <td>0x0052</td>
             <td>1 (byte)</td>
             <td>THAC0 (1-25)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x53">
             <td>0x0053</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x53">Number of attacks</a></b> (0-10)</td>
+            <td><b>Number of attacks</b> (0-10)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x54">
             <td>0x0054</td>
             <td>1 (byte)</td>
             <td>Save versus death (0-20)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x55">
             <td>0x0055</td>
             <td>1 (byte)</td>
             <td>Save versus wands (0-20)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x56">
             <td>0x0056</td>
             <td>1 (byte)</td>
             <td>Save versus polymorph (0-20)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x57">
             <td>0x0057</td>
             <td>1 (byte)</td>
             <td>Save versus breath attacks (0-20)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x58">
             <td>0x0058</td>
             <td>1 (byte)</td>
             <td>Save versus spells (0-20)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x59">
             <td>0x0059</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_FireResistance">Resist fire</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x5A">
             <td>0x005a</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_ColdResistance">Resist cold</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x5B">
             <td>0x005b</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_ElectricityResistance">Resist electricity</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x5C">
             <td>0x005c</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_AcidResistance">Resist acid</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x5D">
             <td>0x005d</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_MagicResistance">Resist magic</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x5E">
             <td>0x005e</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_MagicFireResistance">Resist magic fire</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x5F">
             <td>0x005f</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_MagicColdResistance">Resist magic cold</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x60">
             <td>0x0060</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_SlashingResistance">Resist slashing</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x61">
             <td>0x0061</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_CrushingResistance">Resist crushing</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x62">
             <td>0x0062</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_PiercingResistance">Resist piercing</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x63">
             <td>0x0063</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_MissileResistance">Resist missile</a></b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x64">
             <td>0x0064</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x64">Detect illusion</a></b> (minimum value : 0)</td>
+            <td><b>Detect illusion</b> (minimum value : 0)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x65">
             <td>0x0065</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x65">Set traps</a></b></td>
+            <td><b>Set traps</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x66">
             <td>0x0066</td>
             <td>1 (byte)</td>
             <td>Lore (0-100)*</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x67">
             <td>0x0067</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x67">Lockpicking</a></b> (minimum value: 0)</td>
+            <td><b>Lockpicking</b> (minimum value: 0)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x68">
             <td>0x0068</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x68">Move Silently</a></b> (minimum value: 0)</td>
+            <td><b>Move Silently</b> (minimum value: 0)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x69">
             <td>0x0069</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x69">Find/disarm traps</a></b> (minimum value: 0)</td>
+            <td><b>Find/disarm traps</b> (minimum value: 0)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x6A">
             <td>0x006a</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x6A">Pick Pockets</a></b> (minimum value: 0)</td>
+            <td><b>Pick Pockets</b> (minimum value: 0)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x6B">
             <td>0x006b</td>
             <td>1 (byte)</td>
             <td>Fatigue (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x6C">
             <td>0x006c</td>
             <td>1 (byte)</td>
             <td>Intoxication (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x6D">
             <td>0x006d</td>
             <td>1 (byte)</td>
             <td>Luck</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x6E">
             <td>0x006e</td>
             <td>1 (byte)</td>
             <td>BG1: Large swords proficiency<br />
@@ -457,7 +457,7 @@ regenerate: true
                 Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x6F">
             <td>0x006f</td>
             <td>1 (byte)</td>
             <td>BG1: Small swords proficiency<br />
@@ -465,7 +465,7 @@ regenerate: true
                 Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x70">
             <td>0x0070</td>
             <td>1 (byte)</td>
             <td>BG1: Bows proficiency<br />
@@ -473,7 +473,7 @@ regenerate: true
                 Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x71">
             <td>0x0071</td>
             <td>1 (byte)</td>
             <td>BG1: Spears proficiency<br />
@@ -481,7 +481,7 @@ regenerate: true
                 Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x72">
             <td>0x0072</td>
             <td>1 (byte)</td>
             <td>BG1: Blunt proficiency<br />
@@ -489,7 +489,7 @@ regenerate: true
                 Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x73">
             <td>0x0073</td>
             <td>1 (byte)</td>
             <td>BG1: Spiked proficiency<br />
@@ -497,7 +497,7 @@ regenerate: true
                 Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x74">
             <td>0x0074</td>
             <td>1 (byte)</td>
             <td>BG1: Axe proficiency<br />
@@ -505,7 +505,7 @@ regenerate: true
                 Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x75">
             <td>0x0075</td>
             <td>1 (byte)</td>
             <td>BG1: Missile proficiency<br />
@@ -513,60 +513,60 @@ regenerate: true
                 Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x76">
             <td>0x0076</td>
             <td>1 (byte)</td>
             <td>Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x77">
             <td>0x0077</td>
             <td>1 (byte)</td>
             <td>Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x78">
             <td>0x0078</td>
             <td>1 (byte)</td>
             <td>Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x79">
             <td>0x0079</td>
             <td>1 (byte)</td>
             <td>Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x7A">
             <td>0x007a</td>
             <td>1 (byte)</td>
             <td>Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x7B">
             <td>0x007b</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
                 PSTEE: Unspent proficiencies
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x7C">
             <td>0x007c</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
                 PSTEE: Number of available inventory slots (0 indicates default number)
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x7D">
             <td>0x007d</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
                 BGEE: <b><a name="CREV1_0_Header_NightmareMode">Nightmare mode</a></b> modifiers applied
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x7E">
             <td>0x007e</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
                 BGEE: <b><a name="CREV1_0_Header_translucency">Translucency</a></b> (range: 0-255)
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x7F">
             <td>0x007f</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
@@ -574,26 +574,26 @@ regenerate: true
                 PSTEE: MURDER variable increment value
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x80">
             <td>0x0080</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
                 BGEE: Reputation gain/loss when joining party
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x81">
             <td>0x0081</td>
             <td>1 (byte)</td>
             <td>BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)<br />
                 BGEE: Reputation gain/loss when leaving party
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x82">
             <td>0x0082</td>
             <td>1 (byte)</td>
             <td>Turn undead level</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x83">
             <td>0x0083</td>
             <td>1 (byte)</td>
             <td>Tracking skill (0-100)</td>
@@ -601,7 +601,7 @@ regenerate: true
           <tr>
             <td colspan="3"><b>The following entry applies to BG1, BG2 and BGEE:</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x84">
             <td>0x0084</td>
             <td>32 (char array)</td>
             <td>Tracking target</td>
@@ -614,52 +614,52 @@ regenerate: true
             <td>4 (dword)</td>
             <td>Current thief class experience</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x88">
             <td>0x0088</td>
             <td>4 (dword)</td>
             <td>Current mage class experience</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x8C">
             <td>0x008c</td>
             <td>1 (byte)</td>
             <td>GOOD variable increment value</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x8D">
             <td>0x008d</td>
             <td>1 (byte)</td>
             <td>LAW variable increment value</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x8E">
             <td>0x008e</td>
             <td>1 (byte)</td>
             <td>LADY variable increment value</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x8F">
             <td>0x008f</td>
             <td>1 (byte)</td>
             <td>Faction (see <a href="../../files/ids/pst/faction.htm">FACTION.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x90">
             <td>0x0090</td>
             <td>1 (byte)</td>
             <td>Team (see <a href="../../files/ids/pst/team.htm">TEAM.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x91">
             <td>0x0091</td>
             <td>1 (byte)</td>
             <td>Species (see <a href="../../files/ids/pst/race.htm">RACE.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x92">
             <td>0x0092</td>
             <td>1 (byte)</td>
             <td>Dialogue activation range</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x93">
             <td>0x0093</td>
             <td>1 (byte)</td>
             <td>Selection circle size</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x94">
             <td>0x0094</td>
             <td>1 (byte)</td>
             <td>Shield flags:
@@ -669,12 +669,12 @@ regenerate: true
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x95">
             <td>0x0095</td>
             <td>1 (byte)</td>
             <td><span class="unknown">Field of vision</span> (bitfield?)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x96">
             <td>0x0096</td>
             <td>4 (dword)</td>
             <td>Attribute flags:
@@ -714,7 +714,7 @@ regenerate: true
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x9A">
             <td>0x009a</td>
             <td>10 (bytes)</td>
             <td>Unused</td>
@@ -722,44 +722,44 @@ regenerate: true
           <tr>
             <td colspan="3"><b>Continued for all games:</b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0xA4">
             <td>0x00a4</td>
             <td>4*100 (Strref*100)</td>
             <td>Strrefs pertaining to the character. <br />
                Most are connected with the sound-set (see <a href="../../files/ids/bg1/soundoff.htm">SOUNDOFF.IDS</a> (BG1) and <a href="../../files/ids/bg2/sndslot.htm">SNDSLOT.IDS</a> for (BG2)).</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x234">
             <td>0x0234</td>
             <td>1 (byte)</td>
             <td>
-              <b><a name="CREV1_0_Header_0x234">Level first class</a></b>
+              <b>Level first class</b>
               <ul>
                 <li>Highest attained level in class (0-100).</li>
                 <li>For dual/multi class characters, the levels for each class are split between <a href="#CREV1_0_Header_0x234"><code>0x0234</code></a>, <a href="#CREV1_0_Header_0x235"><code>0x0235</code></a> and <a href="#CREV1_0_Header_0x236"><code>0x0236</code></a> according to the internal class name, i.e. for a <code>FIGHTER_THIEF</code> <code>0x0234</code> will hold the fighter level, <code>0x0235</code> will hold the thief level and <code>0x0236</code> will be <code>0</code>.</li>
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x235">
             <td>0x0235</td>
             <td>1 (byte)</td>
             <td>
-              <b><a name="CREV1_0_Header_0x235">Level second class</a></b>
+              <b>Level second class</b>
               <ul>
                 <li>Highest attained level in class (0-100)</li>
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x236">
             <td>0x0236</td>
             <td>1 (byte)</td>
             <td>
-              <b><a name="CREV1_0_Header_0x236">Level third class</a></b>
+              <b>Level third class</b>
               <ul>
                 <li>Highest attained level in class (0-100)</li>
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x237">
             <td>0x0237</td>
             <td>1 (byte)</td>
             <td>Sex (<a href="../../files/ids/bgee/gender.htm">GENDER.IDS</a>) - checkable via the <a href="../../files/ids/bgee/stats.htm#35">SEX</a> stat.
@@ -790,42 +790,42 @@ regenerate: true
               </table>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x238">
             <td>0x0238</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x238">Strength</a></b> (1-25)</td>
+            <td><b>Strength</b> (1-25)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x239">
             <td>0x0239</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x239">Strength &percnt; Bonus</a></b> (0-100)</td>
+            <td><b>Strength &percnt; Bonus</b> (0-100)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x23A">
             <td>0x023a</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x23A">Intelligence</a></b> (1-25)</td>
+            <td><b>Intelligence</b> (1-25)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x23B">
             <td>0x023b</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x23B">Wisdom</a></b> (1-25)</td>
+            <td><b>Wisdom</b> (1-25)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x23C">
             <td>0x023c</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x23C">Dexterity</a></b> (1-25)</td>
+            <td><b>Dexterity</b> (1-25)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x23D">
             <td>0x023d</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x23D">Constitution</a></b> (1-25)</td>
+            <td><b>Constitution</b> (1-25)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x23E">
             <td>0x023e</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x23E">Charisma</a></b> (1-25)</td>
+            <td><b>Charisma</b> (1-25)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x23F">
             <td>0x023f</td>
             <td>1 (byte)</td>
             <td>
@@ -841,7 +841,7 @@ regenerate: true
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x240">
             <td>0x0240</td>
             <td>1 (byte)</td>
             <td>
@@ -851,12 +851,12 @@ regenerate: true
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x241">
             <td>0x0241</td>
             <td>1 (byte)</td>
             <td>Racial enemy (<a href="../../files/ids/bg2/race.htm">RACE.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x242">
             <td>0x0242</td>
             <td>2 (word)</td>
             <td>
@@ -866,10 +866,10 @@ regenerate: true
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x244">
             <td>0x0244</td>
             <td>4 (dword)</td>
-            <td><b><a name="CREV1_0_Header_0x244">Kit information</a></b>:<br />
+            <td><b>Kit information</b>:<br />
               <pre>
 NONE                0x00000000
 KIT_BARBARIAN       0x00004000
@@ -908,142 +908,142 @@ TRANSMUTER          0x20000000</pre>
               NB.: In BG1 the valid values are mages schools and None<br />
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x248">
             <td>0x0248</td>
             <td>8 (resref)</td>
             <td>Creature <a href="bcs.htm">script</a> - Override</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x250">
             <td>0x0250</td>
             <td>8 (resref)</td>
             <td>Creature <a href="bcs.htm">script</a> - <b><a name="CREV1_0_Header_ClassScript">Class</a></b></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x258">
             <td>0x0258</td>
             <td>8 (resref)</td>
             <td>Creature <a href="bcs.htm">script</a> - Race</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x260">
             <td>0x0260</td>
             <td>8 (resref)</td>
             <td>Creature <a href="bcs.htm">script</a> - General </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x268">
             <td>0x0268</td>
             <td>8 (resref)</td>
             <td>Creature <a href="bcs.htm">script</a> - Default</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x270">
             <td>0x0270</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_EA">Enemy-Ally</a></b> (<a href="../../files/ids/bg2/ea.htm">EA.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x271">
             <td>0x0271</td>
             <td>1 (byte)</td>
             <td>General (<a href="../../files/ids/bg2/general.htm">GENERAL.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x272">
             <td>0x0272</td>
             <td>1 (byte)</td>
             <td>Race (<a href="../../files/ids/bg2/race.htm">RACE.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x273">
             <td>0x0273</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x273">Class</a></b> (<a href="../../files/ids/bg2/class.htm">CLASS.IDS</a>)</td>
+            <td><b>Class</b> (<a href="../../files/ids/bg2/class.htm">CLASS.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x274">
             <td>0x0274</td>
             <td>1 (byte)</td>
-            <td><b><a name="CREV1_0_Header_0x274">Specific</a></b> (<a href="../../files/ids/bg2/specific.htm">SPECIFIC.IDS</a>)</td>
+            <td><b>Specific</b> (<a href="../../files/ids/bg2/specific.htm">SPECIFIC.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x275">
             <td>0x0275</td>
             <td>1 (byte)</td>
             <td><b><a name="CREV1_0_Header_Gender">Gender</a></b> (<a href="../../files/ids/bg2/gender.htm">GENDER.IDS</a>). Dictates the casting voice, and checked for the summoning cap.</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x276">
             <td>0x0276</td>
             <td>5 (bytes)</td>
             <td><a href="../../files/ids/bg2/object.htm">OBJECT.IDS</a> references</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x27B">
             <td>0x027b</td>
             <td>1 (byte)</td>
             <td>Alignment (<a href="../../files/ids/bg2/alignmen.htm">ALIGNMEN.IDS</a>)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x27C">
             <td>0x027c</td>
             <td>2 (word)</td>
             <td>Global actor enumeration value</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x27E">
             <td>0x027e</td>
             <td>2 (word)</td>
             <td>Local (area) actor enumeration value</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x280">
             <td>0x0280</td>
             <td>32 (char array)</td>
-            <td><b><a name="CREV1_0_Header_0x280">Death Variable</a></b> (set SPRITE_IS_DEADvariable on death)</td>
+            <td><b>Death Variable</b> (set SPRITE_IS_DEADvariable on death)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2A0">
             <td>0x02a0</td>
             <td>4 (dword)</td>
             <td><a href="#CREV1_0_KnownSpell">Known spells</a> offset</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2A4">
             <td>0x02a4</td>
             <td>4 (dword)</td>
             <td><a href="#CREV1_0_KnownSpell">Known spells</a> count</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2A8">
             <td>0x02a8</td>
             <td>4 (dword)</td>
             <td><a href="#CREV1_0_MemSpellInfo">Spell memorization info</a> offset</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2AC">
             <td>0x02ac</td>
             <td>4 (dword)</td>
             <td><a href="#CREV1_0_MemSpellInfo">Spell memorization info</a> entries count</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2B0">
             <td>0x02b0</td>
             <td>4 (dword)</td>
             <td><a href="#CREV1_0_MemSpell">Memorized spells</a> offset</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2B4">
             <td>0x02b4</td>
             <td>4 (dword)</td>
             <td><a href="#CREV1_0_MemSpell">Memorized spells</a> count</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2B8">
             <td>0x02b8</td>
             <td>4 (dword)</td>
             <td>Offset to <a href="#CREV1_0_ItemSlots">Item slots</a></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2BC">
             <td>0x02bc</td>
             <td>4 (dword)</td>
             <td>Offset to <a href="#CREV1_0_Item">Items </a></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2C0">
             <td>0x02c0</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#CREV1_0_Item">Items </a></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2C4">
             <td>0x02c4</td>
             <td>4 (dword)</td>
             <td>Offset to <a href="#CREV1_0_Effects">effects</a></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2C8">
             <td>0x02c8</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#CREV1_0_Effects">effects</a>.</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Header_0x2CC">
             <td>0x02cc</td>
             <td>8 (resref)</td>
             <td><a href="dlg_v1.htm">Dialog file</a></td>
@@ -1074,17 +1074,17 @@ TRANSMUTER          0x20000000</pre>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="CREV1_0_KnownSpell_0x0">
             <td>0x0000</td>
             <td>8 (resref)</td>
             <td>Resource name of the <a href="SPL_V1.htm">SPL file</a></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_KnownSpell_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Spell Level -1</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_KnownSpell_0xA">
             <td>0x000a</td>
             <td>2 (word)</td>
             <td>Spell type
@@ -1119,22 +1119,22 @@ TRANSMUTER          0x20000000</pre>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="CREV1_0_MemSpellInfo_0x0">
             <td>0x0000</td>
             <td>2 (word)</td>
             <td>Spell level (less 1)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_MemSpellInfo_0x2">
             <td>0x0002</td>
             <td>2 (word)</td>
             <td>Number of spells memorizable</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_MemSpellInfo_0x4">
             <td>0x0004</td>
             <td>2 (word)</td>
             <td>Number of spells memorizable (after effects)</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_MemSpellInfo_0x6">
             <td>0x0006</td>
             <td>2 (word)</td>
             <td>Spell type
@@ -1145,12 +1145,12 @@ TRANSMUTER          0x20000000</pre>
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_MemSpellInfo_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Index into <a href="#CREV1_0_MemSpell">memorized spells</a> array of first memorized spell of this type in this level.</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_MemSpellInfo_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Count of memorized spell entries in <a href="#CREV1_0_MemSpell">memorized spells</a> array of memorized spells of this type in this level.</td>
@@ -1179,12 +1179,12 @@ TRANSMUTER          0x20000000</pre>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="CREV1_0_MemSpell_0x0">
             <td>0x0000</td>
             <td>8 (resref)</td>
             <td>Resource name of the <a href="SPL_V1.htm">SPL file</a></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_MemSpell_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Memorised
@@ -1227,32 +1227,32 @@ TRANSMUTER          0x20000000</pre>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="CREV1_0_Item_0x0">
             <td>0x0000</td>
             <td>8 (resref)</td>
             <td>Resource name of the <a href="ITM_V1.htm">ITM file</a></td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Item_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Item expiration time expressed in days. If 0 it has no effect. If above 255, the item will expire at game hour `expiration time - 255`. Since that is an absolute time, one cannot plan for it and the mode is largely useless to modders. However, if the value is within 1-255,  it will get converted to a delay in days (expiration time of 1 means 1 day and so on), but internally it will still be expressed in hours. It is used by the BG2 and EE opcodes <a href="../../opcodes/bgee.htm#op122">122</a> and <a href="../../opcodes/bgee.htm#op255">255</a>. Upon that time the item will be replaced with the replacement item (0x10 in <a href="ITM_V1.htm">ITM</a>) or removed.</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Item_0xA">
             <td>0x000a</td>
             <td>2 (word)</td>
             <td>Quantity/Charges 1</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Item_0xC">
             <td>0x000c</td>
             <td>2 (word)</td>
             <td>Quantity/Charges 2</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Item_0xE">
             <td>0x000e</td>
             <td>2 (word)</td>
             <td>Quantity/Charges 3</td>
           </tr>
-          <tr>
+          <tr id="CREV1_0_Item_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Flags

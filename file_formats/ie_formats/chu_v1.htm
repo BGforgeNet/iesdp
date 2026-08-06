@@ -42,27 +42,27 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('CHUI')</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#chuiv1_Window">windows</a></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Header_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#chuiv1_CtlTable">controls table</a></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#chuiv1_Window">window entries</a></td>
@@ -89,57 +89,57 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Window_0x0">
             <td>0x0000</td>
             <td>2 (word)</td>
             <td>Window ID</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0x2">
             <td>0x0002</td>
             <td>2 (unknown)</td>
             <td><span class="unknown">Unknown</span></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0x4">
             <td>0x0004</td>
             <td>2 (word)</td>
             <td>X coordinate</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0x6">
             <td>0x0006</td>
             <td>2 (word)</td>
             <td>Y coordinate</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Width</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0xA">
             <td>0x000a</td>
             <td>2 (word)</td>
             <td>Height</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0xC">
             <td>0x000c</td>
             <td>2 (word)</td>
             <td>Background flag (0=No background, 1=Background)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0xE">
             <td>0x000e</td>
             <td>2 (word)</td>
             <td>Count of <a href="#chuiv1_CtlTable">controls</a> in this window</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0x10">
             <td>0x0010</td>
             <td>8 (resref)</td>
             <td>Background file (<a href="mos_v1.htm">MOS</a>)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0x18">
             <td>0x0018</td>
             <td>2 (word)</td>
             <td>Index of first <a href="#chuiv1_CtlTable">control</a> in this window</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Window_0x1A">
             <td>0x001a</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown</span></td>
@@ -166,12 +166,12 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_CtlTable_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Offset to <a href="#chuiv1_Control">control</a> structure</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_CtlTable_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Length of <a href="#chuiv1_Control">control</a> structure</td>
@@ -214,37 +214,37 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Control_Common_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Control ID</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_Common_0x4">
             <td>0x0004</td>
             <td>2 (word)</td>
             <td>X coordinate (relative to containing window)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_Common_0x6">
             <td>0x0006</td>
             <td>2 (word)</td>
             <td>Y coordinate (relative to containing window)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_Common_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Width</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_Common_0xA">
             <td>0x000a</td>
             <td>2 (word)</td>
             <td>Height</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_Common_0xC">
             <td>0x000c</td>
             <td>1 (byte)</td>
             <td>Type</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_Common_0xD">
             <td>0x000d</td>
             <td>1 (byte)</td>
             <td><span class="unknown">Unknown</span></td>
@@ -271,22 +271,22 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Control_0_0x0">
             <td>0x0000</td>
             <td>14 (common section)</td>
             <td><a href="#chuiv1_Control_Common">Common fields</a></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0xE">
             <td>0x000e</td>
             <td>8 (resref)</td>
             <td>Button image (BAM)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x16">
             <td>0x0016</td>
             <td>1 (byte)</td>
             <td>Animation cycle</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x17">
             <td>0x0017</td>
             <td>1 (byte)</td>
             <td>Button text justification flags:
@@ -301,42 +301,42 @@ title: "CHUI file format"
               NB. With no bits set the text is centred (horizontally and vertically)
             </td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x18">
             <td>0x0018</td>
             <td>1 (byte)</td>
             <td>Frame index from BAM file: Button unpressed</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x19">
             <td>0x0019</td>
             <td>1 (byte)</td>
             <td>Anchor coordinate X 1</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x1A">
             <td>0x001a</td>
             <td>1 (byte)</td>
             <td>Frame index from BAM file: Button pressed</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x1B">
             <td>0x001b</td>
             <td>1 (byte)</td>
             <td>Anchor coordinate X 2</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x1C">
             <td>0x001c</td>
             <td>1 (byte)</td>
             <td>Frame index from BAM file: Button selected</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x1D">
             <td>0x001d</td>
             <td>1 (byte)</td>
             <td>Anchor coordinate Y 1</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x1E">
             <td>0x001e</td>
             <td>1 (byte)</td>
             <td>Frame index from BAM file: Button disabled</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_0_0x1F">
             <td>0x001f</td>
             <td>1 (byte)</td>
             <td>Anchor coordinate Y 2</td>
@@ -363,72 +363,72 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Control_2_0x0">
             <td>0x0000</td>
             <td>14 (common section)</td>
             <td><a href="#chuiv1_Control_Common">Common fields</a></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0xE">
             <td>0x000e</td>
             <td>8 (resref)</td>
             <td>Slider image background (MOS)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x16">
             <td>0x0016</td>
             <td>8 (resref)</td>
             <td>Slider image (knob) (BAM)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x1E">
             <td>0x001e</td>
             <td>2 (word)</td>
             <td>Cycle number</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x20">
             <td>0x0020</td>
             <td>2 (word)</td>
             <td>Frame index from BAM file: Slider ungrabbed</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x22">
             <td>0x0022</td>
             <td>2 (word)</td>
             <td>Frame index from BAM file: Slider grabbed</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x24">
             <td>0x0024</td>
             <td>2 (word)</td>
             <td>Knob X offset</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x26">
             <td>0x0026</td>
             <td>2 (word)</td>
             <td>Knob Y offset</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x28">
             <td>0x0028</td>
             <td>2 (word)</td>
             <td>Knob jump width</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x2A">
             <td>0x002a</td>
             <td>2 (word)</td>
             <td>Knob jump count</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x2C">
             <td>0x002c</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown</span></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x2E">
             <td>0x002e</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown</span></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x30">
             <td>0x0030</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown</span></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_2_0x32">
             <td>0x0032</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown</span></td>
@@ -455,77 +455,77 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Control_3_0x0">
             <td>0x0000</td>
             <td>14 (common section)</td>
             <td><a href="#chuiv1_Control_Common">Common fields</a></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0xE">
             <td>0x000e</td>
             <td>8 (resref)</td>
             <td>MOS file (background #1)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x16">
             <td>0x0016</td>
             <td>8 (resref)</td>
             <td>MOS file (background #2)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x1E">
             <td>0x001e</td>
             <td>8 (resref)</td>
             <td>MOS file (background #3)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x26">
             <td>0x0026</td>
             <td>8 (resref)</td>
             <td>BAM file (cursor)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x2E">
             <td>0x002e</td>
             <td>2 (word)</td>
             <td>Carot animation cycle</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x30">
             <td>0x0030</td>
             <td>2 (word)</td>
             <td>Carot animation frame</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x32">
             <td>0x0032</td>
             <td>2 (word)</td>
             <td>X coordinate</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x34">
             <td>0x0034</td>
             <td>2 (word)</td>
             <td>Y coordinate</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x36">
             <td>0x0036</td>
             <td>4 (dword)</td>
             <td>Control Id of scrollbar attached to this control (0xFFFFFFFF = none)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x3A">
             <td>0x003a</td>
             <td>8 (resref)</td>
             <td>BAM file (font)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x42">
             <td>0x0042</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown</span></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x44">
             <td>0x0044</td>
             <td>32 (ASCII)</td>
             <td>Initial text</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x64">
             <td>0x0064</td>
             <td>2 (word)</td>
             <td>Maximum input length</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_3_0x66">
             <td>0x0066</td>
             <td>4 (dword)</td>
             <td>Text case
@@ -559,37 +559,37 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Control_5_0x0">
             <td>0x0000</td>
             <td>14 (common section)</td>
             <td><a href="#chuiv1_Control_Common">Common fields</a></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_5_0xE">
             <td>0x000e</td>
             <td>8 (resref)</td>
             <td>BAM file font (initials)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_5_0x16">
             <td>0x0016</td>
             <td>8 (resref)</td>
             <td>BAM file font (main text)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_5_0x1E">
             <td>0x001e</td>
             <td>4 (RGBA colour)</td>
             <td>Text colour</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_5_0x22">
             <td>0x0022</td>
             <td>4 (RGBA colour)</td>
             <td>Text colour of initials</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_5_0x26">
             <td>0x0026</td>
             <td>4 (RGBA colour)</td>
             <td>Background colour of text. This is not a fill, more like an outline.</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_5_0x2A">
             <td>0x002a</td>
             <td>4 (control ID)</td>
             <td>Control ID of scroll bar attached to this control (0xFFFFFFFF = none)</td>
@@ -616,32 +616,32 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Control_6_0x0">
             <td>0x0000</td>
             <td>14 (common section)</td>
             <td><a href="#chuiv1_Control_Common">Common fields</a></td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_6_0xE">
             <td>0x000e</td>
             <td>4 (strref)</td>
             <td>Initial text ()</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_6_0x12">
             <td>0x0012</td>
             <td>8 (resref)</td>
             <td>BAM file (font)</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_6_0x1A">
             <td>0x001a</td>
             <td>4 (RGBA colour)</td>
             <td>Text colour</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_6_0x1E">
             <td>0x001e</td>
             <td>4 (RGBA colour)</td>
             <td>Colour of text background (outline).</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_6_0x22">
             <td>0x0022</td>
             <td>2 (word)</td>
             <td>Subtype (justification)<br />
@@ -680,52 +680,52 @@ title: "CHUI file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="chuiv1_Control_7_0x0">
             <td>0x0000</td>
             <td>14 (common section)</td>
             <td><a href="#chuiv1_Control_Common">Common fields</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0xE">
             <td>0x000e</td>
             <td>8 (resref)</td>
             <td>BAM file</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0x16">
             <td>0x0016</td>
             <td>2 (word)</td>
             <td>Cycle number</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0x18">
             <td>0x0018</td>
             <td>2 (word)</td>
             <td>Frame index from BAM file : up-arrow, unpressed</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0x1A">
             <td>0x001a</td>
             <td>2 (word)</td>
             <td>Frame index from BAM file : up-arrow, pressed</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0x1C">
             <td>0x001c</td>
             <td>2 (word)</td>
             <td>Frame index from BAM file : down-arrow, unpressed</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0x1E">
             <td>0x001e</td>
             <td>2 (word)</td>
             <td>Frame index from BAM file : down-arrow, pressed</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0x20">
             <td>0x0020</td>
             <td>2 (word)</td>
             <td>Frame index from BAM file: trough</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0x22">
             <td>0x0022</td>
             <td>2 (word)</td>
             <td>Frame index from BAM file: slider</td>
           </tr>
-          <tr>
+          <tr id="chuiv1_Control_7_0x24">
             <td>0x0024</td>
             <td>4 (control ID)</td>
             <td>Control ID of text area attached to this control (0xFFFFFFFF = none)</td>

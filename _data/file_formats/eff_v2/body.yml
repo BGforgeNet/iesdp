@@ -12,7 +12,7 @@
 - desc: Opcode number
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x14">Target type</a></b>
+    <b>Target type</b>
 
     - 0 ⟶ <b><a name="effv2_Body_0x14_0">None</a></b>
     - 1 ⟶ <b><a name="effv2_Body_0x14_1">Self</a></b>
@@ -39,7 +39,7 @@
 - desc: Parameter 2
   type: dword
 - desc: |-
-    <a name="effv2_Body_0x24">**Timing mode**</a>
+    **Timing mode**
 
     - 0 ⟶ [Instant/Limited](../ie_formats/eff_v1.htm#effv1_Header_0xC_0)
     - 1 ⟶ [Instant/Permanent](../ie_formats/eff_v1.htm#effv1_Header_0xC_1)
@@ -65,7 +65,7 @@
   type: word
   unknown: 1
 - desc: |-
-    <b><a name="effv2_Body_0x28">Duration</a></b>
+    <b>Duration</b>
 
     - This field is measured in seconds or ticks (<small><sup>1</sup>⁄<sub>15</sub></small> second), depending on <a href="#effv2_Body_0x24">Timing mode</a>.
 
@@ -74,14 +74,14 @@
     {% endcapture %} {% include note.html %}
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x2C">Probability 1</a></b>
+    <b>Probability 1</b>
 
     {% capture note %}
     If called via <a href="../../opcodes/bgee.htm#op183">opcode #183</a>, this field is ignored.
     {% endcapture %} {% include note.html %}
   type: word
 - desc: |-
-    <b><a name="effv2_Body_0x2E">Probability 2</a></b>
+    <b>Probability 2</b>
 
     {% capture note %}
     See <a href="../ie_formats/eff_v1.htm#effv1_Header_0x13">here</a> for further details.
@@ -99,7 +99,7 @@
 - desc: Dice Sides
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x40">Saving throw type</a></b>
+    <b>Saving throw type</b>
 
     - bit 0 ⟶ <b><a name="effv2_Body_0x40_BIT0">Spells</a></b>
     - bit 1 ⟶ <b><a name="effv2_Body_0x40_BIT1">Breath</a></b>
@@ -133,7 +133,7 @@
     {% endcapture %} {% include note.html %}
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x44">Save bonus</a></b>
+    <b>Save bonus</b>
 
     {% capture note %}
     If called via <a href="../../opcodes/bgee.htm#op183">opcode #183</a>, this field is ignored.
@@ -149,7 +149,7 @@
     Stacking IDs are unique to the opcode being applied. To maintain uniqueness of stacking IDs between different mods, one recommendation is to use the higher word of Special as the modder's Infinity Engine Community Prefix, then use the lower word as an identifying ID. For example, 0x41360001 ('A6' 0x0001).
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x4C">Primary Type (School)</a></b>
+    <b>Primary Type (School)</b>
 
     - See <a href="../../files/2da/2da_bgee/mschool.htm"><code>MSCHOOL.2DA</code></a>.
   type: dword
@@ -163,7 +163,7 @@
   type: dword
   unknown: 1
 - desc: |
-    <b><a name="effv2_Body_0x5C">Dispel/Resistance</a></b>
+    <b>Dispel/Resistance</b>
 
     The default behaviour is that effects cannot be dispelled and ignore resistance.
     - bit 0 ⟶ <b><a name="effv2_Body_0x5C_BIT0">Dispel</a></b>
@@ -230,23 +230,23 @@
     {% endcapture %} {% include note.html %}
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x60">Parameter 3</a></b>
+    <b>Parameter 3</b>
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x64">Parameter 4</a></b>
+    <b>Parameter 4</b>
   type: dword
 - desc: Parameter 5
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x6C">Time applied</a></b> (ticks)
+    <b>Time applied</b> (ticks)
 
     - It stores the gametime (ticks) at which the effect was originally applied.
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x70">Resource 2</a></b> (<a href="../ie_formats/vvc_v1.htm">VVC</a> in many effects)
+    <b>Resource 2</b> (<a href="../ie_formats/vvc_v1.htm">VVC</a> in many effects)
   type: resref
 - desc: |-
-    <b><a name="effv2_Body_0x78">Resource 3</a></b>
+    <b>Resource 3</b>
   type: resref
 - desc: Caster X coordinate
   type: dword
@@ -257,13 +257,13 @@
 - desc: Target Y coordinate
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x90">Parent resource type</a></b>
+    <b>Parent resource type</b>
     - 0 ⟶ <b><a name="effv2_Body_0x90_0">None</a></b>
     - 1 ⟶ <b><a name="effv2_Body_0x90_1">Spell</a></b>
     - 2 ⟶ <b><a name="effv2_Body_0x90_2">Item</a></b>
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0x94">Parent resource</a></b>
+    <b>Parent resource</b>
 
     {% capture note %}
     This specific field always needs to be in <u><b>ALLCAPS</b></u>.<br />
@@ -280,7 +280,7 @@
     {% endcapture %} {% include info.html %}
   type: resref
 - desc: |-
-    <b><a name="effv2_Body_0x9C">Parent resource flags</a></b>
+    <b>Parent resource flags</b>
 
     - bit 10 ⟶ <b><a name="effv2_Body_0x9C_BIT10">Hostile</a></b>
     - bit 11 ⟶ No LOS required
@@ -291,23 +291,23 @@
     - bit 16 ⟶ Non-combat ability
   type: dword
 - desc: |-
-    <b><a name="effv2_Body_0xA0">Projectile</a></b>
+    <b>Projectile</b>
   type: dword
 - desc: Parent resource slot
   type: dword
   unknown: 1
 - desc: |-
-    <b><a name="effv2_Body_0xA8">Variable name</a></b>
+    <b>Variable name</b>
   type: bytes
   length: 32
 - desc: |-
-    <b><a name="effv2_Body_0xC8">Caster level</a></b>
+    <b>Caster level</b>
   type: dword
 - desc: FirstApply (internal flag)
   type: dword
   unknown: 1
 - desc: |-
-    <b><a name="effv2_Body_0xD0">Secondary Type</a></b>
+    <b>Secondary Type</b>
 
     - See <a href="../../files/2da/2da_bgee/msectype.htm"><code>MSECTYPE.2DA</code></a>.
   type: dword

@@ -40,32 +40,32 @@ title: "MOS file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="mos_v2_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('MOS ')</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V2 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Width (pixels)</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_Header_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Height (pixels)</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Number of data blocks</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_Header_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Offset to data blocks</td>
@@ -92,38 +92,38 @@ title: "MOS file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="mos_v2_DataBlock_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>PVRZ page <br />
                 Refers to <a href="pvrz.htm">MOSxxxx.PVRZ files</a>, where xxxx is a zero-padded four-digits decimal number.</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_DataBlock_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Source x coordinate</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_DataBlock_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Source y coordinate</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_DataBlock_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Width</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_DataBlock_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Height</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_DataBlock_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Target x coordinate</td>
           </tr>
-          <tr>
+          <tr id="mos_v2_DataBlock_0x18">
             <td>0x0018</td>
             <td>4 (dword)</td>
             <td>Target y coordinate</td>

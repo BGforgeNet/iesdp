@@ -44,27 +44,27 @@ title: "IAP File Format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="iapv1_Header_0x0">
           <td>0x0000</td>
           <td>4 (Char Array)</td>
           <td>Signature (&quot;IAP &quot;)</td>
         </tr>
-        <tr>
+        <tr id="iapv1_Header_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>Null</td>
         </tr>
-        <tr>
+        <tr id="iapv1_Header_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Count of TBG files</td>
         </tr>
-        <tr>
+        <tr id="iapv1_Header_0xC">
           <td>0x000c</td>
           <td>4 (dword)</td>
           <td>Count of other files</td>
         </tr>
-        <tr>
+        <tr id="iapv1_Header_0x10">
           <td>0x0010</td>
           <td>1 (Byte)</td>
           <td>Infinity Engine ID
@@ -76,7 +76,7 @@ title: "IAP File Format"
               </ul>
           </td>
         </tr>
-        <tr>
+        <tr id="iapv1_Header_0x11">
           <td>0x0011</td>
           <td>4 (dword)</td>
           <td>Total IAP File Length</td>
@@ -105,17 +105,17 @@ title: "IAP File Format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="iapv1_File_Header_0x0">
           <td>0x0000</td>
           <td>4 (dword)</td>
           <td>Offset (from start of file) to filename </td>
         </tr>
-        <tr>
+        <tr id="iapv1_File_Header_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>Length of filename</td>
         </tr>
-        <tr>
+        <tr id="iapv1_File_Header_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Launch file on IAP Completion (TXT or RTF)
@@ -125,12 +125,12 @@ title: "IAP File Format"
               </ul>
           </td>
         </tr>
-        <tr>
+        <tr id="iapv1_File_Header_0xC">
           <td>0x000C</td>
           <td>4 (dword)</td>
           <td>Offset (from start of file) to file</td>
         </tr>
-        <tr>
+        <tr id="iapv1_File_Header_0x10">
           <td>0x0010</td>
           <td>4 (dword)</td>
           <td>Length of file</td>

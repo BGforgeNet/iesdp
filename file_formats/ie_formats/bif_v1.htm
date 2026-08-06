@@ -71,27 +71,27 @@ title: "BIFF file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bif_v1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('BIFF')</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#bif_v1_FileEntry">file entries</a></td>
           </tr>
-          <tr>
+          <tr id="bif_v1_Header_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#bif_v1_TilesetEntry">tileset entries</a></td>
           </tr>
-          <tr>
+          <tr id="bif_v1_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#bif_v1_FileEntry">file entries</a></td>
@@ -118,28 +118,28 @@ title: "BIFF file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bif_v1_FileEntry_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Resource locator <br />
             NB: On disk, only bits 0-13 are matched. They are matched against the file index in the &quot;resource locator&quot; field from the KEY file resource entries which claim to exist in this BIFF.</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_FileEntry_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to resource data</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_FileEntry_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Size of this resource</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_FileEntry_0xC">
             <td>0x000c</td>
             <td>2 (word)</td>
             <td>Type of this resource</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_FileEntry_0xE">
             <td>0x000e</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown</span></td>
@@ -166,33 +166,33 @@ title: "BIFF file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bif_v1_TilesetEntry_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Resource locator <br />
               NB: On disk, only bits 14-19 are matched upon. They are matched against the tileset index in the &quot;resource locator&quot; field from the KEY file resource entries which claim to exist in this BIFF.</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_TilesetEntry_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to resource data</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_TilesetEntry_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Count of tiles in this resource</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_TilesetEntry_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Size of each tile in this resource</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_TilesetEntry_0x10">
             <td>0x0010</td>
             <td>2 (word)</td>
             <td>Type of this resource (always 0x3eb - TIS)</td>
           </tr>
-          <tr>
+          <tr id="bif_v1_TilesetEntry_0x12">
             <td>0x0012</td>
             <td>2 (word)</td>
             <td><span class="unknown">Unknown</span></td>
@@ -236,22 +236,22 @@ title: "BIFF file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bifc_v1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('BIF ')</td>
           </tr>
-          <tr>
+          <tr id="bifc_v1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1.0')</td>
           </tr>
-          <tr>
+          <tr id="bifc_v1_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Length of filename</td>
           </tr>
-          <tr>
+          <tr id="bifc_v1_Header_0xC">
             <td>0x000c</td>
             <td>(ASCIIZ char array)</td>
             <td>Filename (length specified by previous field)</td>
@@ -310,17 +310,17 @@ title: "BIFF file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bifc_v1.0_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('BIFC')</td>
           </tr>
-          <tr>
+          <tr id="bifc_v1.0_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1.0')</td>
           </tr>
-          <tr>
+          <tr id="bifc_v1.0_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Uncompressed BIF size</td>
@@ -347,17 +347,17 @@ title: "BIFF file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bifc_v1.0_Blocks_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Decompressed size</td>
           </tr>
-          <tr>
+          <tr id="bifc_v1.0_Blocks_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Compressed size</td>
           </tr>
-          <tr>
+          <tr id="bifc_v1.0_Blocks_0x8">
             <td>0x0008</td>
             <td>varies (bytes)</td>
             <td>Compressed data</td>

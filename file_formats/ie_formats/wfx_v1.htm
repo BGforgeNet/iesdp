@@ -13,7 +13,7 @@ title: "WFX file format"
     <br />
     </div>
     
-    <div class="fileHeader">Detailed Description</div>
+    <div class="fileHeader"><a name="wfxv1_Header">Detailed Description</a></div>
     <div class="indent1">
     WFX files only contain a header section. Each WFX file has a constant length of 108h (264) bytes.<br />
     <br />
@@ -31,22 +31,22 @@ title: "WFX file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wfxv1_Header_0x0">
           <td>0x0000</td>
           <td>4 (char array)</td>
           <td>Signature ('WFX ')</td>
         </tr>
-        <tr>
+        <tr id="wfxv1_Header_0x4">
           <td>0x0004</td>
           <td>4 (char array)</td>
           <td>Version ('V1.0')</td>
         </tr>
-        <tr>
+        <tr id="wfxv1_Header_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>SR Curve Radius</td>
         </tr>
-        <tr>
+        <tr id="wfxv1_Header_0xC">
           <td>0x000c</td>
           <td>4 (dword)</td>
           <td>Flags:
@@ -59,17 +59,17 @@ title: "WFX file format"
             </ul>
           </td>
         </tr>
-        <tr>
+        <tr id="wfxv1_Header_0x10">
           <td>0x0010</td>
           <td>4 (dword)</td>
           <td>Random frequency variarion</td>
         </tr>
-        <tr>
+        <tr id="wfxv1_Header_0x14">
           <td>0x0014</td>
           <td>4 (dword)</td>
           <td>Random volume variation (% of 100)</td>
         </tr>
-        <tr>
+        <tr id="wfxv1_Header_0x18">
           <td>0x0018</td>
           <td>240 (bytes)</td>
           <td><span class="unknown">Unused</span></td>

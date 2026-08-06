@@ -57,42 +57,42 @@ title: "WED file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wedV1_3_Header_0x0">
           <td>0x0000</td>
           <td>4 (char array)</td>
           <td>Signature ('WED ')</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Header_0x4">
           <td>0x0004</td>
           <td>4 (char array)</td>
           <td>Version ('V1.3')</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Header_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#wedV1_3_Overlay">overlays</a> (including the base layer)</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Header_0xC">
           <td>0x000c</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#wedV1_3_Doors">doors</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Header_0x10">
           <td>0x0010</td>
           <td>4 (dword)</td>
           <td>Offset (from start of file) to <a href="#wedV1_3_Overlay">overlays</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Header_0x14">
           <td>0x0014</td>
           <td>4 (dword)</td>
           <td>Offset (from start of file) to <a href="#wedV1_3_SecHeader">secondary header</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Header_0x18">
           <td>0x0018</td>
           <td>4 (dword)</td>
           <td>Offset (from start of file) to <a href="#wedV1_3_Doors">doors</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Header_0x1C">
           <td>0x001c</td>
           <td>4 (dword)</td>
           <td>Offset (from start of file) to <a href="#wedV1_3_DoorTiles">door tile cell indices</a></td>
@@ -119,37 +119,37 @@ title: "WED file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wedV1_3_Overlay_0x0">
           <td>0x0000</td>
           <td>2 (word)</td>
           <td>Width (in tiles)</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Overlay_0x2">
           <td>0x0002</td>
           <td>2 (word)</td>
           <td>Height (in tiles)</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Overlay_0x4">
           <td>0x0004</td>
           <td>8 (resref)</td>
           <td>Name of <a href="tis_v1.htm"> tileset</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Overlay_0xC">
           <td>0x000c</td>
           <td>2 (word)</td>
           <td>Unique tile count</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Overlay_0xE">
           <td>0x000e</td>
           <td>2 (word)</td>
           <td>Movement type</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Overlay_0x10">
           <td>0x0010</td>
           <td>4 (dword)</td>
           <td>Offset to <a href="#wedV1_3_TileMap">tilemap</a> for this overlay</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Overlay_0x14">
           <td>0x0014</td>
           <td>4 (dword)</td>
           <td>Offset to <a href="#wedV1_3_TileIndices">tile index lookup</a> for
@@ -178,27 +178,27 @@ title: "WED file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wedV1_3_SecHeader_0x0">
           <td>0x0000</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#wedV1_3_Polygon">polygons</a> used to represent walls</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_SecHeader_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>Offset to <a href="#wedV1_3_Polygon">polygons</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_SecHeader_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Offset to <a href="#wedV1_3_Vertices">vertices</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_SecHeader_0xC">
           <td>0x000c</td>
           <td>4 (dword)</td>
           <td>Offset to <a href="#wedV1_3_WallGroup">wall groups</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_SecHeader_0x10">
           <td>0x0010</td>
           <td>4 (dword)</td>
           <td>Offset to <a href="#wedV1_3_PolygonIndices">polygon indices lookup table</a></td>
@@ -226,42 +226,42 @@ title: "WED file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wedV1_3_Doors_0x0">
           <td>0x0000</td>
           <td>8 (char array)</td>
           <td>Name of door (matched on in AREA file?)</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Doors_0x8">
           <td>0x0008</td>
           <td>2 (word)</td>
           <td><span class="unknown">Open (0) / Closed (1)</span></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Doors_0xA">
           <td>0x000a</td>
           <td>2 (word)</td>
           <td>First <a href="#wedV1_3_DoorTiles">door tile cell</a> index</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Doors_0xC">
           <td>0x000c</td>
           <td>2 (word)</td>
           <td>Count of <a href="#wedV1_3_DoorTiles">door tile cells</a> for this door</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Doors_0xE">
           <td>0x000e</td>
           <td>2 (word)</td>
           <td>Count of <a href="#wedV1_3_Polygon">polygons</a> open state</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Doors_0x10">
           <td>0x0010</td>
           <td>2 (word)</td>
           <td>Count of <a href="#wedV1_3_Polygon">polygons</a> closed state</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Doors_0x12">
           <td>0x0012</td>
           <td>4 (dword)</td>
           <td>Offset (from start of file) to <a href="#wedV1_3_Polygon">polygons</a> open state</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Doors_0x16">
           <td>0x0016</td>
           <td>4 (dword)</td>
           <td>Offset (from start of file) to <a href="#wedV1_3_Polygon">polygons</a> closed state</td>
@@ -288,22 +288,22 @@ title: "WED file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wedV1_3_TileMap_0x0">
           <td>0x0000</td>
           <td>2 (word)</td>
           <td>Start index in <a href="#wedV1_3_TileIndices">tile index lookup table</a> of primary (default) tile</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_TileMap_0x2">
           <td>0x0002</td>
           <td>2 (word)</td>
           <td>Count of tiles in <a href="#wedV1_3_TileIndices">tile index lookup table</a> for primary (default) tile</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_TileMap_0x4">
           <td>0x0004</td>
           <td>2 (word)</td>
           <td>Index from <a href="tis_v1.htm">TIS file</a> of secondary (alternate) tile (i.e. tile for closed state, if tile has an open/closed state) and also for overlays indication (tiles with marked overlay area, by &quot;green&quot; colour)</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_TileMap_0x6">
           <td>0x0006</td>
           <td>1 (byte)</td>
           <td>
@@ -319,7 +319,7 @@ title: "WED file format"
             </ul>
           </td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_TileMap_0x7">
           <td>0x0007</td>
           <td>3 (bytes)</td>
           <td><span class="unknown">Unknown</span></td>
@@ -360,12 +360,12 @@ One thing worth remembering is that one wall group has the following dimensions 
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wedV1_3_WallGroup_0x0">
           <td>0x0000</td>
           <td>2 (word)</td>
           <td>Start <a href="#wedV1_3_PolygonIndices">polygon index</a></td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_WallGroup_0x2">
           <td>0x0002</td>
           <td>2 (word)</td>
           <td><a href="#wedV1_3_PolygonIndices">Polygon index count</a></td>
@@ -397,17 +397,17 @@ One thing worth remembering is that one wall group has the following dimensions 
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wedV1_3_Polygon_0x0">
           <td>0x0000</td>
           <td>4 (dword)</td>
           <td>Starting vertex index</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Polygon_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>Count of vertices</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Polygon_0x8">
           <td>0x0008</td>
           <td>1 (unsigned byte)</td>
           <td>Indicates whether this polygon is a polygon or a hole (i.e. whether it is a section of impassability, or one of passability). The default behaviour is that wall shades animations from both sides.<br />
@@ -423,27 +423,27 @@ One thing worth remembering is that one wall group has the following dimensions 
             </div>
           </td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Polygon_0x9">
           <td>0x0009</td>
           <td>1 (byte)</td>
           <td>Height</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Polygon_0xA">
           <td>0x000a</td>
           <td>2 (word)</td>
           <td>Minimum X coordinate of bounding box</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Polygon_0xC">
           <td>0x000c</td>
           <td>2 (word)</td>
           <td>Maximum X coordinate of bounding box</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Polygon_0xE">
           <td>0x000e</td>
           <td>2 (word)</td>
           <td>Minimum Y coordinate of bounding box</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Polygon_0x10">
           <td>0x0010</td>
           <td>2 (word)</td>
           <td>Maximum Y coordinate of bounding box</td>
@@ -476,12 +476,12 @@ One thing worth remembering is that one wall group has the following dimensions 
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="wedV1_3_Vertices_0x0">
           <td>0x0000</td>
           <td>2 (word)</td>
           <td>X coordinate</td>
         </tr>
-        <tr>
+        <tr id="wedV1_3_Vertices_0x2">
           <td>0x0002</td>
           <td>2 (word)</td>
           <td>Y coordinate</td>

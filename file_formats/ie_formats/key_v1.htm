@@ -42,32 +42,32 @@ title: "KEY file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="keyv1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('KEY ')</td>
           </tr>
-          <tr>
+          <tr id="keyv1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="keyv1_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#keyv1_BifIndices">BIF entries</a></td>
           </tr>
-          <tr>
+          <tr id="keyv1_Header_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#keyv1_ResIndices">resource entries</a></td>
           </tr>
-          <tr>
+          <tr id="keyv1_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#keyv1_BifIndices">BIF entries</a></td>
           </tr>
-          <tr>
+          <tr id="keyv1_Header_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#keyv1_ResIndices">resource entries</a></td>
@@ -94,22 +94,22 @@ title: "KEY file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="keyv1_BifIndices_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Length of BIF file</td>
           </tr>
-          <tr>
+          <tr id="keyv1_BifIndices_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Offset from start of file to ASCIIZ BIF filename</td>
           </tr>
-          <tr>
+          <tr id="keyv1_BifIndices_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Length, including terminating NUL, of ASCIIZ BIF filename</td>
           </tr>
-          <tr>
+          <tr id="keyv1_BifIndices_0xA">
             <td>0x000a</td>
             <td>2 (word)</td>
             <td>The 16 bits of this field are used individually to mark the location of the relevant file.<br />
@@ -144,17 +144,17 @@ title: "KEY file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="keyv1_ResIndices_0x0">
             <td>0x0000</td>
             <td>8 (resref)</td>
             <td>Resource name</td>
           </tr>
-          <tr>
+          <tr id="keyv1_ResIndices_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Resource type</td>
           </tr>
-          <tr>
+          <tr id="keyv1_ResIndices_0xA">
             <td>0x000a</td>
             <td>4 (dword)</td>
             <td>Resource locator. The IE resource manager uses 32-bit values as a 'resource index', which codifies the source of the resource as well as which source it refers to. The layout of this value is below.<br />

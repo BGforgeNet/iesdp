@@ -7,7 +7,7 @@ title: "BMP file format"
     <div class="indent1">BG1, BG1: TotS, BG2, BG2: ToB, PST, IWD, IWD:HoW, IWD:TotL, IWD2</div>
     <br />
     
-    <div class="fileHeader">General Description</div>
+    <div class="fileHeader"><a name="bmp_Header">General Description</a></div>
     <a href="http://www.daubnet.com/formats/BMP.html" class="offsite">http://www.daubnet.com/formats/BMP.html</a><br />
     <br />
     Table of Contents<br />
@@ -52,25 +52,25 @@ title: "BMP file format"
                   <td>Windows Structure:
                     BITMAPFILEHEADER</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x0">
                   <td>0x00</td>
                   <td colspan="2">Signature</td>
                   <td>2 bytes</td>
                   <td>'BM'</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x2">
                   <td>0x02</td>
                   <td colspan="2">FileSize</td>
                   <td>4 bytes</td>
                   <td>File size in bytes</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x6">
                   <td>0x06</td>
                   <td colspan="2">Reserved</td>
                   <td>4 bytes</td>
                   <td>unused (=0)</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0xA">
                   <td>0x0a</td>
                   <td colspan="2">DataOffset</td>
                   <td>4 bytes</td>
@@ -82,31 +82,31 @@ title: "BMP file format"
                   <td>Windows Structure:
                     BITMAPINFOHEADER</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0xE">
                   <td>0x0e</td>
                   <td colspan="2">Size</td>
                   <td>4 bytes</td>
                   <td>Size of InfoHeader =40&nbsp;</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x12">
                   <td>0x12</td>
                   <td colspan="2">Width</td>
                   <td>4 bytes</td>
                   <td>Bitmap Width</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x16">
                   <td>0x16</td>
                   <td colspan="2">Height</td>
                   <td>4 bytes</td>
                   <td>Bitmap Height</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x1A">
                   <td>0x1a</td>
                   <td colspan="2">Planes</td>
                   <td>2 bytes</td>
                   <td>Number of Planes (=1)</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x1C">
                   <td>0x1c</td>
                   <td colspan="2">BitCount</td>
                   <td>2 bytes</td>
@@ -120,7 +120,7 @@ title: "BMP file format"
                     (?)&nbsp;<br />
                     24 = 24bit RGB. NumColors = 16M</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x1E">
                   <td>0x1e</td>
                   <td colspan="2">Compression</td>
                   <td>4 bytes</td>
@@ -132,7 +132,7 @@ title: "BMP file format"
                     2 = BI_RLE4 <a href="#Raster4RLE">4bit
                     RLE encoding</a></td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x22">
                   <td>0x22</td>
                   <td colspan="2">ImageSize</td>
                   <td>4 bytes</td>
@@ -140,33 +140,33 @@ title: "BMP file format"
                     It is valid to set this =0 if
                     Compression = 0</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x26">
                   <td>0x26</td>
                   <td colspan="2">XpixelsPerM</td>
                   <td>4 bytes</td>
                   <td>horizontal resolution:
                     Pixels/meter</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x2A">
                   <td>0x2a</td>
                   <td colspan="2">YpixelsPerM</td>
                   <td>4 bytes</td>
                   <td>vertical resolution: Pixels/meter</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x2E">
                   <td>0x2e</td>
                   <td colspan="2">ColorsUsed</td>
                   <td>4 bytes</td>
                   <td>Number of actually used colors</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x32">
                   <td>0x32</td>
                   <td colspan="2">ColorsImportant</td>
                   <td>4 bytes</td>
                   <td>Number of important colors&nbsp;<br />
                     0 = all</td>
                 </tr>
-                <tr>
+                <tr id="bmp_Header_0x36">
                   <td>0x36</td>
                   <td colspan="2">ColorTable</td>
                   <td>4 * NumColors bytes</td>

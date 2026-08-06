@@ -1,5 +1,5 @@
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x0">Attack type</a></b>
+    <b>Attack type</b>
     - 0 ⟶ None
     - 1 ⟶ <b><a name="itmv1_Extended_Header_0x0_1">Melee</a></b>
     - 2 ⟶ <b><a name="itmv1_Extended_Header_0x0_2">Ranged</a></b>
@@ -35,7 +35,7 @@
     - bit 1 ⟶ Non-ID Required
   type: char
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x2">Location</a></b>
+    <b>Location</b>
 
     - 0 ⟶ None
       - Ability will not be selectable through the UI (but still available to scripts and spell-casting opcodes).
@@ -58,7 +58,7 @@
 - desc: Use icon
   type: resref
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0xC">Target type</a></b>
+    <b>Target type</b>
 
     - 0 ⟶ Invalid (cannot be selected)
     - 1 ⟶ <b><a name="itmv1_Extended_Header_0xC_1">Living actor</a></b>
@@ -85,7 +85,7 @@
     {% endcapture %} {% include note.html %}
   type: char
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0xD">Target count</a></b>
+    <b>Target count</b>
 
     - Only usable by <a href="#itmv1_Extended_Header_0x2_3">Item</a> abilities, and only with Ability Targets <a href="#itmv1_Extended_Header_0xC_1"><code>1</code></a>, <a href="#itmv1_Extended_Header_0xC_3"><code>3</code></a>, or <a href="#itmv1_Extended_Header_0xC_4"><code>4</code></a>.
     - Targeting reticle will display amount remaining while selecting targets.
@@ -94,10 +94,10 @@
     - This feature cannot be utilized by scripts.
       - Scripts will treat this field as if it's always `1`.
   type: char
-- desc: <b><a name="itmv1_Extended_Header_0xE">Range</a></b>
+- desc: <b>Range</b>
   type: word
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x10">Launcher required</a></b>
+    <b>Launcher required</b>
 
     - 0 ⟶ None
     - 1 ⟶ <b><a name="itmv1_Extended_Header_0x10_1">Bow</a></b>
@@ -135,24 +135,24 @@
     - The target creature(s) is `STATE_HELPLESS`.
     - The target is affected by <a href="../../opcodes/bgee.htm#op231">Time Stop</a>.
   type: word
-- desc: <b><a name="itmv1_Extended_Header_0x16">Dice sides</a></b>
+- desc: <b>Dice sides</b>
   type: byte
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x17">Primary Type (School)</a></b>
+    <b>Primary Type (School)</b>
 
     - See <a href="../../files/2da/2da_bgee/mschool.htm"><code>MSCHOOL.2DA</code></a>.
   type: byte
-- desc: <b><a name="itmv1_Extended_Header_0x18">Dice thrown</a></b>
+- desc: <b>Dice thrown</b>
   type: byte
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x19">Secondary Type</a></b>
+    <b>Secondary Type</b>
 
     - See <a href="../../files/2da/2da_bgee/msectype.htm"><code>MSECTYPE.2DA</code></a>.
   type: byte
-- desc: <b><a name="itmv1_Extended_Header_0x1A">Damage bonus</a></b>
+- desc: <b>Damage bonus</b>
   type: word
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x1C">Damage type</a></b>
+    <b>Damage type</b>
 
     - 0 ⟶ <b><a name="itmv1_Extended_Header_0x1C_0">None</a></b>
       - Deals Crushing damage, uses base AC (ignores all 4 specific AC).
@@ -191,10 +191,10 @@
   type: word
 - desc: Index into feature blocks
   type: word
-- desc: <b><a name="itmv1_Extended_Header_0x22">Max Charges</a></b>
+- desc: <b>Max Charges</b>
   type: word
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x24">Charge depletion behaviour</a></b>
+    <b>Charge depletion behaviour</b>
 
     - 0 ⟶ <b><a name="itmv1_Extended_Header_0x24_0">Item remains</a></b>
       - Item becomes unusable (except as a weapon) when <a href="#itmv1_Extended_Header_0x22">Max Charges</a> reaches zero. Can be recharged by selling or by resting if it has the <a href="#ExtHeader_Flags_BIT11">Recharge after resting</a> flag.
@@ -213,7 +213,7 @@
 - desc: '[Flags](#ExtHeader_Flags)'
   type: dword
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x2A">Projectile Animation</a></b> (projectl.ids/missile.ids)
+    <b>Projectile Animation</b> (projectl.ids/missile.ids)
   type: word
 - desc: |-
     <b>[Melee animation](#ExtendedHeader_MeleeAnimation)</b>
@@ -239,7 +239,7 @@
   type: word
   mult: 3
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x32">Arrow qualifier / Is arrow?</a></b>
+    <b>Arrow qualifier / Is arrow?</b>
     - 0 ⟶ No
     - 1 ⟶ Yes
 
@@ -247,7 +247,7 @@
     It needs to be set on any launcher and/or ammo, but the launcher will override the ammo.
   type: word
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x34">Bolt qualifier / Is bolt?</a></b>
+    <b>Bolt qualifier / Is bolt?</b>
     - 0 ⟶ No
     - 1 ⟶ Yes
 
@@ -255,7 +255,7 @@
     It needs to be set on any launcher and/or ammo, but the launcher will override the ammo.
   type: word
 - desc: |-
-    <b><a name="itmv1_Extended_Header_0x36">Bullet qualifier / Is bullet?</a></b>
+    <b>Bullet qualifier / Is bullet?</b>
     - 0 ⟶ No
     - 1 ⟶ Yes
 

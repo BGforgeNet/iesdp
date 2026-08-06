@@ -7,7 +7,7 @@ title: "BMPv5 file format"
     <div class="indent1">BG(2):EE, IWD:EE, PST:EE</div>
     <br />
 
-    <div class="fileHeader">General Description</div>
+    <div class="fileHeader"><a name="bmpv5_Header">General Description</a></div>
     <a href="https://docs.microsoft.com/en-us/windows/desktop/api/wingdi/ns-wingdi-bitmapv5header">Microsoft format documentation</a><br /><br />
     The Enhanced editions support also version 5 of the BMP format. It is <a href="bmp.htm">largely the same as version 1</a> used by the original games, but supports 32-bit colors (still 8 bits per channel, but adds one for alpha).<br />
     <br />
@@ -22,68 +22,68 @@ title: "BMPv5 file format"
           <th>Size</th>
           <th>Description</th>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x0">
           <td>0x00</td>
           <td colspan="2">Signature</td>
           <td>2 bytes</td>
           <td>'BM'</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x2">
           <td>0x02</td>
           <td colspan="2">FileSize</td>
           <td>4 bytes</td>
           <td>File size in bytes</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x6">
           <td>0x06</td>
           <td colspan="2">2 reserved words</td>
           <td>4 bytes</td>
           <td>Unused (=0)</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0xA">
           <td>0x0a</td>
           <td colspan="2">DataOffset</td>
           <td>4 bytes</td>
           <td>File offset to Raster Data</td>
         </tr>
 
-        <tr>
+        <tr id="bmpv5_Header_0xE">
           <td>0x0e</td>
           <td colspan="2">Size</td>
           <td>4 bytes</td>
           <td>Size of InfoHeader =40&nbsp;</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x12">
           <td>0x12</td>
           <td colspan="2">Width</td>
           <td>4 bytes</td>
           <td>Bitmap Width</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x16">
           <td>0x16</td>
           <td colspan="2">Height</td>
           <td>4 bytes</td>
           <td>Bitmap Height</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x1A">
           <td>0x1a</td>
           <td colspan="2">Planes</td>
           <td>2 bytes</td>
           <td>Number of Planes (=1)</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x1C">
           <td>0x1c</td>
           <td colspan="2">BitCount</td>
           <td>2 bytes</td>
           <td>Bits per Pixel</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x1E">
           <td>0x1e</td>
           <td colspan="2">Compression</td>
           <td>4 bytes</td>
           <td>Type of Compression: BI_RGB (uncompressed), BI_BITFIELDS (uncompressed with color masks), BI_RLE4 / BI_RLE8 (with runtime encoding)</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x22">
           <td>0x22</td>
           <td colspan="2">ImageSize</td>
           <td>4 bytes</td>
@@ -91,25 +91,25 @@ title: "BMPv5 file format"
             It is valid to set this =0 if
             Compression = 0</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x26">
           <td>0x26</td>
           <td colspan="2">XpixelsPerM</td>
           <td>4 bytes</td>
           <td>Horizontal resolution: Pixels/meter</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x2A">
           <td>0x2a</td>
           <td colspan="2">YpixelsPerM</td>
           <td>4 bytes</td>
           <td>Vertical resolution: Pixels/meter</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x2E">
           <td>0x2e</td>
           <td colspan="2">ColorsUsed</td>
           <td>4 bytes</td>
           <td>Number of actually used colors</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x32">
           <td>0x32</td>
           <td colspan="2">ColorsImportant</td>
           <td>4 bytes</td>
@@ -117,7 +117,7 @@ title: "BMPv5 file format"
             0 = all</td>
         </tr>
 
-        <tr>
+        <tr id="bmpv5_Header_0x36">
           <td>0x36</td>
           <td colspan="4">Color masks</td>
         </tr>
@@ -144,103 +144,103 @@ title: "BMPv5 file format"
           <td>Mask identifying bits of alpha component</td>
         </tr>
 
-        <tr>
+        <tr id="bmpv5_Header_0x46">
           <td>0x46</td>
           <td colspan="2">CSType</td>
           <td>4 bytes</td>
           <td>Color space type</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x4A">
           <td>0x4a</td>
           <td colspan="2">RedX</td>
           <td>4 bytes</td>
           <td>X coordinate of red endpoin</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x4E">
           <td>0x4e</td>
           <td colspan="2">RedY</td>
           <td>4 bytes</td>
           <td>Y coordinate of red endpoin</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x52">
           <td>0x52</td>
           <td colspan="2">RedZ</td>
           <td>4 bytes</td>
           <td>Z coordinate of red endpoin</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x56">
           <td>0x56</td>
           <td colspan="2">GreenX</td>
           <td>4 bytes</td>
           <td>X coordinate of green endpoint</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x5A">
           <td>0x5a</td>
           <td colspan="2">GreenY</td>
           <td>4 bytes</td>
           <td>Y coordinate of green endpoint</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x5E">
           <td>0x5e</td>
           <td colspan="2">GreenZ</td>
           <td>4 bytes</td>
           <td>Z coordinate of green endpoint</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x62">
           <td>0x62</td>
           <td colspan="2">BlueX</td>
           <td>4 bytes</td>
           <td>X coordinate of blue endpoint</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x66">
           <td>0x66</td>
           <td colspan="2">BlueY</td>
           <td>4 bytes</td>
           <td>Y coordinate of blue endpoint</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x6A">
           <td>0x6a</td>
           <td colspan="2">BlueZ</td>
           <td>4 bytes</td>
           <td>Z coordinate of blue endpoint</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x6E">
           <td>0x6e</td>
           <td colspan="2">GammaRed</td>
           <td>4 bytes</td>
           <td>Gamma red coordinate scale value</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x72">
           <td>0x72</td>
           <td colspan="2">GammaGreen</td>
           <td>4 bytes</td>
           <td>Gamma green coordinate scale value</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x76">
           <td>0x76</td>
           <td colspan="2">GammaBlue</td>
           <td>4 bytes</td>
           <td>Gamma blue coordinate scale value</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x7A">
           <td>0x7a</td>
           <td colspan="2">Intent</td>
           <td>4 bytes</td>
           <td>Rendering intent for bitmap</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x7E">
           <td>0x7e</td>
           <td colspan="2">ProfileData</td>
           <td>4 bytes</td>
           <td>Offset to profile data</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x82">
           <td>0x82</td>
           <td colspan="2">ProfileSize</td>
           <td>4 bytes</td>
           <td>Size of embedded profile data</td>
         </tr>
-        <tr>
+        <tr id="bmpv5_Header_0x86">
           <td>0x86</td>
           <td colspan="2">Reserved3</td>
           <td>4 bytes</td>

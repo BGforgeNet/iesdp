@@ -59,44 +59,44 @@ This file format describes animated graphics. Such files are used for animations
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bamv1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('BAM ')</td>
           </tr>
-          <tr>
+          <tr id="bamv1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="bamv1_Header_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Count of <a href="#bamv1_FrameEntry">frame entries</a></td>
           </tr>
-          <tr>
+          <tr id="bamv1_Header_0xA">
             <td>0x000a</td>
             <td>1 (unsigned byte)</td>
             <td>Count of <a href="#bamv1_CycleEntry">cycles</a></td>
           </tr>
-          <tr>
+          <tr id="bamv1_Header_0xB">
             <td>0x000b</td>
             <td>1 (unsigned byte)</td>
             <td>The compressed colour index for RLE encoded bams (ie. this is the colour that is compressed)<br />
               <br />
               The transparency index is set to the first occurrence of RGB(0,255,0). If RGB(0,255,0) does not exist in the palette then transparency index is set to 0</td>
           </tr>
-          <tr>
+          <tr id="bamv1_Header_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#bamv1_FrameEntry">frame entries</a> (which are immediately followed by <a href="#bamv1_CycleEntry">cycle entries</a>)</td>
           </tr>
-          <tr>
+          <tr id="bamv1_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#bamv1_Palette">palette</a></td>
           </tr>
-          <tr>
+          <tr id="bamv1_Header_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#bamv1_FrameLUT">frame lookup table</a></td>
@@ -125,27 +125,27 @@ This file format describes animated graphics. Such files are used for animations
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bamv1_FrameEntry_0x0">
             <td>0x0000</td>
             <td>2 (word)</td>
             <td>Frame width</td>
           </tr>
-          <tr>
+          <tr id="bamv1_FrameEntry_0x2">
             <td>0x0002</td>
             <td>2 (word)</td>
             <td>Frame height</td>
           </tr>
-          <tr>
+          <tr id="bamv1_FrameEntry_0x4">
             <td>0x0004</td>
             <td>2 (signed word)</td>
             <td>Frame center X coordinate</td>
           </tr>
-          <tr>
+          <tr id="bamv1_FrameEntry_0x6">
             <td>0x0006</td>
             <td>2 (signed word)</td>
             <td>Frame center Y coordinate</td>
           </tr>
-          <tr>
+          <tr id="bamv1_FrameEntry_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>
@@ -179,12 +179,12 @@ This file format describes animated graphics. Such files are used for animations
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bamv1_CycleEntry_0x0">
             <td>0x0000</td>
             <td>2 (word)</td>
             <td>Count of <a href="#bamv1_FrameLUT">frame indices</a> in this cycle</td>
           </tr>
-          <tr>
+          <tr id="bamv1_CycleEntry_0x2">
             <td>0x0002</td>
             <td>2 (word)</td>
             <td>Index into <a href="#bamv1_FrameLUT">frame lookup table</a> of first frame index in this cycle</td>
@@ -270,17 +270,17 @@ This file format describes animated graphics. Such files are used for animations
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bamcv1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('BAMC')</td>
           </tr>
-          <tr>
+          <tr id="bamcv1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="bamcv1_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Uncompressed data length</td>

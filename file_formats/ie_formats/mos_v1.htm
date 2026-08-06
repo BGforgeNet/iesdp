@@ -51,42 +51,42 @@ title: "MOS file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="mos_v1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('MOS ')</td>
           </tr>
-          <tr>
+          <tr id="mos_v1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="mos_v1_Header_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Width (pixels)</td>
           </tr>
-          <tr>
+          <tr id="mos_v1_Header_0xA">
             <td>0x000a</td>
             <td>2 (word)</td>
             <td>Height (pixels)</td>
           </tr>
-          <tr>
+          <tr id="mos_v1_Header_0xC">
             <td>0x000c</td>
             <td>2 (word)</td>
             <td>Columns (blocks)</td>
           </tr>
-          <tr>
+          <tr id="mos_v1_Header_0xE">
             <td>0x000e</td>
             <td>2 (word)</td>
             <td>Rows (blocks)</td>
           </tr>
-          <tr>
+          <tr id="mos_v1_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Block size (pixels)</td>
           </tr>
-          <tr>
+          <tr id="mos_v1_Header_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#mos_v1_Palette">palettes</a></td>
@@ -214,17 +214,17 @@ title: "MOS file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="mosc_v1_Header_0x0">
           <td>0x0000</td>
           <td>4 (char array)</td>
           <td>Signature ('MOSC')</td>
         </tr>
-        <tr>
+        <tr id="mosc_v1_Header_0x4">
           <td>0x0004</td>
           <td>4 (char array)</td>
           <td>Version ('V1 ')</td>
         </tr>
-        <tr>
+        <tr id="mosc_v1_Header_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Uncompressed data length</td>

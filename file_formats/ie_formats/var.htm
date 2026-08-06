@@ -16,7 +16,7 @@ title: "VAR file format"
     <div class="fileHeader">Detailed Description</div>
     <div class="indent1">
     <br />
-    <div class="fileHeader">Dead entry</div>
+    <div class="fileHeader"><a name="var_Dead_entry">Dead entry</a></div>
     <br />
     <table border="1" width="98%">
       <colgroup>
@@ -32,17 +32,17 @@ title: "VAR file format"
       </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="var_Dead_entry_0x0">
           <td>0x0000</td>
           <td>8 (char array)</td>
           <td>Dead entry ('902&nbsp;&nbsp;&nbsp;&nbsp; ')</td>
         </tr>
-        <tr>
+        <tr id="var_Dead_entry_0x8">
           <td>0x0008</td>
           <td>32 (char array)</td>
           <td>Dead entry ('No_Anarchy                        ')</td>
         </tr>
-        <tr>
+        <tr id="var_Dead_entry_0x28">
           <td>0x00028</td>
           <td>4 (dword)</td>
           <td>Variable value (0x00000000)</td>
@@ -51,7 +51,7 @@ title: "VAR file format"
     </table>
     <br />
     
-    <div class="fileHeader">Variable definition sections</div>
+    <div class="fileHeader"><a name="var_Variable">Variable definition sections</a></div>
     <br />
     <table border="1" width="98%">
       <colgroup>
@@ -67,17 +67,17 @@ title: "VAR file format"
       </tr>
       </thead>
       <tbody>
-      <tr>
+      <tr id="var_Variable_0x0">
         <td>0x0000</td>
         <td>8 (char array)</td>
         <td>Variable scope (Global, Locals, etc.)</td>
       </tr>
-      <tr>
+      <tr id="var_Variable_0x8">
         <td>0x0008</td>
         <td>32 (char array)</td>
         <td>Variable name</td>
       </tr>
-      <tr>
+      <tr id="var_Variable_0x28">
         <td>0x0028</td>
         <td>4 (dword)</td>
         <td>Variable value</td>

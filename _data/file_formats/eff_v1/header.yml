@@ -1,7 +1,7 @@
 - desc: Effect type
   type: word
 - desc: |-
-    <b><a name="effv1_Header_0x2">Target type</a></b>
+    <b>Target type</b>
 
     - 0 ⟶ None
     - 1 ⟶ <b><a name="effv1_Header_0x2_1">Self</a></b>
@@ -49,7 +49,7 @@
 - desc: Parameter 2
   type: dword
 - desc: |-
-    <b><a name="effv1_Header_0xC">Timing mode</a></b>
+    <b>Timing mode</b>
 
     - 0 ⟶ <b><a name="effv1_Header_0xC_0">Instant/Limited</a></b>
       - This timing mode measures <a href="#effv1_Header_0xE">Duration</a> in seconds.
@@ -115,7 +115,7 @@
     {% endcapture %} {% include note.html %}
   type: byte
 - desc: |-
-    <b><a name="effv1_Header_0xD">Dispel / Resistance</a></b>
+    <b>Dispel / Resistance</b>
 
     The default behaviour is that effects cannot be dispelled and ignore magic resistance.
 
@@ -131,14 +131,14 @@
     The only difference between `0` and `2` is that `0` will automatically convert to `2` when targeting yourself.
   type: byte
 - desc: |-
-    <b><a name="effv1_Header_0xE">Duration</a></b>
+    <b>Duration</b>
 
     - This field is measured in seconds or ticks (<small><sup>1</sup>⁄<sub>15</sub></small> second), depending on <a href="#effv1_Header_0xC">Timing mode</a>.
   type: dword
-- desc: <b><a name="effv1_Header_0x12">Probability 1</a></b>
+- desc: <b>Probability 1</b>
   type: byte
 - desc: |-
-    <b><a name="effv1_Header_0x13">Probability 2</a></b>
+    <b>Probability 2</b>
 
     {% capture note %}
     - The `BG1` engine treats probability as a single word, effects are applied in the range `0–probability`.
@@ -153,7 +153,7 @@
     <b><a name="effv1_Header_Resource">Resref key</a></b>
   type: resref
 - desc: |-
-    <b><a name="effv1_Header_0x1C">Dice Thrown / Maximum Level</a></b>
+    <b>Dice Thrown / Maximum Level</b>
 
     - When this field is non-zero, all opcodes except for <a href="../../opcodes/bgee.htm#op12">opcode #12</a>, <a href="../../opcodes/bgee.htm#op17">opcode #17</a>, <a href="../../opcodes/bgee.htm#op18">opcode #18</a>, <a href="../../opcodes/bgee.htm#op218">opcode #218</a> (only when `parameter2=1`), <a href="../../opcodes/bgee.htm#op331">opcode #331</a>, and <a href="../../opcodes/bgee.htm#op333">opcode #333</a>, treat it as `Maximum Level`, meaning that only creatures whose level attribute is less than or equal to this value will be affected by the effect.
 
@@ -166,7 +166,7 @@
     {% endcapture %} {% include note.html %}
   type: dword
 - desc: |-
-    <b><a name="effv1_Header_0x20">Dice Sides / Minimum Level</a></b>
+    <b>Dice Sides / Minimum Level</b>
 
     - When this field is non-zero, all opcodes except for <a href="../../opcodes/bgee.htm#op12">opcode #12</a>, <a href="../../opcodes/bgee.htm#op17">opcode #17</a>, <a href="../../opcodes/bgee.htm#op18">opcode #18</a>, <a href="../../opcodes/bgee.htm#op218">opcode #218</a> (only when `parameter2=1`), <a href="../../opcodes/bgee.htm#op331">opcode #331</a>, and <a href="../../opcodes/bgee.htm#op333">opcode #333</a>, treat it as `Minimum Level`, meaning that only creatures whose level attribute is greater than or equal to this value will be affected by the effect.
 
@@ -179,7 +179,7 @@
     {% endcapture %} {% include note.html %}
   type: dword
 - desc: |-
-    <b><a name="effv1_Header_0x24">Saving throw type</a></b>
+    <b>Saving throw type</b>
 
     - bit 0 ⟶ <b><a name="effv1_Header_0x24_BIT0">Spells</a></b>
     - bit 1 ⟶ <b><a name="effv1_Header_0x24_BIT1">Breath</a></b>

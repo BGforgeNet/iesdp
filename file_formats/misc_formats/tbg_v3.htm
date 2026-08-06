@@ -42,32 +42,32 @@ title: "TBG File Format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature (&quot;TBG3&quot;)</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Null fields</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x8">
             <td>0x0008</td>
             <td>12 (char array)</td>
             <td>Filename</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>File offset</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x18">
             <td>0x0018</td>
             <td>4 (dword)</td>
             <td>File length</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x1C">
             <td>0x001C</td>
             <td>4 (dword)</td>
             <td>Infinity Engine ID
@@ -79,17 +79,17 @@ title: "TBG File Format"
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x20">
             <td>0x0020</td>
             <td>4 (dword)</td>
             <td>Text Entries Offset</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x24">
             <td>0x0024</td>
             <td>4 (dword)</td>
             <td>Count of Text Headers</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_Header_0x28">
             <td>0x0028</td>
             <td>4 (dword)</td>
             <td>Text Headers Offset</td>
@@ -116,22 +116,22 @@ title: "TBG File Format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="formTBGV3_0_TextHeader_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Offset (from start of Texct entries) to text</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_TextHeader_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Length of text</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_TextHeader_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Offset in data file where the strref should be inserted or 0xFFFFFFFF if the strref should not be inserted into the data file</td>
           </tr>
-          <tr>
+          <tr id="formTBGV3_0_TextHeader_0xC">
             <td>0x000C</td>
             <td>8 (char array)</td>
             <td>Associated sound filename</td>

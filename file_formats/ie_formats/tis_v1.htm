@@ -33,7 +33,7 @@ title: "TIS file format"
     <br />
     </div>
     
-    <div class="fileHeader">Header</div><br />
+    <div class="fileHeader"><a name="tisv1_Header">Header</a></div><br />
     <div class="indent1">
       The Header has a constant length of 18h (24) bytes.<br />
       <br />
@@ -51,22 +51,22 @@ title: "TIS file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="tisv1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('TIS ')</td>
           </tr>
-          <tr>
+          <tr id="tisv1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="tisv1_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Count of tiles within this tileset</td>
           </tr>
-          <tr>
+          <tr id="tisv1_Header_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Length of a tile data block<br />
@@ -78,12 +78,12 @@ title: "TIS file format"
             </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="tisv1_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Size of the header (offset to tiles)</td>
           </tr>
-          <tr>
+          <tr id="tisv1_Header_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Dimension of 1 tile in pixels (64x64)</td>
@@ -128,7 +128,7 @@ title: "TIS file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="tis_v1_pvrz_tile_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>PVRZ page<br />
@@ -138,12 +138,12 @@ title: "TIS file format"
             Special: A value of -1 (0xffffffff) indicates a solid black tile.
             </td>
           </tr>
-          <tr>
+          <tr id="tis_v1_pvrz_tile_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>PVRZ texture coordinate X</td>
           </tr>
-          <tr>
+          <tr id="tis_v1_pvrz_tile_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>PVRZ texture coordinate Y</td>

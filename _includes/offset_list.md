@@ -40,8 +40,13 @@
   {% assign olength = olength | times: o.mult %}
 {% endif %}
 
+{% comment %}
+  Every row gets an anchor so any field can be linked to. The name matches the convention the
+  hand-written anchors already use - section name plus the field's offset - so existing links
+  to a field keep resolving.
+{% endcomment %}
 {% if skip_row == 0 %}
-<tr>
+<tr id="{{ offset_header_name }}_{{ current_offset | dec_to_hex }}">
   <td>{{ current_offset | offset_to_hex }}</td>
   <td>{{ display_length }} ({{ o.type }})</td>
   <td>{{ odesc | liquify |  markdownify }}</td>

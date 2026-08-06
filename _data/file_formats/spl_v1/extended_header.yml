@@ -10,7 +10,7 @@
 - desc: "- bit 2: 'Friendly' ability (PST only)"
   type: char
 - desc: |-
-    <b><a name="splv1_Extended_Header_0x2">Location</a></b>
+    <b>Location</b>
 
     - 0 ⟶ None
       - Ability will not be selectable through the UI (but still available to scripts and spell-casting opcodes).
@@ -31,7 +31,7 @@
 - desc: Memorised icon (BAM). The engine replaces the last character of this filename with a B.
   type: resref
 - desc: |-
-    <b><a name="splv1_Extended_Header_0xC">Target</a></b>
+    <b>Target</b>
 
     - 0 ⟶ Invalid (cannot be selected)
     - 1 ⟶ <b><a name="splv1_Extended_Header_0xC_1">Living actor</a></b>
@@ -58,7 +58,7 @@
     {% endcapture %} {% include note.html %}
   type: char
 - desc: |-
-    <b><a name="splv1_Extended_Header_0xD">Target count</a></b>
+    <b>Target count</b>
 
     - Only usable with Ability Targets <a href="#splv1_Extended_Header_0xC_1"><code>1</code></a>, <a href="#splv1_Extended_Header_0xC_3"><code>3</code></a>, or <a href="#splv1_Extended_Header_0xC_4"><code>4</code></a>.
     - Targeting reticle will display amount remaining while selecting targets.
@@ -68,21 +68,21 @@
       - Scripts will treat this field as if it's always `1`.
   type: char
 - desc: |-
-    <b><a name="splv1_Extended_Header_0xE">Range</a></b>
+    <b>Range</b>
 
     {% capture note %}
     As far as subspells are concerned, their <a href="#splv1_Extended_Header_0xE">Range</a> is only checked if cast through <a href="../../opcodes/bgee.htm#op148">opcode #148</a>, <a href="../../opcodes/bgee.htm#op232">opcode #232</a>, <a href="../../opcodes/bgee.htm#op258">opcode #258</a>, or <a href="../../opcodes/bgee.htm#op260">opcode #260</a>.
     {% endcapture %} {% include info.html %}
   type: word
 - desc: |-
-    <b><a name="splv1_Extended_Header_0x10">Level Required</a></b>
+    <b>Level Required</b>
 
     {% capture note %}
     Standard spellcasting only utilizes the first byte (`0 – 255`), but opcodes that specify Casting Level (<code><a href="../../opcodes/bgee.htm#op146">146</a><sup><small>*</small></sup>p2=2</code>/<code><a href="../../opcodes/bgee.htm#op326">326</a><sup><small>*</small></sup><a href="../ie_formats/eff_v2.htm#effv2_Body_0xC8">EFF</a></code>/<a href="../../opcodes/bgee.htm#op333"><code>333</code></a>) have access to the entire range (`0 – 65535`).
     {% endcapture %} {% include info.html %}
   type: word
 - desc: |-
-    <b><a name="splv1_Extended_Header_0x12">Casting Time</a></b>
+    <b>Casting Time</b>
 
     {% capture note %}
     - This value represents the number of tenths of rounds that it takes to cast the spell.
@@ -116,6 +116,6 @@
   type: word
   unused: 1
 - desc: |-
-    <b><a name="splv1_Extended_Header_0x26">Projectile</a></b> (BG2: [projectl.ids](../../ids/bg2/projectl.htm). **Note:** in BG2, this value is off-by-one from projectl.ids value. I.e. binary value of `2` corresponds to `0x1 - ARROW`)
+    <b>Projectile</b> (BG2: [projectl.ids](../../ids/bg2/projectl.htm). **Note:** in BG2, this value is off-by-one from projectl.ids value. I.e. binary value of `2` corresponds to `0x1 - ARROW`)
   type: word
   offset: 0x26

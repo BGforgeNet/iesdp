@@ -19,7 +19,7 @@ title: "TOT file format"
     </div>
     <br />
     
-    <div class="fileHeader">Detailed Description</div>
+    <div class="fileHeader"><a name="tot_Header">Detailed Description</a></div>
     <br />
     <div class="indent1">
       TOT files have a fixed length of string sections, each 20Ch byes long.<br />
@@ -38,22 +38,22 @@ title: "TOT file format"
         </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="tot_Header_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Offset to next free region</td>
           </tr>
-          <tr>
+          <tr id="tot_Header_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Offset of preceding entry</td>
           </tr>
-          <tr>
+          <tr id="tot_Header_0x8">
             <td>0x0008</td>
             <td>512 (char array)</td>
             <td>String data</td>
           </tr>
-          <tr>
+          <tr id="tot_Header_0x208">
             <td>0x0208</td>
             <td>4 (dword)</td>
             <td>Offset of following entry</td>

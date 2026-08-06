@@ -39,32 +39,32 @@ title: "VEF file format"
         <th>Size (data type)</th>
         <th>Description</th>
       </tr>
-      <tr>
+      <tr id="vefv1_0_Header_0x0">
         <td>0x0000</td>
         <td>4 (char array)</td>
         <td>Signature ('VEF ')</td>
       </tr>
-      <tr>
+      <tr id="vefv1_0_Header_0x4">
         <td>0x0004</td>
         <td>4 (char array)</td>
         <td>Version ('    ')</td>
       </tr>
-      <tr>
+      <tr id="vefv1_0_Header_0x8">
         <td>0x0008</td>
         <td>4 (dword)</td>
         <td>Offset to visual effect components 1</td>
       </tr>
-      <tr>
+      <tr id="vefv1_0_Header_0xC">
         <td>0x000c</td>
         <td>4 (dword)</td>
         <td>Count of visual effect components 1</td>
       </tr>
-      <tr>
+      <tr id="vefv1_0_Header_0x10">
         <td>0x0010</td>
         <td>4 (dword)</td>
         <td>Offset to visual effect components 2</td>
       </tr>
-      <tr>
+      <tr id="vefv1_0_Header_0x14">
         <td>0x0014</td>
         <td>4 (dword)</td>
         <td>Count of visual effect components 2</td>
@@ -93,22 +93,22 @@ title: "VEF file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="vefv1_0_VisualEffect_0x0">
           <td>0x0000</td>
           <td>4 (dword)</td>
           <td>Ticks until start</td>
         </tr>
-        <tr>
+        <tr id="vefv1_0_VisualEffect_0x4">
           <td>0x0004</td>
           <td>4 (dword)</td>
           <td>Unused</td>
         </tr>
-        <tr>
+        <tr id="vefv1_0_VisualEffect_0x8">
           <td>0x0008</td>
           <td>4 (dword)</td>
           <td>Ticks until loop</td>
         </tr>
-        <tr>
+        <tr id="vefv1_0_VisualEffect_0xC">
           <td>0x000c</td>
           <td>4 (dword)</td>
           <td>Resource Type
@@ -119,17 +119,17 @@ title: "VEF file format"
             </ul>
           </td>
         </tr>
-        <tr>
+        <tr id="vefv1_0_VisualEffect_0x10">
           <td>0x0010</td>
           <td>8 (resref)</td>
           <td>Resource name</td>
         </tr>
-        <tr>
+        <tr id="vefv1_0_VisualEffect_0x18">
           <td>0x0018</td>
           <td>4 (dword)</td>
           <td>Continuous Cycles (only for Resource Type 1)</td>
         </tr>
-        <tr>
+        <tr id="vefv1_0_VisualEffect_0x1C">
           <td>0x001c</td>
           <td>196 (bytes)</td>
           <td>Unused</td>

@@ -40,12 +40,12 @@ title: "SAV file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="formsavv1_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('SAV ')</td>
           </tr>
-          <tr>
+          <tr id="formsavv1_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1.0')</td>
@@ -74,12 +74,12 @@ title: "SAV file format"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="savv1_File_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Length of filename</td>
           </tr>
-          <tr>
+          <tr id="savv1_File_0x4">
             <td>0x0004</td>
             <td>variable (ASCIIZ char array)</td>
             <td>Filename (length specified by previous field)</td>

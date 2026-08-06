@@ -41,87 +41,87 @@ title: "MAZE file format"
         </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('MAZE')</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V1.0')</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x8">
             <td>0x0008</td>
             <td>64 * 28 (array of structs)</td>
             <td>A 8 x 8 grid of <a href="#MAZEV1_0_Entry">Maze Entries</a></td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x708">
             <td>0x0708</td>
             <td>4 (dword)</td>
             <td># rows of areas (always 8)</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x70C">
             <td>0x070c</td>
             <td>4 (dword)</td>
             <td># columns of areas (always 8)</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x710">
             <td>0x0710</td>
             <td>4 (dword)</td>
             <td>Wizard room position X</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x714">
             <td>0x0714</td>
             <td>4 (dword)</td>
             <td>Wizard room position Y</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x718">
             <td>0x0718</td>
             <td>4 (dword)</td>
             <td>Nordom's room position X</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x71C">
             <td>0x071c</td>
             <td>4 (dword)</td>
             <td>Nordom's room position Y</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x720">
             <td>0x0720</td>
             <td>4 (dword)</td>
             <td>Foyer position X</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x724">
             <td>0x0724</td>
             <td>4 (dword)</td>
             <td>Foyer position Y</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x728">
             <td>0x0728</td>
             <td>4 (dword)</td>
             <td>Engine room position X</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x72C">
             <td>0x072c</td>
             <td>4 (dword)</td>
             <td>Engine room position Y</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x730">
             <td>0x0730</td>
             <td>4 (dword)</td>
             <td>Total number of traps</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x734">
             <td>0x0734</td>
             <td>4 (dword)</td>
             <td>Maze initialized (0: no, 1: yes)</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x738">
             <td>0x0738</td>
             <td>4 (dword)</td>
             <td>Foyer maze blocker made (0: no, 1: yes)</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Header_0x73C">
             <td>0x073c</td>
             <td>4 (dword)</td>
             <td>Foyer engine blocker made (0: no, 1: yes)</td>
@@ -150,27 +150,27 @@ title: "MAZE file format"
         </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="MAZEV1_0_Entry_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>Used (0: No, 1: Yes)</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Entry_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Accessible (0: No, 1: Yes)</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Entry_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Is valid (0: No, 1: Yes)</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Entry_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Is trapped (0: No, 1: Yes)</td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Entry_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Trap type
@@ -181,7 +181,7 @@ title: "MAZE file format"
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Entry_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Exits available at
@@ -193,7 +193,7 @@ title: "MAZE file format"
               </ul>
             </td>
           </tr>
-          <tr>
+          <tr id="MAZEV1_0_Entry_0x18">
             <td>0x0018</td>
             <td>4 (dword)</td>
             <td>Populated (0: No, 1: Yes)</td>

@@ -26,7 +26,7 @@ title: "PLT file format"
     
     <div class="fileHeader">Detailed Description</div>
     <br />
-    <div class="fileHeader">Header</div>
+    <div class="fileHeader"><a name="pltv1_Header">Header</a></div>
     <br />
     <div class="indent1">
     <br />
@@ -43,42 +43,42 @@ title: "PLT file format"
           <th>Description</th>
         </tr>
       </thead>
-      <tr>
+      <tr id="pltv1_Header_0x0">
         <td>0x00000</td>
         <td>4 (char array)</td>
         <td>Signature ('PLT ')</td>
       </tr>
-      <tr>
+      <tr id="pltv1_Header_0x4">
         <td>0x00004</td>
         <td>4 (char array)</td>
         <td>Version ('V1 &nbsp;')</td>
       </tr>
-      <tr>
+      <tr id="pltv1_Header_0x8">
         <td>0x00008</td>
         <td>2 (word)</td>
         <td><span class="unknown">Unknown</span></td>
       </tr>
-      <tr>
+      <tr id="pltv1_Header_0xA">
         <td>0x0000a</td>
         <td>2 (word)</td>
         <td><span class="unknown">Unknown</span></td>
       </tr>
-      <tr>
+      <tr id="pltv1_Header_0xC">
         <td>0x0000c</td>
         <td>2 (word)</td>
         <td><span class="unknown">Unknown</span></td>
       </tr>
-      <tr>
+      <tr id="pltv1_Header_0xE">
         <td>0x0000e</td>
         <td>2 (word)</td>
         <td><span class="unknown">Unknown</span></td>
       </tr>
-      <tr>
+      <tr id="pltv1_Header_0x10">
         <td>0x00010</td>
         <td>4 (dword)</td>
         <td>Width</td>
       </tr>
-      <tr>
+      <tr id="pltv1_Header_0x14">
         <td>0x00014</td>
         <td>4 (dword)</td>
         <td>Height</td>
@@ -87,7 +87,7 @@ title: "PLT file format"
     </div>
     <br />
     
-    <div class="fileHeader">Body</div>
+    <div class="fileHeader"><a name="pltv1_Body">Body</a></div>
     <br />
     <div class="indent1">
     This section consists of a pair of bytes for each pixel. The values are row/column lookups into MPAL256.bmp. The pixel information is stored left to right, bottom to top.<br />
@@ -105,12 +105,12 @@ title: "PLT file format"
         </tr>
       </thead>
       <tbody>
-      <tr>
+      <tr id="pltv1_Body_0x0">
         <td>0x00000</td>
         <td>1 (byte)</td>
         <td>Column</td>
       </tr>
-      <tr>
+      <tr id="pltv1_Body_0x1">
         <td>0x00001</td>
         <td>1 (byte)</td>
         <td>Row</td>

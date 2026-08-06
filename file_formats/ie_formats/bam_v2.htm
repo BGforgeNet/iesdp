@@ -41,42 +41,42 @@ This file format describes animated graphics. Such files are used for animations
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bamv2_Header_0x0">
             <td>0x0000</td>
             <td>4 (char array)</td>
             <td>Signature ('BAM ')</td>
           </tr>
-          <tr>
+          <tr id="bamv2_Header_0x4">
             <td>0x0004</td>
             <td>4 (char array)</td>
             <td>Version ('V2 &nbsp;')</td>
           </tr>
-          <tr>
+          <tr id="bamv2_Header_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#bamv2_FrameEntry">frame entries</a></td>
           </tr>
-          <tr>
+          <tr id="bamv2_Header_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#bamv2_CycleEntry">cycle entries</a></td>
           </tr>
-          <tr>
+          <tr id="bamv2_Header_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Count of <a href="#bamv2_DataBlock">data blocks</a></td>
           </tr>
-          <tr>
+          <tr id="bamv2_Header_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#bamv2_FrameEntry">frame entries</a></td>
           </tr>
-          <tr>
+          <tr id="bamv2_Header_0x18">
             <td>0x0018</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#bamv2_CycleEntry">cycle entries</a></td>
           </tr>
-          <tr>
+          <tr id="bamv2_Header_0x1C">
             <td>0x001c</td>
             <td>4 (dword)</td>
             <td>Offset (from start of file) to <a href="#bamv2_DataBlock">data blocks</a></td>
@@ -105,32 +105,32 @@ This file format describes animated graphics. Such files are used for animations
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bamv2_FrameEntry_0x0">
             <td>0x0000</td>
             <td>2 (word)</td>
             <td>Frame width</td>
           </tr>
-          <tr>
+          <tr id="bamv2_FrameEntry_0x2">
             <td>0x0002</td>
             <td>2 (word)</td>
             <td>Frame height</td>
           </tr>
-          <tr>
+          <tr id="bamv2_FrameEntry_0x4">
             <td>0x0004</td>
             <td>2 (signed word)</td>
             <td>Frame center X coordinate</td>
           </tr>
-          <tr>
+          <tr id="bamv2_FrameEntry_0x6">
             <td>0x0006</td>
             <td>2 (signed word)</td>
             <td>Frame center Y coordinate</td>
           </tr>
-          <tr>
+          <tr id="bamv2_FrameEntry_0x8">
             <td>0x0008</td>
             <td>2 (word)</td>
             <td>Start index of data blocks</td>
           </tr>
-          <tr>
+          <tr id="bamv2_FrameEntry_0xA">
             <td>0x000a</td>
             <td>2 (word)</td>
             <td>Count of data blocks</td>
@@ -159,12 +159,12 @@ This file format describes animated graphics. Such files are used for animations
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bamv2_CycleEntry_0x0">
             <td>0x0000</td>
             <td>2 (word)</td>
             <td>Count of <a href="#bamv2_FrameEntry">frame entries</a> in this cycle</td>
           </tr>
-          <tr>
+          <tr id="bamv2_CycleEntry_0x2">
             <td>0x0002</td>
             <td>2 (word)</td>
             <td>Start index of <a href="#bamv2_FrameEntry">frame entries</a> in this cycle</td>
@@ -191,38 +191,38 @@ This file format describes animated graphics. Such files are used for animations
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="bamv2_DataBlock_0x0">
             <td>0x0000</td>
             <td>4 (dword)</td>
             <td>PVRZ page <br />
                 Refers to <a href="pvrz.htm">MOSxxxx.PVRZ files</a>, where xxxx is a zero-padded four-digits decimal number.</td>
           </tr>
-          <tr>
+          <tr id="bamv2_DataBlock_0x4">
             <td>0x0004</td>
             <td>4 (dword)</td>
             <td>Source x coordinate</td>
           </tr>
-          <tr>
+          <tr id="bamv2_DataBlock_0x8">
             <td>0x0008</td>
             <td>4 (dword)</td>
             <td>Source y coordinate</td>
           </tr>
-          <tr>
+          <tr id="bamv2_DataBlock_0xC">
             <td>0x000c</td>
             <td>4 (dword)</td>
             <td>Width</td>
           </tr>
-          <tr>
+          <tr id="bamv2_DataBlock_0x10">
             <td>0x0010</td>
             <td>4 (dword)</td>
             <td>Height</td>
           </tr>
-          <tr>
+          <tr id="bamv2_DataBlock_0x14">
             <td>0x0014</td>
             <td>4 (dword)</td>
             <td>Target x coordinate</td>
           </tr>
-          <tr>
+          <tr id="bamv2_DataBlock_0x18">
             <td>0x0018</td>
             <td>4 (dword)</td>
             <td>Target y coordinate</td>

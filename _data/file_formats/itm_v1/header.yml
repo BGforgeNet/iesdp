@@ -10,7 +10,7 @@
   type: strref
 - desc: |
     BG1, BG2, BGEE:  
-    <b><a name="itmv1_Header_0x10">Replacement item</a></b> (ITM)
+    <b>Replacement item</b> (ITM)
 
     PSTEE:  
     Drop sound - played when the item is dropped in the inventory (WAV)
@@ -26,7 +26,7 @@
   type: char array
   length: 2
 - desc: |-
-    <b><a name="itmv1_Header_0x24">Min Level</a></b>
+    <b>Min Level</b>
 
     - Treated as average of all active class levels, rounded up.
 
@@ -63,13 +63,13 @@
   type: word
 - desc: Price
   type: dword
-- desc: '<b><a name="itmv1_Header_0x38">Stack amount</a></b>'
+- desc: '<b>Stack amount</b>'
   type: word
 - desc: Inventory icon (BAM)
   type: resref
 - desc: Lore to ID
   type: word
-- desc: '<b><a name="itmv1_Header_0x44">Ground icon</a></b> (BAM)'
+- desc: '<b>Ground icon</b> (BAM)'
   type: resref
 - desc: Weight
   type: dword
@@ -79,7 +79,7 @@
   type: strref
 - desc: Description icon (BAM)
   type: resref
-- desc: '<b><a name="itmv1_Header_0x60">Enchantment</a></b>'
+- desc: '<b>Enchantment</b>'
   type: dword
 - desc: Offset to extended headers
   type: dword

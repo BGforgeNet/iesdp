@@ -41,27 +41,27 @@ title: "TLK file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="tlkv1_Header_0x0">
           <td>0x0000</td>
           <td>4 (char array)</td>
           <td>Signature ('TLK ')</td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Header_0x4">
           <td>0x0004</td>
           <td>4 (char array)</td>
           <td>Version ('V1 &nbsp;')</td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Header_0x8">
           <td>0x0008</td>
           <td>2 (word)</td>
           <td>Language ID</td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Header_0xA">
           <td>0x000a</td>
           <td>4 (dword)</td>
           <td>Number of <a href="#tlkv1_Entry">strref entries</a> in this file</td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Header_0xE">
           <td>0x000e</td>
           <td>4 (dword)</td>
           <td>Offset to <a href="#tlkv1_Strings">string data</a></td>
@@ -90,7 +90,7 @@ title: "TLK file format"
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="tlkv1_Entry_0x0">
           <td>0x0000</td>
           <td>2 (word)</td>
           <td>
@@ -104,27 +104,27 @@ title: "TLK file format"
             </ul>
           </td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Entry_0x2">
           <td>0x0002</td>
           <td>8 (resref)</td>
           <td>Resource name of associated sound</td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Entry_0xA">
           <td>0x000a</td>
           <td>4 (dword)</td>
           <td>Volume variance (Unused, at minimum in BG1)</td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Entry_0xE">
           <td>0x000e</td>
           <td>4 (dword)</td>
           <td>Pitch variance (Unused, at minimum in BG1)</td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Entry_0x12">
           <td>0x0012</td>
           <td>4 (dword)</td>
           <td>Offset of this string relative to the <a href="#tlkv1_Strings">strings section</a></td>
         </tr>
-        <tr>
+        <tr id="tlkv1_Entry_0x16">
           <td>0x0016</td>
           <td>4 (dword)</td>
           <td>Length of this string</td>
