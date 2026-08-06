@@ -21,11 +21,27 @@ layout: default
 {% assign actions = actions | sort: 'name' | sort: 'n' %}
 
 
+{% comment %}
+  Several actions share a number - an alias, or a second signature - and the sort above puts them
+  next to each other. The first keeps the bare number, which is what links point at; the rest are
+  suffixed the way their data files are named (8.yml, 8-2.yml), so every entry has its own anchor.
+{% endcomment %}
+{% assign prev_n = "" %}
+{% assign repeat = 0 %}
+
 {% for action in actions %}
 
   {% if action[game] == 1 %}
+    {% if action.n == prev_n %}
+      {% assign repeat = repeat | plus: 1 %}
+      {% assign anchor = action.n | append: "-" | append: repeat %}
+    {% else %}
+      {% assign repeat = 1 %}
+      {% assign anchor = action.n %}
+    {% endif %}
+    {% assign prev_n = action.n %}
     <div class="actionHeader">
-      <a id="{{ action.n }}" class="action_name">
+      <a id="{{ anchor }}" class="action_name">
         {{ action.n }} {{ action.name }}({%- assign a = action -%}{%- include action_params.html -%})
       </a>
       {%- include action_labels.html -%}

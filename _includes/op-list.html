@@ -1,6 +1,21 @@
 {% include relurl.html %}
+{% comment %}
+	A game can carry two entries for one opcode number. They sort next to each other, so the first
+	keeps the bare opNNN that links point at and the rest are suffixed, leaving every entry its own
+	anchor.
+{% endcomment %}
+{% assign prev_n = "" %}
+{% assign repeat = 0 %}
 {% for opcode in ops %}
-	<div id="op{{ opcode.n }}" class="opcode">
+	{% if opcode.n == prev_n %}
+		{% assign repeat = repeat | plus: 1 %}
+		{% assign op_anchor = "op" | append: opcode.n | append: "-" | append: repeat %}
+	{% else %}
+		{% assign repeat = 1 %}
+		{% assign op_anchor = "op" | append: opcode.n %}
+	{% endif %}
+	{% assign prev_n = opcode.n %}
+	<div id="{{ op_anchor }}" class="opcode">
 		<span class="opnumberdata">#{{ opcode.n }} ({{ opcode.n | dec_to_hex }})</span>
 
 		<span class="opnamedata">{{ opcode.opname }}</span>
