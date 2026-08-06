@@ -29,7 +29,7 @@
     - bit 12: Buy Fenced Goods
     - bit 13: Reputation doesn't affect prices (BGEE)
     - bit 14: Toggle item recharge (TobEx)
-    - bit 15: **User allowed to sell [critical]({{ "/file_formats/ie_formats/itm_v1.htm#Header_Flags_BIT0" | prepend: relurl }}) items** (BGEE)
+    - bit 15: <a name="storv1_0_Header_0x10_BIT15"></a>**User allowed to sell [critical]({{ "/file_formats/ie_formats/itm_v1.htm#Header_Flags_BIT0" | prepend: relurl }}) items** (BGEE)
   type: dword
 
 - desc: Store "sell price markup" (percentage of base price store charges for items)
