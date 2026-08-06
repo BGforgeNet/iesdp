@@ -88,7 +88,9 @@ def process(path, text):
 
     # Row ids, innermost section first. Built as edits so offsets stay valid.
     edits, added_rows, collisions, stripped = [], [], [], []
-    used = collections.Counter()
+    # Seed with the ids already in the file, so a second run cannot hand a row an anchor that an
+    # earlier run already gave to another row.
+    used = collections.Counter(re.findall(r'<tr id="([^"]+)"', text))
     for m in ROW.finditer(text):
         prefix = None
         for s in secs:
