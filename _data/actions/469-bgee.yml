@@ -5,6 +5,9 @@ name: WaitSync
 params:
   - name: Amount
     type: i
-not_tested: true
 desc: |-
-  It is likely that it behaves like a combination of [Wait()](#63) and [MultiPlayerSync()](#183).
+  Same as [Wait()](#63), but scales `Amount` according to the "Maximum Frame Rate" option in `Baldur.lua`, so that the
+  action waits approximately the same number of seconds as [Wait()](#63) would at the default frame rate of 30 FPS.
+  ```
+  wait_ticks = <Maximum Frame Rate> * 15 / 30 * <Amount>
+  ```
