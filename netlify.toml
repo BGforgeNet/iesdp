@@ -1,0 +1,4 @@
+[build]
+  # Bundler 4 writes no binstubs during Netlify's dependency install, so a bare `jekyll` is not on PATH.
+  command = "bundle exec jekyll build"
+  publish = "_site"
